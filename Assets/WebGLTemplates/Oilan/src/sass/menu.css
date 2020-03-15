@@ -1,0 +1,252 @@
+<<<<<<< HEAD
+.fab {
+  margin-right: 20px;
+}
+
+.abacus-menu ul,
+.mental-menu ul,
+.mental-menu ol,
+.fleshCart-menu ul,
+.fleshCart-menu ol,
+.abacus-menu ol {
+  list-style: none;
+  z-index: 99;
+}
+
+.abacus-menu > ul,
+.fleshCart-menu > ul,
+.mental-menu > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.abacus-menu > ul li a,
+.fleshCart-menu > ul li a,
+.mental-menu > ul li a {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.abacus-menu > ul li,
+.fleshCart-menu > ul li,
+.mental-menu > ul li {
+  position: relative;
+}
+
+.abacus-menu > ul li:first-child,
+.fleshCart-menu > ul li:first-child,
+.mental-menu > ul li:first-child {
+  border-left: 1px solid #ac8341;
+}
+
+.abacus-menu > ul li:last-child,
+.fleshCart-menu > ul li:last-child,
+.mental-menu > ul li:last-child {
+  border-right: 1px solid #ac8341;
+}
+
+.abacus-menu li a:hover,
+.fleshCart-menu li a:hover,
+.mental-menu li a:hover {
+  background: rgba(1, 1, 1, 0.5);
+  color: white;
+  -webkit-box-shadow: 1px 5px 10px -5px black;
+          box-shadow: 1px 5px 10px -5px black;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.abacus-menu > ul li a,
+.fleshCart-menu > ul li a,
+.mental-menu > ul li a {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px 30px 15px 40px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/*sub menu*/
+.abacus-menu li ul,
+.fleshCart-menu li ul,
+.mental-menu li ul {
+  position: absolute;
+  min-width: 150px;
+}
+
+.abacus-menu li > ul li,
+.fleshCart-menu li > ul li,
+.mental-menu li > ul li {
+  border: 1px solid #ac8341;
+}
+
+.mental-menu li > ul li a,
+.fleshCart-menu li > ul li a,
+.abacus-menu li > ul li a {
+  padding: 10px;
+  text-transform: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.abacus-menu li > ul li ul,
+.fleshCart-menu li > ul li ul,
+.mental-menu li > ul li ul {
+  position: absolute;
+  right: -150px;
+  top: 0;
+}
+
+/*sub menu*/
+.abacus-menu li ul,
+.fleshCart-menu li ul,
+.mental-menu li ul {
+  position: absolute;
+  min-width: 150px;
+  display: none;
+}
+
+.abacus-menu li:hover > ul,
+.fleshCart-menu li:hover > ul,
+.mental-menu li:hover > ul {
+  display: block;
+}
+=======
+.fab {
+  margin-right: 20px;
+}
+
+.abacus-menu ul,
+.mental-menu ul,
+.mental-menu ol,
+.fleshCart-menu ul,
+.fleshCart-menu ol,
+.abacus-menu ol {
+  list-style: none;
+  z-index: 99;
+}
+
+.abacus-menu > ul,
+.fleshCart-menu > ul,
+.mental-menu > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.abacus-menu > ul li a,
+.fleshCart-menu > ul li a,
+.mental-menu > ul li a {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.abacus-menu > ul li,
+.fleshCart-menu > ul li,
+.mental-menu > ul li {
+  position: relative;
+}
+
+.abacus-menu > ul li:first-child,
+.fleshCart-menu > ul li:first-child,
+.mental-menu > ul li:first-child {
+  border-left: 1px solid #ac8341;
+}
+
+.abacus-menu > ul li:last-child,
+.fleshCart-menu > ul li:last-child,
+.mental-menu > ul li:last-child {
+  border-right: 1px solid #ac8341;
+}
+
+.abacus-menu li a:hover,
+.fleshCart-menu li a:hover,
+.mental-menu li a:hover {
+  background: rgba(1, 1, 1, 0.5);
+  color: white;
+  -webkit-box-shadow: 1px 5px 10px -5px black;
+          box-shadow: 1px 5px 10px -5px black;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.abacus-menu > ul li a,
+.fleshCart-menu > ul li a,
+.mental-menu > ul li a {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px 30px 15px 40px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/*sub menu*/
+.abacus-menu li ul,
+.fleshCart-menu li ul,
+.mental-menu li ul {
+  position: absolute;
+  min-width: 150px;
+}
+
+.abacus-menu li > ul li,
+.fleshCart-menu li > ul li,
+.mental-menu li > ul li {
+  border: 1px solid #ac8341;
+}
+
+.mental-menu li > ul li a,
+.fleshCart-menu li > ul li a,
+.abacus-menu li > ul li a {
+  padding: 10px;
+  text-transform: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.abacus-menu li > ul li ul,
+.fleshCart-menu li > ul li ul,
+.mental-menu li > ul li ul {
+  position: absolute;
+  right: -150px;
+  top: 0;
+}
+
+/*sub menu*/
+.abacus-menu li ul,
+.fleshCart-menu li ul,
+.mental-menu li ul {
+  position: absolute;
+  min-width: 150px;
+  display: none;
+}
+
+.abacus-menu li:hover > ul,
+.fleshCart-menu li:hover > ul,
+.mental-menu li:hover > ul {
+  display: block;
+}
+>>>>>>> caf362ac014f97a02fde21406df02b7d63e029d1
+/*# sourceMappingURL=menu.css.map */
