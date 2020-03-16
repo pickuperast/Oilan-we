@@ -7,6 +7,7 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 
+
 namespace Oilan
 {
     [SerializeField]
@@ -153,14 +154,13 @@ namespace Oilan
         }*/
         public void ConsoleLog(string txt)
         {
-            if (WebPlatform())
-                LibConsoleWriter(txt);
+           if (WebPlatform())
+            LibConsoleWriter(txt);
         }
         public void ReturnFromTrainer(bool success, int starsEarned)
         {
             //Debug.Log("Returned from Trainer. Success: " + success.ToString() + " StarsEarned: " + starsEarned.ToString());
         }
-
 
         public void TestOpenTrainer()
         {
@@ -178,14 +178,15 @@ namespace Oilan
             //LibConsoleWriter("UnityLog: Setting progress to: " + mJSONinput);
             //TextSavedStats.text += "\nUnityLog: Setting progress to: " + mJSONinput;
             //Debug.Log("Setting progress to: "+ mJSONinput);
-            SetProgress(mJSONinput);
+            //SetProgress(mJSONinput);
         }
+
         public void PubOpenTrainer(string TrainerType, int level, int step)
         {
             //LibConsoleWriter("UnityLog: Setting progress to: " + mJSONinput);
             //TextSavedStats.text += "\nUnityLog: Setting progress to: " + mJSONinput;
             //Debug.Log("Setting progress to: "+ mJSONinput);
-            OpenTrainer(TrainerType, level, step);
+             OpenTrainer(TrainerType, level, step); 
         }
 //#elif UNITY_EDITOR
 //#endif
@@ -200,7 +201,7 @@ namespace Oilan
             SaveData mSaveData = new SaveData(0, 0, 0, 0, 0);
             if (WebPlatform())
             {
-                string progress = GetProgress();
+                string progress = GetProgress(); 
                 //LibConsoleWriter("UnityLog: call GetProgress(), answer: " + progress);
                 //TextSavedStats.text += "\nUnityLog: call GetProgress(), answer: " + progress;
                 progress = GetProgress().Replace("&quot;", @"""");
