@@ -2,7 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
+/[Ll]ibrary/il2cpp_cache/
+/[Ll]ibrary/metadata/
+/[Ll]ibrary/PlayerDataCache/
+/[Ll]ibrary/ScriptAssemblies/
+/[Ll]ibrary/ShaderCache/
+/[Ll]ibrary/StateCache/
+/[Ll]ibrary/Timeline/
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
@@ -12,7 +18,6 @@
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
-!/Library/PackageCache/
 !/Library/PackageCache/*
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
@@ -59,4 +64,3 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
-
