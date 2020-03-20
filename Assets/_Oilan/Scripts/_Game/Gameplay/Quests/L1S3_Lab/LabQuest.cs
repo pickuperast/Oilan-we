@@ -104,7 +104,6 @@ namespace Oilan
             yield return null;
         }
 
-
         public override void ActivateQuest()
         {
             cameraPosOriginal = Camera.main.transform.position;
