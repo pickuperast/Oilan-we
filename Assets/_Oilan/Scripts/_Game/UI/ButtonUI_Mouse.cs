@@ -53,8 +53,6 @@ namespace Oilan
                     PlayerController.Instance.m_Jump = false;
                 }
             }
-
-
         }
 
         private void OnEnable()
@@ -73,6 +71,5 @@ namespace Oilan
             isPressed = false;
             PlayerController.Instance.move = Vector2.zero;
         }
-
     }
 }
