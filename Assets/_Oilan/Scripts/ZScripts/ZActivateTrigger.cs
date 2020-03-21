@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using Object = UnityEngine.Object;
 
 namespace Oilan
@@ -15,9 +16,11 @@ namespace Oilan
             Activate = 2,   // Activate the target GameObject
             Enable = 3,     // Enable a component
             Animate = 4,    // Start animation on target
-            Deactivate = 5  // Decativate target GameObject
+            Deactivate = 5,  // Decativate target GameObject
+            Event = 6  // To do some event
         }
 
+        public UnityEvent triggerEvent;
         public Mode action = Mode.Activate;         // The action to accomplish
         public Object target;                       // The game object to affect. If none, the trigger work on this game object
         public GameObject source;
@@ -81,6 +84,9 @@ namespace Oilan
                         {
                             targetGameObject.SetActive(false);
                         }
+                        break;
+                    case Mode.Event:
+                        triggerEvent.Invoke();
                         break;
                 }
             }

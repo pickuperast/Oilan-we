@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ZDialogPhraseTrigger : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class ZDialogPhraseTrigger : MonoBehaviour
     //скрывает маркер триггера во время игры
     private void Awake()
     {
-        var graphics = GetComponentInChildren<SpriteRenderer>();
+        var graphics = GetComponentInChildren<Image>();
         if (graphics != null) {
             graphics.enabled = false;// && showGizmo;
         }

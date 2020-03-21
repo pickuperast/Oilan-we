@@ -35,10 +35,11 @@ namespace Oilan
         public PlayableAsset oakTimeline_start;
         public PlayableAsset oakTimeline_showProblems;
         public PlayableAsset oakTimeline_hideProblems;
+        public PlayableAsset oakTimeline_endQuest;
         public PlayableAsset oakTimeline_showSymbols;
         public PlayableAsset oakTimeline_hideSymbols;
         public PlayableAsset oakTimeline_showReward;
-        public PlayableAsset oakTimeline_endQuest;
+
 
         private void Start()
         {
@@ -104,6 +105,7 @@ namespace Oilan
             yield return null;
         }
 
+
         public override void ActivateQuest()
         {
             cameraPosOriginal = Camera.main.transform.position;
@@ -114,9 +116,11 @@ namespace Oilan
             GameplayManager.Instance.TurnAutoCamOnOff(false);
             GameplayManager.Instance.MoveCamera(cameraAnchor, cameraTargetSize);
 
-            
-            StartCoroutine(ActivateQuestCoroutine());
+        }
 
+        public void ActivateLockQuest()
+        {
+            StartCoroutine(ActivateQuestCoroutine());
         }
 
         private IEnumerator ActivateQuestCoroutine()
