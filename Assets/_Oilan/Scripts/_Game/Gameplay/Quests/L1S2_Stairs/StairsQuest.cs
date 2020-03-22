@@ -127,12 +127,10 @@ namespace Oilan
         private IEnumerator ActivateQuestCoroutine()
         {
             ClearQuestCanvas();
-          //problemValues newProblems = new ProblemAA().getAbacusSimple(problems.Length);
 
             for (int i = 0; i < problems.Length; i++)
             {
                 problems[i].Init();
-            //  problems[i].Init(newProblems.countsArr[i], newProblems.sumArr[i]);
             }
 
             director.Play(mTimeline_showProblems);
