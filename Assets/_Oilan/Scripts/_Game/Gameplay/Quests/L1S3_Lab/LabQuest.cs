@@ -289,8 +289,6 @@ namespace Oilan
             yield return null;
         }
 
-
-
         private void ShowReward()
         {
             StartCoroutine(ShowRewardCoroutine());

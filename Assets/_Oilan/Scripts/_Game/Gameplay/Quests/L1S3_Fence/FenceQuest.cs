@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.UI;
 
 namespace Oilan
 {
@@ -12,6 +13,8 @@ namespace Oilan
 
         private Vector3 cameraPosOriginal;
         private float cameraSizeOriginal;
+
+        public GameObject star;
 
         public PlayableDirector director;
 
@@ -26,19 +29,9 @@ namespace Oilan
         public ProblemFlashCard[] problems;
         public float checkDelay = 0.5f;
 
-        public List<DragDropObject> ddObjects;
-        public List<DragDropTarget> ddTargets;
-
-        public DragDropObject ddPlate;
-        public DragDropObject ddLetter;
-        
-        public PlayableAsset oakTimeline_start;
         public PlayableAsset oakTimeline_showProblems;
         public PlayableAsset oakTimeline_hideProblems;
-        public PlayableAsset oakTimeline_endQuest;
-        public PlayableAsset oakTimeline_showSymbols;
-        public PlayableAsset oakTimeline_hideSymbols;
-        public PlayableAsset oakTimeline_showReward;
+
 
 
         private void Start()
@@ -78,69 +71,20 @@ namespace Oilan
 
         public override void PreActivateQuest()
         {
-            StartCoroutine(PreActivateQuestCoroutine());
+           // StartCoroutine(PreActivateQuestCoroutine());
         }
-
-        private IEnumerator PreActivateQuestCoroutine()
-        {
-            ClearQuestCanvas();
-            ClearQuestObjects();
-            ClearInteractiveObjects();
-
-            Character_Ali.Instance.ResetCharacterCutscenePosition();
-
-            Character_Ali.Instance.SetSpriteVisibility(false);
-            Character_Ali.Instance.SetCutsceneSpriteVisibility(true);
-
-            GameplayManager.Instance.TurnPlayerControlsOnOff(false);
-
-            director.Play(oakTimeline_start);
-
-            yield return new WaitForSeconds((float)director.duration);
-
-            isPreActivated = true;
-
-            //GameplayManager.Instance.TurnPlayerControlsOnOff(true);
-
-            yield return null;
-        }
-
 
         public override void ActivateQuest()
         {
             cameraPosOriginal = Camera.main.transform.position;
             cameraSizeOriginal = Camera.main.orthographicSize;
 
+            director.Play(oakTimeline_showProblems);
+
             GameplayManager.Instance.TurnPlayerControlsOnOff(false);
 
             GameplayManager.Instance.TurnAutoCamOnOff(false);
-            GameplayManager.Instance.MoveCamera(cameraAnchor, cameraTargetSize);
-
-        }
-
-        public void ActivateLockQuest()
-        {
-            StartCoroutine(ActivateQuestCoroutine());
-        }
-
-        private IEnumerator ActivateQuestCoroutine()
-        {
-            ClearQuestCanvas();
-
-            for (int i = 0; i < problems.Length; i++)
-            {
-                problems[i].Init();
-            }
-
-            director.Play(oakTimeline_showProblems);
-
-            yield return new WaitForSeconds((float)director.duration);
-
-            buttonCheck.SetActive(true);
-
-            isActivated = true;
-
-            yield return null;
+          //  GameplayManager.Instance.MoveCamera(cameraAnchor, cameraTargetSize);
 
         }
 
@@ -159,18 +103,35 @@ namespace Oilan
 
             bool _isSolved = true;
 
-            foreach (ProblemFlashCard problem in problems)
+            for (int i = 0; i< problems.Length;i++) 
             {
-                if (problem.currentState == ProblemFlashCardState.IDLE)
+                if (problems[i].currentState == ProblemFlashCardState.IDLE)
                 {
-                    problem.CheckAnswer();
+                    problems[i].CheckAnswer();
 
-                    if (problem.currentState != ProblemFlashCardState.SOLVED)
+                    yield return new WaitForSeconds(checkDelay);
+
+                    if (problems[i].currentState != ProblemFlashCardState.SOLVED)
                     {
                         _isSolved = false;
                     }
-
-                    yield return new WaitForSeconds(checkDelay);
+                    else
+                    {
+                        problems[i].currentState = ProblemFlashCardState.SOLVED;
+                        problems[i].gameObject.SetActive(false);
+                        if (problems[i].isFirstTime)
+                        {
+                            GameObject starObject = Instantiate(star, new Vector3(problems[i].transform.position.x, problems[i].transform.position.y + 1, problems[i].transform.position.z),
+                            Quaternion.identity, problems[i].transform) as GameObject;            
+                            starObject.AddComponent<Image>().sprite = starObject.GetComponentInChildren<SpriteRenderer>().sprite;
+                            yield return new WaitForSeconds(0.5f);
+                            GameplayScoreManager.Instance.AddCoins(1);
+                            SAudioManagerRef.Instance.PlayAudioFromTimeline("Zv-9 (Волшебный звук для звезды (отлетают на табло в меню “Награды”))");
+                            Destroy(starObject);
+                        }
+                      
+                    }
+                 
                 }
 
             }
@@ -198,115 +159,13 @@ namespace Oilan
 
             yield return new WaitForSeconds((float)director.duration);
 
-            director.Play(oakTimeline_showSymbols);
-
-            foreach (DragDropObject ddSymbol in ddObjects)
-            {
-                ddSymbol.OnPlaced += CheckSymbolsSolved;
-            }
-
-            foreach (DragDropTarget ddTarget in ddTargets)
-            {
-                ddTarget.isOccupied = false;
-            }
-            yield return new WaitForSeconds((float)director.duration + 0.1f);
-            director.Stop();
-            
-            yield return null;
-        }
-
-        public void CheckSymbolsSolved()
-        {
-            StartCoroutine(CheckSymbolsSolvedCoroutine());
-        }
-
-        private IEnumerator CheckSymbolsSolvedCoroutine()
-        {
-
-            bool isFruitsSolved = true;
-
-            foreach (DragDropTarget ddTarget in ddTargets)
-            {
-                if (!ddTarget.isOccupied)
-                {
-                    isFruitsSolved = false;
-                }
-                else
-                {
-                    foreach (DragDropObject ddSymbol in ddObjects)
-                    {
-                        if (ddSymbol.gameObject.activeInHierarchy && ddTarget.id == ddSymbol.id)
-                        {
-                            ddSymbol.GetComponent<DragDropObject>().enabled = false;
-                        }
-                    }
-                }
-
-            }
-
-            if (isFruitsSolved)
-            {
-                SymbolsSolved();
-            }
-
-            yield return null;
-        }
-
-        public void SymbolsSolved()
-        {
-            StartCoroutine(SymbolsSolvedCoroutine());
-        }
-
-        private IEnumerator SymbolsSolvedCoroutine()
-        {
-            director.Play(oakTimeline_hideSymbols);
-
-            yield return new WaitForSeconds((float)director.duration);
-
-            GameplayManager.Instance.MoveCamera(cameraPosOriginal, cameraSizeOriginal);
-            
-            Character_Ali.Instance.GetComponentInChildren<DragDropTarget>().isOccupied = false;
-
-            foreach (DragDropObject ddSymbol in ddObjects)
-            {
-                ddSymbol.GetComponent<Collider2D>().enabled = false;
-            }
-
-            foreach (DragDropTarget ddTarget in ddTargets)
-            {
-                ddTarget.GetComponent<Collider2D>().enabled = false;
-            }
-
-
-            ddPlate.enabled = true;
-            ddPlate.OnPlaced += ShowReward;
- 
-            //var sortPlate = ddPlate.gameObject.GetComponent<CageLetter>();
-            //sortPlate.sortingLayer = "Front";
-
-            yield return null;
-        }
-
-
-
-        private void ShowReward()
-        {
-            StartCoroutine(ShowRewardCoroutine());
-        }
-
-        private IEnumerator ShowRewardCoroutine()
-        {
             ClearQuestCanvas();
-
-            ddPlate.gameObject.SetActive(false);
-            
-            director.Play(oakTimeline_showReward);
-            yield return new WaitForSeconds((float)director.duration);
-
-            Character_Ali.Instance.GetComponentInChildren<DragDropTarget>().isOccupied = false;
-
+            ClearQuestObjects();
+            director.enabled = false;
+            GameplayManager.Instance.TurnPlayerControlsOnOff(true);
+            GameplayManager.Instance.TurnAutoCamOnOff(true);
             yield return null;
-        }           
+        }
 
         public override void DeactivateQuest()
         {
@@ -315,31 +174,13 @@ namespace Oilan
         
         public override void PostDeactivateQuest()
         {
-            StartCoroutine(PostDeactivateQuestCoroutine());
+            //StartCoroutine(PostDeactivateQuestCoroutine());
         }
 
         private IEnumerator PostDeactivateQuestCoroutine()
         {
-            ClearQuestCanvas();
-            ClearQuestObjects();
-            
-            director.Play(oakTimeline_endQuest);
 
-            yield return new WaitForSeconds((float)director.duration);
-
-            director.enabled = false;
-            
-            Character_Ali.Instance.SetSpriteVisibility(true);
-            Character_Ali.Instance.SetCutsceneSpriteVisibility(false);
-
-            GameplayManager.Instance.TurnPlayerControlsOnOff(true);
-            GameplayManager.Instance.TurnAutoCamOnOff(true);
-
-            Character_Ali.Instance.backpack_Value = 1f;
-            Character_Ali.Instance.equipment_Value = 0f;
-            Character_Ali.Instance.hold_Value = 0f;
-           
-            yield return null;
+              yield return null;
         }
 
     }

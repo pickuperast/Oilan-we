@@ -90,10 +90,10 @@ namespace Oilan
             ClearQuestObjects();
             ClearInteractiveObjects();
 
-            Character_Ali.Instance.ResetCharacterCutscenePosition();
+         // Character_Ali.Instance.ResetCharacterCutscenePosition();
 
             Character_Ali.Instance.SetSpriteVisibility(false);
-            Character_Ali.Instance.SetCutsceneSpriteVisibility(true);
+         // Character_Ali.Instance.SetCutsceneSpriteVisibility(true);
 
             GameplayManager.Instance.TurnPlayerControlsOnOff(false);
 
@@ -374,8 +374,8 @@ namespace Oilan
 
             director.enabled = false;
             
-            Character_Ali.Instance.SetSpriteVisibility(true);
-            Character_Ali.Instance.SetCutsceneSpriteVisibility(false);
+     //      Character_Ali.Instance.SetSpriteVisibility(true);
+     //      Character_Ali.Instance.SetCutsceneSpriteVisibility(false);
 
             GameplayManager.Instance.TurnPlayerControlsOnOff(true);
             GameplayManager.Instance.TurnAutoCamOnOff(true);

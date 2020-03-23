@@ -178,10 +178,20 @@ namespace Oilan
                         }
                         else
                         {
-                        
+
+                            problems[i].currentState = ProblemFlashCardState.SOLVED;
                             problems[i].gameObject.SetActive(false);
-                            questObjectsList[i].GetComponent<Animator>().enabled = true;                 
-                            StartCoroutine(WaitForAnimation(i));                          
+                            questObjectsList[i].GetComponent<Animator>().enabled = true;
+
+                            yield return new WaitForSeconds(1);
+                            if (problems[i].isFirstTime)
+                            {
+                                GameObject starObject = Instantiate(star, new Vector3(questObjectsList[i].transform.position.x, questObjectsList[i].transform.position.y + 1, questObjectsList[i].transform.position.z),
+                                    Quaternion.identity, questObjectsList[i].transform) as GameObject;
+                                starObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "Objects_Back";
+                                starObject.GetComponentInChildren<SpriteRenderer>().sortingOrder = 11 + i;
+                            }
+                            SAudioManagerRef.Instance.PlayAudioFromTimeline("Zv-32 (Звук крепления ступеньки (сбор лестницы))");
                         }
                     }
                 }
@@ -197,18 +207,6 @@ namespace Oilan
             }
 
             yield return null;
-        }
-
-        private IEnumerator WaitForAnimation(int index)
-        {
-            yield return new WaitForSeconds(1);
-            if (problems[index].isFirstTime)
-            {
-                GameObject gameObject = Instantiate(star, new Vector3(questObjectsList[index].transform.position.x, questObjectsList[index].transform.position.y + 1, questObjectsList[index].transform.position.z), Quaternion.identity, questObjectsList[index].transform) as GameObject;
-                gameObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "Objects_Back";
-                gameObject.GetComponentInChildren<SpriteRenderer>().sortingOrder = 11 + index;
-            }
-            SAudioManagerRef.Instance.PlayAudioFromTimeline("Zv-32 (Звук крепления ступеньки (сбор лестницы))");           
         }
 
         public override void Solved()
