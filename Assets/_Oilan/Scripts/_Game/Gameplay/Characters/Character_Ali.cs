@@ -221,6 +221,11 @@ namespace Oilan
             SetAnimatorBool("Lift_up_left_hand", isOn);
         }
 
+        public void SetAnimatorMashetRukoi(bool isOn)
+        {
+            SetAnimatorBool("ali_r24");
+        }
+
         public void SetSpriteVisibility(bool newVal)
         {
             //Chest.SetActive(newVal);
