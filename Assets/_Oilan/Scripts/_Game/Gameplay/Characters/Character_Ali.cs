@@ -256,7 +256,7 @@ namespace Oilan
         {
             if (isCutscene)
             {
-                SetCutsceneSpriteVisibility(true);
+               // SetCutsceneSpriteVisibility(true);
 
                 //m_Rigidbody2D.simulated = false;
                 //m_Rigidbody2D.isKinematic = true;
@@ -265,8 +265,8 @@ namespace Oilan
             }
             else
             {
-                SetCutsceneSpriteVisibility(false);
-                ResetCharacterCutscenePosition();
+                //SetCutsceneSpriteVisibility(false);
+               // ResetCharacterCutscenePosition();
 
                 //m_Anim.enabled = false;
                 

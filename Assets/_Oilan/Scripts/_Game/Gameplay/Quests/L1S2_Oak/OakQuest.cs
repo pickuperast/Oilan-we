@@ -200,7 +200,7 @@ namespace Oilan
             director.Play(oakTimeline_hideProblems);
 
             yield return new WaitForSeconds((float)director.duration);
-
+            
             director.Play(oakTimeline_showSymbols);
 
             foreach (DragDropObject ddSymbol in ddObjects)
@@ -214,7 +214,12 @@ namespace Oilan
             }
             yield return new WaitForSeconds((float)director.duration + 0.1f);
             director.Stop();
-            
+
+            foreach (DragDropObject ddSymbol in ddObjects)
+            {
+                ddSymbol.GetComponent<DragDropObject>().enabled = true;
+            }
+
             yield return null;
         }
 

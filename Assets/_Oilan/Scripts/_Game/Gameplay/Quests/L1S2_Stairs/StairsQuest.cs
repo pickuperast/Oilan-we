@@ -30,21 +30,9 @@ namespace Oilan
         public ProblemFlashCard[] problems;
         public float checkDelay = 0.5f;//Задержка между проверками ответов
 
-        public List<DragDropObject> ddObjects;//drag & drop
-        public List<DragDropTarget> ddTargets;
-
-        public DragDropObject ddPlate;
-        public DragDropObject ddLetter;
-
         public PlayableAsset mTimeline_start;
         public PlayableAsset mTimeline_showProblems;
-        public PlayableAsset mTimeline_hideProblems;
-        public PlayableAsset mTimeline_showSymbols;
-        public PlayableAsset mTimeline_hideSymbols;
-        public PlayableAsset mTimeline_showReward;
-        public PlayableAsset mTimeline_letterOpen;
-        public PlayableAsset mTimeline_letterClose;
-        public PlayableAsset mTimeline_endQuest;
+        public PlayableAsset mTimeline_hideProblemsAndEndQuest;
 
         private void Start()
         {
@@ -220,23 +208,24 @@ namespace Oilan
 
             buttonCheck.SetActive(false);
 
-            director.Play(mTimeline_hideProblems);
+            director.Play(mTimeline_hideProblemsAndEndQuest);
 
             yield return new WaitForSeconds((float)director.duration);
 
-            director.Play(mTimeline_showSymbols);
+            ClearQuestCanvas();
+            ClearQuestObjects();
 
-            foreach (DragDropObject ddSymbol in ddObjects)
-            {
-                ddSymbol.OnPlaced += CheckSymbolsSolved;
-            }
+            director.enabled = false;
 
-            foreach (DragDropTarget ddTarget in ddTargets)
-            {
-                ddTarget.isOccupied = false;
-            }
-            yield return new WaitForSeconds((float)director.duration + 0.1f);
-            director.Stop();
+            Character_Ali.Instance.SetSpriteVisibility(true);
+
+
+            GameplayManager.Instance.TurnPlayerControlsOnOff(true);
+            GameplayManager.Instance.TurnAutoCamOnOff(true);
+
+            Character_Ali.Instance.backpack_Value = 1f;
+            Character_Ali.Instance.equipment_Value = 0f;
+            Character_Ali.Instance.hold_Value = 0f;
 
             yield return null;
         }
@@ -249,31 +238,31 @@ namespace Oilan
         private IEnumerator CheckSymbolsSolvedCoroutine()
         {
 
-            bool isFruitsSolved = true;
+            //bool isFruitsSolved = true;
 
-            foreach (DragDropTarget ddTarget in ddTargets)
-            {
-                if (!ddTarget.isOccupied)
-                {
-                    isFruitsSolved = false;
-                }
-                else
-                {
-                    foreach (DragDropObject ddSymbol in ddObjects)
-                    {
-                        if (ddSymbol.gameObject.activeInHierarchy && ddTarget.id == ddSymbol.id)
-                        {
-                            ddSymbol.GetComponent<DragDropObject>().enabled = false;
-                        }
-                    }
-                }
+            //foreach (DragDropTarget ddTarget in ddTargets)
+            //{
+            //    if (!ddTarget.isOccupied)
+            //    {
+            //        isFruitsSolved = false;
+            //    }
+            //    else
+            //    {
+            //        foreach (DragDropObject ddSymbol in ddObjects)
+            //        {
+            //            if (ddSymbol.gameObject.activeInHierarchy && ddTarget.id == ddSymbol.id)
+            //            {
+            //                ddSymbol.GetComponent<DragDropObject>().enabled = false;
+            //            }
+            //        }
+            //    }
 
-            }
+            //}
 
-            if (isFruitsSolved)
-            {
-                SymbolsSolved();
-            }
+            //if (isFruitsSolved)
+            //{
+            //    SymbolsSolved();
+            //}
 
             yield return null;
         }
@@ -285,27 +274,27 @@ namespace Oilan
 
         private IEnumerator SymbolsSolvedCoroutine()
         {
-            director.Play(mTimeline_hideSymbols);
+            //director.Play(mTimeline_hideSymbols);
 
-            yield return new WaitForSeconds((float)director.duration);
+            //yield return new WaitForSeconds((float)director.duration);
 
-            GameplayManager.Instance.MoveCamera(cameraPosOriginal, cameraSizeOriginal);
+            //GameplayManager.Instance.MoveCamera(cameraPosOriginal, cameraSizeOriginal);
 
-            Character_Ali.Instance.GetComponentInChildren<DragDropTarget>().isOccupied = false;
+            //Character_Ali.Instance.GetComponentInChildren<DragDropTarget>().isOccupied = false;
 
-            foreach (DragDropObject ddSymbol in ddObjects)
-            {
-                ddSymbol.GetComponent<Collider2D>().enabled = false;
-            }
+            //foreach (DragDropObject ddSymbol in ddObjects)
+            //{
+            //    ddSymbol.GetComponent<Collider2D>().enabled = false;
+            //}
 
-            foreach (DragDropTarget ddTarget in ddTargets)
-            {
-                ddTarget.GetComponent<Collider2D>().enabled = false;
-            }
+            //foreach (DragDropTarget ddTarget in ddTargets)
+            //{
+            //    ddTarget.GetComponent<Collider2D>().enabled = false;
+            //}
 
 
-            ddPlate.enabled = true;
-            ddPlate.OnPlaced += ShowReward;
+            //ddPlate.enabled = true;
+            //ddPlate.OnPlaced += ShowReward;
 
             //var sortPlate = ddPlate.gameObject.GetComponent<CageLetter>();
             //sortPlate.sortingLayer = "Front";
@@ -322,13 +311,13 @@ namespace Oilan
         {
             ClearQuestCanvas();
 
-            ddPlate.gameObject.SetActive(false);
+            //ddPlate.gameObject.SetActive(false);
 
-            director.Play(mTimeline_showReward);
-            yield return new WaitForSeconds((float)director.duration);
+            //director.Play(mTimeline_showReward);
+            //yield return new WaitForSeconds((float)director.duration);
 
-            ddLetter.OnPlaced += OpenLetter;
-            Character_Ali.Instance.GetComponentInChildren<DragDropTarget>().isOccupied = false;
+            //ddLetter.OnPlaced += OpenLetter;
+            //Character_Ali.Instance.GetComponentInChildren<DragDropTarget>().isOccupied = false;
 
             //var sortLetter = ddLetter.gameObject.GetComponent<CageLetter>();
             //sortLetter.sortingLayer = "Front";
@@ -345,9 +334,9 @@ namespace Oilan
         {
             ClearQuestCanvas();
 
-            ddLetter.gameObject.SetActive(false);
+            //ddLetter.gameObject.SetActive(false);
 
-            director.Play(mTimeline_letterOpen);
+            //director.Play(mTimeline_letterOpen);
 
             yield return new WaitForSeconds((float)director.duration);
 
@@ -366,7 +355,7 @@ namespace Oilan
 
         private IEnumerator CloseLetterCoroutine()
         {
-            director.Play(mTimeline_letterClose);
+            //director.Play(mTimeline_letterClose);
 
             yield return new WaitForSeconds((float)director.duration);
 
@@ -388,7 +377,7 @@ namespace Oilan
             ClearQuestCanvas();
             ClearQuestObjects();
 
-            director.Play(mTimeline_endQuest);
+         //   director.Play(mTimeline_endQuest);
 
             yield return new WaitForSeconds((float)director.duration);
 
