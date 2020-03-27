@@ -253,9 +253,9 @@ namespace Oilan
             SetAnimatorBool("Lift_up_left_hand", isOn);
         }
 
-        public void SetAnimatorMashetRukoi(bool isOn)
+        public void SetAnimator_r24_MashetRukoi()
         {
-            SetAnimatorBool("ali_r24");
+            SetAnimatorTrigger("ali_r24_mashet_levoi_rukoi");
         }
 
         public void SetSpriteVisibility(bool newVal)

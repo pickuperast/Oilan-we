@@ -81,9 +81,9 @@ namespace Oilan
 
             SceneManager.LoadScene(stepSceneName, LoadSceneMode.Additive);
 
-            Destroy(mainCameraObj);
-            mainCameraObj = null;
-            //mainMenuCamera.SetActive(false);
+            //Destroy(mainCameraObj);
+            //mainCameraObj = null;
+            mainMenuCamera.SetActive(false);
 
             while (!stepSceneIsLoaded)
             {

@@ -9,7 +9,6 @@ namespace Oilan
         public static GameplayTheoryManager Instance;
 
         public List<GameObject> theoryScreens;
-
         public string TrainerType;
         public int level;
         public int step;
@@ -27,13 +26,18 @@ namespace Oilan
             }
         }
 
-        //ТУ –  "multiplicationTable"
+        //ТУ – "multiplicationTable"
         //АА – "abacus"
         //ФК – "fleshCart"
         //МА – "mental"
         public void openExternalTrainer()
         {
             WebGLMessageHandler.Instance.PubOpenTrainer(TrainerType, level, step);
+        }
+
+        public void openExternalTrainerString(string l_type)
+        {
+            WebGLMessageHandler.Instance.PubOpenTrainer(l_type, level, step);
         }
     }
 }
