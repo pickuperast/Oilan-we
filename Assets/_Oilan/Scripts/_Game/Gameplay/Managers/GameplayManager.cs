@@ -55,12 +55,8 @@ namespace Oilan
         // DEBUG
         public bool showSaveGameDebugLog = false;
 
-
-
-
-
-
-
+        public List<GameObject> ShouldBeHiddenAtStart;
+        public GameObject FinalUI;
 
         // STANDARD FUNCTIONS
         private void Awake()
@@ -80,6 +76,12 @@ namespace Oilan
             gameplayCameraOriginalSize = gameplayCamera.orthographicSize;
 
             isInitialized = false;
+
+            foreach (GameObject GO in ShouldBeHiddenAtStart)
+            {
+                GO.transform.localPosition = Vector3.zero; // I attempt to set the position of the panel to center
+                GO.active = false;
+            }
         }
 
         private void Start()
@@ -280,7 +282,10 @@ namespace Oilan
                 ChangeGamePlayState(GameplayState.Playing);
             }
         }
-
+        public void ShowLevelFinishedWindow()
+        {
+            FinalUI.SetActive(true);
+        }
         public void WhenPartWasFinished(int part)
         {
             SaveGameManager.Instance.SetPartFinished(next_level_num, next_step_num, part);
