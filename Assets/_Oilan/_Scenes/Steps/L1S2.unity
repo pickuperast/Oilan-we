@@ -1531,7 +1531,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 833dc60347460dc4894081abf8ad2214, type: 2}
     - {fileID: 11400000, guid: ea37ca8c775ba9742b02f683c59dcc6b, type: 2}
     - {fileID: 11400000, guid: 5013c4e2c3e3f8844bee829f8a46edcc, type: 2}
-    - {fileID: 11400000, guid: 6e8cb3aa53c36ba478a6440e311c598d, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -1663,8 +1662,6 @@ MonoBehaviour:
             m_StringArgument: Gameplay
             m_BoolArgument: 0
           m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls: []
 --- !u!320 &124941103
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -1674,7 +1671,7 @@ PlayableDirector:
   m_GameObject: {fileID: 124941099}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 76403a86b06795b49bafcb236e84c402, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 8431b62b5e64bc7468c946857163611b, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -7712,28 +7709,6 @@ MonoBehaviour:
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 833951887}
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 0
-        - m_Target: {fileID: 1850572969}
-          m_MethodName: ChangeActiveUI
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Cutscene
-            m_BoolArgument: 1
-          m_CallState: 2
         - m_Target: {fileID: 2137360378}
           m_MethodName: CleanupTheoryScreens
           m_Mode: 1
@@ -7747,17 +7722,6 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 833951887}
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 0
         - m_Target: {fileID: 2070864618}
           m_MethodName: StopAllTimelines
           m_Mode: 1
@@ -7791,6 +7755,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 833951887}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1150245497}
@@ -7803,6 +7778,17 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: Au-P3-9
             m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 833951887}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
 --- !u!95 &581362204
 Animator:
@@ -11106,12 +11092,12 @@ PrefabInstance:
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.5
+      value: 1.55
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2
+      value: -2.35
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -14125,10 +14111,8 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 74c9292a90640424c98431a98328cd18, type: 2}
-    - {fileID: 11400000, guid: 034639053fdbd6c4a9adc15eadae75e7, type: 2}
     - {fileID: 11400000, guid: 464bfb1a5e79f56469044be4f90d1904, type: 2}
     - {fileID: 11400000, guid: 7221e2640165e024c8709226232494a2, type: 2}
-    - {fileID: 11400000, guid: 44c80190ef591094aa7df31cc6173dbb, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -14189,19 +14173,6 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 833951887}
-          m_MethodName: ResetPosition
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
         - m_Target: {fileID: 1150245497}
           m_MethodName: PlayAudioFromTimeline
           m_Mode: 5
@@ -14248,8 +14219,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls: []
 --- !u!1 &978537874
 GameObject:
   m_ObjectHideFlags: 0
@@ -17571,34 +17540,12 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 74c9292a90640424c98431a98328cd18, type: 2}
-    - {fileID: 11400000, guid: 034639053fdbd6c4a9adc15eadae75e7, type: 2}
     - {fileID: 11400000, guid: 44c80190ef591094aa7df31cc6173dbb, type: 2}
     - {fileID: 11400000, guid: 464bfb1a5e79f56469044be4f90d1904, type: 2}
+    - {fileID: 11400000, guid: 7221e2640165e024c8709226232494a2, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 833951887}
-          m_MethodName: 
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 0
-        - m_Target: {fileID: 1850572969}
-          m_MethodName: ChangeActiveUI
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Cutscene
-            m_BoolArgument: 1
-          m_CallState: 2
         - m_Target: {fileID: 2137360378}
           m_MethodName: CleanupTheoryScreens
           m_Mode: 1
@@ -17612,16 +17559,27 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1150245497}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: au_l1s2p2_2
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 833951887}
-          m_MethodName: ResetPosition
-          m_Mode: 1
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 0
+            m_BoolArgument: 1
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
@@ -17638,15 +17596,15 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1150245497}
-          m_MethodName: PlayAudioFromTimeline
-          m_Mode: 5
+        - m_Target: {fileID: 833951887}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: au_l1s5p2_3
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!95 &1242359968
@@ -18396,7 +18354,7 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 1
+            m_BoolArgument: 0
           m_CallState: 2
 --- !u!320 &1280389845
 PlayableDirector:
@@ -19626,7 +19584,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368133020}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -26571,7 +26529,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 110.00001, y: 192}
+  m_AnchoredPosition: {x: 110, y: 192}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!61 &1890629499
