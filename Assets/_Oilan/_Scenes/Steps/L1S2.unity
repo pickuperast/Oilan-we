@@ -7676,7 +7676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &581362202
 Transform:
   m_ObjectHideFlags: 0
@@ -17539,7 +17539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1242359966
 Transform:
   m_ObjectHideFlags: 0
@@ -18281,6 +18281,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7221e2640165e024c8709226232494a2, type: 2}
     - {fileID: 11400000, guid: 15003b8423b589a43b550dc3c0ba43bb, type: 2}
     - {fileID: 11400000, guid: 5ea7b14610b781f499841751d0dd3a0b, type: 2}
+    - {fileID: 11400000, guid: 5013c4e2c3e3f8844bee829f8a46edcc, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -18372,6 +18373,30 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: Au-P3-22
             m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1850572969}
+          m_MethodName: ChangeActiveUI
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Cutscene
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 833951890}
+          m_MethodName: PauseAFK_Routine
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
 --- !u!320 &1280389845
 PlayableDirector:
@@ -26546,7 +26571,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 110, y: 192}
+  m_AnchoredPosition: {x: 110.00001, y: 192}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!61 &1890629499
