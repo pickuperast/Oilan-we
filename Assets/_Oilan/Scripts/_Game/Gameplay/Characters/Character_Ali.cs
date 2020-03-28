@@ -258,6 +258,15 @@ namespace Oilan
             SetAnimatorTrigger("ali_r24_mashet_levoi_rukoi");
         }
 
+        public void SetAnimatorAli_r40_Trigger()
+        {
+            SetAnimatorTrigger("ali_r40_look_around");
+        }
+        public void SetAnimatorAli_r58_Trigger(bool isOn)
+        {
+            SetAnimatorBool("ali_r58_walk", isOn);
+        }
+        
         public void SetSpriteVisibility(bool newVal)
         {
             //Chest.SetActive(newVal);

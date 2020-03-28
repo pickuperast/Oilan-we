@@ -238,7 +238,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.41785502}
+  m_Offset: {x: 0, y: 2.5230706}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -249,7 +249,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.626782}
+  m_Size: {x: 1, y: 5.837213}
   m_EdgeRadius: 0
 --- !u!114 &32875333
 MonoBehaviour:
@@ -2116,6 +2116,8 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: 74c9292a90640424c98431a98328cd18, type: 2}
     - {fileID: 11400000, guid: 5013c4e2c3e3f8844bee829f8a46edcc, type: 2}
+    - {fileID: 11400000, guid: 44c80190ef591094aa7df31cc6173dbb, type: 2}
+    - {fileID: 11400000, guid: 464bfb1a5e79f56469044be4f90d1904, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -2131,8 +2133,8 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1613841432}
-          m_MethodName: SetCutsceneMode
-          m_Mode: 6
+          m_MethodName: SetAnimatorAli_r40_Trigger
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2141,30 +2143,8 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 1613841432}
-          m_MethodName: ResetCharacterCutscenePosition
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1613841432}
-          m_MethodName: SetCutsceneMode
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1850572969}
           m_MethodName: ChangeActiveUI
           m_Mode: 5
@@ -2188,7 +2168,55 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1613841432}
-          m_MethodName: SetPositionToCutsceneSprite
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Au-P3-24
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorAli_r80_Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorAli_r47_Trigger
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2214,13 +2242,13 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 5630079009320294587, guid: 3e9b9e54ef6ebee49b38425b14d40a4e, type: 2}
-    value: {fileID: 8175776209479368389}
+    value: {fileID: 1613841426}
   - key: {fileID: -217034291556701692, guid: 3e9b9e54ef6ebee49b38425b14d40a4e, type: 2}
-    value: {fileID: 8175776209479368386}
+    value: {fileID: 1613841428}
   - key: {fileID: 2553228365157121549, guid: 3e9b9e54ef6ebee49b38425b14d40a4e, type: 2}
     value: {fileID: 137136272}
   - key: {fileID: -6169536870593253659, guid: 3e9b9e54ef6ebee49b38425b14d40a4e, type: 2}
-    value: {fileID: 8175776209479368386}
+    value: {fileID: 1613841428}
   - key: {fileID: 4274189115410958925, guid: 3e9b9e54ef6ebee49b38425b14d40a4e, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
@@ -7642,12 +7670,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472283515}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 150.19, y: -7.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1261232146}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &491931412
 GameObject:
@@ -15182,7 +15210,7 @@ PlayableDirector:
   - key: {fileID: 254944655479265872, guid: 83af2e3215eddd34f98d87b438ded9d0, type: 2}
     value: {fileID: 956428194}
   - key: {fileID: 4143972547097921291, guid: 83af2e3215eddd34f98d87b438ded9d0, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1613841426}
   - key: {fileID: 7270498306713352537, guid: 83af2e3215eddd34f98d87b438ded9d0, type: 2}
     value: {fileID: 0}
   - key: {fileID: 5099516629788901914, guid: 83af2e3215eddd34f98d87b438ded9d0, type: 2}
@@ -15826,11 +15854,11 @@ PlayableDirector:
   - key: {fileID: 4291293503683619432, guid: 5cad266324eec894cb20da4e2d6979c2, type: 2}
     value: {fileID: 0}
   - key: {fileID: -5322553639847626075, guid: 5cad266324eec894cb20da4e2d6979c2, type: 2}
-    value: {fileID: 8175776209479368386}
+    value: {fileID: 1613841428}
   - key: {fileID: 6148136158510119146, guid: 5cad266324eec894cb20da4e2d6979c2, type: 2}
-    value: {fileID: 8175776209479368389}
+    value: {fileID: 1613841426}
   - key: {fileID: -1281913355810571557, guid: 5cad266324eec894cb20da4e2d6979c2, type: 2}
-    value: {fileID: 8175776209479368386}
+    value: {fileID: 1613841428}
   - key: {fileID: 0}
     value: {fileID: 977285925}
   - key: {fileID: -8976964868074880885, guid: 5cad266324eec894cb20da4e2d6979c2, type: 2}
@@ -15857,22 +15885,17 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 74c9292a90640424c98431a98328cd18, type: 2}
-    - {fileID: 11400000, guid: 034639053fdbd6c4a9adc15eadae75e7, type: 2}
     - {fileID: 11400000, guid: 32f0d995037c6d64a85ab344803e9dcc, type: 2}
+    - {fileID: 11400000, guid: 44c80190ef591094aa7df31cc6173dbb, type: 2}
+    - {fileID: 11400000, guid: 464bfb1a5e79f56469044be4f90d1904, type: 2}
+    - {fileID: 11400000, guid: 9285d95eaa510e143bf81e7b3b8aa258, type: 2}
+    - {fileID: 11400000, guid: 15003b8423b589a43b550dc3c0ba43bb, type: 2}
+    - {fileID: 11400000, guid: 5ea7b14610b781f499841751d0dd3a0b, type: 2}
+    - {fileID: 11400000, guid: adf96489221277143a1d76a336bf20f0, type: 2}
+    - {fileID: 11400000, guid: 7221e2640165e024c8709226232494a2, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1613841432}
-          m_MethodName: SetCutsceneMode
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
         - m_Target: {fileID: 1850572969}
           m_MethodName: ChangeActiveUI
           m_Mode: 5
@@ -15896,8 +15919,8 @@ MonoBehaviour:
             m_BoolArgument: 1
           m_CallState: 2
         - m_Target: {fileID: 1613841432}
-          m_MethodName: ResetPosition
-          m_Mode: 1
+          m_MethodName: SetAnimatorAli_r58_Trigger
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15905,19 +15928,6 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1613841432}
-          m_MethodName: ResetPosition
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
@@ -15930,6 +15940,141 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: Videos/video_l1s3p2_1..mp4
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorAli_r58_Trigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimator_r24_MashetRukoi
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: au_l1s3p1_1
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorAli_r19_Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorAli_r59_Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: au_l1s3p1_2
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: au_l1s3p2_1
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &978537874
@@ -16781,7 +16926,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4343338, y: -1.5605807}
+  m_Offset: {x: 0.4343338, y: 0.0906291}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -16792,7 +16937,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3030243, y: 2.5050259}
+  m_Size: {x: 1.3030243, y: 5.8074455}
   m_EdgeRadius: 0
 --- !u!1 &1052990775
 GameObject:
@@ -17376,7 +17521,7 @@ MonoBehaviour:
   stepID: 
   next_level_num: 0
   next_step_num: 0
-  startFromFirstTimeline: 0
+  startFromFirstTimeline: 1
   gameplayCamera: {fileID: 519420031}
   gameplayAutoCam: {fileID: 873330949}
   gameplayCanvas: {fileID: 869214884}
@@ -18138,6 +18283,8 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 74c9292a90640424c98431a98328cd18, type: 2}
+    - {fileID: 11400000, guid: 464bfb1a5e79f56469044be4f90d1904, type: 2}
+    - {fileID: 11400000, guid: 9285d95eaa510e143bf81e7b3b8aa258, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -18155,6 +18302,54 @@ MonoBehaviour:
         - m_Target: {fileID: 2137360378}
           m_MethodName: CleanupTheoryScreens
           m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: au_l1s3p2_5
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: au_l1s3p2_6
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -20093,7 +20288,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.22258973}
+  m_Offset: {x: 0, y: 3.0824127}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -20104,7 +20299,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9371948, y: 3.7882152}
+  m_Size: {x: 1.9371948, y: 9.507862}
   m_EdgeRadius: 0
 --- !u!1 &1232652037
 GameObject:
@@ -21106,6 +21301,7 @@ Transform:
   - {fileID: 135870855}
   - {fileID: 1791673470}
   - {fileID: 1467872631}
+  - {fileID: 472283517}
   m_Father: {fileID: 1863380749}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27298,7 +27494,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15679932, y: -0.0657537}
+  m_Offset: {x: 0.15679932, y: 0.39729118}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -27309,7 +27505,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26153564, y: 2.0217128}
+  m_Size: {x: 0.26153564, y: 3.1330194}
   m_EdgeRadius: 0
 --- !u!1 &1604089173
 GameObject:
@@ -27705,22 +27901,22 @@ PrefabInstance:
     - target: {fileID: 8175776208716393839, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.19519517
+      value: -0.20504962
       objectReference: {fileID: 0}
     - target: {fileID: 8175776208716393839, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98076445
+      value: 0.9787516
       objectReference: {fileID: 0}
     - target: {fileID: 8175776208718745993, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.00016440857
+      value: 0.015637467
       objectReference: {fileID: 0}
     - target: {fileID: 8175776208718745993, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99987775
       objectReference: {fileID: 0}
     - target: {fileID: 8175776208935261029, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -27735,92 +27931,92 @@ PrefabInstance:
     - target: {fileID: 8175776208935726415, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00016440857
+      value: -0.015637467
       objectReference: {fileID: 0}
     - target: {fileID: 8175776208935726415, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99987775
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209023969150, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.17640382
+      value: 0.19313163
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209023969150, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9843179
+      value: 0.98117286
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209124053407, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.07079466
+      value: 0.12737277
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209124053407, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99749094
+      value: 0.9918549
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209440678485, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00053723034
+      value: 0.031024147
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209440678485, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999999
+      value: 0.99951863
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209474989120, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00009699732
+      value: -0.013764009
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209474989120, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9999053
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209791432492, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.019922549
+      value: -0.043195304
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209791432492, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9998015
+      value: 0.99906665
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209848059401, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.020404534
+      value: 0.05522478
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209848059401, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9997918
+      value: 0.998474
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209942908745, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.014893407
+      value: -0.004216
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209942908745, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99988914
+      value: 0.9999911
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 120.06
+      value: -5.22
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.03
+      value: -3.31
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -27885,22 +28081,22 @@ PrefabInstance:
     - target: {fileID: 8175776210009565380, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.030155227
+      value: -0.010508099
       objectReference: {fileID: 0}
     - target: {fileID: 8175776210009565380, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9995453
+      value: 0.9999448
       objectReference: {fileID: 0}
     - target: {fileID: 8175776210142766100, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000030335068
+      value: -0.002893063
       objectReference: {fileID: 0}
     - target: {fileID: 8175776210142766100, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9999958
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 290012830, guid: a78faa85e2a730d4b8af34fedfcdeec1, type: 3}
@@ -31514,6 +31710,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: au_l1s5p2_3
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!320 &1860007344
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -31992,10 +32199,6 @@ MonoBehaviour:
   - {fileID: 1715088486}
   - {fileID: 1178010592}
   checkDelay: 0.5
-  ddObjects: []
-  ddTargets: []
-  ddPlate: {fileID: 0}
-  ddLetter: {fileID: 0}
   oakTimeline_start: {fileID: 11400000, guid: c508a71467530764aac1bc782b9c5d6d, type: 2}
   oakTimeline_showProblems: {fileID: 11400000, guid: b2a7defef42466d448b2c98360e78a28,
     type: 2}
@@ -32052,9 +32255,20 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1906965343}
-          m_MethodName: PostDeactivateQuest
-          m_Mode: 1
+        - m_Target: {fileID: 1850572969}
+          m_MethodName: ChangeActiveUI
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Gameplay
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetCutsceneMode
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -32072,7 +32286,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1906965341}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: b2a7defef42466d448b2c98360e78a28, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 319cbe85e80009d4b806337726100bda, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
@@ -35508,6 +35722,28 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Au-P3-23
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1613841432}
@@ -35554,6 +35790,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!95 &2060290548
 Animator:
   serializedVersion: 3
@@ -35589,13 +35836,13 @@ PlayableDirector:
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -7008572943643532475, guid: c63a08a2ff1251e40adb9217ee416493, type: 2}
-    value: {fileID: 8175776209479368386}
+    value: {fileID: 1613841428}
   - key: {fileID: -8520251083986836857, guid: c63a08a2ff1251e40adb9217ee416493, type: 2}
     value: {fileID: 2060290545}
   - key: {fileID: -8844788848202230319, guid: c63a08a2ff1251e40adb9217ee416493, type: 2}
     value: {fileID: 0}
   - key: {fileID: 912506019045858152, guid: c63a08a2ff1251e40adb9217ee416493, type: 2}
-    value: {fileID: 8175776209479368389}
+    value: {fileID: 1613841426}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &2070864616
@@ -45703,7 +45950,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776208773508140}
-  m_LocalRotation: {x: 0, y: 0, z: -0.0005044609, w: 0.99999994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.22, y: -2.496, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -45798,7 +46045,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776209070427699}
-  m_LocalRotation: {x: 0, y: 0, z: 0.025618063, w: 0.9996719}
+  m_LocalRotation: {x: 0, y: 0, z: 0.052335896, w: 0.9986295}
   m_LocalPosition: {x: -0.207, y: -1.371, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -45947,7 +46194,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776209127079700}
-  m_LocalRotation: {x: 0, y: 0, z: 0.009468238, w: 0.9999552}
+  m_LocalRotation: {x: 0, y: 0, z: 0.020593435, w: 0.999788}
   m_LocalPosition: {x: -0.1, y: -1.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -46279,7 +46526,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776209445806332}
-  m_LocalRotation: {x: 0, y: 0, z: -0.026902085, w: 0.9996381}
+  m_LocalRotation: {x: 0, y: 0, z: -0.030364104, w: 0.9995389}
   m_LocalPosition: {x: -0.18, y: -2.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -46358,7 +46605,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776209512318835}
-  m_LocalRotation: {x: 0, y: 0, z: 0.011728916, w: 0.9999312}
+  m_LocalRotation: {x: 0, y: 0, z: 0.015096553, w: 0.99988604}
   m_LocalPosition: {x: -0.1, y: -1.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -46604,7 +46851,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776209800731049}
-  m_LocalRotation: {x: 0, y: 0, z: 0.08018528, w: 0.99678}
+  m_LocalRotation: {x: 0, y: 0, z: 0.070191704, w: 0.99753356}
   m_LocalPosition: {x: 0.29399756, y: -0.29300004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -46996,7 +47243,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776209988641912}
-  m_LocalRotation: {x: 0, y: 0, z: -0.0016088814, w: 0.99999875}
+  m_LocalRotation: {x: 0, y: 0, z: -0.043619405, w: 0.9990483}
   m_LocalPosition: {x: -0.521, y: 1.361, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -47011,7 +47258,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776210020985455}
-  m_LocalRotation: {x: 0, y: 0, z: 0.0046905894, w: 0.99998903}
+  m_LocalRotation: {x: 0, y: 0, z: -0.0008726012, w: 0.99999964}
   m_LocalPosition: {x: -0.3379986, y: -0.29300004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -47093,7 +47340,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776210200012121}
-  m_LocalRotation: {x: 0, y: 0, z: -0.19682847, w: 0.98043793}
+  m_LocalRotation: {x: 0, y: 0, z: -0.19509031, w: 0.98078537}
   m_LocalPosition: {x: -0.217, y: -1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -47175,7 +47422,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776210206038451}
-  m_LocalRotation: {x: 0, y: 0, z: 0.0027270631, w: 0.9999963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.7399999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -47407,7 +47654,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776210439663430}
-  m_LocalRotation: {x: 0, y: 0, z: 0.17917785, w: 0.98381674}
+  m_LocalRotation: {x: 0, y: 0, z: 0.17622578, w: 0.98434985}
   m_LocalPosition: {x: 0.16, y: 1.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -47422,7 +47669,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776210518006623}
-  m_LocalRotation: {x: 0, y: 0, z: 0.015613125, w: 0.99987817}
+  m_LocalRotation: {x: 0, y: 0, z: 0.14806834, w: 0.98897713}
   m_LocalPosition: {x: 0.365, y: -1.029, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -47504,7 +47751,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776210519516537}
-  m_LocalRotation: {x: 0, y: 0, z: -0.0027271567, w: 0.9999963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
