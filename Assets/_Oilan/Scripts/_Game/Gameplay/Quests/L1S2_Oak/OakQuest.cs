@@ -271,6 +271,8 @@ namespace Oilan
 
             yield return new WaitForSeconds((float)director.duration);
 
+            questObjectsList[2].gameObject.SetActive(false);
+
             GameplayManager.Instance.MoveCamera(cameraPosOriginal, cameraSizeOriginal);
             
             Character_Ali.Instance.GetComponentInChildren<DragDropTarget>().isOccupied = false;
