@@ -78,11 +78,6 @@ namespace Oilan
             ClearQuestObjects();
             ClearInteractiveObjects();
 
-            Character_Ali.Instance.ResetCharacterCutscenePosition();
-
-            Character_Ali.Instance.SetSpriteVisibility(false);
-            Character_Ali.Instance.SetCutsceneSpriteVisibility(true);
-
             GameplayManager.Instance.TurnPlayerControlsOnOff(false);
 
             director.Play(oakTimeline_start);
@@ -194,7 +189,6 @@ namespace Oilan
             director.Play(oakTimeline_endQuest);
             
             yield return new WaitForSeconds((float)director.duration);
-            director.Stop();
 
             ClearQuestCanvas();
             ClearQuestObjects();
@@ -230,10 +224,7 @@ namespace Oilan
 
             yield return new WaitForSeconds((float)director.duration);
 
-            director.enabled = false;
-            
-            Character_Ali.Instance.SetSpriteVisibility(true);
-            Character_Ali.Instance.SetCutsceneSpriteVisibility(false);
+            director.enabled = false;           
 
             GameplayManager.Instance.TurnPlayerControlsOnOff(true);
             GameplayManager.Instance.TurnAutoCamOnOff(true);
