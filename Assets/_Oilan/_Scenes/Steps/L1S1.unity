@@ -41689,17 +41689,6 @@ MonoBehaviour:
               jeleza), dergaetsa no ne otkryvaetsa)
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1305392200}
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1150245497}
@@ -43231,6 +43220,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398321031663430701, guid: 200027717cd4dd046bfc42052a8b37d4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.023314415
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398321031663430701, guid: 200027717cd4dd046bfc42052a8b37d4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9997282
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 200027717cd4dd046bfc42052a8b37d4, type: 3}

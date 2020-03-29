@@ -1,7 +1,16 @@
 fileFormatVersion: 2
 guid: 4087b9c86ea9a70468498fa6ace60b7b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3566533417775201113
+    second: Tree_High_Fat_0
+  - first:
+      213: -8456820181387062575
+    second: Tree_High_Fat_1
+  - first:
+      213: 9098185078684324449
+    second: Tree_High_Fat_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +79,120 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tree_High_Fat_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1012
+        height: 1434
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 117, y: -237}
+        - {x: 241, y: -717}
+        - {x: -226, y: -717}
+        - {x: -186, y: -284}
+        - {x: -506, y: -280}
+        - {x: -506, y: 717}
+        - {x: 506, y: 717}
+        - {x: 506, y: -211}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e0d1fe6d426a24bb676d2169d1bf4d
+      internalID: -3566533417775201113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree_High_Fat_1
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 0
+        width: 214
+        height: 481
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -107, y: -157.5}
+        - {x: -107, y: 240.5}
+        - {x: 107, y: 240.5}
+        - {x: 107, y: -240.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e0da8e6fa9d69459277c7259e42d34
+      internalID: -8456820181387062575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree_High_Fat_2
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 0
+        width: 214
+        height: 481
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5586d7d512104774d8999e1944f7b2bd
+      internalID: 9098185078684324449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
