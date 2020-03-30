@@ -74,12 +74,6 @@ namespace Oilan
 
         private IEnumerator PreActivateQuestCoroutine()
         {
-            ClearQuestCanvas();
-            ClearQuestObjects();
-            ClearInteractiveObjects();
-
-            GameplayManager.Instance.TurnPlayerControlsOnOff(false);
-
             director.Play(oakTimeline_start);
 
             yield return new WaitForSeconds((float)director.duration);
@@ -94,13 +88,19 @@ namespace Oilan
 
         public override void ActivateQuest()
         {
+            ClearQuestCanvas();
+            ClearQuestObjects();
+            ClearInteractiveObjects();
+
             cameraPosOriginal = Camera.main.transform.position;
             cameraSizeOriginal = Camera.main.orthographicSize;
 
             GameplayManager.Instance.TurnPlayerControlsOnOff(false);
-
             GameplayManager.Instance.TurnAutoCamOnOff(false);
+
             GameplayManager.Instance.MoveCamera(cameraAnchor, cameraTargetSize);
+
+            StartCoroutine(PreActivateQuestCoroutine());
 
         }
 
@@ -184,10 +184,6 @@ namespace Oilan
 
             director.Play(oakTimeline_hideProblems);
 
-            yield return new WaitForSeconds((float)director.duration);
-
-            director.Play(oakTimeline_endQuest);
-            
             yield return new WaitForSeconds((float)director.duration);
 
             ClearQuestCanvas();

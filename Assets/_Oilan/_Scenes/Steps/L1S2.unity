@@ -11124,12 +11124,12 @@ PrefabInstance:
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.55
+      value: -5.8
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.35
+      value: -2.95
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -15136,7 +15136,7 @@ MonoBehaviour:
   stepID: L1S2
   next_level_num: 1
   next_step_num: 3
-  startFromFirstTimeline: 0
+  startFromFirstTimeline: 1
   gameplayCamera: {fileID: 519420031}
   gameplayAutoCam: {fileID: 873330949}
   gameplayCanvas: {fileID: 869214884}
@@ -16040,7 +16040,7 @@ Transform:
   m_GameObject: {fileID: 1146261512}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.205, y: 2.5, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 1278674093}
   m_Father: {fileID: 1402058559}
@@ -18195,15 +18195,15 @@ SpriteRenderer:
   m_SortingLayerID: -1452548069
   m_SortingLayer: 5
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 05fcff1fd1142734d9b7deac9153b37e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a383c4e3d256a834eaadbb74e264f590, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.8, y: 3}
+  m_Size: {x: 0.41, y: 0.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1280389842
@@ -26630,7 +26630,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 109.99999, y: 192}
+  m_AnchoredPosition: {x: 110, y: 192}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!61 &1890629499
@@ -29608,7 +29608,7 @@ PlayableDirector:
   m_GameObject: {fileID: 2106483131}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 9da74f6511504d442b31dd7bea062f97, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 30dfcbaceb3be7448bb140cc962d26a1, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
@@ -29968,8 +29968,8 @@ MonoBehaviour:
   questObjectsList:
   - {fileID: 1146261512}
   - {fileID: 612933303}
-  - {fileID: 1826803952}
   interactiveObjectsList: []
+  symbolTargets: {fileID: 1826803952}
   oak: {fileID: 998018775}
   buttonCheck: {fileID: 653029521598210539}
   problems:

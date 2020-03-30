@@ -20,7 +20,8 @@ namespace Oilan
         public GameObject[] questObjectsList;
 
         public GameObject[] interactiveObjectsList;
-        
+
+        public GameObject symbolTargets;
         public GameObject oak;
 
         public GameObject buttonCheck;
@@ -271,7 +272,7 @@ namespace Oilan
 
             yield return new WaitForSeconds((float)director.duration);
 
-            questObjectsList[2].gameObject.SetActive(false);
+            symbolTargets.SetActive(false);
 
             GameplayManager.Instance.MoveCamera(cameraPosOriginal, cameraSizeOriginal);
             
