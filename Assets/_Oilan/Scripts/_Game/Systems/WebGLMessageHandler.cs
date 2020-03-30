@@ -169,7 +169,7 @@ namespace Oilan
 
         public void TestSetProgress()
         {
-            SetData("{id:18, level:1,step:1,part:1,stars:0}");
+            SetData("{id:18, level:1,step:4,part:1,stars:0}");
         }
 
 //#if UNITY_WEBGL
@@ -193,7 +193,7 @@ namespace Oilan
 
         bool WebPlatform()
         {
-            return Application.platform == RuntimePlatform.WebGLPlayer;//!= for testing in pickuperast.github.io and oilan.kz
+            return Application.platform != RuntimePlatform.WebGLPlayer;//!= for testing in pickuperast.github.io and oilan.kz
         }
 
         public SaveData GetData()

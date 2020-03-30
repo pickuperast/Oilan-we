@@ -16828,6 +16828,8 @@ MonoBehaviour:
   characterStartAnchor: {fileID: 693415796}
   controlsUI: {fileID: 1256819513}
   showSaveGameDebugLog: 0
+  ShouldBeHiddenAtStart: []
+  FinalUI: {fileID: 0}
 --- !u!114 &1092593892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30896,8 +30898,6 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 2949476655223664262, guid: dce02e1d2daa0f347bb617f9d57d69b6, type: 2}
     value: {fileID: 1622427168}
-  - key: {fileID: -5111468878651647191, guid: dce02e1d2daa0f347bb617f9d57d69b6, type: 2}
-    value: {fileID: 0}
   - key: {fileID: 2156345037671785762, guid: dce02e1d2daa0f347bb617f9d57d69b6, type: 2}
     value: {fileID: 1863416138}
   m_ExposedReferences:
@@ -31295,10 +31295,6 @@ MonoBehaviour:
   - {fileID: 1715088486}
   - {fileID: 1178010592}
   checkDelay: 0.5
-  ddObjects: []
-  ddTargets: []
-  ddPlate: {fileID: 0}
-  ddLetter: {fileID: 0}
   oakTimeline_start: {fileID: 11400000, guid: c508a71467530764aac1bc782b9c5d6d, type: 2}
   oakTimeline_showProblems: {fileID: 11400000, guid: b2a7defef42466d448b2c98360e78a28,
     type: 2}
@@ -31306,9 +31302,6 @@ MonoBehaviour:
     type: 2}
   oakTimeline_endQuest: {fileID: 11400000, guid: 319cbe85e80009d4b806337726100bda,
     type: 2}
-  oakTimeline_showSymbols: {fileID: 0}
-  oakTimeline_hideSymbols: {fileID: 0}
-  oakTimeline_showReward: {fileID: 0}
 --- !u!114 &1906965344
 MonoBehaviour:
   m_ObjectHideFlags: 0

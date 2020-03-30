@@ -27,6 +27,12 @@ namespace Oilan
         public List<float> AudioIdleSecondAFKLength;
         private Character_Ali m_Character;
 
+
+        public void PauseAFK_Routine(bool isOn)
+        {
+            idlePause = isOn;
+        }
+
         private void Update()
         {
             if (!idlePause)

@@ -25,20 +25,11 @@ namespace Oilan
 
         public ProblemAA_1_1_3[] problems;
         public float checkDelay = 0.5f;
-
-        public List<DragDropObject> ddObjects;
-        public List<DragDropTarget> ddTargets;
-
-        public DragDropObject ddPlate;
-        public DragDropObject ddLetter;
-        
+     
         public PlayableAsset oakTimeline_start;
         public PlayableAsset oakTimeline_showProblems;
         public PlayableAsset oakTimeline_hideProblems;
         public PlayableAsset oakTimeline_endQuest;
-        public PlayableAsset oakTimeline_showSymbols;
-        public PlayableAsset oakTimeline_hideSymbols;
-        public PlayableAsset oakTimeline_showReward;
 
 
         private void Start()
@@ -83,17 +74,6 @@ namespace Oilan
 
         private IEnumerator PreActivateQuestCoroutine()
         {
-            ClearQuestCanvas();
-            ClearQuestObjects();
-            ClearInteractiveObjects();
-
-            Character_Ali.Instance.ResetCharacterCutscenePosition();
-
-            Character_Ali.Instance.SetSpriteVisibility(false);
-            Character_Ali.Instance.SetCutsceneSpriteVisibility(true);
-
-            GameplayManager.Instance.TurnPlayerControlsOnOff(false);
-
             director.Play(oakTimeline_start);
 
             yield return new WaitForSeconds((float)director.duration);
@@ -108,13 +88,19 @@ namespace Oilan
 
         public override void ActivateQuest()
         {
+            ClearQuestCanvas();
+            ClearQuestObjects();
+            ClearInteractiveObjects();
+
             cameraPosOriginal = Camera.main.transform.position;
             cameraSizeOriginal = Camera.main.orthographicSize;
 
             GameplayManager.Instance.TurnPlayerControlsOnOff(false);
-
             GameplayManager.Instance.TurnAutoCamOnOff(false);
+
             GameplayManager.Instance.MoveCamera(cameraAnchor, cameraTargetSize);
+
+            StartCoroutine(PreActivateQuestCoroutine());
 
         }
 
@@ -200,113 +186,20 @@ namespace Oilan
 
             yield return new WaitForSeconds((float)director.duration);
 
-            director.Play(oakTimeline_showSymbols);
-
-            foreach (DragDropObject ddSymbol in ddObjects)
-            {
-                ddSymbol.OnPlaced += CheckSymbolsSolved;
-            }
-
-            foreach (DragDropTarget ddTarget in ddTargets)
-            {
-                ddTarget.isOccupied = false;
-            }
-            yield return new WaitForSeconds((float)director.duration + 0.1f);
-            director.Stop();
-            
-            yield return null;
-        }
-
-        public void CheckSymbolsSolved()
-        {
-            StartCoroutine(CheckSymbolsSolvedCoroutine());
-        }
-
-        private IEnumerator CheckSymbolsSolvedCoroutine()
-        {
-
-            bool isFruitsSolved = true;
-
-            foreach (DragDropTarget ddTarget in ddTargets)
-            {
-                if (!ddTarget.isOccupied)
-                {
-                    isFruitsSolved = false;
-                }
-                else
-                {
-                    foreach (DragDropObject ddSymbol in ddObjects)
-                    {
-                        if (ddSymbol.gameObject.activeInHierarchy && ddTarget.id == ddSymbol.id)
-                        {
-                            ddSymbol.GetComponent<DragDropObject>().enabled = false;
-                        }
-                    }
-                }
-
-            }
-
-            if (isFruitsSolved)
-            {
-                SymbolsSolved();
-            }
-
-            yield return null;
-        }
-
-        public void SymbolsSolved()
-        {
-            StartCoroutine(SymbolsSolvedCoroutine());
-        }
-
-        private IEnumerator SymbolsSolvedCoroutine()
-        {
-            director.Play(oakTimeline_hideSymbols);
-
-            yield return new WaitForSeconds((float)director.duration);
-
-            GameplayManager.Instance.MoveCamera(cameraPosOriginal, cameraSizeOriginal);
-            
-            Character_Ali.Instance.GetComponentInChildren<DragDropTarget>().isOccupied = false;
-
-            foreach (DragDropObject ddSymbol in ddObjects)
-            {
-                ddSymbol.GetComponent<Collider2D>().enabled = false;
-            }
-
-            foreach (DragDropTarget ddTarget in ddTargets)
-            {
-                ddTarget.GetComponent<Collider2D>().enabled = false;
-            }
-
-
-            ddPlate.enabled = true;
-            ddPlate.OnPlaced += ShowReward;
- 
-            //var sortPlate = ddPlate.gameObject.GetComponent<CageLetter>();
-            //sortPlate.sortingLayer = "Front";
-
-            yield return null;
-        }
-
-        private void ShowReward()
-        {
-            StartCoroutine(ShowRewardCoroutine());
-        }
-
-        private IEnumerator ShowRewardCoroutine()
-        {
             ClearQuestCanvas();
+            ClearQuestObjects();
+     
+            director.enabled = false;
 
-            ddPlate.gameObject.SetActive(false);
-            
-            director.Play(oakTimeline_showReward);
-            yield return new WaitForSeconds((float)director.duration);
+            GameplayManager.Instance.TurnPlayerControlsOnOff(true);
+            GameplayManager.Instance.TurnAutoCamOnOff(true);
 
-            Character_Ali.Instance.GetComponentInChildren<DragDropTarget>().isOccupied = false;
+            Character_Ali.Instance.backpack_Value = 1f;
+            Character_Ali.Instance.equipment_Value = 0f;
+            Character_Ali.Instance.hold_Value = 0f;
 
             yield return null;
-        }           
+        }
 
         public override void DeactivateQuest()
         {
@@ -327,10 +220,7 @@ namespace Oilan
 
             yield return new WaitForSeconds((float)director.duration);
 
-            director.enabled = false;
-            
-            Character_Ali.Instance.SetSpriteVisibility(true);
-            Character_Ali.Instance.SetCutsceneSpriteVisibility(false);
+            director.enabled = false;           
 
             GameplayManager.Instance.TurnPlayerControlsOnOff(true);
             GameplayManager.Instance.TurnAutoCamOnOff(true);

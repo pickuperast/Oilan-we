@@ -67,11 +67,11 @@ namespace Oilan
 
         public void ChangeAudioSource()//because unity webgl cant play with 2 audiosources
         {
-            musicSource.enabled = false;
-            Destroy(musicSource);
-            GameObject GOAudioManager;
-            GOAudioManager = GameObject.Find("GameplayAudioHandler");
-            musicSource = GOAudioManager.GetComponent<AudioSource>();
+            //musicSource.enabled = false;
+            //Destroy(musicSource);
+            //GameObject GOAudioManager;
+            //GOAudioManager = GameObject.Find("GameplayAudioHandler");
+            //musicSource = GOAudioManager.GetComponent<AudioSource>();
         }
         /*
         void Update()

@@ -2279,9 +2279,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MaxSpeed: 4.5
-  m_JumpForce: 500
+  m_JumpForce: 700
   m_CrouchSpeed: 0.25
-  m_AirControl: 0
+  m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 1
@@ -2290,7 +2290,7 @@ MonoBehaviour:
   backpack_Value: 1
   equipment_Value: 0
   hold_Value: 0
-  Chest: {fileID: 0}
+  Chest: {fileID: 8175776208935726400}
   m_items:
   - name: Abacus
     m_sprite: {fileID: 21300000, guid: 9e1549e92a4078049862218f86a37d29, type: 3}
@@ -2310,9 +2310,16 @@ MonoBehaviour:
     m_sprite: {fileID: -5745161450419549214, guid: 712f1e6887b1d2a4787a32b19160ae1b,
       type: 3}
     Backpack: {fileID: 8175776208549258496}
-    isEquipped: 0
+    isEquipped: 1
     isForLeftHand: 0
     isForBack: 1
+    isForFoot: 0
+  - name: Plate
+    m_sprite: {fileID: 21300000, guid: a383c4e3d256a834eaadbb74e264f590, type: 3}
+    Backpack: {fileID: 0}
+    isEquipped: 0
+    isForLeftHand: 1
+    isForBack: 0
     isForFoot: 0
   LeftHand: {fileID: 2001975955995940535}
   Back: {fileID: 8175776208549258510}
