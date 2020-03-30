@@ -1640,17 +1640,6 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 833951887}
-          m_MethodName: SetCutsceneMode
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1850572969}
           m_MethodName: ChangeActiveUI
           m_Mode: 5
@@ -1671,14 +1660,12 @@ PlayableDirector:
   m_GameObject: {fileID: 124941099}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 8431b62b5e64bc7468c946857163611b, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 38ebf3a8e1cf9a945890934ee14a7ef4, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: -8582007313530321661, guid: 38ebf3a8e1cf9a945890934ee14a7ef4, type: 2}
-    value: {fileID: 833951888}
   - key: {fileID: 6867996836836762781, guid: 38ebf3a8e1cf9a945890934ee14a7ef4, type: 2}
     value: {fileID: 0}
   - key: {fileID: 7200090177894259962, guid: 38ebf3a8e1cf9a945890934ee14a7ef4, type: 2}
@@ -1687,8 +1674,6 @@ PlayableDirector:
     value: {fileID: 699658232}
   - key: {fileID: 5864041402548235167, guid: 38ebf3a8e1cf9a945890934ee14a7ef4, type: 2}
     value: {fileID: 124941099}
-  - key: {fileID: -4976899005302616260, guid: 8431b62b5e64bc7468c946857163611b, type: 2}
-    value: {fileID: 833951888}
   - key: {fileID: -9069477140962018637, guid: 8431b62b5e64bc7468c946857163611b, type: 2}
     value: {fileID: 1515903695}
   - key: {fileID: 4639003522721930970, guid: 8431b62b5e64bc7468c946857163611b, type: 2}
@@ -1841,8 +1826,6 @@ PlayableDirector:
     value: {fileID: 630199880}
   - key: {fileID: 0}
     value: {fileID: 2106934312}
-  - key: {fileID: -2780956972781964972, guid: 0b0899f71a69cba4988c7d106e9ac58a, type: 2}
-    value: {fileID: 833951888}
   - key: {fileID: -4914104869728235766, guid: 0b0899f71a69cba4988c7d106e9ac58a, type: 2}
     value: {fileID: 833951889}
   - key: {fileID: -5757008831276496153, guid: 0b0899f71a69cba4988c7d106e9ac58a, type: 2}
@@ -11124,12 +11107,12 @@ PrefabInstance:
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.8
+      value: -7.02
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.95
+      value: -3.16
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -26630,7 +26613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 110, y: 192}
+  m_AnchoredPosition: {x: 110.00001, y: 192}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!61 &1890629499
