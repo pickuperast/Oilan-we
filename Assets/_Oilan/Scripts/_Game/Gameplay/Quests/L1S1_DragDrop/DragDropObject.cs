@@ -127,6 +127,11 @@ namespace Oilan
 
         }
 
+        private void OnTriggerEnter(Collider other)
+        {
+            PlaceObject();
+        }
+
         private void OnMouseDown()
         {
             if (GameManager.Instance.GetCurrentGameState() == GameState.GAMEPLAY)
