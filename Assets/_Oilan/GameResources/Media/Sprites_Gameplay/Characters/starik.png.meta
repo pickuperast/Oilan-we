@@ -1,7 +1,52 @@
 fileFormatVersion: 2
 guid: 3d7b7f3b3fd67be4b8d738a933496e8d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -810105382175781746
+    second: starik_noga
+  - first:
+      213: 3830722048000956487
+    second: starik_sumka
+  - first:
+      213: -4587154057126512292
+    second: starik_2
+  - first:
+      213: 2002040737396886329
+    second: starik_3
+  - first:
+      213: -810105382175781746
+    second: starik_golova
+  - first:
+      213: -810105382175781746
+    second: starik_0
+  - first:
+      213: 4822918660363083434
+    second: starik_posoh
+  - first:
+      213: 4822918660363083434
+    second: starik_4
+  - first:
+      213: 73897217428377768
+    second: starik_sapog
+  - first:
+      213: 73897217428377768
+    second: starik_5
+  - first:
+      213: 3830722048000956487
+    second: starik_sumka2
+  - first:
+      213: 3830722048000956487
+    second: starik_ruka1
+  - first:
+      213: 3830722048000956487
+    second: starik_1
+  - first:
+      213: -3681621183966594493
+    second: starik_telo
+  - first:
+      213: 3332108595926579264
+    second: starik_ruka2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,8 +85,8 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
-  spriteExtrude: 1
+  spriteMode: 2
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -50,7 +95,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -70,9 +115,550 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: starik_noga
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2272
+        width: 167
+        height: 460
+      alignment: 9
+      pivot: {x: 0.5812065, y: 0.9602422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -83.5, y: -230}
+        - {x: -83.5, y: 230}
+        - {x: 83.5, y: 230}
+        - {x: 73.5, y: 145}
+        - {x: 83.5, y: -124}
+        - {x: 83.5, y: -230}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c4911aea7f57b419fca41e8156bd31
+      internalID: -810105382175781746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starik_sumka
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 354
+        width: 294
+        height: 443
+      alignment: 9
+      pivot: {x: 0.5231836, y: 0.5578796}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05e8e72ab058d5499202c48c48b60fe
+      internalID: 3830722048000956487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starik_2
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 554
+        width: 524
+        height: 429
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb076a6b01fa164e8e246cac41f69c6
+      internalID: -4587154057126512292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starik_3
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 1378
+        width: 102
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0720087c4a73f948820e841144b01eb
+      internalID: 2002040737396886329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starik_golova
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1861
+        width: 886
+        height: 871
+      alignment: 9
+      pivot: {x: 0.62883955, y: 0.2542656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 136, y: -435.5}
+        - {x: 112, y: -425.5}
+        - {x: 76, y: -406.5}
+        - {x: 45, y: -376.5}
+        - {x: 22, y: -314.5}
+        - {x: 13, y: -244.5}
+        - {x: -18, y: -253.5}
+        - {x: -65, y: -244.5}
+        - {x: -161, y: -323.5}
+        - {x: -145, y: -191.5}
+        - {x: -9, y: -86.5}
+        - {x: -16, y: -4.5}
+        - {x: -1, y: 26.5}
+        - {x: -265, y: -115.5}
+        - {x: -380, y: -189.5}
+        - {x: -443, y: -260.5}
+        - {x: -443, y: -175.5}
+        - {x: -71, y: 72.5}
+        - {x: -45, y: 176.5}
+        - {x: -70, y: 247.5}
+        - {x: -143, y: 351.5}
+        - {x: -258, y: 334.5}
+        - {x: -289, y: 346.5}
+        - {x: -204, y: 435.5}
+        - {x: -120, y: 435.5}
+        - {x: -33, y: 402.5}
+        - {x: 35, y: 362.5}
+        - {x: 115, y: 279.5}
+        - {x: 184, y: 170.5}
+        - {x: 289, y: 198.5}
+        - {x: 389, y: 215.5}
+        - {x: 443, y: 206.5}
+        - {x: 443, y: 197.5}
+        - {x: 152, y: 104.5}
+        - {x: 184, y: 57.5}
+        - {x: 193, y: 27.5}
+        - {x: 205, y: 13.5}
+        - {x: 207, y: -24.5}
+        - {x: 188, y: -46.5}
+        - {x: 207, y: -113.5}
+        - {x: 224, y: -151.5}
+        - {x: 273, y: -239.5}
+        - {x: 296, y: -280.5}
+        - {x: 302, y: -315.5}
+        - {x: 297, y: -359.5}
+        - {x: 271, y: -397.5}
+        - {x: 248, y: -416.5}
+        - {x: 209, y: -435.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b4d5835de1bd1e47bac144e374317f9
+      internalID: -810105382175781746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starik_0
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 2264
+        width: 1066
+        height: 468
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 307, y: -5}
+        - {x: 116, y: -44}
+        - {x: -88, y: -120}
+        - {x: -266, y: -198}
+        - {x: -382, y: -234}
+        - {x: -533, y: -234}
+        - {x: -533, y: -161}
+        - {x: -396, y: -70}
+        - {x: -285, y: 3}
+        - {x: -225, y: 36}
+        - {x: -25, y: 149}
+        - {x: 69, y: 188}
+        - {x: 287, y: 234}
+        - {x: 368, y: 234}
+        - {x: 471, y: 161}
+        - {x: 533, y: 85}
+        - {x: 533, y: 28}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73867f9d4da6f314ab126aaf22bf92d6
+      internalID: -810105382175781746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starik_posoh
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 393
+        width: 331
+        height: 2339
+      alignment: 9
+      pivot: {x: 0.36937517, y: 0.7735627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -165.5, y: -1169.5}
+        - {x: -165.5, y: -1112.5}
+        - {x: -153.5, y: -795.5}
+        - {x: -129.5, y: -264.5}
+        - {x: -66.5, y: 773.5}
+        - {x: -107.5, y: 792.5}
+        - {x: -140.5, y: 817.5}
+        - {x: -160.5, y: 834.5}
+        - {x: -165.5, y: 878.5}
+        - {x: -157.5, y: 903.5}
+        - {x: -149.5, y: 943.5}
+        - {x: -149.5, y: 995.5}
+        - {x: -149.5, y: 1025.5}
+        - {x: -89.5, y: 1085.5}
+        - {x: 13.5, y: 1169.5}
+        - {x: 59.5, y: 1169.5}
+        - {x: 100.5, y: 1095.5}
+        - {x: 165.5, y: 1024.5}
+        - {x: 165.5, y: 866.5}
+        - {x: 119.5, y: 801.5}
+        - {x: 68.5, y: 775.5}
+        - {x: -12.5, y: 767.5}
+        - {x: -17.5, y: 658.5}
+        - {x: -15.5, y: 604.5}
+        - {x: -35.5, y: 496.5}
+        - {x: -44.5, y: 314.5}
+        - {x: -52.5, y: 206.5}
+        - {x: -61.5, y: 63.5}
+        - {x: -74.5, y: -87.5}
+        - {x: -86.5, y: -326.5}
+        - {x: -99.5, y: -535.5}
+        - {x: -107.5, y: -702.5}
+        - {x: -109.5, y: -806.5}
+        - {x: -126.5, y: -924.5}
+        - {x: -141.5, y: -1169.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c812659e2596ce94b965910ce1bb121f
+      internalID: 4822918660363083434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starik_4
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 1378
+        width: 103
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d043dae6fe17d5f4cb3884d504cd5df9
+      internalID: 4822918660363083434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starik_sapog
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 269
+        width: 347
+        height: 391
+      alignment: 9
+      pivot: {x: 0.09616291, y: 0.9823223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -173.5, y: -195.5}
+        - {x: -173.5, y: 195.5}
+        - {x: -122.5, y: 195.5}
+        - {x: -105.5, y: 185.5}
+        - {x: -86.5, y: 170.5}
+        - {x: -84.5, y: 124.5}
+        - {x: -88.5, y: 102.5}
+        - {x: -102.5, y: -4.5}
+        - {x: -102.5, y: -45.5}
+        - {x: -78.5, y: -71.5}
+        - {x: -21.5, y: -80.5}
+        - {x: 98.5, y: -119.5}
+        - {x: 173.5, y: -160.5}
+        - {x: 173.5, y: -195.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc38ae409b652b42af81fc8ecbeb749
+      internalID: 73897217428377768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starik_5
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 0
+        width: 644
+        height: 635
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28, y: -317.5}
+        - {x: -63, y: -312.5}
+        - {x: -322, y: -233.5}
+        - {x: -322, y: -123.5}
+        - {x: -185, y: -9.5}
+        - {x: -59, y: 84.5}
+        - {x: -49, y: 116.5}
+        - {x: -10, y: 139.5}
+        - {x: 22, y: 175.5}
+        - {x: 159, y: 317.5}
+        - {x: 199, y: 317.5}
+        - {x: 322, y: 161.5}
+        - {x: 322, y: -57.5}
+        - {x: 281, y: -67.5}
+        - {x: 230, y: -47.5}
+        - {x: 175, y: -199.5}
+        - {x: 126, y: -272.5}
+        - {x: 33, y: -317.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db1fc1dbc2313741985568fda07b922
+      internalID: 73897217428377768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starik_sumka2
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 797
+        width: 205
+        height: 716
+      alignment: 9
+      pivot: {x: 0.047845013, y: 0.010786259}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102.5, y: -358}
+        - {x: -102.5, y: -341}
+        - {x: -73.5, y: -255}
+        - {x: -41.5, y: -164}
+        - {x: 7.5, y: 3}
+        - {x: 51.5, y: 169}
+        - {x: 74.5, y: 358}
+        - {x: 82.5, y: 358}
+        - {x: 102.5, y: 329}
+        - {x: 102.5, y: 294}
+        - {x: 97.5, y: 278}
+        - {x: 91.5, y: 251}
+        - {x: 83.5, y: 212}
+        - {x: 76.5, y: 171}
+        - {x: 67.5, y: 129}
+        - {x: 61.5, y: 84}
+        - {x: 51.5, y: 39}
+        - {x: 43.5, y: -14}
+        - {x: 14.5, y: -133}
+        - {x: -33.5, y: -264}
+        - {x: -79.5, y: -358}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec68db780c02a6148ad9acf45c2b44f0
+      internalID: 3830722048000956487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starik_ruka1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 813
+        width: 555
+        height: 1194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -94.5, y: -597}
+        - {x: -277.5, y: -454}
+        - {x: -277.5, y: 597}
+        - {x: -168.5, y: 597}
+        - {x: 2.5, y: 521}
+        - {x: 88.5, y: 483}
+        - {x: 146.5, y: 489}
+        - {x: 203.5, y: 485}
+        - {x: 251.5, y: 475}
+        - {x: 277.5, y: 461}
+        - {x: 277.5, y: 390}
+        - {x: 238.5, y: 373}
+        - {x: 235.5, y: 341}
+        - {x: 80.5, y: 316}
+        - {x: 70.5, y: 63}
+        - {x: -6.5, y: -597}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb14b93d032d644291f25a90d69c83f
+      internalID: 3830722048000956487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starik_1
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 2581
+        width: 145
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83dfdb933b2ac8b4c97630f2a5900ae6
+      internalID: 3830722048000956487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starik_telo
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 464
+        width: 613
+        height: 1714
+      alignment: 9
+      pivot: {x: 0.6063794, y: 0.68832713}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 225.5, y: -857}
+        - {x: 225.5, y: -622}
+        - {x: 59.5, y: -648}
+        - {x: 6.5, y: -648}
+        - {x: -84.5, y: -641}
+        - {x: -96.5, y: -816}
+        - {x: -102.5, y: -857}
+        - {x: -306.5, y: -857}
+        - {x: -306.5, y: -571}
+        - {x: -293.5, y: -256}
+        - {x: -246.5, y: 461}
+        - {x: -87.5, y: 436}
+        - {x: -22.5, y: 609}
+        - {x: 15.5, y: 736}
+        - {x: 133.5, y: 857}
+        - {x: 306.5, y: 857}
+        - {x: 306.5, y: -527}
+        - {x: 306.5, y: -857}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b7209b6ff3985438085484555b1062
+      internalID: -3681621183966594493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starik_ruka2
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 971
+        width: 630
+        height: 1414
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: -707}
+        - {x: -315, y: -574}
+        - {x: -315, y: -290}
+        - {x: -256, y: 707}
+        - {x: 289, y: 707}
+        - {x: 315, y: 707}
+        - {x: 315, y: 636}
+        - {x: 182, y: 448}
+        - {x: 121, y: -707}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9681167f180c54a853ae86d32b1de2
+      internalID: 3332108595926579264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
