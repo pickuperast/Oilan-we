@@ -280,7 +280,7 @@ namespace Oilan
 
             foreach (DragDropObject ddSymbol in ddObjects)
             {
-                ddSymbol.GetComponent<Collider2D>().enabled = false;
+                ddSymbol.gameObject.SetActive(false);
             }
 
             foreach (DragDropTarget ddTarget in ddTargets)
