@@ -110,6 +110,7 @@ namespace Oilan
             foreach (var item in m_items) {
                 if (item.isEquipped) {
                     if (item.isForLeftHand) {//if item for hand
+                        Debug.Log("showing left hand item");
                         LeftHand.sprite = item.m_sprite;
                     } else if (item.isForBack) {//if item for back
                         item.Backpack.SetActive(true);//Back of character has only one item - blue backpack, so i will just turn it on when need
