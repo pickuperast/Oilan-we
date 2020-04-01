@@ -107,61 +107,52 @@ namespace Oilan
 
         public void CheckRequiredItems()//ƒелает проверку по листу m_items и переодевает персонажа
         {
+            //check left hand items
             foreach (var item in m_items) {
-                if (item.isEquipped) {
-                    if (item.isForLeftHand) {//if item for hand
-                        Debug.Log("showing left hand item");
-                        //LeftHand.sprite = item.m_sprite;
-                        SetAnimatorBool("isLetterEquipped", true);
-                    } else if (item.isForBack) {//if item for back
-                        item.Backpack.SetActive(true);//Back of character has only one item - blue backpack, so i will just turn it on when need
-                    } else if (item.isForFoot) {//if item for foot
-                        FootLeft.sprite = item.m_sprite;
-                        FootRight.sprite = item.m_sprite;
-                    }
-                }
-                else
-                {
-                    if (item.isForLeftHand)
-                    {//if item for hand
-                        LeftHand.sprite = null;
-                    }
-                    else if (item.isForBack)
-                    {//if item for back
-                        item.Backpack.SetActive(false);//Back of character has only one item - bluebackpack, so i will just turn it on when need
-                    }
-                    else if (item.isForFoot)
-                    {//if item for foot
-                        FootLeft.sprite = null;
-                        FootRight.sprite = null;
-                    }
+                Debug.Log("Checking item: " + item.name);
+                if (item.isForLeftHand && item.isEquipped) {
+                    LeftHand.sprite = item.m_sprite;
+                    Debug.Log("showing left hand item. Sprite: " + LeftHand.sprite);
+                    break;
                 }
             }
+
+            //check backpack
+            foreach (var item in m_items) {
+                if (item.isForBack) {
+                    item.Backpack.SetActive(item.isEquipped);//Back of character has only one item - blue backpack, so i will just turn it on when need
+                }
+            }
+
+            //check foots
+            foreach (var item in m_items) {
+                if (item.isForFoot && item.isEquipped) {
+                    FootLeft.sprite = item.m_sprite;
+                    FootRight.sprite = item.m_sprite;
+                }
+            }
+            Debug.Log("hand item sprite: " + LeftHand.sprite);
         }
         
         private void Awake()
         {
             Instance = this;
-
             // Setting up references.
             m_GroundCheck = transform.Find("GroundCheck");
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
-
             m_SpriteRenderer = GetComponent<SpriteRenderer>();
         }
 
-
         private void FixedUpdate()
         {
+            CheckRequiredItems();
             m_Grounded = false;
-
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             // This can be done using layers instead but Sample Assets will not overwrite your project settings.
             Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
-            for (int i = 0; i < colliders.Length; i++)
-            {
+            for (int i = 0; i < colliders.Length; i++) {
                 if (colliders[i].gameObject != gameObject)
                     m_Grounded = true;
             }
@@ -169,10 +160,19 @@ namespace Oilan
 
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
-            if (m_Grounded)// && Mathf.Abs(m_Rigidbody2D.velocity.y) < 0.1f)
-            {
+            if (m_Grounded) {// && Mathf.Abs(m_Rigidbody2D.velocity.y) < 0.1f)
                 m_Anim.SetBool("Jump", false);
             }
+            if (LeftHand.sprite == m_items[1].m_sprite)
+            {
+                Debug.Log("OK"+ m_items[1].m_sprite);
+            }
+            else
+            {
+                Debug.Log("NOT OK"+ m_items[1].m_sprite);
+
+            }
+                //Debug.Log("hand item sprite: " + LeftHand.sprite);
             //CheckRequiredItems();
             /*
             if (_backpack_Value != backpack_Value

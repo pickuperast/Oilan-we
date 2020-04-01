@@ -235,7 +235,7 @@ namespace Oilan
             yield return null;
         }
         
-        private void OpenLetter()
+        public void OpenLetter()
         {
             StartCoroutine(OpenLetterCoroutine());
         }
@@ -306,9 +306,9 @@ namespace Oilan
             //AudioManager.Instance.PlaySound(audioName, SoundPriority.MEDIUM);
             //StartCoroutine(HideDialogueCoroutine());
 
-            Character_Ali.Instance.backpack_Value = 1f;
-            Character_Ali.Instance.equipment_Value = 0f;
-            Character_Ali.Instance.hold_Value = 0f;
+            //Character_Ali.Instance.backpack_Value = 1f;
+            //Character_Ali.Instance.equipment_Value = 0f;
+            //Character_Ali.Instance.hold_Value = 0f;
            
             yield return null;
         }
