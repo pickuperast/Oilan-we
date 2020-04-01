@@ -98,11 +98,15 @@ namespace Oilan
             {
                 controls.Enable();
                 idlePause = false;
+                GameplayManager.Instance.TurnPlayerControlsOnOff(true);
+                GameplayManager.Instance.TurnAutoCamOnOff(true);
             }
             else
             {
                 controls.Disable();
                 idlePause = true;
+                GameplayManager.Instance.TurnPlayerControlsOnOff(false);
+                GameplayManager.Instance.TurnAutoCamOnOff(false);
             }
         }
 
