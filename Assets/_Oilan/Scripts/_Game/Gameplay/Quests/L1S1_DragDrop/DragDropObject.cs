@@ -127,11 +127,7 @@ namespace Oilan
 
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            Debug.Log(gameObject.name+" is collided with " + other.gameObject.name);
-            PlaceObject();
-        }
+
 
         private void OnMouseDown()
         {
@@ -282,7 +278,7 @@ namespace Oilan
                 if (itemID != 2)
                 {
                     Debug.Log("Playing show hand + item animation. ItemID = " + itemID);
-                    Character_Ali.Instance.SetAnimatorShowItemTalk(true);
+                    //Character_Ali.Instance.SetAnimatorShowItemTalk(true);
                 }
                 else//backpack
                 {

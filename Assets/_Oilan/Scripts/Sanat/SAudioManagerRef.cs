@@ -19,6 +19,13 @@ public class SAudioManagerRef : MonoBehaviour
     void Start()
     {
         GOAudioManager = GameObject.Find("AudioHandler");
+        l_audioSource = GOAudioManager.GetComponent<AudioSource>();
+        
+        //musicSource.enabled = false;
+        //Destroy(musicSource);
+        //GameObject GOAudioManager;
+        //GOAudioManager = GameObject.Find("GameplayAudioHandler");
+        //musicSource = GOAudioManager.GetComponent<AudioSource>();
     }
     /*
     public void SwitchAudioSourceOnOff(bool isOn)
