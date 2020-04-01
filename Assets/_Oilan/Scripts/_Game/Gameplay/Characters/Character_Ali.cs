@@ -111,7 +111,8 @@ namespace Oilan
                 if (item.isEquipped) {
                     if (item.isForLeftHand) {//if item for hand
                         Debug.Log("showing left hand item");
-                        LeftHand.sprite = item.m_sprite;
+                        //LeftHand.sprite = item.m_sprite;
+                        SetAnimatorBool("isLetterEquipped", true);
                     } else if (item.isForBack) {//if item for back
                         item.Backpack.SetActive(true);//Back of character has only one item - blue backpack, so i will just turn it on when need
                     } else if (item.isForFoot) {//if item for foot
@@ -172,6 +173,8 @@ namespace Oilan
             {
                 m_Anim.SetBool("Jump", false);
             }
+            //CheckRequiredItems();
+            /*
             if (_backpack_Value != backpack_Value
                 || _equipment_Value != equipment_Value
                 || _hold_Value != hold_Value)
@@ -183,7 +186,7 @@ namespace Oilan
                 //m_Anim.SetFloat("Backpack_Value", _backpack_Value);
                 //m_Anim.SetFloat("Equipment_Value", _equipment_Value);
                 //m_Anim.SetFloat("Hold_Value", _hold_Value);
-            }
+            }*/
 
         }
 

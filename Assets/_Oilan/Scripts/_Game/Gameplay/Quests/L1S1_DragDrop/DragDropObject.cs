@@ -129,7 +129,7 @@ namespace Oilan
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("Draggable object collided with " + other.gameObject.name);
+            Debug.Log(gameObject.name+" is collided with " + other.gameObject.name);
             PlaceObject();
         }
 
