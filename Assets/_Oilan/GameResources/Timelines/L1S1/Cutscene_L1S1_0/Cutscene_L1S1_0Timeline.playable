@@ -1953,7 +1953,7 @@ MonoBehaviour:
     m_Start: 4.15
     m_ClipIn: 0.16666666666666696
     m_Asset: {fileID: -1782723141265490369}
-    m_Duration: 43.11666666666667
+    m_Duration: 33.61666666666667
     m_TimeScale: 0.5
     m_ParentTrack: {fileID: -3878518636552078211}
     m_EaseInDuration: 0
@@ -2015,7 +2015,7 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
-    m_PostExtrapolationTime: 1.3333333333333357
+    m_PostExtrapolationTime: 3.5333333333333314
     m_PreExtrapolationTime: 0
     m_DisplayName: ali_r78_talk_show_left_hand
   - m_Version: 1
@@ -2222,14 +2222,14 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
-    m_PostExtrapolationTime: 1.3833333333333329
+    m_PostExtrapolationTime: 2.133333333333333
     m_PreExtrapolationTime: 0
     m_DisplayName: ali_r78_talk_show_left_hand
   - m_Version: 1
-    m_Start: 59.61666666666667
-    m_ClipIn: 0.16666666666666696
+    m_Start: 60.36666666666667
+    m_ClipIn: 0.541666666666667
     m_Asset: {fileID: -7599447572493896336}
-    m_Duration: 20.511814058956936
+    m_Duration: 19.761814058956936
     m_TimeScale: 0.5
     m_ParentTrack: {fileID: -3878518636552078211}
     m_EaseInDuration: 0
@@ -2292,6 +2292,75 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
+    m_PreExtrapolationTime: 0
+    m_DisplayName: ali_r78_talk_show_left_hand
+  - m_Version: 1
+    m_Start: 41.3
+    m_ClipIn: 1.7166666666666641
+    m_Asset: {fileID: 5675103675842526177}
+    m_Duration: 5.966666666666669
+    m_TimeScale: 0.5
+    m_ParentTrack: {fileID: -3878518636552078211}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 1
+    m_PreExtrapolationMode: 1
+    m_PostExtrapolationTime: 1.3333333333333357
     m_PreExtrapolationTime: 0
     m_DisplayName: ali_r78_talk_show_left_hand
   m_Markers:
@@ -10072,6 +10141,28 @@ MonoBehaviour:
   m_RemoveStartOffset: 0
   m_ApplyFootIK: 0
   m_Loop: 2
+  m_Version: 1
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+--- !u!114 &5675103675842526177
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030f85c3f73729f4f976f66ffb23b875, type: 3}
+  m_Name: AnimationPlayableAsset(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 7400000, guid: b1a8c86920d4347438ea8ab34a753ba3, type: 2}
+  m_Position: {x: 0, y: 0, z: 0}
+  m_EulerAngles: {x: 0, y: 0, z: 0}
+  m_UseTrackMatchFields: 1
+  m_MatchTargetFields: 63
+  m_RemoveStartOffset: 1
+  m_ApplyFootIK: 1
+  m_Loop: 0
   m_Version: 1
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!114 &5831179918316434839
