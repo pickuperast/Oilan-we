@@ -208,6 +208,10 @@ namespace Oilan
         {
             SetAnimatorBool("ali_eyes_front", isOn);
         }
+        public void SetAnimatorAli_Walk_Bool(bool isOn)
+        {
+            SetAnimatorBool("Walk", isOn);
+        }
         public void SetAnimatorAli_r83_Bool(bool isOn)
         {
             SetAnimatorBool("ali_r83_ukazyvaet_vpered", isOn);
