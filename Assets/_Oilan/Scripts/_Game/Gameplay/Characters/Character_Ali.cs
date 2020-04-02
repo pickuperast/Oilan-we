@@ -51,8 +51,6 @@ namespace Oilan
         private float _equipment_Value = 0f;
         public float hold_Value = 0f;
         private float _hold_Value = 0f;
-        public bool isBeingPushed = false;
-        private bool isRequiredToResetPush = true;
 
 
         [Header("Map initialization")]
@@ -164,26 +162,6 @@ namespace Oilan
             m_Anim.SetBool("Ground", m_Grounded);
 
             // Set the vertical animation
-            if (isBeingPushed)
-            {
-                //m_Rigidbody2D.velocity = new Vector2(1000.0f, 0.0f);
-                //m_Rigidbody2D.AddForce(new Vector2(150.0f, 0.0f));
-                //m_Anim.SetFloat("Speed", 1);
-                //Move(100f, false, false);
-                gameObject.GetComponent<PlayerController>().move = new Vector2(1f, 0f);
-                isRequiredToResetPush = true;
-                /*if (!m_Anim.GetBool("Walk"))
-                {
-                    SetAnimatorBool("Walk", true);
-                }*/
-            }
-            else
-            {
-                if (isRequiredToResetPush) {
-                    StartCoroutine(ResetSpeed());
-                    isRequiredToResetPush = false;
-                }
-            }
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
             if (m_Grounded) {// && Mathf.Abs(m_Rigidbody2D.velocity.y) < 0.1f)
                 m_Anim.SetBool("Jump", false);
@@ -216,11 +194,6 @@ namespace Oilan
              }*/
 
         }
-        public void SetEmulateWalking(bool isOn)
-        {
-            isBeingPushed = isOn;
-        }
-        
 
         public void SetAnimatorTrigger(string triggerName)
         {
