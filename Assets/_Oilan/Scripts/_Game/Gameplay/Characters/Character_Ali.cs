@@ -303,12 +303,6 @@ namespace Oilan
         {
             SetAnimatorBool("ali_r58_walk", isOn);
         }
-
-        public void SetAnimatorAli_Put_Letter_In_Backpack_Trigger()
-        {
-            SetAnimatorTrigger("Ali_Put_Letter_In_Backpack");
-        }
-
         
         public void SetSpriteVisibility(bool newVal)
         {
