@@ -7,7 +7,6 @@ namespace Oilan
     public class SPickableEquipment : MonoBehaviour
     {
         public ChestQuest Quest0;
-        public CageQuest Quest1;
         public int QuestID = 0;
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -22,9 +21,6 @@ namespace Oilan
                     break;
                 case 1:
                     Quest0.PostDeactivateQuest();
-                    break;
-                case 2:
-                    Quest1.OpenLetter();
                     break;
                 default:
                     break;

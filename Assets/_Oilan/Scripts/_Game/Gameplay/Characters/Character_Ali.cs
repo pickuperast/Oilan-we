@@ -63,7 +63,6 @@ namespace Oilan
         public SpriteRenderer Back;
         public SpriteRenderer FootLeft;
         public SpriteRenderer FootRight;
-        public GameObject LBackpack;
         /*
         public Vector2 StartPosition;
         public float timer;
@@ -121,9 +120,7 @@ namespace Oilan
             //check backpack
             foreach (var item in m_items) {
                 if (item.isForBack) {
-                    item.Backpack.SetActive(true);//Back of character has only one item - blue backpack, so i will just turn it on when need
-                    LBackpack.SetActive(true);
-                    Debug.Log("Backpack: item.isEquipped = " + item.isEquipped);
+                    item.Backpack.SetActive(item.isEquipped);//Back of character has only one item - blue backpack, so i will just turn it on when need
                 }
             }
 
@@ -150,7 +147,7 @@ namespace Oilan
 
         private void FixedUpdate()
         {
-            
+            CheckRequiredItems();
             m_Grounded = false;
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             // This can be done using layers instead but Sample Assets will not overwrite your project settings.
@@ -165,7 +162,7 @@ namespace Oilan
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
             if (m_Grounded) {// && Mathf.Abs(m_Rigidbody2D.velocity.y) < 0.1f)
                 m_Anim.SetBool("Jump", false);
-            }/*
+            }
             if (LeftHand.sprite == m_items[1].m_sprite)
             {
                 Debug.Log("OK"+ m_items[1].m_sprite);
@@ -174,24 +171,22 @@ namespace Oilan
             {
                 Debug.Log("NOT OK"+ m_items[1].m_sprite);
 
+            }
+                //Debug.Log("hand item sprite: " + LeftHand.sprite);
+            //CheckRequiredItems();
+            /*
+            if (_backpack_Value != backpack_Value
+                || _equipment_Value != equipment_Value
+                || _hold_Value != hold_Value)
+            {
+                _backpack_Value = backpack_Value;
+                _equipment_Value = equipment_Value;
+                _hold_Value = hold_Value;
+
+                //m_Anim.SetFloat("Backpack_Value", _backpack_Value);
+                //m_Anim.SetFloat("Equipment_Value", _equipment_Value);
+                //m_Anim.SetFloat("Hold_Value", _hold_Value);
             }*/
-
-
-             //Debug.Log("hand item sprite: " + LeftHand.sprite);
-             //CheckRequiredItems();
-             /*
-             if (_backpack_Value != backpack_Value
-                 || _equipment_Value != equipment_Value
-                 || _hold_Value != hold_Value)
-             {
-                 _backpack_Value = backpack_Value;
-                 _equipment_Value = equipment_Value;
-                 _hold_Value = hold_Value;
-
-                 //m_Anim.SetFloat("Backpack_Value", _backpack_Value);
-                 //m_Anim.SetFloat("Equipment_Value", _equipment_Value);
-                 //m_Anim.SetFloat("Hold_Value", _hold_Value);
-             }*/
 
         }
 
@@ -207,10 +202,6 @@ namespace Oilan
         public void SetEyesFront(bool isOn)
         {
             SetAnimatorBool("ali_eyes_front", isOn);
-        }
-        public void SetAnimatorAli_Walk_Bool(bool isOn)
-        {
-            SetAnimatorBool("Walk", isOn);
         }
         public void SetAnimatorAli_r83_Bool(bool isOn)
         {

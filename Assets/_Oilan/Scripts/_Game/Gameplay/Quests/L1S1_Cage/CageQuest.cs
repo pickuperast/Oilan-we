@@ -366,7 +366,7 @@ namespace Oilan
         }
 
         
-        public void OpenLetter()
+        private void OpenLetter()
         {
             StartCoroutine(OpenLetterCoroutine());
         }

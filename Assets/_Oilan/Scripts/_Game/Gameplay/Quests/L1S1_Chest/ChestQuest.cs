@@ -285,16 +285,20 @@ namespace Oilan
 
         private IEnumerator PostDeactivateQuestCoroutine()
         {
-            GameplayManager.Instance.TurnPlayerControlsOnOff(false);//Забираем управление
             ClearQuestCanvas();
             ClearQuestObjects();
             
-            director.Play(chestTimeline_endQuest);//Проигрываем катсцену
-            yield return new WaitForSeconds((float)director.duration);//Ждем пока она не доиграет
-            director.enabled = false;//отключаем катсцену
+            director.Play(chestTimeline_endQuest);
 
-            GameplayManager.Instance.TurnPlayerControlsOnOff(true);//Возвращаем управление
-            GameplayManager.Instance.TurnAutoCamOnOff(true);//Включаем привязку камеры
+            yield return new WaitForSeconds((float)director.duration);
+
+            director.enabled = false;
+            
+            Character_Ali.Instance.SetSpriteVisibility(true);
+            Character_Ali.Instance.SetCutsceneSpriteVisibility(false);
+
+            GameplayManager.Instance.TurnPlayerControlsOnOff(true);
+            GameplayManager.Instance.TurnAutoCamOnOff(true);
 
             //DialogueManager.Instance.currentText = text;
             //DialogueManager.Instance.ShowDialogueGUI();
