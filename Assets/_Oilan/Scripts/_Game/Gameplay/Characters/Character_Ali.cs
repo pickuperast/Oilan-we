@@ -51,6 +51,7 @@ namespace Oilan
         private float _equipment_Value = 0f;
         public float hold_Value = 0f;
         private float _hold_Value = 0f;
+        public float PushStrength = 10f;
         public bool isBeingPushed = false;
         private bool isRequiredToResetPush = true;
 
