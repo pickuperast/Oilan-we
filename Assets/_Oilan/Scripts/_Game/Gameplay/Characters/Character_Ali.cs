@@ -104,6 +104,10 @@ namespace Oilan
             }
         }
 
+        private void LateUpdate()
+        {
+            CheckRequiredItems();
+        }
 
         public void CheckRequiredItems()//ƒелает проверку по листу m_items и переодевает персонажа
         {
@@ -147,7 +151,6 @@ namespace Oilan
 
         private void FixedUpdate()
         {
-            CheckRequiredItems();
             m_Grounded = false;
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             // This can be done using layers instead but Sample Assets will not overwrite your project settings.
@@ -162,15 +165,6 @@ namespace Oilan
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
             if (m_Grounded) {// && Mathf.Abs(m_Rigidbody2D.velocity.y) < 0.1f)
                 m_Anim.SetBool("Jump", false);
-            }
-            if (LeftHand.sprite == m_items[1].m_sprite)
-            {
-                Debug.Log("OK"+ m_items[1].m_sprite);
-            }
-            else
-            {
-                Debug.Log("NOT OK"+ m_items[1].m_sprite);
-
             }
                 //Debug.Log("hand item sprite: " + LeftHand.sprite);
             //CheckRequiredItems();
