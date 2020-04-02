@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityStandardAssets._2D;
+//using UnityEngine.InputSystem;
+//using UnityStandardAssets._2D;
 
 namespace Oilan
 {
@@ -98,15 +98,15 @@ namespace Oilan
             {
                 controls.Enable();
                 idlePause = false;
-                GameplayManager.Instance.TurnPlayerControlsOnOff(true);
-                GameplayManager.Instance.TurnAutoCamOnOff(true);
+                //GameplayManager.Instance.TurnPlayerControlsOnOff(true);
+                //GameplayManager.Instance.TurnAutoCamOnOff(true);
             }
             else
             {
                 controls.Disable();
                 idlePause = true;
-                GameplayManager.Instance.TurnPlayerControlsOnOff(false);
-                GameplayManager.Instance.TurnAutoCamOnOff(false);
+                //GameplayManager.Instance.TurnPlayerControlsOnOff(false);
+                //GameplayManager.Instance.TurnAutoCamOnOff(false);
             }
         }
 
