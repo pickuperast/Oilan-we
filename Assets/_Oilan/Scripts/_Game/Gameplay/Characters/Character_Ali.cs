@@ -264,7 +264,14 @@ namespace Oilan
         {
             SetAnimatorBool("ali_r58_walk", isOn);
         }
+
+        public void SetAnimatorAli_r46_stay_Trigger(bool isOn)
+        {
+            SetAnimatorBool("ali_r46_stay", isOn);
+        }
+
         
+
         public void SetSpriteVisibility(bool newVal)
         {
             //Chest.SetActive(newVal);
