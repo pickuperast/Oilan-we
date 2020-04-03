@@ -2343,14 +2343,8 @@ PlayableDirector:
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: 5630079009320294587, guid: 3e9b9e54ef6ebee49b38425b14d40a4e, type: 2}
-    value: {fileID: 1613841426}
-  - key: {fileID: -217034291556701692, guid: 3e9b9e54ef6ebee49b38425b14d40a4e, type: 2}
-    value: {fileID: 1613841428}
   - key: {fileID: 2553228365157121549, guid: 3e9b9e54ef6ebee49b38425b14d40a4e, type: 2}
     value: {fileID: 137136272}
-  - key: {fileID: -6169536870593253659, guid: 3e9b9e54ef6ebee49b38425b14d40a4e, type: 2}
-    value: {fileID: 1613841428}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &141680182
@@ -15969,8 +15963,6 @@ PlayableDirector:
     value: {fileID: 1622427166}
   - key: {fileID: 254944655479265872, guid: 83af2e3215eddd34f98d87b438ded9d0, type: 2}
     value: {fileID: 956428194}
-  - key: {fileID: 4143972547097921291, guid: 83af2e3215eddd34f98d87b438ded9d0, type: 2}
-    value: {fileID: 1613841426}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &967688976
@@ -16607,10 +16599,6 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 5540073970122334567, guid: 51380c9d6223b404baa31dc949e1c1e7, type: 2}
     value: {fileID: 0}
-  - key: {fileID: -5322553639847626075, guid: 5cad266324eec894cb20da4e2d6979c2, type: 2}
-    value: {fileID: 1613841428}
-  - key: {fileID: 6148136158510119146, guid: 5cad266324eec894cb20da4e2d6979c2, type: 2}
-    value: {fileID: 1613841426}
   - key: {fileID: -1281913355810571557, guid: 5cad266324eec894cb20da4e2d6979c2, type: 2}
     value: {fileID: 1613841428}
   - key: {fileID: 0}
@@ -19205,6 +19193,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorAli_r46_stay_Trigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1150245498}
@@ -19375,11 +19374,7 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 0}
     value: {fileID: 0}
-  - key: {fileID: -5322553639847626075, guid: 5cad266324eec894cb20da4e2d6979c2, type: 2}
-    value: {fileID: 1613841428}
-  - key: {fileID: -6327075990800636829, guid: 79bcb429e1f47ee4f91a969b8fb828a0, type: 2}
-    value: {fileID: 1613841428}
-  - key: {fileID: -2388738058664167862, guid: 79bcb429e1f47ee4f91a969b8fb828a0, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 1613841428}
   - key: {fileID: 4455015510355485638, guid: 79bcb429e1f47ee4f91a969b8fb828a0, type: 2}
     value: {fileID: 1781375368}
@@ -29353,22 +29348,22 @@ PrefabInstance:
     - target: {fileID: 8175776208716393839, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.20504962
+      value: -0.19509031
       objectReference: {fileID: 0}
     - target: {fileID: 8175776208716393839, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9787516
+      value: 0.98078537
       objectReference: {fileID: 0}
     - target: {fileID: 8175776208718745993, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.015637467
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8175776208718745993, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99987775
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8175776208935261029, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -29383,12 +29378,12 @@ PrefabInstance:
     - target: {fileID: 8175776208935726415, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.015637467
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8175776208935726415, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99987775
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8175776208935726415, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -29403,72 +29398,72 @@ PrefabInstance:
     - target: {fileID: 8175776209023969150, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.19313163
+      value: 0.17622578
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209023969150, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98117286
+      value: 0.98434985
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209124053407, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.12737277
+      value: 0.070191704
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209124053407, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9918549
+      value: 0.99753356
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209440678485, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.031024147
+      value: -0.0008726012
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209440678485, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99951863
+      value: 0.99999964
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209474989120, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.013764009
+      value: -0.043619405
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209474989120, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999053
+      value: 0.9990483
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209791432492, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.043195304
+      value: 0.020593435
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209791432492, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99906665
+      value: 0.999788
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209848059401, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.05522478
+      value: 0.052335896
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209848059401, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.998474
+      value: 0.9986295
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209942908745, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.004216
+      value: 0.015096553
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209942908745, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999911
+      value: 0.99988604
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -29543,22 +29538,22 @@ PrefabInstance:
     - target: {fileID: 8175776210009565380, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.010508099
+      value: -0.030364104
       objectReference: {fileID: 0}
     - target: {fileID: 8175776210009565380, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999448
+      value: 0.9995389
       objectReference: {fileID: 0}
     - target: {fileID: 8175776210142766100, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.002893063
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8175776210142766100, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999958
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 290012830, guid: a78faa85e2a730d4b8af34fedfcdeec1, type: 3}
@@ -29838,7 +29833,7 @@ SpriteRenderer:
   m_Size: {x: 1.9799999, y: 3.9447815}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1631949648
@@ -34192,7 +34187,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1906965341}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 7474fe15295649d42aa65c5243214ceb, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 7513931182b1e8949b208c94a5822efc, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
@@ -34220,8 +34215,6 @@ PlayableDirector:
     value: {fileID: 166435761}
   - key: {fileID: -7291335214737163510, guid: 319cbe85e80009d4b806337726100bda, type: 2}
     value: {fileID: 1613841428}
-  - key: {fileID: -4924708157263335058, guid: 7474fe15295649d42aa65c5243214ceb, type: 2}
-    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1911512925
@@ -37343,7 +37336,7 @@ PlayableDirector:
   m_GameObject: {fileID: 2051039018}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: eaca89450c8ec1f4a8dd68b9de03886c, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 7474fe15295649d42aa65c5243214ceb, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -37365,7 +37358,7 @@ PlayableDirector:
     value: {fileID: 4954644357616767897}
   - key: {fileID: -1006528339327946771, guid: eaca89450c8ec1f4a8dd68b9de03886c, type: 2}
     value: {fileID: 1613413602899719433}
-  - key: {fileID: -4924708157263335058, guid: 7474fe15295649d42aa65c5243214ceb, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 1613841426}
   - key: {fileID: 0}
     value: {fileID: 0}
@@ -37764,12 +37757,8 @@ PlayableDirector:
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: -7008572943643532475, guid: c63a08a2ff1251e40adb9217ee416493, type: 2}
-    value: {fileID: 1613841428}
   - key: {fileID: -8520251083986836857, guid: c63a08a2ff1251e40adb9217ee416493, type: 2}
     value: {fileID: 2060290545}
-  - key: {fileID: 912506019045858152, guid: c63a08a2ff1251e40adb9217ee416493, type: 2}
-    value: {fileID: 1613841426}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &2064916830
