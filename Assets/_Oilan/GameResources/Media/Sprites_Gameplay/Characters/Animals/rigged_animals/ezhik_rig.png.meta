@@ -11,6 +11,9 @@ TextureImporter:
   - first:
       213: -2680566148027908041
     second: ezhik_rig_right_leg
+  - first:
+      213: 6999745278435392820
+    second: ezhik_rot
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -141,7 +144,13 @@ TextureImporter:
       alignment: 9
       pivot: {x: 0.4757325, y: 0.3336737}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 71, y: -41}
+        - {x: 20, y: -53}
+        - {x: -82, y: -53}
+        - {x: -82, y: 53}
+        - {x: 82, y: 53}
+        - {x: 82, y: -29}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -189,6 +198,27 @@ TextureImporter:
       bones: []
       spriteID: 2f89b586aa7322649a3f7ee9d748c2b0
       internalID: -2680566148027908041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ezhik_rot
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 84
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6823f7c7204ef49a7cb0ff57e136bd
+      internalID: 6999745278435392820
       vertices: []
       indices: 
       edges: []
