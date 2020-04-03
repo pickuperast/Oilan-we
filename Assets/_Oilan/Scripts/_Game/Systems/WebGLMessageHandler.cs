@@ -54,7 +54,7 @@ namespace Oilan
         private static extern string TestReturnString();
         */
         [DllImport("__Internal")]//Assets\Plugins\Oilan\Utils\WebGL\JSManager
-        private static extern int OpenTrainer(string TrainerType, int level, int step);
+        private static extern int OpenTrainer(string TrainerType, int level, int step, bool isOk);
 
         [DllImport("__Internal")]//Assets\Plugins\Oilan\Utils\WebGL\JSManager
         private static extern int GetUserID();
@@ -186,7 +186,7 @@ namespace Oilan
             //LibConsoleWriter("UnityLog: Setting progress to: " + mJSONinput);
             //TextSavedStats.text += "\nUnityLog: Setting progress to: " + mJSONinput;
             //Debug.Log("Setting progress to: "+ mJSONinput);
-             OpenTrainer(TrainerType, level, step); 
+             OpenTrainer(TrainerType, level, step, true); 
         }
 //#elif UNITY_EDITOR
 //#endif

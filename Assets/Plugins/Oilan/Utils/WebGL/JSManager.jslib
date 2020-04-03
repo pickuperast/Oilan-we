@@ -16,9 +16,9 @@
 		SetProgress(Pointer_stringify(stringVal));
 	},
 	
-	OpenTrainer: function (stringVal, intValLevel, intValStep){
+	OpenTrainer: function (stringVal, intValLevel, intValStep, boolVal){
 		console.log("Trying to open Trainer: " + Pointer_stringify(stringVal) + ", level: " + intValLevel + ", step: " + intValStep);
-		startGame(Pointer_stringify(stringVal), intValLevel, intValStep);
+		startGame(Pointer_stringify(stringVal), intValLevel, intValStep, boolVal);
 	},
 	
 	printErr: function (message) { console.error(message); }

@@ -481,6 +481,17 @@ AnimationClip:
     path: Chest/Shoulder_right/Arm_right/Hand_right
     classID: 212
     script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 8659474824711615487, guid: 712f1e6887b1d2a4787a32b19160ae1b,
+        type: 3}
+    - time: 1
+      value: {fileID: 8659474824711615487, guid: 712f1e6887b1d2a4787a32b19160ae1b,
+        type: 3}
+    attribute: m_Sprite
+    path: Chest/Shoulder_left/Arm_left/Hand_left
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -600,9 +611,18 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 3106670857
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 1416078274147454363, guid: 712f1e6887b1d2a4787a32b19160ae1b, type: 3}
     - {fileID: -9137028242655451332, guid: 712f1e6887b1d2a4787a32b19160ae1b, type: 3}
+    - {fileID: 8659474824711615487, guid: 712f1e6887b1d2a4787a32b19160ae1b, type: 3}
+    - {fileID: 8659474824711615487, guid: 712f1e6887b1d2a4787a32b19160ae1b, type: 3}
     - {fileID: 8659474824711615487, guid: 712f1e6887b1d2a4787a32b19160ae1b, type: 3}
     - {fileID: 8659474824711615487, guid: 712f1e6887b1d2a4787a32b19160ae1b, type: 3}
   m_AnimationClipSettings:

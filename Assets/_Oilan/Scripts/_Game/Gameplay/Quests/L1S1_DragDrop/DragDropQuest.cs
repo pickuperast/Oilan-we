@@ -8,7 +8,7 @@ namespace Oilan
     {
         //public GameObject cameraAnchor;
         //public float cameraTargetSize;
-
+        
         private Vector3 cameraPosOriginal;
         private float cameraSizeOriginal;
 
@@ -22,6 +22,7 @@ namespace Oilan
 
         public string audioName;
         public AudioClip audioClip;
+        public SAudioManagerRef GameplayAudioHandler;
 
         private void Start()
         {
@@ -83,8 +84,7 @@ namespace Oilan
 
         void playOwnAudioSource()
         {
-            AudioSource l_audioSource = gameObject.GetComponent<AudioSource>();
-            l_audioSource.Play();
+            GameplayAudioHandler.PlayAudioFromTimeline(audioName);
         }
 
         public override void Solved()
