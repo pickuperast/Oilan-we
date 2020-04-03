@@ -11173,12 +11173,12 @@ PrefabInstance:
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80.56
+      value: 138.83
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.54
+      value: -3.63
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -15896,6 +15896,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 567448858239870836, guid: b6c27a3f0c8791a4580f7011ba48a3b3,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 567448857993508266, guid: b6c27a3f0c8791a4580f7011ba48a3b3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b6c27a3f0c8791a4580f7011ba48a3b3, type: 3}
@@ -16259,7 +16264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1146888544
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16301,7 +16306,7 @@ SpriteRenderer:
   m_Sprite: {fileID: -8849682789866023165, guid: 3fd77ad78857d5c4c99b660950370054,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3.6499999, y: 2.9540403}
@@ -18566,6 +18571,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 833951887}
+          m_MethodName: EquipItem
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 833951887}
@@ -18615,6 +18631,10 @@ PlayableDirector:
     value: {fileID: 1132231436}
   - key: {fileID: -6722612949981625819, guid: 09751160db7a7814780d49c0e7ddd230, type: 2}
     value: {fileID: 1280389842}
+  - key: {fileID: 6428118182777178361, guid: 09751160db7a7814780d49c0e7ddd230, type: 2}
+    value: {fileID: 699658232}
+  - key: {fileID: -3079151436093237384, guid: 09751160db7a7814780d49c0e7ddd230, type: 2}
+    value: {fileID: 1146888546}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1280742161
