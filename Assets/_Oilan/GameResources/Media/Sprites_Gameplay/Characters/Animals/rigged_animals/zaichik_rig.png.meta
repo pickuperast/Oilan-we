@@ -1,16 +1,31 @@
 fileFormatVersion: 2
-guid: c0058d531d27d4142a6f38e3facb90b9
+guid: 85fadc54f64b79647910cb9386826710
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8510894171228146998
-    second: zaichik_rig_hand_left
+      213: -638776024943744660
+    second: zaichik_rig_mouth_1
   - first:
-      213: -306529630532393626
-    second: zaichik_rig_hand_right
+      213: 4688969881077493872
+    second: zaichik_rig_mouth_2
   - first:
-      213: 2234367475766296390
-    second: zaichik_rig_head
+      213: -8224109796059975813
+    second: zaichik_rig_mouth_3
+  - first:
+      213: 8277668029794616262
+    second: zaichik_rig_mouth_4
+  - first:
+      213: -8197841839995517515
+    second: zaichik_rig_mouth_5
+  - first:
+      213: -5891892839636863785
+    second: zaichik_rig_mouth_6
+  - first:
+      213: -3735120162120270485
+    second: zaichik_rig_mouth_7
+  - first:
+      213: -8527079153157070850
+    second: zaichik_rig_body
   - first:
       213: 8880987547434969882
     second: zaichik_rig_ear_left
@@ -18,8 +33,20 @@ TextureImporter:
       213: -3648626742993845365
     second: zaichik_rig_ear_right
   - first:
-      213: -8527079153157070850
-    second: zaichik_rig_body
+      213: 2234367475766296390
+    second: zaichik_rig_head
+  - first:
+      213: 8510894171228146998
+    second: zaichik_rig_hand_left
+  - first:
+      213: -306529630532393626
+    second: zaichik_rig_hand_right
+  - first:
+      213: 3765924774661035236
+    second: zaichik_rig_leg_left
+  - first:
+      213: 5873285845538081846
+    second: zaichik_rig_leg_right
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -126,7 +153,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 256
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: 12
     textureCompression: 1
@@ -140,64 +167,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zaichik_rig_hand_left
+      name: zaichik_rig_mouth_1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 132
-        width: 54
-        height: 51
+        x: 15
+        y: 157
+        width: 20
+        height: 16
       alignment: 9
-      pivot: {x: 0.25608853, y: 0.79136956}
+      pivot: {x: 0.45497045, y: 0.42964268}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62b577a2970cfce4ba0328dbdf8dc088
-      internalID: 8510894171228146998
+      spriteID: 4a5858495705d734ea43e6bfae426610
+      internalID: -638776024943744660
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zaichik_rig_hand_right
+      name: zaichik_rig_mouth_2
       rect:
         serializedVersion: 2
-        x: 138
-        y: 119
-        width: 65
-        height: 60
+        x: 59
+        y: 158
+        width: 18
+        height: 16
       alignment: 9
-      pivot: {x: 0.3025616, y: 0.7251493}
+      pivot: {x: 0.48749244, y: 0.4014988}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b87941784581c140a1afaeeb5e42f82
-      internalID: -306529630532393626
+      spriteID: e2ee5b46cc50a4843a6e0fb60d376751
+      internalID: 4688969881077493872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zaichik_rig_head
+      name: zaichik_rig_mouth_3
       rect:
         serializedVersion: 2
-        x: 220
-        y: 4
-        width: 80
-        height: 62
-      alignment: 9
-      pivot: {x: 0.3775751, y: 0.06967454}
+        x: 102
+        y: 156
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f6a63fde579bf44b8e980ba25e3656b
-      internalID: 2234367475766296390
+      spriteID: 78a430d6cb91cc041910497bfcf729e4
+      internalID: -8224109796059975813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zaichik_rig_mouth_4
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 155
+        width: 18
+        height: 17
+      alignment: 9
+      pivot: {x: 0.41244254, y: 0.52648836}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1976c2a1349c99540b10fb7a3c54a4d6
+      internalID: 8277668029794616262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zaichik_rig_mouth_5
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 153
+        width: 19
+        height: 18
+      alignment: 9
+      pivot: {x: 0.4763007, y: 0.4874929}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7086f40ae47244584ef219de12019a
+      internalID: -8197841839995517515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zaichik_rig_mouth_6
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 151
+        width: 19
+        height: 18
+      alignment: 9
+      pivot: {x: 0.46445104, y: 0.5375256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728601d79615dbb468fc37ea8b982e79
+      internalID: -5891892839636863785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zaichik_rig_mouth_7
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 154
+        width: 21
+        height: 13
+      alignment: 9
+      pivot: {x: 0.45711553, y: 0.43072394}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714575b631e0aee40bc70b9cbec561aa
+      internalID: -3735120162120270485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zaichik_rig_body
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 0
+        width: 99
+        height: 114
+      alignment: 9
+      pivot: {x: 0.5454848, y: 0.4842001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dff6e93d969f4840b5d7d1a1a169236
+      internalID: -8527079153157070850
       vertices: []
       indices: 
       edges: []
@@ -206,18 +338,18 @@ TextureImporter:
       name: zaichik_rig_ear_left
       rect:
         serializedVersion: 2
-        x: 156
-        y: 19
-        width: 47
-        height: 80
+        x: 138
+        y: 77
+        width: 40
+        height: 72
       alignment: 9
-      pivot: {x: 0.74431074, y: 0.09473133}
+      pivot: {x: 0.8377239, y: 0.03719351}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9f20d8e2871e544d8db89a54652be0c
+      spriteID: a27fee5bdbe88ec47aa543f6092dec2b
       internalID: 8880987547434969882
       vertices: []
       indices: 
@@ -227,40 +359,124 @@ TextureImporter:
       name: zaichik_rig_ear_right
       rect:
         serializedVersion: 2
-        x: 103
-        y: 20
-        width: 38
-        height: 79
+        x: 149
+        y: 1
+        width: 40
+        height: 72
       alignment: 9
-      pivot: {x: 0.87327373, y: 0.06822656}
+      pivot: {x: 0.8377243, y: 0.04032057}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 629da2d8d0d050d409da90208cc88918
+      spriteID: 63b0aef0b5f9fac44b6fe6809ce3a7c8
       internalID: -3648626742993845365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zaichik_rig_body
+      name: zaichik_rig_head
       rect:
         serializedVersion: 2
-        x: 0
-        y: 13
-        width: 98
-        height: 112
+        x: 70
+        y: 11
+        width: 72
+        height: 58
       alignment: 9
-      pivot: {x: 0.54306597, y: 0.5376827}
+      pivot: {x: 0.47185665, y: 0.057465456}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fe440d4236ef4e48bd4a3105bb21013
-      internalID: -8527079153157070850
+      spriteID: 8e60d9e325ac99c45ac14d55bb7c753c
+      internalID: 2234367475766296390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zaichik_rig_hand_left
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 82
+        width: 44
+        height: 52
+      alignment: 9
+      pivot: {x: 0.3669574, y: 0.9026709}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2691323173a8845b3b05ea365e8376
+      internalID: 8510894171228146998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zaichik_rig_hand_right
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 79
+        width: 43
+        height: 55
+      alignment: 9
+      pivot: {x: 0.37957162, y: 0.8888945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0aa28a32b6d964788f8de924461a9d
+      internalID: -306529630532393626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zaichik_rig_leg_left
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 63
+        height: 36
+      alignment: 9
+      pivot: {x: 0.07471821, y: 0.7626746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acedcc654ed94a84e8220a4f3bcec2da
+      internalID: 3765924774661035236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zaichik_rig_leg_right
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 63
+        height: 27
+      alignment: 9
+      pivot: {x: 0.0961611, y: 0.875249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7c56d78257f374e9ee3ed1c02ba9bd
+      internalID: 5873285845538081846
       vertices: []
       indices: 
       edges: []

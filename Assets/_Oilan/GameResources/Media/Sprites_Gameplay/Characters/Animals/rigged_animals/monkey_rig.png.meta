@@ -1,28 +1,70 @@
 fileFormatVersion: 2
-guid: aa617136ad7ff574eb76257a0efcbe2a
+guid: ba2bd92377b56d34b9bb1012b1ba8cee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1965765223928964193
-    second: monkey_rig_hand_right
+      213: -1156005727125762944
+    second: monkey_rig_mouth_1
   - first:
-      213: 4981576881901229046
-    second: monkey_rig_head
+      213: -7034414597578454990
+    second: monkey_rig_mouth_2
   - first:
-      213: 5447360739006338221
-    second: monkey_rig_hand_left
+      213: -1038042156444509166
+    second: monkey_rig_mouth_3
   - first:
-      213: -9064521210605192037
-    second: monkey_rig_body
+      213: -5849995618816690541
+    second: monkey_rig_mouth_4
+  - first:
+      213: 2554404086962976919
+    second: monkey_rig_mouth_5
+  - first:
+      213: 4003006280085721728
+    second: monkey_rig_mouth_6
+  - first:
+      213: 7253689140333129342
+    second: monkey_rig_mouth_7
   - first:
       213: 175880963502780187
     second: monkey_rig_tail
   - first:
-      213: 7215724092558356151
-    second: monkey_rig_leg_left
+      213: -5411290247676272050
+    second: monkey_rig_shoulder_left
   - first:
-      213: -4954738959535474998
-    second: monkey_leg_right
+      213: 7575127908656795796
+    second: monkey_rig_forearm_left
+  - first:
+      213: -8020834109459700289
+    second: monkey_rig_left_forearm
+  - first:
+      213: -1101918169006374447
+    second: monkey_rig_shoulder_right
+  - first:
+      213: -2570368243672562588
+    second: monkey_rig_forearm_right
+  - first:
+      213: -8239957149565727787
+    second: monkey_rig_quad_left
+  - first:
+      213: 2601046300624488014
+    second: monkey_rig_quad_right
+  - first:
+      213: 6798543851219254637
+    second: monkey_rig_shin_left
+  - first:
+      213: -8169350638800661726
+    second: monkey_rig_shin_right
+  - first:
+      213: -965974701300825715
+    second: monkey_rig_wrist
+  - first:
+      213: 7776439784450361207
+    second: monkey_rig_foot
+  - first:
+      213: -9064521210605192037
+    second: monkey_rig_body
+  - first:
+      213: 4981576881901229046
+    second: monkey_rig_head
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -129,7 +171,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 256
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: 12
     textureCompression: 1
@@ -143,85 +185,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: monkey_rig_hand_right
+      name: monkey_rig_mouth_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 106
-        width: 75
-        height: 144
+        x: 1
+        y: 219
+        width: 39
+        height: 30
       alignment: 9
-      pivot: {x: 0.12810183, y: 0.9729695}
+      pivot: {x: 0.45670217, y: 0.42494863}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5f19d001ce1fb14c83d0d2282967e79
-      internalID: 1965765223928964193
+      spriteID: b653df807d036d3499f88fe4df2ca77e
+      internalID: -1156005727125762944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monkey_rig_head
+      name: monkey_rig_mouth_2
       rect:
         serializedVersion: 2
-        x: 75
-        y: 159
-        width: 79
-        height: 91
+        x: 50
+        y: 220
+        width: 35
+        height: 27
       alignment: 9
-      pivot: {x: 0.4979838, y: 0.050208624}
+      pivot: {x: 0.5, y: 0.41661072}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fb266b06746e1e409ffb766233193ef
-      internalID: 4981576881901229046
+      spriteID: 7c30e560017a5ee44b3c74a4ff3dc1d5
+      internalID: -7034414597578454990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monkey_rig_hand_left
+      name: monkey_rig_mouth_3
       rect:
         serializedVersion: 2
-        x: 156
-        y: 105
-        width: 73
-        height: 145
+        x: 97
+        y: 221
+        width: 39
+        height: 23
       alignment: 9
-      pivot: {x: 0.08425151, y: 0.9702625}
+      pivot: {x: 0.4999998, y: 0.389872}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dcfc86684eb1ab48a9a311e8a07e41d
-      internalID: 5447360739006338221
+      spriteID: c96564cee747048439a74fc231d08851
+      internalID: -1038042156444509166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monkey_rig_body
+      name: monkey_rig_mouth_4
       rect:
         serializedVersion: 2
-        x: 247
-        y: 139
-        width: 93
-        height: 111
+        x: 147
+        y: 226
+        width: 33
+        height: 18
       alignment: 9
-      pivot: {x: 0.26689985, y: 0.08454345}
+      pivot: {x: 0.49147174, y: 0.3905504}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c7d287199b2a8141926c7845eafab5f
-      internalID: -9064521210605192037
+      spriteID: d3cfa751a7476c44f988aab32f22c5f9
+      internalID: -5849995618816690541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_rig_mouth_5
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 225
+        width: 35
+        height: 19
+      alignment: 9
+      pivot: {x: 0.49195948, y: 0.36668637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664092adf5ad29b4f97cd3ffa7316a89
+      internalID: 2554404086962976919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_rig_mouth_6
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 223
+        width: 35
+        height: 18
+      alignment: 9
+      pivot: {x: 0.48391855, y: 0.39055124}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8a709e0bf5749498189c32e3026a6a
+      internalID: 4003006280085721728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_rig_mouth_7
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 220
+        width: 39
+        height: 19
+      alignment: 9
+      pivot: {x: 0.46391883, y: 0.35187492}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed258ce4cd03f2c48874f96fccd0a871
+      internalID: 7253689140333129342
       vertices: []
       indices: 
       edges: []
@@ -230,61 +335,292 @@ TextureImporter:
       name: monkey_rig_tail
       rect:
         serializedVersion: 2
-        x: 191
-        y: 3
+        x: 0
+        y: 113
         width: 129
-        height: 99
+        height: 104
       alignment: 9
-      pivot: {x: 0.96289796, y: 0.78864574}
+      pivot: {x: 0.9712425, y: 0.7787301}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 758ab3a1cab7a4b41b98a3d4e25f7fcf
+      spriteID: 42c25019d2ae55f43aa52b416755a51d
       internalID: 175880963502780187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monkey_rig_leg_left
+      name: monkey_rig_shoulder_left
       rect:
         serializedVersion: 2
-        x: 81
-        y: 0
-        width: 83
-        height: 108
+        x: 160
+        y: 96
+        width: 41
+        height: 60
       alignment: 9
-      pivot: {x: 0.22678265, y: 0.9368782}
+      pivot: {x: 0.11559872, y: 0.8940109}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57e6bdf7116ecd848827856d695dbd22
-      internalID: 7215724092558356151
+      spriteID: 5af14d2e378c0774487a7173c5582388
+      internalID: -5411290247676272050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monkey_leg_right
+      name: monkey_rig_forearm_left
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 81
-        height: 106
+        x: 180
+        y: 9
+        width: 45
+        height: 74
       alignment: 9
-      pivot: {x: 0.24194255, y: 0.960703}
+      pivot: {x: 0.16853027, y: 0.93736744}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3412e20bc64d2e649b8ebd875389d35f
-      internalID: -4954738959535474998
+      spriteID: 96ffb85697e9c3446b0dc9c67152ea1c
+      internalID: 7575127908656795796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_rig_left_forearm
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 7
+        width: 48
+        height: 78
+      alignment: 9
+      pivot: {x: 0.20097415, y: 0.91493803}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eae54032c9061f40bee616cff0279fd
+      internalID: -8020834109459700289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_rig_shoulder_right
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 96
+        width: 43
+        height: 59
+      alignment: 9
+      pivot: {x: 0.14002281, y: 0.9102292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3f05e112d6d1443809c33da18c5b95
+      internalID: -1101918169006374447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_rig_forearm_right
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 14
+        width: 47
+        height: 69
+      alignment: 9
+      pivot: {x: 0.21257603, y: 0.95274496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088271fd5de198445a9eec4f9b5e67f0
+      internalID: -2570368243672562588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_rig_quad_left
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 95
+        width: 70
+        height: 73
+      alignment: 9
+      pivot: {x: 0.09997733, y: 0.9285958}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dba7ae3823772b4a8d128785534eb97
+      internalID: -8239957149565727787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_rig_quad_right
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 96
+        width: 70
+        height: 74
+      alignment: 9
+      pivot: {x: 0.09970267, y: 0.9129478}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8378f48000f65f4cbcda9f3ccedbf5c
+      internalID: 2601046300624488014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_rig_shin_left
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 61
+        width: 81
+        height: 28
+      alignment: 9
+      pivot: {x: 0.9590612, y: 0.80324334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b12133efbcdd6469dc661bbc69e094
+      internalID: 6798543851219254637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_rig_shin_right
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 29
+        width: 80
+        height: 30
+      alignment: 9
+      pivot: {x: 0.96480024, y: 0.85134506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e08a8f996f6044b9da938fbb439b50
+      internalID: -8169350638800661726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_rig_wrist
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 0
+        width: 22
+        height: 28
+      alignment: 9
+      pivot: {x: 0.70368266, y: 0.91855234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421a23f064cf15f49a86b931e934fa79
+      internalID: -965974701300825715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_rig_foot
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 2
+        width: 46
+        height: 23
+      alignment: 9
+      pivot: {x: 0.24273217, y: 0.7897398}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459d7a00d40b792469da6477fc86e320
+      internalID: 7776439784450361207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_rig_body
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 85
+        height: 106
+      alignment: 9
+      pivot: {x: 0.43388724, y: 0.47925496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4336d5109e6ad4580a0035dd04060c
+      internalID: -9064521210605192037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_rig_head
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 81
+        height: 89
+      alignment: 9
+      pivot: {x: 0.5120657, y: 0.01683109}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60db4d9cdee245d49991a151e35f8bce
+      internalID: 4981576881901229046
       vertices: []
       indices: 
       edges: []
