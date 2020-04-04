@@ -178,7 +178,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1440198387
   m_SortingLayer: 6
-  m_SortingOrder: 9
+  m_SortingOrder: 10
   m_Sprite: {fileID: 878777441990743753, guid: 712f1e6887b1d2a4787a32b19160ae1b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -200,7 +200,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2018439213324835038}
   - component: {fileID: 2001975955995940535}
-  - component: {fileID: 1940269584}
   m_Layer: 0
   m_Name: Left_item
   m_TagString: Untagged
@@ -271,25 +270,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1940269584
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2809942152923444503}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3821778139343160382
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,7 +1998,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1440198387
   m_SortingLayer: 6
-  m_SortingOrder: 8
+  m_SortingOrder: 9
   m_Sprite: {fileID: -8884063348422108610, guid: 712f1e6887b1d2a4787a32b19160ae1b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2325,7 +2305,6 @@ MonoBehaviour:
   Back: {fileID: 8175776208549258510}
   FootLeft: {fileID: 8175776210009565379}
   FootRight: {fileID: 8175776210142766099}
-  LBackpack: {fileID: 0}
 --- !u!114 &290012830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2812,7 +2791,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1440198387
   m_SortingLayer: 6
-  m_SortingOrder: 8
+  m_SortingOrder: 9
   m_Sprite: {fileID: 8659474824711615487, guid: 712f1e6887b1d2a4787a32b19160ae1b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
