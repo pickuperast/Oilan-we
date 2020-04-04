@@ -63,6 +63,9 @@ namespace Oilan
         public SpriteRenderer Back;
         public SpriteRenderer FootLeft;
         public SpriteRenderer FootRight;
+
+        public bool isBeingPushed = false;
+        private bool isRequiredToResetPush = true;
         /*
         public Vector2 StartPosition;
         public float timer;
@@ -161,6 +164,22 @@ namespace Oilan
             }
             m_Anim.SetBool("Ground", m_Grounded);
 
+
+            if (isBeingPushed)//pushes ali in front and plays walk animation
+            {
+                gameObject.GetComponent<PlayerController>().move = new Vector2(1f, 0f);
+                isRequiredToResetPush = true;
+            }
+            else
+            {
+                if (isRequiredToResetPush)
+                {
+                    StartCoroutine(ResetSpeed());
+                    isRequiredToResetPush = false;
+                }
+            }
+
+
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
             if (m_Grounded) {// && Mathf.Abs(m_Rigidbody2D.velocity.y) < 0.1f)
@@ -192,6 +211,10 @@ namespace Oilan
         public void SetAnimatorBool(string boolName, bool newValue = false)
         {
             m_Anim.SetBool(boolName, newValue);
+        }
+        public void SetEmulateWalking(bool isOn)
+        {
+            isBeingPushed = isOn;
         }
         public void SetEyesFront(bool isOn)
         {
