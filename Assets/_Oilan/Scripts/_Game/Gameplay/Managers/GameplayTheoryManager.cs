@@ -39,5 +39,9 @@ namespace Oilan
         {
             WebGLMessageHandler.Instance.PubOpenTrainer(l_type, level, step);
         }
+        public void openExternalLastTrainerString(string l_type)
+        {
+            WebGLMessageHandler.Instance.PubOpenTrainer(l_type, level, step, true);
+        }
     }
 }

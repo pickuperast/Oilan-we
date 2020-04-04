@@ -181,19 +181,19 @@ namespace Oilan
             //SetProgress(mJSONinput);
         }
 
-        public void PubOpenTrainer(string TrainerType, int level, int step)
+        public void PubOpenTrainer(string TrainerType, int level, int step, bool isLastStepTrainer = false)
         {
             //LibConsoleWriter("UnityLog: Setting progress to: " + mJSONinput);
             //TextSavedStats.text += "\nUnityLog: Setting progress to: " + mJSONinput;
             //Debug.Log("Setting progress to: "+ mJSONinput);
-             OpenTrainer(TrainerType, level, step, true); 
+             OpenTrainer(TrainerType, level, step, isLastStepTrainer); 
         }
 //#elif UNITY_EDITOR
 //#endif
 
         bool WebPlatform()
         {
-            return Application.platform == RuntimePlatform.WebGLPlayer;//!= for testing in pickuperast.github.io and oilan.kz
+            return Application.platform != RuntimePlatform.WebGLPlayer;//!= for testing in pickuperast.github.io and oilan.kz
         }
 
         public SaveData GetData()
