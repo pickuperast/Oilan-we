@@ -1535,6 +1535,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 15003b8423b589a43b550dc3c0ba43bb, type: 2}
     - {fileID: 11400000, guid: 5ea7b14610b781f499841751d0dd3a0b, type: 2}
     - {fileID: 11400000, guid: 605302dee5611ba4b8b64bb644d33b0c, type: 2}
+    - {fileID: 11400000, guid: 128385db434086040853d6d250458a25, type: 2}
+    - {fileID: 11400000, guid: 80fce184ef1af9243a5f028b28e5efa2, type: 2}
+    - {fileID: 11400000, guid: 6e8cb3aa53c36ba478a6440e311c598d, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -1718,6 +1721,67 @@ MonoBehaviour:
             m_StringArgument: Au-P3-18
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 833951887}
+          m_MethodName: SetAnimatorAli_r58_Trigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 833951887}
+          m_MethodName: SetAnimatorAli_r58_Trigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 833951887}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1150245497}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Au-P3-17
+            m_BoolArgument: 1
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 833951887}
+          m_MethodName: SetAnimatorAli_r40_look_aroundTrigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!320 &124941103
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -1899,6 +1963,10 @@ PlayableDirector:
     value: {fileID: 124941099}
   - key: {fileID: 3741575054830540085, guid: 0b0899f71a69cba4988c7d106e9ac58a, type: 2}
     value: {fileID: 833951889}
+  - key: {fileID: -7642046241043628752, guid: 0b0899f71a69cba4988c7d106e9ac58a, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -765041344349100777, guid: 0b0899f71a69cba4988c7d106e9ac58a, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &133067136
@@ -11173,12 +11241,12 @@ PrefabInstance:
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 138.83
+      value: 80.94
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.63
+      value: -2.52
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -26863,7 +26931,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 110, y: 192}
+  m_AnchoredPosition: {x: 110.00001, y: 192}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!61 &1890629499

@@ -256,7 +256,7 @@ namespace Oilan
             SetAnimatorTrigger("ali_r24_mashet_levoi_rukoi");
         }
 
-        public void SetAnimatorAli_r40_Trigger()
+        public void SetAnimatorAli_r40_look_aroundTrigger()
         {
             SetAnimatorTrigger("ali_r40_look_around");
         }
