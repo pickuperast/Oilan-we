@@ -1468,7 +1468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraAnchor: {fileID: 1509335728}
-  cameraTargetSize: 5
+  cameraTargetSize: 3.5
   isPreActivated: 0
   isActivated: 0
   isSolved: 1
@@ -1632,6 +1632,28 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 833951887}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1150245497}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Au-P3-14
+            m_BoolArgument: 1
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 833951887}
@@ -1724,7 +1746,7 @@ MonoBehaviour:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 833951887}
-          m_MethodName: SetAnimatorAli_r58_Trigger
+          m_MethodName: SetEmulateWalking
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1737,7 +1759,7 @@ MonoBehaviour:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 833951887}
-          m_MethodName: SetAnimatorAli_r58_Trigger
+          m_MethodName: SetEmulateWalking
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1746,17 +1768,6 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 833951887}
-          m_MethodName: SetAnimatorTalkTrigger
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
           m_CallState: 2
         - m_Target: {fileID: 1150245497}
           m_MethodName: PlayAudioFromTimeline
@@ -1767,6 +1778,17 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: Au-P3-17
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 833951887}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
     - m_PersistentCalls:
@@ -1963,10 +1985,10 @@ PlayableDirector:
     value: {fileID: 124941099}
   - key: {fileID: 3741575054830540085, guid: 0b0899f71a69cba4988c7d106e9ac58a, type: 2}
     value: {fileID: 833951889}
-  - key: {fileID: -7642046241043628752, guid: 0b0899f71a69cba4988c7d106e9ac58a, type: 2}
-    value: {fileID: 0}
   - key: {fileID: -765041344349100777, guid: 0b0899f71a69cba4988c7d106e9ac58a, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -2291537396935598779, guid: 0b0899f71a69cba4988c7d106e9ac58a, type: 2}
+    value: {fileID: 699658232}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &133067136
@@ -22448,7 +22470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509335728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.44, y: 2.14, z: 0}
+  m_LocalPosition: {x: 7.47, y: 1.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 124941100}
