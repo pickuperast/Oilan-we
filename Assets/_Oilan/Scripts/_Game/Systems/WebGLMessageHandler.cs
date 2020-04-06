@@ -193,7 +193,7 @@ namespace Oilan
 
         bool WebPlatform()
         {
-            return Application.platform == RuntimePlatform.WebGLPlayer;//!= for testing in pickuperast.github.io and oilan.kz
+            return Application.platform != RuntimePlatform.WebGLPlayer;//!= for testing in pickuperast.github.io and oilan.kz
         }
 
         public SaveData GetData()

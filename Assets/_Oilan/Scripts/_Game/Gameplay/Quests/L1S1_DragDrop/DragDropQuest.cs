@@ -84,7 +84,9 @@ namespace Oilan
 
         void playOwnAudioSource()
         {
-            GameplayAudioHandler.PlayAudioFromTimeline(audioName);
+            AudioSource l_audioSource = gameObject.GetComponent<AudioSource>();
+            l_audioSource.Play();
+            //GameplayAudioHandler.PlayAudioFromTimeline(audioName);
         }
 
         public override void Solved()

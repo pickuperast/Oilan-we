@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace Oilan
 {
-    [ExecuteInEditMode]
     public class SpriteSortingController : MonoBehaviour
     {
 
@@ -30,7 +29,7 @@ namespace Oilan
         }
 
         // Update is called once per frame
-        void Update()
+        void LateUpdate()
         {
             if (NewsortingLayer != _NewsortingLayer || sortingOrder != _sortingOrder)
             {
