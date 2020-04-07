@@ -161,9 +161,9 @@ namespace Oilan
 
             ClearQuestCanvas();
             ClearQuestObjects();
-            director.enabled = false;
             GameplayManager.Instance.TurnPlayerControlsOnOff(true);
             GameplayManager.Instance.TurnAutoCamOnOff(true);
+            director.enabled = false;    
             yield return null;
         }
 
