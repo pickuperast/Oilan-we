@@ -154,7 +154,7 @@ namespace Oilan
         }*/
         public void ConsoleLog(string txt)
         {
-           if (WebPlatform())
+           if (!UnityPlatform())
             LibConsoleWriter(txt);
         }
         public void ReturnFromTrainer(bool success, int starsEarned)
@@ -191,17 +191,39 @@ namespace Oilan
 //#elif UNITY_EDITOR
 //#endif
 
-        bool WebPlatform()
+        bool UnityPlatform()
         {
-            return Application.platform != RuntimePlatform.WebGLPlayer;//!= for testing in pickuperast.github.io and oilan.kz
+            //return Application.platform == RuntimePlatform.WebGLPlayer;//== for testing in pickuperast.github.io and oilan.kz
+            return false;//false for testing in pickuperast.github.io and oilan.kz
         }
 
         public SaveData GetData()
         {
             SaveData mSaveData = new SaveData(0, 0, 0, 0, 0);
-            if (WebPlatform())
+            if (UnityPlatform())
             {
-                string progress = GetProgress(); 
+
+                string GetProgress = @"[{&quot;id&quot;:18,&quot;level&quot;:1,&quot;step&quot;:1,&quot;part&quot;:1,&quot;stars&quot;:0}]";
+                string progress = GetProgress.Replace("&quot;", @"""");
+                string pattern = @"{.*?\}";
+                string input = progress;
+                string output = "";
+                //string input = @"{&quot;1&quot;:{&quot;id&quot;:2,&quot;user_id&quot;:9,&quot;level&quot;:1,&quot;step&quot;:1,&quot;part&quot;:1,&quot;starts&quot;:0}}";
+                RegexOptions options = RegexOptions.Multiline;
+
+                foreach (Match m in Regex.Matches(input, pattern, options))
+                {
+                    output = m.Value;
+                    Debug.Log(m.Value);
+                    Debug.Log("'{0}' found at index {1}." + m.Value + m.Index);
+                }
+                //output = output.Substring(1, output.Length - 1);//{"id":2,"user_id":9,"level":1,"step":1,"part":1,"starts":0}
+                mSaveData = JsonUtility.FromJson<SaveData>(output);
+                return mSaveData;
+            }
+            else
+            {
+                string progress = GetProgress();
                 //LibConsoleWriter("UnityLog: call GetProgress(), answer: " + progress);
                 //TextSavedStats.text += "\nUnityLog: call GetProgress(), answer: " + progress;
                 progress = GetProgress().Replace("&quot;", @"""");
@@ -240,26 +262,6 @@ namespace Oilan
 
                 //SaveGameManager.Instance.SetLocationUnlocked();
                 */
-            }
-            else
-            {
-                string GetProgress = @"[{&quot;id&quot;:18,&quot;level&quot;:1,&quot;step&quot;:1,&quot;part&quot;:1,&quot;stars&quot;:0}]";
-                string progress = GetProgress.Replace("&quot;", @"""");
-                string pattern = @"{.*?\}";
-                string input = progress;
-                string output = "";
-                //string input = @"{&quot;1&quot;:{&quot;id&quot;:2,&quot;user_id&quot;:9,&quot;level&quot;:1,&quot;step&quot;:1,&quot;part&quot;:1,&quot;starts&quot;:0}}";
-                RegexOptions options = RegexOptions.Multiline;
-
-                foreach (Match m in Regex.Matches(input, pattern, options))
-                {
-                    output = m.Value;
-                    Debug.Log(m.Value);
-                    Debug.Log("'{0}' found at index {1}." + m.Value + m.Index);
-                }
-                //output = output.Substring(1, output.Length - 1);//{"id":2,"user_id":9,"level":1,"step":1,"part":1,"starts":0}
-                mSaveData = JsonUtility.FromJson<SaveData>(output);
-                return mSaveData;
             }
             return mSaveData;
             //UpdateConnectionTestData();
