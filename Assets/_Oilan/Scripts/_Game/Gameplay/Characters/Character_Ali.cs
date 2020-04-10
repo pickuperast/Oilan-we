@@ -66,6 +66,7 @@ namespace Oilan
 
         public bool isBeingPushed = false;
         private bool isRequiredToResetPush = true;
+        bool isRequiredItemChecking = false;
         /*
         public Vector2 StartPosition;
         public float timer;
@@ -93,13 +94,13 @@ namespace Oilan
         public void EquipItem(int ItemIdinList)
         {
             m_items[ItemIdinList].isEquipped = true;
-            CheckRequiredItems();
+            isRequiredItemChecking = true;
             Debug.Log("Called EquipItem("+ ItemIdinList+")");
         }
         public void UnEquipItem(int ItemIdinList)
         {
             m_items[ItemIdinList].isEquipped = false;
-            CheckRequiredItems();
+            isRequiredItemChecking = true;
             Debug.Log("Called UnEquipItem(" + ItemIdinList + ")");
             if (ItemIdinList != 2)
             {
@@ -109,7 +110,7 @@ namespace Oilan
 
         private void LateUpdate()
         {
-            CheckRequiredItems();
+            if (isRequiredItemChecking) CheckRequiredItems();
         }
 
         public void CheckRequiredItems()//ƒелает проверку по листу m_items и переодевает персонажа
@@ -139,6 +140,7 @@ namespace Oilan
                 }
             }
             Debug.Log("hand item sprite: " + LeftHand.sprite);
+            isRequiredItemChecking = false;
         }
         
         private void Awake()
