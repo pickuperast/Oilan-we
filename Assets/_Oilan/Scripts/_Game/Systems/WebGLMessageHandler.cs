@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 
 namespace Oilan
 {
+    
     [SerializeField]
     public class SaveData
     {
@@ -63,7 +64,7 @@ namespace Oilan
         private static extern string GetProgress();
 
         [DllImport("__Internal")]//Assets\Plugins\Oilan\Utils\WebGL\JSManager
-        private static extern void SetProgress(string JSONinput);
+        private static extern void Unity_SetProgress(string JSONinput);
 
         [DllImport("__Internal")]//Assets\Plugins\Oilan\Utils\WebGL\JSManager
         private static extern void LibConsoleWriter(string JSONinput);
@@ -178,7 +179,8 @@ namespace Oilan
             //LibConsoleWriter("UnityLog: Setting progress to: " + mJSONinput);
             //TextSavedStats.text += "\nUnityLog: Setting progress to: " + mJSONinput;
             //Debug.Log("Setting progress to: "+ mJSONinput);
-            //SetProgress(mJSONinput);
+            if (!UnityPlatform())
+                Unity_SetProgress(mJSONinput);
         }
 
         public void PubOpenTrainer(string TrainerType, int level, int step, bool isLastStepTrainer = false)
@@ -193,8 +195,8 @@ namespace Oilan
 
         bool UnityPlatform()
         {
-            //return Application.platform == RuntimePlatform.WebGLPlayer;//== for testing in pickuperast.github.io and oilan.kz
-            return false;//false for testing in pickuperast.github.io and oilan.kz
+            return Application.platform != RuntimePlatform.WebGLPlayer;//== for testing in pickuperast.github.io and oilan.kz
+            //return false;//false for testing in pickuperast.github.io and oilan.kz
         }
 
         public SaveData GetData()

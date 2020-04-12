@@ -121,10 +121,7 @@ namespace Oilan
         void PushProgress()
         {
             string SaveDataInJSON = JsonUtility.ToJson(mSaveData);
-#if UNITY_WEBGL
             WebGLMessageHandler.Instance.SetData(SaveDataInJSON);
-#elif UNITY_EDITOR
-#endif
         }
 
         public int GetUserID()

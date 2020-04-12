@@ -12,8 +12,10 @@
 		console.log(Pointer_stringify(stringVal));
 	},
 	
-	SetProgress: function (stringVal){
-		SetProgress(Pointer_stringify(stringVal));
+	Unity_SetProgress: function (stringVal){
+		var m_string = Pointer_stringify(stringVal);
+		console.log("Trying to SetProgress: " + m_string);
+        SetProgress(m_string);
 	},
 	
 	OpenTrainer: function (stringVal, intValLevel, intValStep, boolVal){
