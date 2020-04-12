@@ -15,6 +15,7 @@ namespace Oilan
         public bool isEquipped;
         //===start=== Only one possible
         public bool isForLeftHand;
+        public bool isForRightHand;
         public bool isForBack;
         public bool isForFoot;
         //===end===
@@ -60,6 +61,7 @@ namespace Oilan
         [Header("EQUIPMENT")]
         public List<EquippableItem> m_items;
         public SpriteRenderer LeftHand;
+        public SpriteRenderer RightHand;
         public SpriteRenderer Back;
         public SpriteRenderer FootLeft;
         public SpriteRenderer FootRight;
@@ -121,6 +123,17 @@ namespace Oilan
                 if (item.isForLeftHand && item.isEquipped) {
                     LeftHand.sprite = item.m_sprite;
                     Debug.Log("showing left hand item. Sprite: " + LeftHand.sprite);
+                    break;
+                }
+            }
+
+            //check left hand items
+            foreach (var item in m_items) {
+                Debug.Log("Checking item: " + item.name);
+                if (item.isForRightHand && item.isEquipped)
+                {
+                    RightHand.sprite = item.m_sprite;
+                    Debug.Log("showing right hand item. Sprite: " + RightHand.sprite);
                     break;
                 }
             }
