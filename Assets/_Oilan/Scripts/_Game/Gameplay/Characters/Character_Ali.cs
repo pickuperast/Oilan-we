@@ -67,7 +67,7 @@ namespace Oilan
         public SpriteRenderer FootRight;
 
         public bool isBeingPushed = false;
-        private bool isRequiredToResetPush = true;
+        public bool isRequiredToResetPush = true;
         bool isRequiredItemChecking = false;
         /*
         public Vector2 StartPosition;
