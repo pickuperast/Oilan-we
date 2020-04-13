@@ -18,7 +18,7 @@ public class SIsometricSpriteRenderer : MonoBehaviour
     public bool isOn = false;
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (isOn) { 
             foreach (var pt in Parts)
