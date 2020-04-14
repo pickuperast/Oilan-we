@@ -26,7 +26,7 @@ namespace Oilan
             if (collision.CompareTag("Player") && pickableType == PickableType.STAR && !isPicked)
             {
                 isPicked = true;
-
+                WebGLMessageHandler.Instance.AddWebsiteStar();
                 GameplayScoreManager.Instance.AddCoins(1);
 
                 AudioManager.Instance.PlaySound("Zv-9 (Волшебный звук для звезды (отлетают на табло в меню “Награды”))");

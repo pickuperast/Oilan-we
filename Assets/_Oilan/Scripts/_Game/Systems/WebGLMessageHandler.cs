@@ -68,6 +68,9 @@ namespace Oilan
 
         [DllImport("__Internal")]//Assets\Plugins\Oilan\Utils\WebGL\JSManager
         private static extern void LibConsoleWriter(string JSONinput);
+
+        [DllImport("__Internal")]//Assets\Plugins\Oilan\Utils\WebGL\JSManager
+        private static extern void Unity_AddStar();
         //answer is: {&quot;1&quot;:
         //                   {&quot;id&quot;:2,&quot;user_id&quot;:9,&quot;level&quot;:1,&quot;step&quot;:1,&quot;part&quot;:1,&quot;starts&quot;:0}}
         // Given JSON input should be:
@@ -183,11 +186,14 @@ namespace Oilan
                 Unity_SetProgress(mJSONinput);
         }
 
+        public void AddWebsiteStar()
+        {
+            if (!UnityPlatform())
+                Unity_AddStar();
+        }
+
         public void PubOpenTrainer(string TrainerType, int level, int step, bool isLastStepTrainer = false)
         {
-            //LibConsoleWriter("UnityLog: Setting progress to: " + mJSONinput);
-            //TextSavedStats.text += "\nUnityLog: Setting progress to: " + mJSONinput;
-            //Debug.Log("Setting progress to: "+ mJSONinput);
              OpenTrainer(TrainerType, level, step, isLastStepTrainer); 
         }
 //#elif UNITY_EDITOR

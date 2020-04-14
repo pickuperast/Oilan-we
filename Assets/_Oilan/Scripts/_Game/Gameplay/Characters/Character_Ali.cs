@@ -19,6 +19,8 @@ namespace Oilan
         public bool isForBack;
         public bool isForFoot;
         //===end===
+        //FOR ANIMATION UPDATE
+        public bool isNeedInThisStep;
     };
 
     public class Character_Ali : MonoBehaviour
@@ -68,7 +70,7 @@ namespace Oilan
 
         public bool isBeingPushed = false;
         public bool isRequiredToResetPush = true;
-        bool isRequiredItemChecking = false;
+        public bool isRequiredItemChecking = false;
         /*
         public Vector2 StartPosition;
         public float timer;
@@ -93,6 +95,15 @@ namespace Oilan
         }
         */
         [ExecuteAlways]
+        public bool isAnyItemEquipped()
+        {
+            foreach (var item in m_items)
+            {
+                if (item.isEquipped) return true;
+            }
+            return false;
+        }
+
         public void EquipItem(int ItemIdinList)
         {
             m_items[ItemIdinList].isEquipped = true;
@@ -102,7 +113,9 @@ namespace Oilan
         public void UnEquipItem(int ItemIdinList)
         {
             m_items[ItemIdinList].isEquipped = false;
-            isRequiredItemChecking = true;
+            //проверка, если при вызове метода "UnEquipItem", остался хоть один одетый предмет, то
+            //оставляем переменную "isRequiredItemChecking" = true, чтобы продолжалось отображение одетого предмета
+            isRequiredItemChecking = isAnyItemEquipped();
             Debug.Log("Called UnEquipItem(" + ItemIdinList + ")");
             if (ItemIdinList != 2)
             {
@@ -113,47 +126,45 @@ namespace Oilan
         private void LateUpdate()
         {
             if (isRequiredItemChecking) CheckRequiredItems();
+            //Debug.Log("("+ LateUpdateFrames+") showing left hand item. Sprite: " + LeftHand.sprite);
+            //if (LateUpdateFrames < LateUpdateMaxFrames) { 
+            //    CheckRequiredItems();
+            //    LateUpdateFrames++;
+            //}
+
         }
         
         public void CheckRequiredItems()//Делает проверку по листу m_items и переодевает персонажа
         {
-            //check left hand items
-            foreach (var item in m_items) {
-                Debug.Log("Checking item: " + item.name);
-                if (item.isForLeftHand && item.isEquipped) {
+            foreach (var item in m_items)
+            {
+                if (!item.isNeedInThisStep) continue;
+                if (!item.isEquipped) continue;
+                //check left hand items
+                if (item.isForLeftHand)
+                {
                     LeftHand.sprite = item.m_sprite;
                     Debug.Log("showing left hand item. Sprite: " + LeftHand.sprite);
-                    break;
                 }
-            }
-
-            //check left hand items
-            foreach (var item in m_items) {
-                Debug.Log("Checking item: " + item.name);
-                if (item.isForRightHand && item.isEquipped)
+                //check right hand items
+                if (item.isForRightHand)
                 {
                     RightHand.sprite = item.m_sprite;
                     Debug.Log("showing right hand item. Sprite: " + RightHand.sprite);
-                    break;
                 }
-            }
-
-            //check backpack
-            foreach (var item in m_items) {
-                if (item.isForBack) {
+                //check backpack
+                if (item.isForBack)
+                {
                     item.Backpack.SetActive(item.isEquipped);//Back of character has only one item - blue backpack, so i will just turn it on when need
                 }
-            }
-
-            //check foots
-            foreach (var item in m_items) {
-                if (item.isForFoot && item.isEquipped) {
+                //check foots
+                if (item.isForFoot)
+                {
                     FootLeft.sprite = item.m_sprite;
                     FootRight.sprite = item.m_sprite;
                 }
             }
-            Debug.Log("hand item sprite: " + LeftHand.sprite);
-            isRequiredItemChecking = false;
+            //isRequiredItemChecking = false;
         }
         
         private void Awake()
