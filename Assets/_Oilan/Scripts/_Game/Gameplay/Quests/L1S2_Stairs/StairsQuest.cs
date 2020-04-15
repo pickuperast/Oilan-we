@@ -208,158 +208,23 @@ namespace Oilan
 
             buttonCheck.SetActive(false);
 
-            director.Play(mTimeline_hideProblemsAndEndQuest);
-
-            yield return new WaitForSeconds((float)director.duration);
-
             ClearQuestCanvas();
             ClearQuestObjects();
-
-            director.enabled = false;
-
-            Character_Ali.Instance.SetSpriteVisibility(true);
-
 
             GameplayManager.Instance.TurnPlayerControlsOnOff(true);
             GameplayManager.Instance.TurnAutoCamOnOff(true);
 
+            director.Play(mTimeline_hideProblemsAndEndQuest);
+
+            yield return new WaitForSeconds((float)director.duration);
+
+            director.enabled = false;
+   
             Character_Ali.Instance.backpack_Value = 1f;
             Character_Ali.Instance.equipment_Value = 0f;
             Character_Ali.Instance.hold_Value = 0f;
 
             yield return null;
-        }
-
-        public void CheckSymbolsSolved()
-        {
-            StartCoroutine(CheckSymbolsSolvedCoroutine());
-        }
-
-        private IEnumerator CheckSymbolsSolvedCoroutine()
-        {
-
-            //bool isFruitsSolved = true;
-
-            //foreach (DragDropTarget ddTarget in ddTargets)
-            //{
-            //    if (!ddTarget.isOccupied)
-            //    {
-            //        isFruitsSolved = false;
-            //    }
-            //    else
-            //    {
-            //        foreach (DragDropObject ddSymbol in ddObjects)
-            //        {
-            //            if (ddSymbol.gameObject.activeInHierarchy && ddTarget.id == ddSymbol.id)
-            //            {
-            //                ddSymbol.GetComponent<DragDropObject>().enabled = false;
-            //            }
-            //        }
-            //    }
-
-            //}
-
-            //if (isFruitsSolved)
-            //{
-            //    SymbolsSolved();
-            //}
-
-            yield return null;
-        }
-
-        public void SymbolsSolved()
-        {
-            StartCoroutine(SymbolsSolvedCoroutine());
-        }
-
-        private IEnumerator SymbolsSolvedCoroutine()
-        {
-            //director.Play(mTimeline_hideSymbols);
-
-            //yield return new WaitForSeconds((float)director.duration);
-
-            //GameplayManager.Instance.MoveCamera(cameraPosOriginal, cameraSizeOriginal);
-
-            //Character_Ali.Instance.GetComponentInChildren<DragDropTarget>().isOccupied = false;
-
-            //foreach (DragDropObject ddSymbol in ddObjects)
-            //{
-            //    ddSymbol.GetComponent<Collider2D>().enabled = false;
-            //}
-
-            //foreach (DragDropTarget ddTarget in ddTargets)
-            //{
-            //    ddTarget.GetComponent<Collider2D>().enabled = false;
-            //}
-
-
-            //ddPlate.enabled = true;
-            //ddPlate.OnPlaced += ShowReward;
-
-            //var sortPlate = ddPlate.gameObject.GetComponent<CageLetter>();
-            //sortPlate.sortingLayer = "Front";
-
-            yield return null;
-        }
-
-        private void ShowReward()
-        {
-            StartCoroutine(ShowRewardCoroutine());
-        }
-
-        private IEnumerator ShowRewardCoroutine()
-        {
-            ClearQuestCanvas();
-
-            //ddPlate.gameObject.SetActive(false);
-
-            //director.Play(mTimeline_showReward);
-            //yield return new WaitForSeconds((float)director.duration);
-
-            //ddLetter.OnPlaced += OpenLetter;
-            //Character_Ali.Instance.GetComponentInChildren<DragDropTarget>().isOccupied = false;
-
-            //var sortLetter = ddLetter.gameObject.GetComponent<CageLetter>();
-            //sortLetter.sortingLayer = "Front";
-
-            yield return null;
-        }
-
-        private void OpenLetter()
-        {
-            StartCoroutine(OpenLetterCoroutine());
-        }
-
-        private IEnumerator OpenLetterCoroutine()
-        {
-            ClearQuestCanvas();
-
-            //ddLetter.gameObject.SetActive(false);
-
-            //director.Play(mTimeline_letterOpen);
-
-            yield return new WaitForSeconds((float)director.duration);
-
-            yield return null;
-        }
-
-        public void ButtonCloseLetter()
-        {
-            CloseLetter();
-        }
-
-        private void CloseLetter()
-        {
-            StartCoroutine(CloseLetterCoroutine());
-        }
-
-        private IEnumerator CloseLetterCoroutine()
-        {
-            //director.Play(mTimeline_letterClose);
-
-            yield return new WaitForSeconds((float)director.duration);
-
-            PostDeactivateQuest();
         }
 
         public override void DeactivateQuest()
