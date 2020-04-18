@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!95 &335720887
+--- !u!95 &3578588746672562127
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -42,14 +42,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6859947929457067719}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.052335896, w: 0.9986295}
   m_LocalPosition: {x: 8.351577, y: 2.28731, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1916044921401080885}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -6}
 --- !u!1001 &8940038686840381521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64,13 +64,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4930045293862010121, guid: 9f322e830e36df046b762dc50a5ea379,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.0000001188708
+      propertyPath: m_LocalRotation.x
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -2304570140521244314, guid: 9f322e830e36df046b762dc50a5ea379,
+    - target: {fileID: -4930045293862010121, guid: 9f322e830e36df046b762dc50a5ea379,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.017333
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4930045293862010121, guid: 9f322e830e36df046b762dc50a5ea379,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.369272
+      objectReference: {fileID: 0}
+    - target: {fileID: -4930045293862010121, guid: 9f322e830e36df046b762dc50a5ea379,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9293214
+      objectReference: {fileID: 0}
+    - target: {fileID: -4930045293862010121, guid: 9f322e830e36df046b762dc50a5ea379,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 43.341003
       objectReference: {fileID: 0}
     - target: {fileID: -1835694697917211548, guid: 9f322e830e36df046b762dc50a5ea379,
         type: 3}
