@@ -155,6 +155,7 @@ namespace Oilan
 
         private IEnumerator CheckSolvedCoroutine()
         {
+            buttonCheck.SetActive(false);
 
             foreach (ProblemAA_1_1_3 prblm in problems)
             {
@@ -179,6 +180,7 @@ namespace Oilan
 
             }
 
+            buttonCheck.SetActive(!buttonCheck.activeSelf);
             if (_isSolved)
             {
                 Solved();
