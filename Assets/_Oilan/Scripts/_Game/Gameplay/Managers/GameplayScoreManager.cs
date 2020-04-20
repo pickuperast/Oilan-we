@@ -43,6 +43,9 @@ namespace Oilan
             UpdateAllStats();
         }
 
-
+        public void AddWebStars(int HowMuch = 1) {
+            for (int i = 0; i < HowMuch; i++)
+                WebGLMessageHandler.Instance.AddWebsiteStar();
+        }
     }
 }

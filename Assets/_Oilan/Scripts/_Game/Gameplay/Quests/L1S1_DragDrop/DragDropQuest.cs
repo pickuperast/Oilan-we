@@ -116,6 +116,7 @@ namespace Oilan
             AudioManager.Instance.PlaySound(audioName, true, true);
             playOwnAudioSource();
             StartCoroutine(HideDialogueCoroutine());
+            WebGLMessageHandler.Instance.AddWebsiteStar();//Add 1 star when quest was finished
         }
         private IEnumerator HideDialogueCoroutine()
         {
