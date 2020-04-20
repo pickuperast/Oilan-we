@@ -180,10 +180,14 @@ namespace Oilan
 
             }
 
-            buttonCheck.SetActive(!buttonCheck.activeSelf);
             if (_isSolved)
             {
+                GameplayScoreManager.Instance.AddWebStars(7);
                 Solved();
+            }
+            else
+            {
+                buttonCheck.SetActive(true);
             }
 
             yield return null;

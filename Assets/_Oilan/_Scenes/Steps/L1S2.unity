@@ -11430,6 +11430,22 @@ PrefabInstance:
       propertyPath: m_items.Array.data[1].isNeedInThisStep
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 870960307, guid: a78faa85e2a730d4b8af34fedfcdeec1, type: 3}
+      propertyPath: m_items.Array.data[3].isForLeftHand
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 870960307, guid: a78faa85e2a730d4b8af34fedfcdeec1, type: 3}
+      propertyPath: m_items.Array.data[3].isForRightHand
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 870960307, guid: a78faa85e2a730d4b8af34fedfcdeec1, type: 3}
+      propertyPath: m_items.Array.data[1].isForRightHand
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 870960307, guid: a78faa85e2a730d4b8af34fedfcdeec1, type: 3}
+      propertyPath: m_items.Array.data[1].isForLeftHand
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 865614620007101603, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_Offset.y
@@ -11603,12 +11619,12 @@ PrefabInstance:
     - target: {fileID: 8175776209474989120, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.043619405
+      value: -0.67559016
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209474989120, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9990483
+      value: 0.7372774
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209474989135, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -11658,12 +11674,12 @@ PrefabInstance:
     - target: {fileID: 8175776209848059401, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.052335896
+      value: 0.86602545
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209848059401, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9986295
+      value: 0.49999994
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209942908744, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -11813,12 +11829,12 @@ PrefabInstance:
     - target: {fileID: 8175776210335316361, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.020680677
+      value: -0.258819
       objectReference: {fileID: 0}
     - target: {fileID: 8175776210335316361, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99978614
+      value: 0.9659259
       objectReference: {fileID: 0}
     - target: {fileID: 8175776210456874476, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -12273,6 +12289,12 @@ MonoBehaviour:
     sprite: {fileID: 833951892}
     defaultOrder: 3
   isOn: 1
+--- !u!61 &833951924 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 870960305, guid: a78faa85e2a730d4b8af34fedfcdeec1,
+    type: 3}
+  m_PrefabInstance: {fileID: 833951884}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &840792180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27837,7 +27859,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 110.00001, y: 192}
+  m_AnchoredPosition: {x: 110, y: 192}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!61 &1890629499
@@ -31146,7 +31168,7 @@ PlayableDirector:
   m_GameObject: {fileID: 2106483131}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 31c05fa7821b845418ca248f620a782d, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: d6fa00022aaa43f45905f07a2758bcf1, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
@@ -31268,20 +31290,12 @@ PlayableDirector:
     value: {fileID: 998018778}
   - key: {fileID: 0}
     value: {fileID: 0}
-  - key: {fileID: -8295557513887505850, guid: d6fa00022aaa43f45905f07a2758bcf1, type: 2}
-    value: {fileID: 833951888}
-  - key: {fileID: 345205003272808491, guid: d6fa00022aaa43f45905f07a2758bcf1, type: 2}
-    value: {fileID: 833951889}
   - key: {fileID: -1868592385452862323, guid: bdbaf1b51ea112b4387c5c4aa969bffd, type: 2}
     value: {fileID: 1460535622}
   - key: {fileID: 3981262811607767686, guid: bdbaf1b51ea112b4387c5c4aa969bffd, type: 2}
     value: {fileID: 518955974}
   - key: {fileID: -3644224502704253533, guid: bdbaf1b51ea112b4387c5c4aa969bffd, type: 2}
     value: {fileID: 5650442582889982161}
-  - key: {fileID: -107400696056338186, guid: bdbaf1b51ea112b4387c5c4aa969bffd, type: 2}
-    value: {fileID: 833951888}
-  - key: {fileID: 5920767531393082267, guid: bdbaf1b51ea112b4387c5c4aa969bffd, type: 2}
-    value: {fileID: 833951889}
   - key: {fileID: 3308087697853662985, guid: bdbaf1b51ea112b4387c5c4aa969bffd, type: 2}
     value: {fileID: 1747373263}
   - key: {fileID: 8775021207354625512, guid: bdbaf1b51ea112b4387c5c4aa969bffd, type: 2}
@@ -31294,8 +31308,6 @@ PlayableDirector:
     value: {fileID: 1549680571}
   - key: {fileID: 1935789520438021215, guid: bdbaf1b51ea112b4387c5c4aa969bffd, type: 2}
     value: {fileID: 971745718}
-  - key: {fileID: -5350473700292704424, guid: bdbaf1b51ea112b4387c5c4aa969bffd, type: 2}
-    value: {fileID: 653029521598210539}
   - key: {fileID: 0}
     value: {fileID: 0}
   - key: {fileID: 0}
@@ -31304,10 +31316,6 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 0}
     value: {fileID: 0}
-  - key: {fileID: 2522072685879607037, guid: 38caf7306fd1d4849a90d32fbab90fda, type: 2}
-    value: {fileID: 833951888}
-  - key: {fileID: -8648375811740308955, guid: 38caf7306fd1d4849a90d32fbab90fda, type: 2}
-    value: {fileID: 833951889}
   - key: {fileID: 3593589893625139493, guid: 38caf7306fd1d4849a90d32fbab90fda, type: 2}
     value: {fileID: 1460535622}
   - key: {fileID: -3583871153194594398, guid: 38caf7306fd1d4849a90d32fbab90fda, type: 2}
@@ -31326,8 +31334,6 @@ PlayableDirector:
     value: {fileID: 1549680571}
   - key: {fileID: 664282785112434110, guid: 38caf7306fd1d4849a90d32fbab90fda, type: 2}
     value: {fileID: 971745718}
-  - key: {fileID: -811379443320997570, guid: 38caf7306fd1d4849a90d32fbab90fda, type: 2}
-    value: {fileID: 653029521598210539}
   - key: {fileID: 0}
     value: {fileID: 0}
   - key: {fileID: 0}
@@ -31368,8 +31374,6 @@ PlayableDirector:
     value: {fileID: 1095615876}
   - key: {fileID: -1868479050902584427, guid: 9da74f6511504d442b31dd7bea062f97, type: 2}
     value: {fileID: 430128681}
-  - key: {fileID: -9167896545429815737, guid: 9da74f6511504d442b31dd7bea062f97, type: 2}
-    value: {fileID: 833951888}
   - key: {fileID: 0}
     value: {fileID: 0}
   - key: {fileID: 0}
@@ -31412,10 +31416,6 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 568353779162953763, guid: 5ef64bbb92b859348af5eea99374f20b, type: 2}
     value: {fileID: 612933303}
-  - key: {fileID: -5034445355844513984, guid: 6163437b45ed2784dae623cb077cd91e, type: 2}
-    value: {fileID: 833951888}
-  - key: {fileID: -3278119719806119987, guid: 6163437b45ed2784dae623cb077cd91e, type: 2}
-    value: {fileID: 833951889}
   - key: {fileID: 0}
     value: {fileID: 0}
   - key: {fileID: -5329940937468521261, guid: 6163437b45ed2784dae623cb077cd91e, type: 2}
@@ -31428,10 +31428,6 @@ PlayableDirector:
     value: {fileID: 1399368777}
   - key: {fileID: 6928682650076961369, guid: 6163437b45ed2784dae623cb077cd91e, type: 2}
     value: {fileID: 4601767224148450806}
-  - key: {fileID: -6210799903732871574, guid: 69dca9860d62dae46963c0ba67ab6644, type: 2}
-    value: {fileID: 833951888}
-  - key: {fileID: 4932863206569297232, guid: 69dca9860d62dae46963c0ba67ab6644, type: 2}
-    value: {fileID: 833951889}
   - key: {fileID: 0}
     value: {fileID: 0}
   - key: {fileID: 0}
@@ -31448,10 +31444,6 @@ PlayableDirector:
     value: {fileID: 1399368777}
   - key: {fileID: 6928682650076961369, guid: 69dca9860d62dae46963c0ba67ab6644, type: 2}
     value: {fileID: 2035797232}
-  - key: {fileID: 8196725203048250783, guid: 30dfcbaceb3be7448bb140cc962d26a1, type: 2}
-    value: {fileID: 833951888}
-  - key: {fileID: 8073214135988282766, guid: 30dfcbaceb3be7448bb140cc962d26a1, type: 2}
-    value: {fileID: 833951889}
   - key: {fileID: 0}
     value: {fileID: 0}
   - key: {fileID: 8491818204130130138, guid: 6163437b45ed2784dae623cb077cd91e, type: 2}
@@ -31474,6 +31466,8 @@ PlayableDirector:
     value: {fileID: 1948996274}
   - key: {fileID: -3098268064566023310, guid: 31c05fa7821b845418ca248f620a782d, type: 2}
     value: {fileID: 1948996276}
+  - key: {fileID: 1251266637529334029, guid: 30dfcbaceb3be7448bb140cc962d26a1, type: 2}
+    value: {fileID: 2106483131}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &2106483135
@@ -31575,6 +31569,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 5013c4e2c3e3f8844bee829f8a46edcc, type: 2}
     - {fileID: 11400000, guid: 1d07ef1fa6a99d44a989b2f83d57b16d, type: 2}
     - {fileID: 11400000, guid: 78d47f61dbd7e294fa70aabe9c3cb3f6, type: 2}
+    - {fileID: 11400000, guid: 294a056ce9b31fc479a75855e02ca641, type: 2}
+    - {fileID: 11400000, guid: 74c9292a90640424c98431a98328cd18, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -31761,6 +31757,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 833951924}
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 833951887}
@@ -31794,6 +31801,32 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 833951887}
+          m_MethodName: SetAnimatorAli_r59_Trigger
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 833951924}
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
