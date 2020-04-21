@@ -228,7 +228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -125}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 92, y: 114}
+  m_AnchoredPosition: {x: 199, y: 114}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!95 &21430801
@@ -12588,7 +12588,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 1368133022}
@@ -31168,7 +31168,7 @@ PlayableDirector:
   m_GameObject: {fileID: 2106483131}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 69dca9860d62dae46963c0ba67ab6644, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 38caf7306fd1d4849a90d32fbab90fda, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
@@ -31468,6 +31468,8 @@ PlayableDirector:
     value: {fileID: 1948996276}
   - key: {fileID: 1251266637529334029, guid: 30dfcbaceb3be7448bb140cc962d26a1, type: 2}
     value: {fileID: 2106483131}
+  - key: {fileID: 1251266637529334029, guid: 38caf7306fd1d4849a90d32fbab90fda, type: 2}
+    value: {fileID: 2106483131}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &2106483135
@@ -31570,6 +31572,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 78d47f61dbd7e294fa70aabe9c3cb3f6, type: 2}
     - {fileID: 11400000, guid: 294a056ce9b31fc479a75855e02ca641, type: 2}
     - {fileID: 11400000, guid: 74c9292a90640424c98431a98328cd18, type: 2}
+    - {fileID: 11400000, guid: 8fbc17cd67c31e84da25dd8b3340a137, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -31813,6 +31816,19 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 297939531}
+          m_MethodName: AddWebStars
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 7
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
