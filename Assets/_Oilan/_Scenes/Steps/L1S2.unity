@@ -11432,19 +11432,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 870960307, guid: a78faa85e2a730d4b8af34fedfcdeec1, type: 3}
       propertyPath: m_items.Array.data[3].isForLeftHand
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 870960307, guid: a78faa85e2a730d4b8af34fedfcdeec1, type: 3}
       propertyPath: m_items.Array.data[3].isForRightHand
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 870960307, guid: a78faa85e2a730d4b8af34fedfcdeec1, type: 3}
       propertyPath: m_items.Array.data[1].isForRightHand
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 870960307, guid: a78faa85e2a730d4b8af34fedfcdeec1, type: 3}
       propertyPath: m_items.Array.data[1].isForLeftHand
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 865614620007101603, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -31168,7 +31168,7 @@ PlayableDirector:
   m_GameObject: {fileID: 2106483131}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: d6fa00022aaa43f45905f07a2758bcf1, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 69dca9860d62dae46963c0ba67ab6644, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
@@ -31567,7 +31567,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3cbe0374d1fc62b408fbb07fe4cc033d, type: 2}
     - {fileID: 11400000, guid: 7221e2640165e024c8709226232494a2, type: 2}
     - {fileID: 11400000, guid: 5013c4e2c3e3f8844bee829f8a46edcc, type: 2}
-    - {fileID: 11400000, guid: 1d07ef1fa6a99d44a989b2f83d57b16d, type: 2}
     - {fileID: 11400000, guid: 78d47f61dbd7e294fa70aabe9c3cb3f6, type: 2}
     - {fileID: 11400000, guid: 294a056ce9b31fc479a75855e02ca641, type: 2}
     - {fileID: 11400000, guid: 74c9292a90640424c98431a98328cd18, type: 2}
@@ -31660,7 +31659,7 @@ MonoBehaviour:
             m_BoolArgument: 1
           m_CallState: 2
         - m_Target: {fileID: 833951887}
-          m_MethodName: UnEquipItem
+          m_MethodName: EquipItem
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -31771,18 +31770,7 @@ MonoBehaviour:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 833951887}
-          m_MethodName: SetAnimatorAli_r59_Trigger
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 833951887}
-          m_MethodName: EquipItem
+          m_MethodName: UnEquipItem
           m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -31792,8 +31780,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
         - m_Target: {fileID: 833951887}
           m_MethodName: EquipItem
           m_Mode: 3

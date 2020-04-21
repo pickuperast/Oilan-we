@@ -363,7 +363,17 @@ namespace Oilan
 
             yield return new WaitForSeconds((float)director.duration);
 
-            PostDeactivateQuest();
+            ClearQuestCanvas();
+            ClearQuestObjects();
+
+            director.enabled = false;
+
+            GameplayManager.Instance.TurnPlayerControlsOnOff(true);
+            GameplayManager.Instance.TurnAutoCamOnOff(true);
+
+            Character_Ali.Instance.backpack_Value = 1f;
+            Character_Ali.Instance.equipment_Value = 0f;
+            Character_Ali.Instance.hold_Value = 0f;
         }
         
 
@@ -382,9 +392,9 @@ namespace Oilan
             ClearQuestCanvas();
             ClearQuestObjects();
             
-            director.Play(oakTimeline_endQuest);
+       //     director.Play(oakTimeline_endQuest);
 
-            yield return new WaitForSeconds((float)director.duration);
+        //    yield return new WaitForSeconds((float)director.duration);
 
             director.enabled = false;
             
