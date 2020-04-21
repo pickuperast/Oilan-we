@@ -181,8 +181,7 @@ namespace Oilan
             }
 
             if (_isSolved)
-            {
-                GameplayScoreManager.Instance.AddWebStars(7);
+            {             
                 Solved();
             }
             else
