@@ -202,7 +202,7 @@ namespace Oilan
         bool UnityPlatform()
         {
             //return Application.platform == RuntimePlatform.WebGLPlayer;//== for testing in pickuperast.github.io and oilan.kz
-            return false;   //false - test in pickuperast.github.io and oilan.kz
+            return true;   //false - test in pickuperast.github.io and oilan.kz
                             //true - test in editor
         }
 
