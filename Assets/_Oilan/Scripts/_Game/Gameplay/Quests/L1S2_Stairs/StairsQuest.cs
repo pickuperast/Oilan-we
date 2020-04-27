@@ -114,12 +114,12 @@ namespace Oilan
 
         private IEnumerator ActivateQuestCoroutine()
         {
-            ClearQuestCanvas();
+            // ClearQuestCanvas();
 
-            for (int i = 0; i < problems.Length; i++)
-            {
-                problems[i].Init();
-            }
+            //for (int i = 0; i < problems.Length; i++)
+            //{
+            //    problems[i].Init();
+            //}
 
             director.Play(mTimeline_showProblems);
 
