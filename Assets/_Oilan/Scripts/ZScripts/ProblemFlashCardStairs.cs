@@ -7,16 +7,8 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Oilan
-{
-    public enum ProblemFlashCardState
-    {
-        IDLE,
-        INACTIVE,
-        WRONG,
-        SOLVED
-    }
-    
-    public class ProblemFlashCard : MonoBehaviour
+{  
+    public class ProblemFlashCardStairs : MonoBehaviour
     {
         public ProblemFlashCardState currentState = ProblemFlashCardState.IDLE;
 
@@ -41,7 +33,6 @@ namespace Oilan
         public Color colorWrong;
         public Color colorSolved;
         
-        public GameObject buttonCheck;
         public Image inputFieldImage;
         public TMP_InputField inputField;
 
@@ -62,21 +53,14 @@ namespace Oilan
         {
             currentState = newState;
 
-            Debug.Log("N1");
             switch (newState)
             {
                 case ProblemFlashCardState.IDLE:
-
-                    if (!buttonCheck.Equals(null))
-                        buttonCheck.SetActive(true);
 
                     inputFieldImage.color = colorIdle;
 
                     break;
                 case ProblemFlashCardState.INACTIVE:
-
-                    if (!buttonCheck.Equals(null))
-                        buttonCheck.SetActive(false);
 
                     answerUser = answer;
 
@@ -86,17 +70,11 @@ namespace Oilan
                     break;
                 case ProblemFlashCardState.WRONG:
 
-                    if (!buttonCheck.Equals(null))
-                        buttonCheck.SetActive(true);
-
                     inputFieldImage.color = colorWrong;
                     audioSource.PlayOneShot(clipWrong);
 
                     break;
                 case ProblemFlashCardState.SOLVED:
-
-                    if (!buttonCheck.Equals(null))
-                        buttonCheck.SetActive(false);
 
                     inputFieldImage.color = colorSolved;
                     audioSource.PlayOneShot(clipSolved);
