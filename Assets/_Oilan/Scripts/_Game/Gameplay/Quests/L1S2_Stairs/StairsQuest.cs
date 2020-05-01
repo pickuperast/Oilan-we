@@ -27,7 +27,7 @@ namespace Oilan
 
         public GameObject buttonCheck;
 
-        public ProblemFlashCard[] problems;
+        public ProblemFlashCardStairs[] problems;
         public float checkDelay = 0.5f;//Задержка между проверками ответов
 
         public PlayableAsset mTimeline_start;
@@ -141,7 +141,7 @@ namespace Oilan
         {
             buttonCheck.SetActive(false);
 
-            foreach (ProblemFlashCard prblm in problems)
+            foreach (ProblemFlashCardStairs prblm in problems)
             {
                 prblm.SetState(ProblemFlashCardState.IDLE);
             }
