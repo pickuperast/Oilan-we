@@ -109,11 +109,13 @@ namespace Oilan
 
             if (rb.simulated)
             {
-                animator.SetBool("Lvenek_walk", true);
+                animator.Play("Lvenek_walk");
+              //animator.SetBool("Lvenek_walk", true);
             }
             else
             {
-                animator.SetBool("Lvenek_walk", false);
+                animator.Play("lvenek_idle");
+              //animator.SetBool("Lvenek_walk", false);
             }
         }
 
