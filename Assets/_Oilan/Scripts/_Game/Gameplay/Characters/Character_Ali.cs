@@ -334,6 +334,11 @@ namespace Oilan
             SetAnimatorTrigger("ali_r18");
         }
 
+        public void SetAnimator_TakeStarTrigger()
+        {
+            SetAnimatorTrigger("ali_r59_put_plate_in_backpack");
+        }
+
 
 
         public void SetSpriteVisibility(bool newVal)
