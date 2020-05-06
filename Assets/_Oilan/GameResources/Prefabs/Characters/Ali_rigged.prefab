@@ -2281,6 +2281,7 @@ MonoBehaviour:
     isForRightHand: 0
     isForBack: 0
     isForFoot: 0
+    isNeedInThisStep: 0
   - name: Letter
     m_sprite: {fileID: 21300000, guid: af8ff46b3161cb04fab11d72c6af7721, type: 3}
     Backpack: {fileID: 0}
@@ -2289,6 +2290,7 @@ MonoBehaviour:
     isForRightHand: 0
     isForBack: 0
     isForFoot: 0
+    isNeedInThisStep: 0
   - name: Backpack
     m_sprite: {fileID: -5745161450419549214, guid: 712f1e6887b1d2a4787a32b19160ae1b,
       type: 3}
@@ -2298,6 +2300,7 @@ MonoBehaviour:
     isForRightHand: 0
     isForBack: 1
     isForFoot: 0
+    isNeedInThisStep: 0
   - name: Plate
     m_sprite: {fileID: 21300000, guid: a383c4e3d256a834eaadbb74e264f590, type: 3}
     Backpack: {fileID: 0}
@@ -2306,6 +2309,7 @@ MonoBehaviour:
     isForRightHand: 0
     isForBack: 0
     isForFoot: 0
+    isNeedInThisStep: 0
   - name: StarPlate
     m_sprite: {fileID: 21300000, guid: 9c3e0f9d21c70c243944006e9907a49b, type: 3}
     Backpack: {fileID: 0}
@@ -2314,6 +2318,7 @@ MonoBehaviour:
     isForRightHand: 0
     isForBack: 0
     isForFoot: 0
+    isNeedInThisStep: 0
   - name: Star
     m_sprite: {fileID: 21300000, guid: 3d1753b8c06ac1c4ea3b4ea56fa49988, type: 3}
     Backpack: {fileID: 0}
@@ -2322,6 +2327,7 @@ MonoBehaviour:
     isForRightHand: 1
     isForBack: 0
     isForFoot: 0
+    isNeedInThisStep: 0
   LeftHand: {fileID: 2001975955995940535}
   RightHand: {fileID: 4902963384382121557}
   Back: {fileID: 8175776208549258510}
@@ -2330,7 +2336,6 @@ MonoBehaviour:
   isBeingPushed: 0
   isRequiredToResetPush: 1
   isRequiredItemChecking: 0
-  itemsToCheckEquipment: 000000000100000002000000030000000400000005000000
 --- !u!114 &290012830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2367,13 +2372,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776210009565381}
-  m_LocalRotation: {x: 0, y: 0, z: -0.026368793, w: 0.9996523}
+  m_LocalRotation: {x: 0, y: 0, z: -0.044316813, w: 0.99901754}
   m_LocalPosition: {x: -0.18, y: -2.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8175776209791432492}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.55}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -5.08}
 --- !u!212 &8175776210009565379
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2529,13 +2534,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8175776210142766101}
-  m_LocalRotation: {x: 0, y: 0, z: -0.0005821711, w: 0.9999998}
+  m_LocalRotation: {x: 0, y: 0, z: 0.033155207, w: 0.9994502}
   m_LocalPosition: {x: -0.22, y: -2.496, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8175776209942908745}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 18.52}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.8}
 --- !u!212 &8175776210142766099
 SpriteRenderer:
   m_ObjectHideFlags: 0
