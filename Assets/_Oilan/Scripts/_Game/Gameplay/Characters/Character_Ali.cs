@@ -336,7 +336,22 @@ namespace Oilan
 
         public void SetAnimator_TakeStarTrigger()
         {
-            SetAnimatorTrigger("ali_r59_put_plate_in_backpack");
+            SetAnimatorTrigger("ali_take_star");
+        }
+
+        public void SetAnimator_PlateFromBPTrigger()
+        {
+            SetAnimatorTrigger("ali_r19_plate_from_backpack");
+        }
+
+        public void SetAnimator_PlateStarTrigger()
+        {
+            SetAnimatorTrigger("ali_plate+star");
+        }
+
+        public void SetAnimator_PlateInBPTrigger()
+        {
+            SetAnimatorTrigger("ali_put_plate_in_backpack(useThis)");
         }
 
 
