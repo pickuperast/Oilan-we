@@ -67,6 +67,7 @@ namespace Oilan
         public SpriteRenderer Back;
         public SpriteRenderer FootLeft;
         public SpriteRenderer FootRight;
+        
 
         public bool isBeingPushed = false;
         public bool isRequiredToResetPush = true;
