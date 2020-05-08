@@ -232,7 +232,7 @@ namespace Oilan
 
         public void SetAnimatorTrigger(string triggerName)
         {
-            m_Anim.SetTrigger(triggerName);
+           m_Anim.SetTrigger(triggerName);
         }
 
         public void SetAnimatorBool(string boolName, bool newValue = false)

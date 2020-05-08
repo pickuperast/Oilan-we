@@ -28,6 +28,15 @@ namespace Oilan
         public bool repeatTrigger = false;
 
 
+        public void Awake()
+        {
+            var graphics = GetComponentInChildren<SpriteRenderer>();
+            if (graphics != null)
+            {
+                graphics.enabled = false;
+            }
+        }
+
         private void DoActivateTrigger()
         {
             triggerCount--;
@@ -95,10 +104,8 @@ namespace Oilan
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            Debug.Log("1");
             if (other.CompareTag("Player"))
-            {
-                Debug.Log("2");
+            {      
                 DoActivateTrigger();
             }
         }
