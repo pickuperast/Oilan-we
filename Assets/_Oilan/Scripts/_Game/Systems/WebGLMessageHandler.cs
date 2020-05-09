@@ -57,6 +57,9 @@ namespace Oilan
         [DllImport("__Internal")]//Assets\Plugins\Oilan\Utils\WebGL\JSManager
         private static extern int OpenTrainer(string TrainerType, int level, int step, bool isOk);
 
+        [DllImport("__Internal")]
+        private static extern void Unity_openTrenazerAfterStep();
+
         [DllImport("__Internal")]//Assets\Plugins\Oilan\Utils\WebGL\JSManager
         private static extern int GetUserID();
 
@@ -133,7 +136,9 @@ namespace Oilan
             Instance = this;
             //var gameInstance = UnityLoader.instantiate("gameContainer", "Build/webgl.json");
         }
-
+        public void PubOpenEndStepTrainer(){
+            Unity_openTrenazerAfterStep();
+        }
         public void RecieveMessageInt(int message)
         {
             //Debug.Log("MessageRecieved: " + message.ToString());

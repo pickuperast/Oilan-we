@@ -34,7 +34,10 @@ namespace Oilan
         {
             WebGLMessageHandler.Instance.PubOpenTrainer(TrainerType, level, step);
         }
-
+        public void openEndGameTrainer()
+        {
+            WebGLMessageHandler.Instance.PubOpenEndStepTrainer();
+        }
         public void openExternalTrainerString(string l_type)
         {
             WebGLMessageHandler.Instance.PubOpenTrainer(l_type, level, step);
