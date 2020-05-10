@@ -35,16 +35,16 @@ namespace Oilan
             animator = gameObject.GetComponent<Animator>();
         }
 
-        void FixedUpdate()
+        void LateUpdate()
         {
             Vector3 offset = ali.transform.position - transform.position;
             float sqrLen = offset.sqrMagnitude;
 
-            if(playerController.move.x > 0)
+            if (playerController.move.x > 0)
             {
                 aliState = AliState.Left;
             }
-            else if(playerController.move.x < 0)
+            else if (playerController.move.x < 0)
             {
                 aliState = AliState.Right;
             }
@@ -52,7 +52,7 @@ namespace Oilan
             {
                 aliState = AliState.Idle;
             }
-           
+
             if (isBeingPushed)//pushes ali in front and plays walk animation
             {
                 switch (aliState)
@@ -98,11 +98,12 @@ namespace Oilan
             else
             {
                 if (isRequiredToResetPush)
-                {                  
+                {
                     bc2D.enabled = false;
                     cc2D.enabled = false;
                     rb.simulated = false;
-                    StartCoroutine(ResetSpeed());                 
+                    transform.position += new Vector3(0, 0, 0) * Time.deltaTime * speed;
+                    // StartCoroutine(ResetSpeed());                 
                     isRequiredToResetPush = false;
                 }
             }
@@ -110,12 +111,12 @@ namespace Oilan
             if (rb.simulated)
             {
                 animator.Play("Lvenek_walk");
-              //animator.SetBool("Lvenek_walk", true);
+                //animator.SetBool("Lvenek_walk", true);
             }
             else
             {
                 animator.Play("lvenek_idle");
-              //animator.SetBool("Lvenek_walk", false);
+                //animator.SetBool("Lvenek_walk", false);
             }
         }
 
