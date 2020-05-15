@@ -45,8 +45,10 @@ namespace Oilan
                 StartCoroutine(CoroutineStopR83());
             }
             if (idleTimer > SecondAFKMax)// every 60 sec play audio au_t_ZEVOK
-            {
-                AudioManager.Instance.PlaySound(AudioIdleSecondAFK[Random.Range(0, AudioIdleSecondAFK.Capacity)], false, false);//play 1 of 3 zevok audios
+            {             
+                int random = Random.Range(0, AudioIdleSecondAFK.Capacity);
+                StartCoroutine(CoroutineStopZEVOK(random));
+                AudioManager.Instance.PlaySound(AudioIdleSecondAFK[random], false, false);//play 1 of 3 zevok audios
                 Character_Ali.Instance.SetAnimatorAli_r20_Trigger();
                 idleTimer = 0f;
             }
@@ -57,9 +59,22 @@ namespace Oilan
             }
         }
 
+        IEnumerator CoroutineStopZEVOK(int random)
+        {
+            Gameplay_UI_Manager.Instance.ChangeActiveUI("Cutscene");
+            controls.Disable();
+            yield return new WaitForSeconds(AudioIdleSecondAFKLength[random]);//Wait for ending sound
+            Gameplay_UI_Manager.Instance.ChangeActiveUI("Gameplay");
+            controls.Enable();
+        }
+
         IEnumerator CoroutineStopR83()
         {
+            Gameplay_UI_Manager.Instance.ChangeActiveUI("Cutscene");
+            controls.Disable();
             yield return new WaitForSeconds(AudioIdleFirstLength);//Wait for ending sound
+            Gameplay_UI_Manager.Instance.ChangeActiveUI("Gameplay");
+            controls.Enable();
             Character_Ali.Instance.SetAnimatorAli_r83_Bool(false);
         }
 
