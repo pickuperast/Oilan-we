@@ -13,6 +13,7 @@ namespace Oilan
 
         public SpriteRenderer spriteActive;
         public SpriteRenderer spriteDisabled;
+        public GameObject UIError;
 
         private void Start()
         {
@@ -34,6 +35,8 @@ namespace Oilan
 
                 GameStateParametersManager.Instance.SetTrigger("ShowStepSelect");
             }
+
+            UIError.SetActive(true);
         }
 
     }
