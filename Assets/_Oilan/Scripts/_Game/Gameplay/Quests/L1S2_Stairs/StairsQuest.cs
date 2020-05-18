@@ -141,10 +141,10 @@ namespace Oilan
         {
             buttonCheck.SetActive(false);
 
-            foreach (ProblemFlashCardStairs prblm in problems)
-            {
-                prblm.SetState(ProblemFlashCardState.IDLE);
-            }
+            //foreach (ProblemFlashCardStairs prblm in problems)
+            //{
+            //    prblm.SetState(ProblemFlashCardState.IDLE);
+            //}
 
             bool _isSolved = true;
 
@@ -152,7 +152,7 @@ namespace Oilan
             {
                 if (problems[i].gameObject.activeSelf)
                 {
-                    if (problems[i].currentState == ProblemFlashCardState.IDLE)
+                    if (problems[i].currentState != ProblemFlashCardState.SOLVED)
                     {
                         problems[i].CheckAnswer();
 
@@ -164,8 +164,6 @@ namespace Oilan
                         }
                         else
                         {
-
-                            problems[i].currentState = ProblemFlashCardState.SOLVED;
                             problems[i].gameObject.SetActive(false);
                             questObjectsList[i].GetComponent<Animator>().enabled = true;
 

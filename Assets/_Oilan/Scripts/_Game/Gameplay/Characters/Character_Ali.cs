@@ -132,7 +132,6 @@ namespace Oilan
             //    CheckRequiredItems();
             //    LateUpdateFrames++;
             //}
-
         }
         
         public void CheckRequiredItems()//ƒелает проверку по листу m_items и переодевает персонажа

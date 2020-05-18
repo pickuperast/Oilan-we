@@ -157,16 +157,16 @@ namespace Oilan
         {
             buttonCheck.SetActive(false);
 
-            foreach (ProblemAA_1_1_3 prblm in problems)
-            {
-                prblm.SetState(ProblemAA_1_1_3_State.IDLE);
-            }
+            //foreach (ProblemAA_1_1_3 prblm in problems)
+            //{
+            //    prblm.SetState(ProblemAA_1_1_3_State.IDLE);
+            //}
 
             bool _isSolved = true;
 
             foreach (ProblemAA_1_1_3 problem in problems)
             {
-                if (problem.currentState == ProblemAA_1_1_3_State.IDLE)
+                if (problem.currentState != ProblemAA_1_1_3_State.SOLVED)
                 {
                     problem.CheckAnswer();
 
