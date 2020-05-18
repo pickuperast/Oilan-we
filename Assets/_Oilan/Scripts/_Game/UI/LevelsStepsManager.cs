@@ -76,7 +76,7 @@ namespace Oilan
                             }
                         }
 
-                        newStepsPage.GetComponent<StepButton>().UIError = UIError;//add link to error ui from existing main scene
+                     //   newStepsPage.GetComponent<StepButton>().UIError = UIError;//add link to error ui from existing main scene
                         stepsPageObjects.Add(newStepsPage);
                     }
                     break;
