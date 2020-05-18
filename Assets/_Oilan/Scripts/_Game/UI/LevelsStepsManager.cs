@@ -30,6 +30,9 @@ namespace Oilan
         public string currentLevelID;
         public string currentStepID;
 
+        [Header("Error UI when lvl/step closed")]
+        public GameObject UIError;
+
         private void Awake()
         {
             Instance = this;
@@ -52,6 +55,7 @@ namespace Oilan
                         GameObject newStepsPage = Instantiate(stepsPageElements[i].prefab, stepsPageContainer.transform);
                         //blocking steps
                         //steps in db starts from 1, but in our list it starts from 0
+
                         if (i + 1 < SaveGameManager.Instance.mSaveData.level)//SaveGameManager.Instance.mSaveData.level = max opened level
                         {
                             foreach (var stepButton in newStepsPage.GetComponent<SStepsCheck>().steps)
@@ -71,6 +75,8 @@ namespace Oilan
                                 }
                             }
                         }
+
+                        newStepsPage.GetComponent<StepButton>().UIError = UIError;//add link to error ui from existing main scene
                         stepsPageObjects.Add(newStepsPage);
                     }
                     break;

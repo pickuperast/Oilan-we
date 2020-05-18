@@ -13,6 +13,7 @@ namespace Oilan
 
         public SpriteRenderer spriteActive;
         public SpriteRenderer spriteDisabled;
+        public GameObject UIError;
 
         private void Start()
         {
@@ -33,6 +34,7 @@ namespace Oilan
 
                 GameStateParametersManager.Instance.SetBoolTrue("Bool_ShowNewGame");
             }
+            UIError.SetActive(true);
         }
     }
 }
