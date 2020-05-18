@@ -34,7 +34,11 @@ namespace Oilan
 
                 GameStateParametersManager.Instance.SetBoolTrue("Bool_ShowNewGame");
             }
-            UIError.SetActive(true);
+            else
+            {
+                UIError.SetActive(true);
+            }
+            
         }
     }
 }

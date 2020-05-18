@@ -22,7 +22,7 @@ public class SUICloseErrorStepClosed : MonoBehaviour
             if (elapsedTime > timeout)
             {
                 timerLeft = true;
-                gameObject.SetActive(true);
+                gameObject.SetActive(false);
             }
         }
     }

@@ -35,8 +35,9 @@ namespace Oilan
 
                 GameStateParametersManager.Instance.SetTrigger("ShowStepSelect");
             }
-
-            UIError.SetActive(true);
+            else {
+                UIError.SetActive(true);
+            }
         }
 
     }
