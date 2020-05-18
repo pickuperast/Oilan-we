@@ -293,6 +293,8 @@ namespace Oilan
 
         public void WhenStepWasFinished()
         {
+            GameObject UILastScreen = GameObject.Find("UIEndGameSelectTrainer");
+            UILastScreen.SetActive(true);
             SaveGameManager.Instance.SaveProgress(next_level_num, next_step_num);
         }
         // GET PARAMS
