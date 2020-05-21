@@ -33,6 +33,17 @@ public class SAudioManagerRef : MonoBehaviour
         l_audioSource.enabled = isOn ? true : false;
     }
     */
+
+    public void StopAudio()
+    {
+        l_audioSource.Stop();
+    }
+
+    public void PlayAudio()
+    {
+        l_audioSource.Play();
+    }
+
     public void PlayAudioFromTimeline(string audioName)
     {
         Debug.Log("Trying to play " + audioName + " sound");
