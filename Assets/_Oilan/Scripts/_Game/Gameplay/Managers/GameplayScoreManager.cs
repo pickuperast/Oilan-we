@@ -44,6 +44,8 @@ namespace Oilan
         }
 
         public void AddWebStars(int HowMuch = 1) {
+            if (SaveGameManager.Instance.mSaveData.level > GameplayManager.Instance.next_level_num) return;
+            if (SaveGameManager.Instance.mSaveData.step >= GameplayManager.Instance.next_step_num) return;
             for (int i = 0; i < HowMuch; i++)
                 WebGLMessageHandler.Instance.AddWebsiteStar();
         }
