@@ -63,6 +63,10 @@ namespace Oilan
 
         }
 
+        public void ToStepPage(string stepPage)
+        {
+            LevelsStepsManager.Instance.LoadStepsPage(stepPage);
+        }
         public void ToMainMenu()
         {
             SceneChanger.Instance.UnloadGameScenes();

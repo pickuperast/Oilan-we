@@ -168,14 +168,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: openEndGameTrainer
-        m_Mode: 1
+        m_MethodName: ToStepPage
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: abacus
+          m_StringArgument: L1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &5326194551897254042
@@ -238,12 +238,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21568628, g: 0.7529412, b: 0.7647059, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3bd978db04027bb4a8c22747edcdbc4a, type: 3}
+  m_Sprite: {fileID: -416864093989270547, guid: 2ed4568951efb5a48bfecb702a542544,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -282,11 +283,10 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: -3235167354109832520, guid: 0eb2366e55f40df4a9e7d5f699954c99,
+    m_PressedSprite: {fileID: -9067979577442630773, guid: 2ed4568951efb5a48bfecb702a542544,
       type: 3}
     m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: -4286947662882993671, guid: 0eb2366e55f40df4a9e7d5f699954c99,
-      type: 3}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -582,7 +582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8367758892787738296
 RectTransform:
   m_ObjectHideFlags: 0
