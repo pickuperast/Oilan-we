@@ -287,6 +287,8 @@ namespace Oilan
             SetAnimatorTrigger("ali_r80_look_down");
         }
         public void SetAnimatorTalkTrigger(bool isOn){
+            if (isOn) SAudioManagerRef.Instance.TurnDownBGSound();
+            else SAudioManagerRef.Instance.TurnUpBGSound();
             SetAnimatorBool("Talk",isOn);
         }
         public void SetAnimatorPointOnChest(bool isOn)

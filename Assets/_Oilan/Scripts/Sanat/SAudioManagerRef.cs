@@ -10,6 +10,8 @@ public class SAudioManagerRef : MonoBehaviour
     public static SAudioManagerRef Instance;
     public GameObject GOAudioManager;
     public AudioSource l_audioSource;
+    public AudioClip clip;
+    private AudioSource bgsound;
     //public List<string> l_audioName;
 
     private void Awake()
@@ -18,9 +20,12 @@ public class SAudioManagerRef : MonoBehaviour
     }
     void Start()
     {
+        bgsound = GameObject.Find("SoundBackgroundHandler").GetComponent<AudioSource>();
+        bgsound.clip = (AudioClip)Resources.Load("Media/Audio/Sounds/" + clip.name, typeof(AudioClip));
+        bgsound.Play();
         GOAudioManager = GameObject.Find("AudioHandler");
         l_audioSource = GOAudioManager.GetComponent<AudioSource>();
-        
+        l_audioSource.clip = null;
         //musicSource.enabled = false;
         //Destroy(musicSource);
         //GameObject GOAudioManager;
@@ -33,6 +38,15 @@ public class SAudioManagerRef : MonoBehaviour
         l_audioSource.enabled = isOn ? true : false;
     }
     */
+    public void TurnDownBGSound()
+    {
+        bgsound.volume = 0.2f;
+    }
+
+    public void TurnUpBGSound()
+    {
+        bgsound.volume = 1f;
+    }
 
     public void StopAudio()
     {
