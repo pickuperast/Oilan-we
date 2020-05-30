@@ -112,7 +112,7 @@ namespace Oilan
             {
                 mSaveData.level = i_level;
                 mSaveData.step = i_step;
-                mSaveData.stars += ScoreManager.Instance.coins;//прибавляем накопленные звезды к тому кол-ву, сколько было
+                mSaveData.stars = ScoreManager.Instance.coins;//отправляем только заработанное количество звезд
                 PushProgress();
             }
             

@@ -27,7 +27,7 @@ namespace Oilan
              level = 0;
              step = 0;
              part = 0;
-             stars = 0;
+             stars = 0;//передавать только заработанные на этом уровне
         }
     }
 
@@ -54,6 +54,8 @@ namespace Oilan
         [DllImport("__Internal")]
         private static extern string TestReturnString();
         */
+
+            //external AddStar(int=1)
         [DllImport("__Internal")]//Assets\Plugins\Oilan\Utils\WebGL\JSManager
         private static extern int OpenTrainer(string TrainerType, int level, int step, bool isOk);
 
@@ -73,7 +75,7 @@ namespace Oilan
         private static extern void LibConsoleWriter(string JSONinput);
 
         [DllImport("__Internal")]//Assets\Plugins\Oilan\Utils\WebGL\JSManager
-        private static extern void Unity_AddStar();
+        private static extern void Unity_AddStar(int HowMuch);
         //answer is: {&quot;1&quot;:
         //                   {&quot;id&quot;:2,&quot;user_id&quot;:9,&quot;level&quot;:1,&quot;step&quot;:1,&quot;part&quot;:1,&quot;starts&quot;:0}}
         // Given JSON input should be:
@@ -191,11 +193,11 @@ namespace Oilan
                 Unity_SetProgress(mJSONinput);
         }
 
-        public void AddWebsiteStar()
+        public void AddWebsiteStar(int HowMuch = 1)
         {
-            GameplayScoreManager.Instance.AddCoins(1);
+            GameplayScoreManager.Instance.AddCoins(HowMuch);
             if (!UnityPlatform())
-                Unity_AddStar();
+                Unity_AddStar(HowMuch);
         }
 
         public void PubOpenTrainer(string TrainerType, int level, int step, bool isLastStepTrainer = false)
