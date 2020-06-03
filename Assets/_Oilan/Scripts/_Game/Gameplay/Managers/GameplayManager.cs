@@ -295,6 +295,7 @@ namespace Oilan
         {
             ShowLevelFinishedWindow();
             SaveGameManager.Instance.SaveProgress(next_level_num, next_step_num);
+            TurnPlayerControlsOnOff(false);
         }
         // GET PARAMS
 
