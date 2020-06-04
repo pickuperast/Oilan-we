@@ -8,10 +8,12 @@
 		return buffer;
 	},
 	
+	LibConsoleWriter: function (stringVal){
+		console.log(Pointer_stringify(stringVal));
+	},
+	
 	Unity_SetProgress: function (stringVal){
-		var m_string = Pointer_stringify(stringVal);
-		console.log("Trying to SetProgress: " + m_string);
-        SetProgress(m_string);
+		SetProgress(Pointer_stringify(stringVal));
 	},
 	
 	OpenTrainer: function (stringVal, intValLevel, intValStep, boolVal){
@@ -19,17 +21,13 @@
 		startGame(Pointer_stringify(stringVal), intValLevel, intValStep, boolVal);
 	},
 	
-	Unity_AddStar: function (){
-		console.log("calling addStar()");
-		addStar();
+	Unity_openTrenazerAfterStep: function (){
+		openTrenazerAfterStep();
 	},
 	
-	LibConsoleWriter: function (stringVal){
-		console.log(Pointer_stringify(stringVal));
+	Unity_AddStar: function (intVal){
+		addStar(intVal);
 	},
 	
 	printErr: function (message) { console.error(message); }
 });
-
-	
-	
