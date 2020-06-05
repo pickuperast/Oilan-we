@@ -147,6 +147,7 @@ namespace Oilan
             {
                 if (answerUser == answer)
                 {
+                    GameplayScoreManager.Instance.AddWebStars(1);
                     SetState(ProblemAA_1_1_3_State.SOLVED);
                     isSolved = true;
                     StartHideTimer = true;
