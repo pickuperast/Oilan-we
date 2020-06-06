@@ -125,6 +125,7 @@ namespace Oilan
             {
                 if (answerUser == answer)
                 {
+                    GameplayScoreManager.Instance.AddWebStars(1);
                     SetState(ProblemFlashCardState.SOLVED);
                 }
                 else
