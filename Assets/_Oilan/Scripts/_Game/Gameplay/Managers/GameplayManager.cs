@@ -304,12 +304,6 @@ namespace Oilan
             return currentGamePlayState;
         }
 
-        // SET PARAMS
-        public void AddCoins(int addValue)
-        {
-            GameplayScoreManager.Instance.AddCoins(addValue);
-        }
-
         // OBJECTS CREATIONS
 
 

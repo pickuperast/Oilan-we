@@ -125,7 +125,7 @@ namespace Oilan
                             Quaternion.identity, problems[i].transform) as GameObject;            
                             starObject.AddComponent<Image>().sprite = starObject.GetComponentInChildren<SpriteRenderer>().sprite;
                             yield return new WaitForSeconds(0.5f);
-                            GameplayScoreManager.Instance.AddCoins(1);
+                            GameplayScoreManager.Instance.AddWebStars(1);
                             SAudioManagerRef.Instance.PlayAudioFromTimeline("Zv-9 (Волшебный звук для звезды (отлетают на табло в меню “Награды”))");
                             Destroy(starObject);
                         }

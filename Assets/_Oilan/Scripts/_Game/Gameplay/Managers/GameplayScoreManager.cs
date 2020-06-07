@@ -36,17 +36,12 @@ namespace Oilan
             coinsTextGameplay.GetComponent<UI_CurveNumberChanger>().SetNumber(ScoreManager.Instance.coins);
         }
 
-        public void AddCoins(int value = 1)
-        {
-            ScoreManager.Instance.coins += value;
-
-            UpdateAllStats();
-        }
-
         public void AddWebStars(int HowMuch = 1) {
             if (SaveGameManager.Instance.mSaveData.level > GameplayManager.Instance.next_level_num) return;
             if (SaveGameManager.Instance.mSaveData.step >= GameplayManager.Instance.next_step_num) return;
             WebGLMessageHandler.Instance.AddWebsiteStar(HowMuch);
+            ScoreManager.Instance.coins += HowMuch;
+            UpdateAllStats();
         }
     }
 }

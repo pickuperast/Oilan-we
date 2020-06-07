@@ -195,7 +195,6 @@ namespace Oilan
 
         public void AddWebsiteStar(int HowMuch = 1)
         {
-            GameplayScoreManager.Instance.AddCoins(HowMuch);
             if (!UnityPlatform())
                 Unity_AddStar(HowMuch);
         }
@@ -210,7 +209,7 @@ namespace Oilan
         bool UnityPlatform()
         {
             //return Application.platform == RuntimePlatform.WebGLPlayer;//== for testing in pickuperast.github.io and oilan.kz
-            return true;   //false - test in oilan.kz
+            return false;   //false - test in oilan.kz
                            //true - test in editor and pickuperast.github.io
         }
 

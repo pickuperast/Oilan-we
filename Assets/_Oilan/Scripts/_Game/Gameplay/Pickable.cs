@@ -27,8 +27,6 @@ namespace Oilan
             {
                 isPicked = true;
                 WebGLMessageHandler.Instance.AddWebsiteStar();
-                
-
                 AudioManager.Instance.PlaySound("Zv-9 (Волшебный звук для звезды (отлетают на табло в меню “Награды”))");
 
                 Destroy(this.gameObject);
