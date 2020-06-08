@@ -66,6 +66,7 @@ namespace Oilan
         public void ToStepPage(string stepPage)
         {
             LevelsStepsManager.Instance.LoadStepsPage(stepPage);
+            WebGLMessageHandler.Instance.ConsoleLog("button на карту мира was pressed");
         }
         public void ToMainMenu()
         {
