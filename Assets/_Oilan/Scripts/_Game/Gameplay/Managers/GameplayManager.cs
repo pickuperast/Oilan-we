@@ -293,9 +293,10 @@ namespace Oilan
 
         public void WhenStepWasFinished()
         {
+            TurnPlayerControlsOnOff(false);
             ShowLevelFinishedWindow();
             SaveGameManager.Instance.SaveProgress(next_level_num, next_step_num);
-            TurnPlayerControlsOnOff(false);
+            WebGLMessageHandler.Instance.ConsoleLog("called WhenStepWasFinished()");
         }
         // GET PARAMS
 
