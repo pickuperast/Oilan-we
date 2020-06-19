@@ -201,7 +201,8 @@ namespace Oilan
 
         public void PubOpenTrainer(string TrainerType, int level, int step, bool isLastStepTrainer = false)
         {
-             OpenTrainer(TrainerType, level, step, isLastStepTrainer); 
+            if (!UnityPlatform())
+                OpenTrainer(TrainerType, level, step, isLastStepTrainer); 
         }
 //#elif UNITY_EDITOR
 //#endif

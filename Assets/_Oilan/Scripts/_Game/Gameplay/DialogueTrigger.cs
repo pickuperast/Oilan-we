@@ -16,6 +16,7 @@ namespace Oilan
 
         public string audioName;
         public AudioClip audioClip;
+        public GameObject ali_cutscene;
 
         private void Awake()
         {
@@ -39,7 +40,7 @@ namespace Oilan
                 //GameplayManager.Instance.TurnPlayerControlsOnOff(false);
 
                 StartCoroutine(HideDialogueCoroutine(audioClip.length));
-
+                Destroy(ali_cutscene);
             }
         }
 

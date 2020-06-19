@@ -205,7 +205,7 @@ namespace Unity.VideoHelper
 
                 Thumbnail.SetGameObjectActive(true);
                 buttonRepeat.SetGameObjectActive(true);
-                buttonClose.SetGameObjectActive(true); 
+                //buttonClose.SetGameObjectActive(true); 
                 
             }
             else

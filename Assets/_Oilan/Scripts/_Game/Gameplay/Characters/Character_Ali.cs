@@ -366,17 +366,20 @@ namespace Oilan
         
         public void SetCutsceneSpriteVisibility(bool newVal)
         {
-            characterCutscene.SetActive(newVal);
+            if (characterCutscene != null)
+                characterCutscene.SetActive(newVal);
         }
         
         public void ResetCharacterCutscenePosition()
         {
-            characterCutscene.transform.position = transform.position;
+            if (characterCutscene != null)
+                characterCutscene.transform.position = transform.position;
         }
         
         public void SetPositionToCutsceneSprite()
         {
-            transform.position = characterCutscene.transform.position;
+            if (characterCutscene != null)
+                transform.position = characterCutscene.transform.position;
         }
         
         public void SetCutsceneMode(bool isCutscene)

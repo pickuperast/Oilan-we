@@ -9,4 +9,9 @@ public class sCharacterCutSceneForTimeline : MonoBehaviour
     public void MoveToHero() {
         transform.position = Hero.transform.position;
     }
+
+    public void Destroy_Obj() {
+        Destroy(gameObject);
+    }
+        
 }
