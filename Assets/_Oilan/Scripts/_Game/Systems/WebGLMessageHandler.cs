@@ -211,7 +211,7 @@ namespace Oilan
         {
             //return Application.platform == RuntimePlatform.WebGLPlayer;//== for testing in pickuperast.github.io and oilan.kz
             return false;   //false - test in oilan.kz
-                           //true - test in editor and pickuperast.github.io
+            return true;   //true - test in editor and pickuperast.github.io
         }
 
         public SaveData GetData()
