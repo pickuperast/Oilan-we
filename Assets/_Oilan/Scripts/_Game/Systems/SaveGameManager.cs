@@ -74,6 +74,21 @@ namespace Oilan
             mSaveData = WebGLMessageHandler.Instance.GetData();
             //If we send level 2 it means level 2 is unlocked and should be active
             //------------Unlock levels
+            //mSaveData.level starts from 1 == id 0 in list
+            //total 10 levels
+            for (int i = 0; i < 10; i++)
+            {
+                if (i <= mSaveData.count_level)
+                {
+                    levelButtons[i].isBought = true;
+                }
+                if (i < mSaveData.level)
+                {
+                    levelButtons[i].isUnlocked = true;
+                    levelButtons[i].UpdateState();
+                }
+                //-----------Unlock steps in levels
+            }
             for (int i = 0; i < mSaveData.level; i++)//mSaveData.level starts from 1 == id 0 in list
             {
                 levelButtons[i].isUnlocked = true;

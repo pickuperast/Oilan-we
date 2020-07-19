@@ -10,10 +10,12 @@ namespace Oilan
         public string levelID;
 
         public bool isUnlocked = false;
+        public bool isBought = false;
 
         public SpriteRenderer spriteActive;
         public SpriteRenderer spriteDisabled;
         public GameObject UIError;
+        public GameObject UIBuyLevel;
 
         private void Start()
         {
@@ -31,11 +33,13 @@ namespace Oilan
             //Debug.Log("button is clicked!"+gameObject.name);
             if (isUnlocked)
             {
-                LevelsStepsManager.Instance.LoadStepsPage(levelID);
-
-                GameStateParametersManager.Instance.SetTrigger("ShowStepSelect");
-            }
-            else {
+                if (isBought) {
+                    LevelsStepsManager.Instance.LoadStepsPage(levelID);
+                    GameStateParametersManager.Instance.SetTrigger("ShowStepSelect");
+                } else {
+                    UIBuyLevel.SetActive(true);
+                }
+            } else {
                 UIError.SetActive(true);
             }
         }

@@ -29,5 +29,9 @@
 		addStar(intVal);
 	},
 	
+	Unity_OpenShop: function (){
+		OpenShop();
+	},
+	
 	printErr: function (message) { console.error(message); }
 });

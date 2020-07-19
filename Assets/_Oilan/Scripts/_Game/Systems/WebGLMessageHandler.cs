@@ -20,14 +20,16 @@ namespace Oilan
         public int step;
         public int part;
         public int stars;
+        public int count_level;
 
-        public SaveData(int id, int level, int step, int part, int stars)
+        public SaveData(int id, int level, int step, int part, int stars, int count_level)
         {
-             id = 0;//it is user id
-             level = 0;
-             step = 0;
-             part = 0;
-             stars = 0;//передавать только заработанные на этом уровне
+            id = 0;//it is user id
+            level = 0;
+            step = 0;
+            part = 0;
+            stars = 0;//передавать только заработанные на этом уровне
+            count_level = 0;
         }
     }
 
@@ -76,6 +78,9 @@ namespace Oilan
 
         [DllImport("__Internal")]//Assets\Plugins\Oilan\Utils\WebGL\JSManager
         private static extern void Unity_AddStar(int HowMuch);
+
+        [DllImport("__Internal")]//Assets\Plugins\Oilan\Utils\WebGL\JSManager
+        private static extern void Unity_OpenShop();
         //answer is: {&quot;1&quot;:
         //                   {&quot;id&quot;:2,&quot;user_id&quot;:9,&quot;level&quot;:1,&quot;step&quot;:1,&quot;part&quot;:1,&quot;starts&quot;:0}}
         // Given JSON input should be:
@@ -140,6 +145,10 @@ namespace Oilan
         }
         public void PubOpenEndStepTrainer(){
             Unity_openTrenazerAfterStep();
+        }
+        public void PubOpenShop()
+        {
+            Unity_OpenShop();
         }
         public void RecieveMessageInt(int message)
         {
@@ -216,11 +225,11 @@ namespace Oilan
 
         public SaveData GetData()
         {
-            SaveData mSaveData = new SaveData(0, 0, 0, 0, 0);
+            SaveData mSaveData = new SaveData(0, 0, 0, 0, 0, 0);
             if (UnityPlatform())
             {
 
-                string GetProgress = @"[{&quot;id&quot;:18,&quot;level&quot;:1,&quot;step&quot;:1,&quot;part&quot;:1,&quot;stars&quot;:0}]";
+                string GetProgress = @"[{&quot;id&quot;:18,&quot;level&quot;:1,&quot;step&quot;:1,&quot;part&quot;:1,&quot;stars&quot;:0,&quot;count_level&quot;:5}]";
                 string progress = GetProgress.Replace("&quot;", @"""");
                 string pattern = @"{.*?\}";
                 string input = progress;
@@ -238,7 +247,7 @@ namespace Oilan
                 mSaveData = JsonUtility.FromJson<SaveData>(output);
                 return mSaveData;
             }
-            else
+            else//oilan.kz
             {
                 string progress = GetProgress();
                 //LibConsoleWriter("UnityLog: call GetProgress(), answer: " + progress);
@@ -261,7 +270,7 @@ namespace Oilan
                     //Debug.Log(m.Value);
                     //Debug.Log("'{0}' found at index {1}." + m.Value + m.Index);
                 }
-                //output = output.Substring(1, output.Length - 1);//{"id":2,"level":1,"step":1,"part":1,"stars":0}
+                //output = output.Substring(1, output.Length - 1);//{"id":2,"level":1,"step":1,"part":1,"stars":0,"maxUnlockedLevels":5}
                 mSaveData = JsonUtility.FromJson<SaveData>(output);
                 return mSaveData;
                 /*
