@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Cameras;
 
 public class ZLimitCameraView : MonoBehaviour
 {
@@ -27,12 +28,20 @@ public class ZLimitCameraView : MonoBehaviour
 
     public Transform player;
     public Transform cameraTransform;
+    private AutoCam autoCam;
+    private ProtectCameraFromWallClip protectCameraFromWall;
 
     [Header("Camera limit")]
     public CameraLimit[] cameraLimits;
 
     [Header("Palyer limit")]
     public PlayerLimit[] playerLimits;
+
+    private void Start()
+    {
+        autoCam = GetComponent<AutoCam>();
+        protectCameraFromWall = GetComponent<ProtectCameraFromWallClip>();
+    }
 
     void Update()
     {
@@ -44,10 +53,23 @@ public class ZLimitCameraView : MonoBehaviour
                 {
                     cameraTransform.transform.position = new Vector3
                     (
+
                         Mathf.Clamp(cameraTransform.transform.position.x, cameraLimits[i].leftLimitC, cameraLimits[i].rightLimitC),
                         Mathf.Clamp(cameraTransform.transform.position.y, cameraLimits[i].bottomLimitC, cameraLimits[i].topLimitC),
                         cameraTransform.transform.position.z
                     );
+
+                    if (cameraTransform.transform.position.x == cameraLimits[i].leftLimitC && player.transform.position.x < cameraLimits[i].leftLimitC ||
+                       cameraTransform.transform.position.x == cameraLimits[i].rightLimitC && player.transform.position.x > cameraLimits[i].rightLimitC ||
+                       cameraTransform.transform.position.y == cameraLimits[i].bottomLimitC && player.transform.position.y < cameraLimits[i].bottomLimitC ||
+                       cameraTransform.transform.position.y == cameraLimits[i].topLimitC && player.transform.position.y > cameraLimits[i].topLimitC)
+                    {           
+                        autoCam.enabled = false;
+                    }
+                    else
+                    {                    
+                        autoCam.enabled = true;
+                    }
                 }
 
                 if (playerLimits[i].isActive)
@@ -63,9 +85,7 @@ public class ZLimitCameraView : MonoBehaviour
         }
         else
         {
-     
-                Debug.Log("CameraLimits and PlayerLimits must be equal to each other");
-            
+            Debug.Log("CameraLimits and PlayerLimits must be equal to each other");
         }
     }
 
@@ -95,28 +115,35 @@ public class ZLimitCameraView : MonoBehaviour
                 new Vector2(playerLimits[i].leftLimitP, playerLimits[i].topLimitP));
         }
     }
+    IEnumerator ChangeActiveBorderCoroutine(int borderIndex)
+    {     
+        protectCameraFromWall.enabled = true;
+        autoCam.enabled = false;
 
-    IEnumerator ChangeActiveBorderCoroutine()
-    {
-        yield return new WaitForEndOfFrame();
-    }
-
-
-    public void ChangeActiveBorder(int borderIndex)
-    {
-        StartCoroutine(ChangeActiveBorderCoroutine());
-
-        for(int i = 0; i < cameraLimits.Length; i++)
+        for (int i = 0; i < cameraLimits.Length; i++)
         {
-            if(i == borderIndex)
-            {
-                cameraLimits[i].isActive = true;
-                playerLimits[i].isActive = true;
-                continue;
-            }
-
             cameraLimits[i].isActive = false;
             playerLimits[i].isActive = false;
         }
+
+        yield return new WaitForEndOfFrame();
+
+        for (int i = 0; i < cameraLimits.Length; i++)
+        {
+            if (i == borderIndex)
+            {
+                cameraLimits[i].isActive = true;
+                playerLimits[i].isActive = true;
+            }
+
+        }
+
+        protectCameraFromWall.enabled = false;
+        transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
+    }
+
+    public void ChangeActiveBorder(int borderIndex)
+    {
+        StartCoroutine(ChangeActiveBorderCoroutine(borderIndex));
     }
 }
