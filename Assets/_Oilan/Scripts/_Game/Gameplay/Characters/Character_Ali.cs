@@ -376,6 +376,11 @@ namespace Oilan
                 characterCutscene.transform.position = transform.position;
         }
         
+        public void SetCharacterPosition(Transform target)
+        {
+            transform.position = target.transform.position;
+        }
+
         public void SetPositionToCutsceneSprite()
         {
             if (characterCutscene != null)
