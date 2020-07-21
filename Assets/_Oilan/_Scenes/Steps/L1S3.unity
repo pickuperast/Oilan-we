@@ -13568,7 +13568,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842541976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 111.79, y: -2.43, z: 0}
+  m_LocalPosition: {x: 111.79, y: -2.83, z: 0}
   m_LocalScale: {x: 0.439, y: 0.439, z: 0.439}
   m_Children: []
   m_Father: {fileID: 1906965342}
@@ -14870,7 +14870,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873330947}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8d3968294210ba4a9d2bb96dfa74a16, type: 3}
   m_Name: 
@@ -14894,7 +14894,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873330947}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94b04ec3bda6b7747aa53936ef3b0ae2, type: 3}
   m_Name: 
@@ -14928,7 +14928,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873330947}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3816ee7f0408d442980d795fbd14ba8, type: 3}
   m_Name: 
@@ -14953,19 +14953,19 @@ MonoBehaviour:
   cameraTransform: {fileID: 519420032}
   cameraLimits:
   - isActive: 0
-    topLimitC: -7.39
-    bottomLimitC: 4.07
-    leftLimitC: 117.8
+    topLimitC: 4.02
+    bottomLimitC: -7.36
+    leftLimitC: 117.19
     rightLimitC: 169.63
   - isActive: 1
     topLimitC: -0.1
     bottomLimitC: -8.39
     leftLimitC: -14.81
-    rightLimitC: 76.8
+    rightLimitC: 75.81
   playerLimits:
   - isActive: 0
-    topLimitP: -7.39
-    bottomLimitP: 4.07
+    topLimitP: 4.05
+    bottomLimitP: -7.44
     leftLimitP: 108.8
     rightLimitP: 169.63
   - isActive: 1
@@ -17432,7 +17432,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 047889188932c6040910aab6e5742dd0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.02
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -34584,6 +34584,28 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 873330950}
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PauseBGSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1150245498}
@@ -34632,17 +34654,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 873330950}
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 1
         - m_Target: {fileID: 1006964272}
           m_MethodName: SetActive
           m_Mode: 6
@@ -34698,6 +34709,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: StartBGSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!320 &1906965345
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -34707,7 +34729,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1906965341}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 7513931182b1e8949b208c94a5822efc, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: c508a71467530764aac1bc782b9c5d6d, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1

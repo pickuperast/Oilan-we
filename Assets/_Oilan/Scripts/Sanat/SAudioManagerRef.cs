@@ -38,6 +38,17 @@ public class SAudioManagerRef : MonoBehaviour
         l_audioSource.enabled = isOn ? true : false;
     }
     */
+
+    public void PauseBGSound()
+    {
+        bgsound.Pause();
+    }
+
+    public void StartBGSound()
+    {
+        bgsound.Play();
+    }
+
     public void TurnDownBGSound()
     {
         bgsound.volume = 0.2f;
