@@ -9,6 +9,11 @@ public class SStepsCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UpdateStepButtons();
+    }
+
+    public void UpdateStepButtons()
+    {
         //level in save data will be only 
         //  > loaded level's step map
         //  or =  loaded level's step map
@@ -27,6 +32,7 @@ public class SStepsCheck : MonoBehaviour
             for (int i = 0; i < steps.Capacity; i++)
             {
                 //server responds step parameter starting from 1, but our steps list begins from 0, so (code) 0 = 1 (db)
+                Debug.Log("i + 1(" + (i + 1).ToString() + ") <= (" + Oilan.SaveGameManager.Instance.mSaveData.step.ToString() + ")Oilan.SaveGameManager.Instance.mSaveData.step");
                 if (i + 1 <= Oilan.SaveGameManager.Instance.mSaveData.step)
                 {
                     steps[i].isUnlocked = true;
