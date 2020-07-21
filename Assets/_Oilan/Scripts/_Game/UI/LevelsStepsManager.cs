@@ -67,7 +67,7 @@ namespace Oilan
                         {
                             for (int j = 0; j < newStepsPage.GetComponent<SStepsCheck>().steps.Capacity; j++)
                             {
-                                if (SaveGameManager.Instance.mSaveData.step>=j+1)//compare max unlocked step
+                                if (j + 1 <= SaveGameManager.Instance.mSaveData.step)//compare max unlocked step
                                 {
                                     //unlock step
                                     newStepsPage.GetComponent<SStepsCheck>().steps[j].isUnlocked = true;

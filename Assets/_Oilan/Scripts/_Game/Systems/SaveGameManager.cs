@@ -96,15 +96,15 @@ namespace Oilan
                 //-----------Unlock steps in levels
             }
             UpdateStarsScoreText();
-            /*string log = "";
-            log += "id: " + mSaveData.id + "\n";
-            log += "user_id: " + mSaveData.user_id + "\n";
-            log += "level: " + mSaveData.level + "\n"; = used
-            log += "part: " + mSaveData.part + "\n";
-            log += "stars: " + mSaveData.stars + "\n"; = used
-            log += "step: " + mSaveData.step + "\n"; = used
+            string log = "Loaded: ";
+            log += "id: " + mSaveData.id + "; ";
+            log += "user_id: " + mSaveData.user_id + "; ";
+            log += "level: " + mSaveData.level + "; ";
+            log += "step: " + mSaveData.step + "; ";
+            log += "part: " + mSaveData.part + "; ";
+            log += "stars: " + mSaveData.stars + "; ";
             Debug.Log(log);
-            TextSavedStats.text = log;*/
+            //TextSavedStats.text = log;
         }
 
         void UpdateStarsScoreText()

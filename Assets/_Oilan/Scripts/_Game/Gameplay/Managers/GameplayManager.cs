@@ -288,14 +288,15 @@ namespace Oilan
         }
         public void WhenPartWasFinished(int part)
         {
-            SaveGameManager.Instance.SetPartFinished(next_level_num, next_step_num, part);
+            SaveGameManager.Instance.SetPartFinished(SaveGameManager.Instance.mSaveData.level, SaveGameManager.Instance.mSaveData.step, part);
+            
         }
 
         public void WhenStepWasFinished()
         {
             TurnPlayerControlsOnOff(false);
             ShowLevelFinishedWindow();
-            SaveGameManager.Instance.SaveProgress(next_level_num, next_step_num);
+            SaveGameManager.Instance.SaveProgress(SaveGameManager.Instance.mSaveData.level, SaveGameManager.Instance.mSaveData.step);
             WebGLMessageHandler.Instance.ConsoleLog("called WhenStepWasFinished()");
         }
         // GET PARAMS
