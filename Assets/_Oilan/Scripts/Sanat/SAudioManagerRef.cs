@@ -69,6 +69,7 @@ public class SAudioManagerRef : MonoBehaviour
         l_audioSource.Play();
     }
 
+    [ExecuteAlways]
     public void PlayAudioFromTimeline(string audioName)
     {
         Debug.Log("Trying to play " + audioName + " sound");
@@ -87,6 +88,7 @@ public class SAudioManagerRef : MonoBehaviour
                 l_audioSource.clip = clip;
             }
             l_audioSource.Play();
+            Debug.Log("Playing " + audioName + " sound with l_audioSource");
         }
     }
 }

@@ -23,8 +23,10 @@ namespace Oilan
 
         private void Start()
         {
-            if (SaveGameManager.Instance.mSaveData.level > GameplayManager.Instance.next_level_num) Destroy(gameObject);
-            if (SaveGameManager.Instance.mSaveData.step >= GameplayManager.Instance.next_step_num) Destroy(gameObject);
+            if (!WebGLMessageHandler.Instance.UnityPlatform()) {
+                if (SaveGameManager.Instance.mSaveData.level > GameplayManager.Instance.next_level_num) Destroy(gameObject);
+                if (SaveGameManager.Instance.mSaveData.step >= GameplayManager.Instance.next_step_num) Destroy(gameObject);
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
