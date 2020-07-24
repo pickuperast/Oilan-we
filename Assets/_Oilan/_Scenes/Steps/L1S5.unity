@@ -390,7 +390,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1722985055}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &47576911
 GameObject:
@@ -4194,6 +4194,82 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &348271003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 348271004}
+  - component: {fileID: 348271006}
+  - component: {fileID: 348271005}
+  m_Layer: 0
+  m_Name: Cutscene_L1S5_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &348271004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348271003}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1722985055}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &348271005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348271003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals: []
+    m_Events: []
+--- !u!320 &348271006
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348271003}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 962d328a6f3d7ac4e84bd206c6377bc4, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -5224092107611169807, guid: 4fc50b10799d50d4cb8f0369cb251de8, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -4348674699240371380, guid: 4fc50b10799d50d4cb8f0369cb251de8, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &349848159
 GameObject:
   m_ObjectHideFlags: 0
@@ -6328,7 +6404,7 @@ GameObject:
   - component: {fileID: 499994511}
   - component: {fileID: 499994510}
   m_Layer: 0
-  m_Name: Cutscene_L1S4_3
+  m_Name: Cutscene_L1S5_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6382,7 +6458,7 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -4348674699240371380, guid: 4fc50b10799d50d4cb8f0369cb251de8, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 726590442603657011, guid: 4fc50b10799d50d4cb8f0369cb251de8, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
@@ -9983,7 +10059,7 @@ GameObject:
   - component: {fileID: 716345912}
   - component: {fileID: 716345911}
   m_Layer: 0
-  m_Name: Cutscene_L1S4_2_222
+  m_Name: Cutscene_L1S5_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10082,14 +10158,21 @@ PlayableDirector:
     value: {fileID: 1539041556}
   - key: {fileID: -5903938717874811077, guid: 1dc5a5f0ece5f3047827df4900a685c4, type: 2}
     value: {fileID: 0}
-  - key: {fileID: -799204951806121803, guid: 56507a0352c437a4899c8bcfd9b85501, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 0}
-  - key: {fileID: 1478818069389750142, guid: 56507a0352c437a4899c8bcfd9b85501, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 0}
-  - key: {fileID: -5903938717874811077, guid: 56507a0352c437a4899c8bcfd9b85501, type: 2}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: -8500813868420257057, guid: 56507a0352c437a4899c8bcfd9b85501, type: 2}
+    value: {fileID: 1613841428}
+  - key: {fileID: -992131222090915064, guid: 56507a0352c437a4899c8bcfd9b85501, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 2932110368595075354, guid: 56507a0352c437a4899c8bcfd9b85501, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
-    m_References: []
+    m_References:
+    - 95f86cc153f53704e9155ed7327b84e1: {fileID: 1613841426}
 --- !u!1 &720294418
 GameObject:
   m_ObjectHideFlags: 0
@@ -20213,7 +20296,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1722985055}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1348954099
 PrefabInstance:
@@ -24357,7 +24440,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1722985055}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1540877664
 GameObject:
@@ -25952,7 +26035,7 @@ PrefabInstance:
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.98
+      value: -8.89
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -26754,12 +26837,12 @@ PrefabInstance:
     - target: {fileID: 7781931314323168335, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.95
+      value: -6.354
       objectReference: {fileID: 0}
     - target: {fileID: 7781931314323168335, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.43
+      value: -5.77
       objectReference: {fileID: 0}
     - target: {fileID: 7781931314323168335, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
@@ -27504,6 +27587,7 @@ Transform:
   - {fileID: 1950108452}
   - {fileID: 716345910}
   - {fileID: 499994509}
+  - {fileID: 348271004}
   - {fileID: 1341228465}
   - {fileID: 47413481}
   - {fileID: 1539041557}
@@ -27529,7 +27613,7 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -4348674699240371380, guid: 4fc50b10799d50d4cb8f0369cb251de8, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 726590442603657011, guid: 4fc50b10799d50d4cb8f0369cb251de8, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
@@ -29734,7 +29818,7 @@ GameObject:
   - component: {fileID: 1863416141}
   - component: {fileID: 1863416140}
   m_Layer: 0
-  m_Name: Cutscene_L1S4_0
+  m_Name: Cutscene_L1S5_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30000,7 +30084,9 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -4348674699240371380, guid: 4fc50b10799d50d4cb8f0369cb251de8, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 726590442603657011, guid: 4fc50b10799d50d4cb8f0369cb251de8, type: 2}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: 3381433070335719013, guid: 4fc50b10799d50d4cb8f0369cb251de8, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
@@ -31757,7 +31843,7 @@ GameObject:
   - component: {fileID: 1950108454}
   - component: {fileID: 1950108453}
   m_Layer: 0
-  m_Name: Cutscene_L1S4_1_221
+  m_Name: Cutscene_L1S5_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31910,13 +31996,17 @@ PlayableDirector:
     value: {fileID: 1831985235}
   - key: {fileID: -2823672210878230217, guid: 476ac673f709f3046b6dc464a595d153, type: 2}
     value: {fileID: 0}
-  - key: {fileID: 7173259417115263847, guid: 0a7c5d046b2798e4aae48e23f4a4c90f, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 0}
-  - key: {fileID: 4247393561982513477, guid: 0a7c5d046b2798e4aae48e23f4a4c90f, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 0}
-  - key: {fileID: -4960269197893526175, guid: 0a7c5d046b2798e4aae48e23f4a4c90f, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 0}
-  - key: {fileID: -2823672210878230217, guid: 0a7c5d046b2798e4aae48e23f4a4c90f, type: 2}
+  - key: {fileID: 0}
+    value: {fileID: 0}
+  - key: {fileID: -1632173677415121634, guid: 0a7c5d046b2798e4aae48e23f4a4c90f, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8267528789966845501, guid: 0a7c5d046b2798e4aae48e23f4a4c90f, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References:
