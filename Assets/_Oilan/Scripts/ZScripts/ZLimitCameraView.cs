@@ -51,18 +51,18 @@ public class ZLimitCameraView : MonoBehaviour
             {
                 if (cameraLimits[i].isActive)
                 {
-                    cameraTransform.transform.position = new Vector3
+                   transform.position = new Vector3
                     (
 
-                        Mathf.Clamp(cameraTransform.transform.position.x, cameraLimits[i].leftLimitC, cameraLimits[i].rightLimitC),
-                        Mathf.Clamp(cameraTransform.transform.position.y, cameraLimits[i].bottomLimitC, cameraLimits[i].topLimitC),
-                        cameraTransform.transform.position.z
+                        Mathf.Clamp(transform.position.x, cameraLimits[i].leftLimitC, cameraLimits[i].rightLimitC),
+                        Mathf.Clamp(transform.position.y, cameraLimits[i].bottomLimitC, cameraLimits[i].topLimitC),
+                        transform.position.z
                     );
 
-                    if (cameraTransform.transform.position.x == cameraLimits[i].leftLimitC && player.transform.position.x < cameraLimits[i].leftLimitC ||
-                       cameraTransform.transform.position.x == cameraLimits[i].rightLimitC && player.transform.position.x > cameraLimits[i].rightLimitC ||
-                       cameraTransform.transform.position.y == cameraLimits[i].bottomLimitC && player.transform.position.y < cameraLimits[i].bottomLimitC ||
-                       cameraTransform.transform.position.y == cameraLimits[i].topLimitC && player.transform.position.y > cameraLimits[i].topLimitC)
+                    if (transform.position.x == cameraLimits[i].leftLimitC && player.transform.position.x < cameraLimits[i].leftLimitC ||
+                        transform.position.x == cameraLimits[i].rightLimitC && player.transform.position.x > cameraLimits[i].rightLimitC ||
+                        transform.position.y == cameraLimits[i].bottomLimitC && player.transform.position.y < cameraLimits[i].bottomLimitC ||
+                        transform.position.y == cameraLimits[i].topLimitC && player.transform.position.y > cameraLimits[i].topLimitC)
                     {           
                         autoCam.enabled = false;
                     }
@@ -118,7 +118,7 @@ public class ZLimitCameraView : MonoBehaviour
     IEnumerator ChangeActiveBorderCoroutine(int borderIndex)
     {     
         protectCameraFromWall.enabled = true;
-        autoCam.enabled = false;
+      //  autoCam.enabled = false;
 
         for (int i = 0; i < cameraLimits.Length; i++)
         {
@@ -138,8 +138,9 @@ public class ZLimitCameraView : MonoBehaviour
 
         }
 
-        protectCameraFromWall.enabled = false;
         transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
+        protectCameraFromWall.enabled = false;
+       // cameraTransform.transform.position = new Vector3(0, cameraTransform.transform.position.y, cameraTransform.transform.position.z);
     }
 
     public void ChangeActiveBorder(int borderIndex)
