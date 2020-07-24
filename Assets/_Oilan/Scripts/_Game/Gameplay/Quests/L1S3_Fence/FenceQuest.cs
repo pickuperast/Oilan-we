@@ -95,17 +95,11 @@ namespace Oilan
 
         private IEnumerator CheckSolvedCoroutine()
         {
-
-            foreach (ProblemFlashCard prblm in problems)
-            {
-                prblm.SetState(ProblemFlashCardState.IDLE);
-            }
-
             bool _isSolved = true;
 
             for (int i = 0; i< problems.Length;i++) 
             {
-                if (problems[i].currentState == ProblemFlashCardState.IDLE)
+                if (problems[i].currentState != ProblemFlashCardState.SOLVED)
                 {
                     problems[i].CheckAnswer();
 
@@ -122,8 +116,9 @@ namespace Oilan
                         if (problems[i].isFirstTime)
                         {
                             GameObject starObject = Instantiate(star, new Vector3(problems[i].transform.position.x, problems[i].transform.position.y + 1, problems[i].transform.position.z),
-                            Quaternion.identity, problems[i].transform) as GameObject;            
-                            starObject.AddComponent<Image>().sprite = starObject.GetComponentInChildren<SpriteRenderer>().sprite;
+                            Quaternion.identity, gameObject.GetComponentInChildren<Transform>()) as GameObject;
+                            starObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "UI";
+                            starObject.GetComponentInChildren<SpriteRenderer>().sortingOrder = 10;
                             yield return new WaitForSeconds(0.5f);
                             GameplayScoreManager.Instance.AddWebStars(1);
                             SAudioManagerRef.Instance.PlayAudioFromTimeline("Zv-9 (Волшебный звук для звезды (отлетают на табло в меню “Награды”))");
@@ -134,6 +129,10 @@ namespace Oilan
                  
                 }
 
+                if(i == problems.Length - 1 && !_isSolved)
+                {
+                    buttonCheck.SetActive(true);
+                }
             }
 
             if (_isSolved)
