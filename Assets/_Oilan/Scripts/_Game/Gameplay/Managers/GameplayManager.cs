@@ -285,11 +285,12 @@ namespace Oilan
         public void ShowLevelFinishedWindow()
         {
             FinalUI.SetActive(true);
+            WebGLMessageHandler.Instance.ConsoleLog("FinalUI window activated");
         }
+
         public void WhenPartWasFinished(int part)
         {
-            SaveGameManager.Instance.SetPartFinished(SaveGameManager.Instance.mSaveData.level, SaveGameManager.Instance.mSaveData.step, part);
-            
+            //SaveGameManager.Instance.SetPartFinished(SaveGameManager.Instance.mSaveData.level, SaveGameManager.Instance.mSaveData.step, part);
         }
 
         public void WhenStepWasFinished()

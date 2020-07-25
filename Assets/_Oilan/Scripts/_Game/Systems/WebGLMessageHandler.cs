@@ -229,7 +229,7 @@ namespace Oilan
             if (UnityPlatform())
             {
 
-                string GetProgress = @"[{&quot;id&quot;:18,&quot;level&quot;:1,&quot;step&quot;:1,&quot;part&quot;:1,&quot;stars&quot;:0,&quot;count_level&quot;:5}]";
+                string GetProgress = @"[{&quot;id&quot;:18,&quot;level&quot;:5,&quot;step&quot;:1,&quot;part&quot;:1,&quot;stars&quot;:0,&quot;count_level&quot;:5}]";
                 string progress = GetProgress.Replace("&quot;", @"""");
                 string pattern = @"{.*?\}";
                 string input = progress;

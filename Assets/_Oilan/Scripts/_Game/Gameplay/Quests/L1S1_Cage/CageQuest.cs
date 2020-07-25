@@ -425,6 +425,7 @@ namespace Oilan
 
             yield return new WaitForSeconds((float)director.duration);
 
+
             director.enabled = false;
             
             Character_Ali.Instance.SetSpriteVisibility(true);
@@ -432,7 +433,7 @@ namespace Oilan
 
             GameplayManager.Instance.TurnPlayerControlsOnOff(true);
             GameplayManager.Instance.TurnAutoCamOnOff(true);
-
+            GameplayManager.Instance.WhenStepWasFinished();
             //DialogueManager.Instance.currentText = text;
             //DialogueManager.Instance.ShowDialogueGUI();
 
