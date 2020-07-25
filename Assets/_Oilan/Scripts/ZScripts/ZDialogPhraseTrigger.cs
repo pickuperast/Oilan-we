@@ -8,10 +8,10 @@ public class ZDialogPhraseTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && collision.gameObject.layer != LayerMask.NameToLayer("Ali"))
         {
             StartCoroutine(PlaySound());
-
+            
             Oilan.Character_Ali.Instance.SetAnimatorTalkTrigger(true);
             gameObject.GetComponent<BoxCollider2D>().enabled = false;//Отключаем триггер
 
