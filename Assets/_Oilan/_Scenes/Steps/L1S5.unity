@@ -10095,6 +10095,8 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: 5013c4e2c3e3f8844bee829f8a46edcc, type: 2}
     - {fileID: 11400000, guid: 74c9292a90640424c98431a98328cd18, type: 2}
+    - {fileID: 11400000, guid: 9acb50d88258e8442bdda614c59cc3d4, type: 2}
+    - {fileID: 11400000, guid: dad224dc0b877c84983f78d7d598808b, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -10133,6 +10135,32 @@ MonoBehaviour:
             m_StringArgument: au_l1s4p2_4
             m_BoolArgument: 1
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetEmulateWalking
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetEmulateWalking
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!320 &716345912
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -10170,6 +10198,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 2932110368595075354, guid: 56507a0352c437a4899c8bcfd9b85501, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -458645508200874188, guid: 56507a0352c437a4899c8bcfd9b85501, type: 2}
+    value: {fileID: 716345909}
   m_ExposedReferences:
     m_References:
     - 95f86cc153f53704e9155ed7327b84e1: {fileID: 1613841426}
@@ -27615,6 +27645,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 0}
     value: {fileID: 0}
+  - key: {fileID: 3381433070335719013, guid: 4fc50b10799d50d4cb8f0369cb251de8, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1732507798
@@ -34474,13 +34506,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timelineItems:
-  - name: Cutscene_L1S4_0
+  - name: Cutscene_L1S5_0
     timeline: {fileID: 1863416141}
-  - name: Cutscene_L1S4_1
+  - name: Cutscene_L1S5_1
     timeline: {fileID: 1950108454}
-  - name: Cutscene_L1S4_2
+  - name: Cutscene_L1S5_2
     timeline: {fileID: 716345912}
-  - name: Cutscene_L1S4_3
+  - name: Cutscene_L1S5_3
     timeline: {fileID: 499994511}
 --- !u!1 &2081805311
 GameObject:
