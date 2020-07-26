@@ -2,8 +2,7 @@
 
 public class SUIResetPositionOnPlay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         transform.localPosition = Vector3.zero;
         gameObject.SetActive(false);
