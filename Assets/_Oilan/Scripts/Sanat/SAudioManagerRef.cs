@@ -21,8 +21,8 @@ public class SAudioManagerRef : MonoBehaviour
     void Start()
     {
         bgsound = GameObject.Find("SoundBackgroundHandler").GetComponent<AudioSource>();
-        bgsound.clip = (AudioClip)Resources.Load("Media/Audio/Sounds/" + clip.name, typeof(AudioClip));
-        bgsound.Play();
+        //bgsound.clip = (AudioClip)Resources.Load("Media/Audio/Sounds/" + clip.name, typeof(AudioClip));
+        //bgsound.Play();
         GOAudioManager = GameObject.Find("AudioHandler");
         l_audioSource = GOAudioManager.GetComponent<AudioSource>();
         l_audioSource.clip = null;
