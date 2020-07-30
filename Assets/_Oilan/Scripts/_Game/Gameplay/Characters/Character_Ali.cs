@@ -41,7 +41,7 @@ namespace Oilan
         public Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
         private SpriteRenderer m_SpriteRenderer;
-        
+
         public bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
         [Header("CUTSCENES")]
@@ -67,7 +67,7 @@ namespace Oilan
         public SpriteRenderer Back;
         public SpriteRenderer FootLeft;
         public SpriteRenderer FootRight;
-        
+
 
         public bool isBeingPushed = false;
         public bool isRequiredToResetPush = true;
@@ -109,7 +109,7 @@ namespace Oilan
         {
             m_items[ItemIdinList].isEquipped = true;
             isRequiredItemChecking = true;
-            Debug.Log("Called EquipItem("+ ItemIdinList+")");
+            Debug.Log("Called EquipItem(" + ItemIdinList + ")");
         }
         public void UnEquipItem(int ItemIdinList)
         {
@@ -133,7 +133,7 @@ namespace Oilan
             //    LateUpdateFrames++;
             //}
         }
-        
+
         public void CheckRequiredItems()//ƒелает проверку по листу m_items и переодевает персонажа
         {
             foreach (var item in m_items)
@@ -166,7 +166,7 @@ namespace Oilan
             }
             //isRequiredItemChecking = false;
         }
-        
+
         private void Awake()
         {
             Instance = this;
@@ -211,7 +211,7 @@ namespace Oilan
             if (m_Grounded) {// && Mathf.Abs(m_Rigidbody2D.velocity.y) < 0.1f)
                 m_Anim.SetBool("Jump", false);
             }
-                //Debug.Log("hand item sprite: " + LeftHand.sprite);
+            //Debug.Log("hand item sprite: " + LeftHand.sprite);
             //CheckRequiredItems();
             /*
             if (_backpack_Value != backpack_Value
@@ -231,7 +231,7 @@ namespace Oilan
 
         public void SetAnimatorTrigger(string triggerName)
         {
-           m_Anim.SetTrigger(triggerName);
+            m_Anim.SetTrigger(triggerName);
         }
 
         public void SetAnimatorBool(string boolName, bool newValue = false)
@@ -250,7 +250,7 @@ namespace Oilan
         {
             SetAnimatorBool("ali_r83_ukazyvaet_vpered", isOn);
         }
-            public void SetAnimatorAli_r48_Bool(bool isOn)
+        public void SetAnimatorAli_r48_Bool(bool isOn)
         {
             SetAnimatorBool("ali_r48_point_in_front", isOn);
         }
@@ -277,6 +277,10 @@ namespace Oilan
         public void SetAnimatorAli_r59_Trigger()
         {
             SetAnimatorTrigger("ali_r59_put_plate_in_backpack");
+        }
+        public void SetAnimatorAli_r74_Trigger()
+        {
+            SetAnimatorTrigger("ali_r74_derzhit_krystall");
         }
         public void SetAnimatorAli_r76_Trigger()
         {
