@@ -270,6 +270,12 @@ namespace Oilan
         {
             SetAnimatorTrigger("ali_r45_talk_look_in_front");
         }
+        public void SetAnimatorAli_r45_Bool(bool isOn)
+        {
+            SetAnimatorBool("ali_eyes_front", !isOn);
+            SetAnimatorBool("ali_eyes_right" , isOn);
+            SetAnimatorBool("Talk", isOn);
+        }
         public void SetAnimatorAli_r47_Trigger()
         {
             SetAnimatorTrigger("ali_r47_surprise_no_smile");
@@ -286,14 +292,20 @@ namespace Oilan
         {
             SetAnimatorTrigger("ali_r76_happy_talk");
         }
+        public void SetAnimatorAli_r78_Bool_Talk(bool isOn)
+        {
+            if (isOn) SAudioManagerRef.Instance.TurnDownBGSound();
+            else SAudioManagerRef.Instance.TurnUpBGSound();
+            SetAnimatorBool("Talk", isOn);
+            SetAnimatorBool("ali_eyes_right", !isOn);
+            SetAnimatorBool("ali_eyes_front", isOn);
+        }
         public void SetAnimatorAli_r80_Trigger()
         {
             SetAnimatorTrigger("ali_r80_look_down");
         }
         public void SetAnimatorTalkTrigger(bool isOn){
-            if (isOn) SAudioManagerRef.Instance.TurnDownBGSound();
-            else SAudioManagerRef.Instance.TurnUpBGSound();
-            SetAnimatorBool("Talk", isOn);
+            SetAnimatorAli_r78_Bool_Talk(isOn);
         }
         public void SetAnimatorPointOnChest(bool isOn)
         {
