@@ -4263,6 +4263,12 @@ PlayableDirector:
     value: {fileID: 1855853458}
   - key: {fileID: 1251266637529334029, guid: f8ebe87b018e5044b92b59e9c5741525, type: 2}
     value: {fileID: 348271003}
+  - key: {fileID: 2962038237424165375, guid: f8ebe87b018e5044b92b59e9c5741525, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3251391068607683545, guid: f8ebe87b018e5044b92b59e9c5741525, type: 2}
+    value: {fileID: 1613841428}
+  - key: {fileID: -7518854908523682795, guid: f8ebe87b018e5044b92b59e9c5741525, type: 2}
+    value: {fileID: 1855853458}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &348271007
@@ -16628,7 +16634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GOAudioManager: {fileID: 0}
   l_audioSource: {fileID: 1150245497}
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 9bacdd808a597314d8f6c43b16ff58fe, type: 3}
 --- !u!1 &1166068701
 GameObject:
   m_ObjectHideFlags: 0
@@ -27432,12 +27438,12 @@ PrefabInstance:
     - target: {fileID: 1883546239490979397, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.9304525
+      value: -0.9331356
       objectReference: {fileID: 0}
     - target: {fileID: 1883546239490979397, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.36641252
+      value: 0.35952467
       objectReference: {fileID: 0}
     - target: {fileID: 1921950097716480224, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
@@ -27677,12 +27683,12 @@ PrefabInstance:
     - target: {fileID: 8286843437431481404, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.034922976
+      value: 0.003900762
       objectReference: {fileID: 0}
     - target: {fileID: 8286843437431481404, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99939
+      value: 0.99999243
       objectReference: {fileID: 0}
     - target: {fileID: 8901681625403077885, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
