@@ -9,6 +9,7 @@ namespace Oilan
         public static PlayerController Instance;
 
         private PlayerControls controls;
+        private List<GameObject> UIControlButtons = new List<GameObject>();
         public Vector2 move;
         public bool m_Jump;
         public bool canJump;
@@ -86,13 +87,14 @@ namespace Oilan
             m_Character = GetComponent<Character_Ali>();
 
             controls = new PlayerControls();
-
+            UIControlButtons.Add(GameObject.Find("ButtonLeft"));
+            UIControlButtons.Add(GameObject.Find("ButtonRight"));
+            UIControlButtons.Add(GameObject.Find("ButtonUp"));
             controls.Gameplay.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
             controls.Gameplay.Move.canceled += ctx => move = Vector2.zero;
             if (canJump) { 
                 controls.Gameplay.Jump.started += ctx => m_Jump = true;
             }
-
         }
 
         private void FixedUpdate()
@@ -111,7 +113,6 @@ namespace Oilan
             {
                 controls.Enable();
                 idlePause = false;
-                
                 GameplayManager.Instance.TurnAutoCamOnOff(true);
             }
             else
@@ -119,6 +120,13 @@ namespace Oilan
                 controls.Disable();
                 idlePause = true;
                 GameplayManager.Instance.TurnAutoCamOnOff(false);
+            }
+            foreach (var btn in UIControlButtons)
+            {
+                if (btn.GetComponent<ButtonUI_Mouse>().isWorking)
+                {
+                    btn.SetActive(newValue);
+                }
             }
         }
 

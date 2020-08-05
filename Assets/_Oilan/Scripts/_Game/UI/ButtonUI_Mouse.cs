@@ -53,6 +53,10 @@ namespace Oilan
                     PlayerController.Instance.m_Jump = false;
                 }
             }
+            else
+            {
+                gameObject.SetActive(false);
+            }
         }
 
         private void OnEnable()
