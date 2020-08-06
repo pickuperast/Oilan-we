@@ -9,7 +9,7 @@ namespace Oilan
         public static PlayerController Instance;
 
         private PlayerControls controls;
-        private List<GameObject> UIControlButtons = new List<GameObject>();
+        public List<GameObject> UIControlButtons = new List<GameObject>();
         public Vector2 move;
         public bool m_Jump;
         public bool canJump;

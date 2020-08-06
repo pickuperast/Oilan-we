@@ -40,6 +40,7 @@ namespace Oilan
         {
             if (timelineItems.Count > lastTimelineID + 1)
             {
+                Debug.Log("Playing timeline: " + timelineItems[lastTimelineID + 1].name);
                 PlayTimeline(timelineItems[lastTimelineID + 1].name);
             }
         }
