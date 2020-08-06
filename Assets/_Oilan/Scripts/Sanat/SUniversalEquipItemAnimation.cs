@@ -15,6 +15,22 @@ public class SUniversalEquipItemAnimation : MonoBehaviour
 
     public List<SUniversalEquipItemList> m_items;
     public bool isRequiredItemChecking = false;
+    public Animator m_Anim;
+
+    private void Start()
+    {
+        m_Anim = gameObject.GetComponent<Animator>();
+    }
+
+    public void OnBool(string nameOfBool)
+    {
+        m_Anim.SetBool(nameOfBool, true);
+    }
+
+    public void OffBool(string nameOfBool)
+    {
+        m_Anim.SetBool(nameOfBool, false);
+    }
 
     public void EquipItem(int ItemIdinList)
     {
