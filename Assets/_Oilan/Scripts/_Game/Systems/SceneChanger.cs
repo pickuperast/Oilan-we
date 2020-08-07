@@ -60,7 +60,7 @@ namespace Oilan
             stepSceneIsUnloaded = false;
 
             SceneManager.sceneLoaded += OnStepSceneLoaded;
-            Debug.Log("Loading " + newStepSceneName);
+            WebGLMessageHandler.Instance.ConsoleLog("Loading " + newStepSceneName);
             StartCoroutine(LoadStepSceneCoroutine());
         }
 

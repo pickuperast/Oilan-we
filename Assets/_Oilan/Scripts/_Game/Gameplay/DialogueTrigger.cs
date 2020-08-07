@@ -36,7 +36,7 @@ namespace Oilan
 
                 Character_Ali.Instance.SetAnimatorTalkTrigger(true);
                 Character_Ali.Instance.SetAnimatorPointOnChest(true);
-                //Debug.Log("class DialogueTrigger called Character_Ali.Instance.SetAnimatorTalkTrigger();");
+                //WebGLMessageHandler.Instance.ConsoleLog("class DialogueTrigger called Character_Ali.Instance.SetAnimatorTalkTrigger();");
                 //GameplayManager.Instance.TurnPlayerControlsOnOff(false);
 
                 StartCoroutine(HideDialogueCoroutine(audioClip.length));
@@ -60,7 +60,7 @@ namespace Oilan
         {
             yield return new WaitForSeconds(time);
             
-            //Debug.Log("HideDialogue");
+            //WebGLMessageHandler.Instance.ConsoleLog("HideDialogue");
             DialogueManager.Instance.HideDialogueGUI();
             Character_Ali.Instance.SetAnimatorTalkTrigger(false);
             Character_Ali.Instance.SetAnimatorPointOnChest(false);

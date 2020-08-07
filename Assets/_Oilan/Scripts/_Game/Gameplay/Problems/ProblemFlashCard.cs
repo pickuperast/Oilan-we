@@ -62,7 +62,7 @@ namespace Oilan
         {
             currentState = newState;
 
-            Debug.Log("N1");
+            WebGLMessageHandler.Instance.ConsoleLog("N1");
             switch (newState)
             {
                 case ProblemFlashCardState.IDLE:

@@ -284,8 +284,11 @@ namespace Oilan
         }
         public void ShowLevelFinishedWindow()
         {
+            WebGLMessageHandler.Instance.ConsoleLog("FinalUI local position is: " + FinalUI.transform.localPosition.ToString());
+            FinalUI.transform.localPosition = Vector3.zero;
             FinalUI.SetActive(true);
             WebGLMessageHandler.Instance.ConsoleLog("FinalUI window activated");
+            WebGLMessageHandler.Instance.ConsoleLog("FinalUI local position is: " + FinalUI.transform.localPosition.ToString());
         }
 
         public void WhenPartWasFinished(int part)

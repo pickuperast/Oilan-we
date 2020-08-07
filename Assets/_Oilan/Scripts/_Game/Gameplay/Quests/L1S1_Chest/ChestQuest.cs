@@ -316,7 +316,7 @@ namespace Oilan
         {
             //yield return new WaitForSeconds(audioClip.length);
 
-            //Debug.Log("HideDialogue");
+            //WebGLMessageHandler.Instance.ConsoleLog("HideDialogue");
             //DialogueManager.Instance.HideDialogueGUI();
 
             yield return null;

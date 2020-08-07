@@ -109,7 +109,7 @@ namespace Oilan
         {
             m_items[ItemIdinList].isEquipped = true;
             isRequiredItemChecking = true;
-            Debug.Log("Called EquipItem(" + ItemIdinList + ")");
+            WebGLMessageHandler.Instance.ConsoleLog("Called EquipItem(" + ItemIdinList + ")");
         }
         public void UnEquipItem(int ItemIdinList)
         {
@@ -117,7 +117,7 @@ namespace Oilan
             //проверка, если при вызове метода "UnEquipItem", остался хоть один одетый предмет, то
             //оставляем переменную "isRequiredItemChecking" = true, чтобы продолжалось отображение одетого предмета
             isRequiredItemChecking = isAnyItemEquipped();
-            Debug.Log("Called UnEquipItem(" + ItemIdinList + ")");
+            WebGLMessageHandler.Instance.ConsoleLog("Called UnEquipItem(" + ItemIdinList + ")");
             if (ItemIdinList != 2)
             {
                 Character_Ali.Instance.SetAnimatorShowItemTalk(false);
@@ -127,7 +127,7 @@ namespace Oilan
         private void LateUpdate()
         {
             if (isRequiredItemChecking) CheckRequiredItems();
-            //Debug.Log("("+ LateUpdateFrames+") showing left hand item. Sprite: " + LeftHand.sprite);
+            //WebGLMessageHandler.Instance.ConsoleLog("("+ LateUpdateFrames+") showing left hand item. Sprite: " + LeftHand.sprite);
             //if (LateUpdateFrames < LateUpdateMaxFrames) { 
             //    CheckRequiredItems();
             //    LateUpdateFrames++;
@@ -144,13 +144,13 @@ namespace Oilan
                 if (item.isForLeftHand)
                 {
                     LeftHand.sprite = item.m_sprite;
-                    Debug.Log("showing left hand item. Sprite: " + LeftHand.sprite);
+                    WebGLMessageHandler.Instance.ConsoleLog("showing left hand item. Sprite: " + LeftHand.sprite);
                 }
                 //check right hand items
                 if (item.isForRightHand)
                 {
                     RightHand.sprite = item.m_sprite;
-                    Debug.Log("showing right hand item. Sprite: " + RightHand.sprite);
+                    WebGLMessageHandler.Instance.ConsoleLog("showing right hand item. Sprite: " + RightHand.sprite);
                 }
                 //check backpack
                 if (item.isForBack)
@@ -211,7 +211,7 @@ namespace Oilan
             if (m_Grounded) {// && Mathf.Abs(m_Rigidbody2D.velocity.y) < 0.1f)
                 m_Anim.SetBool("Jump", false);
             }
-            //Debug.Log("hand item sprite: " + LeftHand.sprite);
+            //WebGLMessageHandler.Instance.ConsoleLog("hand item sprite: " + LeftHand.sprite);
             //CheckRequiredItems();
             /*
             if (_backpack_Value != backpack_Value
@@ -487,7 +487,7 @@ namespace Oilan
                 m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
                 // Move the character
-                //Debug.Log(new Vector2(move * m_MaxSpeed, m_Rigidbody2D.velocity.y));
+                //WebGLMessageHandler.Instance.ConsoleLog(new Vector2(move * m_MaxSpeed, m_Rigidbody2D.velocity.y));
                 m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
 
                 // If the input is moving the player right and the player is facing left...
