@@ -64,9 +64,9 @@ namespace Oilan.Utils
 
                 avgFramesPerSec = Mathf.RoundToInt((float)avgframeCount / avgTime);
 
-                //Debug.Log("min " + minFramesPerSec);
-                //Debug.Log("avg " + avgFramesPerSec);
-                //Debug.Log("max " + maxFramesPerSec);
+                //WebGLMessageHandler.Instance.ConsoleLog("min " + minFramesPerSec);
+                //WebGLMessageHandler.Instance.ConsoleLog("avg " + avgFramesPerSec);
+                //WebGLMessageHandler.Instance.ConsoleLog("max " + maxFramesPerSec);
             }
 
         }

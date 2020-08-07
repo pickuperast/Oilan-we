@@ -74,7 +74,7 @@ namespace Oilan
                 Character_Ali.Instance.SetAnimatorTalkTrigger(false);
                 Character_Ali.Instance.SetAnimatorIdleTrigger();
 
-                Debug.Log("HideDialogue");
+                WebGLMessageHandler.Instance.ConsoleLog("HideDialogue");
                 DialogueManager.Instance.HideDialogueGUI();
 
                 GameplayManager.Instance.TurnPlayerControlsOnOff(true);

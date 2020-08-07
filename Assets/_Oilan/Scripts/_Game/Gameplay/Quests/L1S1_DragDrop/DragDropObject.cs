@@ -277,7 +277,7 @@ namespace Oilan
                 Character_Ali.Instance.CheckRequiredItems();
                 if (itemID != 2)
                 {
-                    Debug.Log("Playing show hand + item animation. ItemID = " + itemID);
+                    WebGLMessageHandler.Instance.ConsoleLog("Playing show hand + item animation. ItemID = " + itemID);
                     //Character_Ali.Instance.SetAnimatorShowItemTalk(true);
                 }
                 else//backpack

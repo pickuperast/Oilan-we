@@ -163,7 +163,7 @@ namespace Oilan
 
         IEnumerator CoroutinePlaySound(string soundName, bool isLockControl, bool isTalkAnimation, float volume = 1f, float pitch = 1f, bool loop = false)
         {
-            Debug.Log("Playing sound: " + soundName);
+            WebGLMessageHandler.Instance.ConsoleLog("Playing sound: " + soundName);
             AudioTrack trackH = new AudioTrack();
             trackH.SetClip(soundName);
             trackH.volume = volume;

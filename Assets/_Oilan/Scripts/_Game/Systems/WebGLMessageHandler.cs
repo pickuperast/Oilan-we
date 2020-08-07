@@ -152,12 +152,12 @@ namespace Oilan
         }
         public void RecieveMessageInt(int message)
         {
-            //Debug.Log("MessageRecieved: " + message.ToString());
+            //WebGLMessageHandler.Instance.ConsoleLog("MessageRecieved: " + message.ToString());
         }
 
         public void RecieveMessageString(string message)
         {
-            //Debug.Log("MessageRecieved: " + message);
+            //WebGLMessageHandler.Instance.ConsoleLog("MessageRecieved: " + message);
         }
         /*
         public void PullSaveDataFromJSON(string message)
@@ -169,17 +169,23 @@ namespace Oilan
             saveDataString.AppendLine("level: " + saveData.level);
             saveDataString.AppendLine("stars: " + saveData.stars);
 
-            Debug.Log(saveDataString.ToString());
+            WebGLMessageHandler.Instance.ConsoleLog(saveDataString.ToString());
 
         }*/
         public void ConsoleLog(string txt)
         {
-           if (!UnityPlatform())
-            LibConsoleWriter(txt);
+            if (UnityPlatform())
+            {
+                WebGLMessageHandler.Instance.ConsoleLog(txt);
+            }
+            else
+            {
+                LibConsoleWriter(txt);
+            }
         }
         public void ReturnFromTrainer(bool success, int starsEarned)
         {
-            //Debug.Log("Returned from Trainer. Success: " + success.ToString() + " StarsEarned: " + starsEarned.ToString());
+            //WebGLMessageHandler.Instance.ConsoleLog("Returned from Trainer. Success: " + success.ToString() + " StarsEarned: " + starsEarned.ToString());
         }
 
         public void TestOpenTrainer()
@@ -197,7 +203,7 @@ namespace Oilan
         {
             //LibConsoleWriter("UnityLog: Setting progress to: " + mJSONinput);
             //TextSavedStats.text += "\nUnityLog: Setting progress to: " + mJSONinput;
-            //Debug.Log("Setting progress to: "+ mJSONinput);
+            //WebGLMessageHandler.Instance.ConsoleLog("Setting progress to: "+ mJSONinput);
             if (!UnityPlatform())
                 Unity_SetProgress(mJSONinput);
         }
@@ -242,8 +248,8 @@ namespace Oilan
                 foreach (Match m in Regex.Matches(input, pattern, options))
                 {
                     output = m.Value;
-                    Debug.Log(m.Value);
-                    Debug.Log("'{0}' found at index {1}." + m.Value + m.Index);
+                    WebGLMessageHandler.Instance.ConsoleLog(m.Value);
+                    WebGLMessageHandler.Instance.ConsoleLog("'{0}' found at index {1}." + m.Value + m.Index);
                 }
                 //output = output.Substring(1, output.Length - 1);//{"id":2,"user_id":9,"level":1,"step":1,"part":1,"starts":0}
                 mSaveData = JsonUtility.FromJson<SaveData>(output);
@@ -269,8 +275,8 @@ namespace Oilan
                     output = m.Value;
                     //LibConsoleWriter("UnityLog: Regex matching, answer: m.Value = " + m.Value);
                     //TextSavedStats.text += "\nUnityLog: Regex matching, answer: m.Value = " + m.Value;
-                    //Debug.Log(m.Value);
-                    //Debug.Log("'{0}' found at index {1}." + m.Value + m.Index);
+                    //WebGLMessageHandler.Instance.ConsoleLog(m.Value);
+                    //WebGLMessageHandler.Instance.ConsoleLog("'{0}' found at index {1}." + m.Value + m.Index);
                 }
                 //output = output.Substring(1, output.Length - 1);//{"id":2,"level":1,"step":1,"part":1,"stars":0,"maxUnlockedLevels":5}
                 mSaveData = JsonUtility.FromJson<SaveData>(output);
@@ -278,7 +284,7 @@ namespace Oilan
                 /*
                 //string pattern = @"(?:\{.*?\:)(.*?\})";
                 SaveGameManager.Instance.mSetProgress(progress);
-                Debug.Log("Debug.log - Getting progress: " + progress);
+                WebGLMessageHandler.Instance.ConsoleLog("Debug.log - Getting progress: " + progress);
                 TextSavedStats.text = progress;
                 SaveGameManager.Instance.SetUserID(GetUserID());
 

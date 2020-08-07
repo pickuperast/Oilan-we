@@ -30,7 +30,7 @@ namespace Oilan
 
         public void OpenLevel()
         {
-            //Debug.Log("button is clicked!"+gameObject.name);
+            //WebGLMessageHandler.Instance.ConsoleLog("button is clicked!"+gameObject.name);
             if (isUnlocked)
             {
                 if (isBought) {

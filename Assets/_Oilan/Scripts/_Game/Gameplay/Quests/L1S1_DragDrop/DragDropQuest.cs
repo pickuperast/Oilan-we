@@ -91,7 +91,7 @@ namespace Oilan
 
         public override void Solved()
         {
-            Debug.Log("Solved!");
+            WebGLMessageHandler.Instance.ConsoleLog("Solved!");
             bridgeSolved.SetActive(true);
             bridgeUnsolved.SetActive(false);
 
@@ -111,7 +111,7 @@ namespace Oilan
             DialogueManager.Instance.currentText = text;
             DialogueManager.Instance.ShowDialogueGUI();
             
-            Debug.Log("trying to play sound: " + audioName);
+            WebGLMessageHandler.Instance.ConsoleLog("trying to play sound: " + audioName);
             AudioManager.Instance.PlaySound(audioName, true, true);
             playOwnAudioSource();
             StartCoroutine(HideDialogueCoroutine());
@@ -120,12 +120,12 @@ namespace Oilan
         private IEnumerator HideDialogueCoroutine()
         {
             yield return new WaitForSeconds(audioClip.length);
-            Debug.Log("HideDialogue");
+            WebGLMessageHandler.Instance.ConsoleLog("HideDialogue");
             DialogueManager.Instance.HideDialogueGUI();
 
             //yield return new WaitForSeconds(time);
 
-            //Debug.Log("ShowIndicator");
+            //WebGLMessageHandler.Instance.ConsoleLog("ShowIndicator");
             //ShowHideGraphics(true);
 
             yield return null;

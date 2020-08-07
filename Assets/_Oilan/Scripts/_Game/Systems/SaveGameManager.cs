@@ -103,7 +103,7 @@ namespace Oilan
             log += "step: " + mSaveData.step + "; ";
             log += "part: " + mSaveData.part + "; ";
             log += "stars: " + mSaveData.stars + "; ";
-            Debug.Log(log);
+            WebGLMessageHandler.Instance.ConsoleLog(log);
             //TextSavedStats.text = log;
         }
 

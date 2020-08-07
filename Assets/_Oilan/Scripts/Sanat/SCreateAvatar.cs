@@ -17,7 +17,7 @@ public class SCreateAvatar : MonoBehaviour
         {
             Avatar avatar = AvatarBuilder.BuildGenericAvatar(activeGameObject, "");
             avatar.name = name;
-            Debug.Log(avatar.isHuman ? "is human" : "is generic");
+            WebGLMessageHandler.Instance.ConsoleLog(avatar.isHuman ? "is human" : "is generic");
 
             Animator animator = activeGameObject.GetComponent<Animator>() as Animator;
             animator.avatar = avatar;
@@ -34,7 +34,7 @@ public class SCreateAvatar : MonoBehaviour
         AssetDatabase.CreateAsset(_ava, "Assets/MyMaterial.mask");
 
         // Print the path of the created asset
-        Debug.Log(AssetDatabase.GetAssetPath(_ava));
+        WebGLMessageHandler.Instance.ConsoleLog(AssetDatabase.GetAssetPath(_ava));
     }
     */
 }
@@ -55,7 +55,7 @@ namespace Infrastructure.Editor
             {
                 Avatar avatar = AvatarBuilder.BuildGenericAvatar(activeGameObject, "");
                 avatar.name = "InsertYourName";
-                Debug.Log(avatar.isHuman ? "is human" : "is generic");
+                WebGLMessageHandler.Instance.ConsoleLog(avatar.isHuman ? "is human" : "is generic");
 
                 AssetDatabase.CreateAsset(avatar, "Assets/NewAvatar.asset");
             }
