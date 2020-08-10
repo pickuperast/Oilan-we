@@ -4762,6 +4762,7 @@ GameObject:
   - component: {fileID: 326225954}
   - component: {fileID: 326225952}
   - component: {fileID: 326225953}
+  - component: {fileID: 326225955}
   m_Layer: 5
   m_Name: VideoGUI
   m_TagString: Untagged
@@ -4813,6 +4814,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &326225955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326225951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11bda8e4ed377c84696d294be567cc3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!223 &326225956
 Canvas:
   m_ObjectHideFlags: 0
@@ -4855,7 +4868,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1200}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &335606188
@@ -16289,9 +16302,9 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: au_l1s2p1_1
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
         - m_Target: {fileID: 833951887}
-          m_MethodName: SetAnimatorTalkTrigger
+          m_MethodName: SetAnimatorAli_r78_Bool_Talk
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -16300,17 +16313,6 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 833951887}
-          m_MethodName: SetEyesFront
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
@@ -18322,7 +18324,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 323fef86869225d4c81a5b07aff34939, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -19642,6 +19644,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7221e2640165e024c8709226232494a2, type: 2}
     - {fileID: 11400000, guid: 9285d95eaa510e143bf81e7b3b8aa258, type: 2}
     - {fileID: 11400000, guid: 15003b8423b589a43b550dc3c0ba43bb, type: 2}
+    - {fileID: 11400000, guid: 049d059d3bdabd342a0d027af31395d6, type: 2}
+    - {fileID: 11400000, guid: 684ed1d57dfa4df48894af26e36dc5eb, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -19668,7 +19672,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: au_l1s2p2_2
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
         - m_Target: {fileID: 833951887}
           m_MethodName: SetAnimatorTalkTrigger
           m_Mode: 6
@@ -19692,7 +19696,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: au_l1s5p2_3
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 833951887}
@@ -19724,6 +19728,32 @@ MonoBehaviour:
         - m_Target: {fileID: 2070864618}
           m_MethodName: PlayNextTimeline
           m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 833951887}
+          m_MethodName: SetAnimatorAli_r78_Bool_Talk
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 833951887}
+          m_MethodName: SetAnimatorAli_r78_Bool_Talk
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -29661,7 +29691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 110.00003, y: 192}
+  m_AnchoredPosition: {x: 110.00004, y: 192}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!61 &1890629499

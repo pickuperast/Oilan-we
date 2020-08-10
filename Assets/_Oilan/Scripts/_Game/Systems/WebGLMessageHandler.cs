@@ -180,7 +180,7 @@ namespace Oilan
             }
             else
             {
-                LibConsoleWriter(txt);
+                //LibConsoleWriter(txt);
             }
         }
         public void ReturnFromTrainer(bool success, int starsEarned)

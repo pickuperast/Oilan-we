@@ -296,8 +296,8 @@ namespace Oilan
         {
             if (isOn) SAudioManagerRef.Instance.TurnDownBGSound();
             else SAudioManagerRef.Instance.TurnUpBGSound();
-            SetAnimatorBool("Talk", isOn);
             SetAnimatorBool("ali_eyes_right", !isOn);
+            SetAnimatorBool("Talk", isOn);
             SetAnimatorBool("ali_eyes_front", isOn);
         }
         public void SetAnimatorAli_r80_Trigger()

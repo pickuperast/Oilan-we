@@ -860,10 +860,10 @@ AnimatorStateMachine:
     m_Position: {x: 260, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7650341135455135861}
-    m_Position: {x: 140, y: 320, z: 0}
+    m_Position: {x: 150, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6257470916021683786}
-    m_Position: {x: 555.22314, y: 230.44868, z: 0}
+    m_Position: {x: 440, y: 290, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 5380759256729370347}
@@ -1842,7 +1842,7 @@ AnimatorController:
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
-    m_DefaultWeight: 0
+    m_DefaultWeight: 1
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
@@ -1854,7 +1854,7 @@ AnimatorController:
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: -1
-    m_DefaultWeight: 0
+    m_DefaultWeight: 1
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
@@ -2681,6 +2681,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: ali_eyes_front
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ali_eyes_right
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7650341135455135861}
   m_Solo: 0
@@ -2690,7 +2693,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 1
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -3223,6 +3226,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: ali_eyes_right
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: ali_eyes_front
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6257470916021683786}
   m_Solo: 0
@@ -3232,7 +3238,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 1
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
