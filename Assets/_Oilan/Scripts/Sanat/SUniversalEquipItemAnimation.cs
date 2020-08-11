@@ -17,41 +17,44 @@ public class SUniversalEquipItemAnimation : MonoBehaviour
     public bool isRequiredItemChecking = false;
     public Animator m_Anim;
 
-    private void Start()
-    {
+    private void Start()    {
         m_Anim = gameObject.GetComponent<Animator>();
     }
 
-    public void OnBool(string nameOfBool)
-    {
+    public void OnBool(string nameOfBool)    {
         m_Anim.SetBool(nameOfBool, true);
     }
 
-    public void OffBool(string nameOfBool)
-    {
+    public void OffBool(string nameOfBool)    {
         m_Anim.SetBool(nameOfBool, false);
     }
 
-    public void EquipItem(int ItemIdinList)
-    {
+    public void EquipItem(int ItemIdinList)    {
         m_items[ItemIdinList].isEquipped = true;
         isRequiredItemChecking = true;
     }
 
-    public void UnEquipItem(int ItemIdinList)
-    {
+    public void UnEquipItem(int ItemIdinList)    {
         m_items[ItemIdinList].isEquipped = false;
-        isRequiredItemChecking = false;
+        isRequiredItemChecking = isAnyItemEquipped();
+    }
+
+    [ExecuteAlways]
+    bool isAnyItemEquipped()    {
+        foreach (var item in m_items)
+        {
+            if (item.isEquipped) return true;
+        }
+        return false;
     }
 
     // Update is called once per frame
-    void LateUpdate()
-    {
+    void LateUpdate()    {
         if (isRequiredItemChecking) CheckRequiredItems();
+        Debug.Log("showing item");
     }
 
-    private void CheckRequiredItems()//Делает проверку по листу m_items и переодевает персонажа
-    {
+    private void CheckRequiredItems() { //Делает проверку по листу m_items и переодевает персонажа
         for (int i = 0; i < m_items.Capacity; i++)
         {
             if (!m_items[i].isEquipped) continue;//пропускаем, если нет необходимости одеть вещь

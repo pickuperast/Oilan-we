@@ -78,7 +78,7 @@ namespace Oilan
             List<GameObject> ui_all = new List<GameObject>();
 
             ui_all.Add(gameplayGUI);
-            ui_all.Add(controlsGUI);
+            //ui_all.Add(controlsGUI);
             ui_all.Add(dialogueGUI);
             ui_all.Add(theoryGUI);
             ui_all.Add(videoGUI);
@@ -92,7 +92,7 @@ namespace Oilan
                     currentState = Gameplay_UI_State.Gameplay;
 
                     ui_active.Add(gameplayGUI);
-                    ui_active.Add(controlsGUI);
+                    //ui_active.Add(controlsGUI);
 
                     TurnUIOnOff(ui_all, ui_active);
 

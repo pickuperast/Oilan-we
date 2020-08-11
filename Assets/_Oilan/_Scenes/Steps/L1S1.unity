@@ -3630,6 +3630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f28f2cc0ed1304aa7e5c4afc5b85f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isShown: 1
   isWorking: 1
   isPressed: 0
   moveVector: {x: -1, y: 0}
@@ -4925,6 +4926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f28f2cc0ed1304aa7e5c4afc5b85f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isShown: 1
   isWorking: 1
   isPressed: 0
   moveVector: {x: 1, y: 0}
@@ -18992,7 +18994,7 @@ MonoBehaviour:
   stepID: 
   next_level_num: 1
   next_step_num: 2
-  startFromFirstTimeline: 0
+  startFromFirstTimeline: 1
   gameplayCamera: {fileID: 519420031}
   gameplayAutoCam: {fileID: 873330949}
   gameplayCanvas: {fileID: 869214884}
@@ -19275,6 +19277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f28f2cc0ed1304aa7e5c4afc5b85f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isShown: 1
   isWorking: 1
   isPressed: 0
   moveVector: {x: 1, y: 0}
@@ -21670,6 +21673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f28f2cc0ed1304aa7e5c4afc5b85f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isShown: 1
   isWorking: 1
   isPressed: 0
   moveVector: {x: 1, y: 0}
@@ -31088,6 +31092,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1801154644}
+  - component: {fileID: 1801154645}
   m_Layer: 5
   m_Name: ButtonUp
   m_TagString: Untagged
@@ -31114,6 +31119,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1801154645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801154643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f28f2cc0ed1304aa7e5c4afc5b85f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isShown: 0
+  isWorking: 0
+  isPressed: 0
+  moveVector: {x: 1, y: 0}
+  jumpBool: 0
 --- !u!4 &1814474222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2769922779042567762, guid: 72189d76e23aaa049a559031a32ad4bc,
@@ -36301,7 +36323,7 @@ PlayableDirector:
   m_GameObject: {fileID: 2106483131}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: dc73703a477cc5a4995f00094290da94, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 42025b6eddb05c346af9b1f687900804, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
@@ -37356,12 +37378,12 @@ PrefabInstance:
     - target: {fileID: 278719418725231737, guid: 52841dfb19be06f4fa7859a3658ec227,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 278719418725231740, guid: 52841dfb19be06f4fa7859a3658ec227,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -948.2357
       objectReference: {fileID: 0}
     - target: {fileID: 278719418725231743, guid: 52841dfb19be06f4fa7859a3658ec227,
         type: 3}
@@ -38502,7 +38524,7 @@ PrefabInstance:
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 103.15
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -39687,7 +39709,7 @@ PrefabInstance:
     - target: {fileID: 3187089691377403340, guid: 2518692efc6ea494e8ebfe33fbdfd752,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3640754602647695471, guid: 2518692efc6ea494e8ebfe33fbdfd752,
         type: 3}

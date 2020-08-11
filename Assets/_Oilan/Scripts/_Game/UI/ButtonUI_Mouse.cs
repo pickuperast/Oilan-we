@@ -6,6 +6,7 @@ namespace Oilan
 {
     public class ButtonUI_Mouse : MonoBehaviour
     {
+        public bool isShown = true;
         public bool isWorking = false;
         public bool isPressed = false;
 
@@ -31,7 +32,11 @@ namespace Oilan
             isPressed = false;
             PlayerController.Instance.move = Vector2.zero;
         }
-
+        private void Start()
+        {
+            if (!isShown)
+                gameObject.SetActive(false);
+        }
         private void FixedUpdate()
         {
             if (isWorking)
@@ -46,16 +51,6 @@ namespace Oilan
                         isPressed = false;
                     }
                 }
-                else
-                {
-                    isWorking = false;
-                    PlayerController.Instance.move = Vector2.zero;
-                    PlayerController.Instance.m_Jump = false;
-                }
-            }
-            else
-            {
-                gameObject.SetActive(false);
             }
         }
 

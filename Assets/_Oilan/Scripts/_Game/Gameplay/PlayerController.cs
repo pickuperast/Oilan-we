@@ -123,7 +123,7 @@ namespace Oilan
             }
             foreach (var btn in UIControlButtons)
             {
-                if (btn.GetComponent<ButtonUI_Mouse>().isWorking)
+                if (btn.GetComponent<ButtonUI_Mouse>().isShown)
                 {
                     btn.SetActive(newValue);
                 }

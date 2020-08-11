@@ -152,12 +152,12 @@ namespace Oilan
         }
         public void RecieveMessageInt(int message)
         {
-            //WebGLMessageHandler.Instance.ConsoleLog("MessageRecieved: " + message.ToString());
+            //Debug.Log("MessageRecieved: " + message.ToString());
         }
 
         public void RecieveMessageString(string message)
         {
-            //WebGLMessageHandler.Instance.ConsoleLog("MessageRecieved: " + message);
+            //Debug.Log("MessageRecieved: " + message);
         }
         /*
         public void PullSaveDataFromJSON(string message)
@@ -169,7 +169,7 @@ namespace Oilan
             saveDataString.AppendLine("level: " + saveData.level);
             saveDataString.AppendLine("stars: " + saveData.stars);
 
-            WebGLMessageHandler.Instance.ConsoleLog(saveDataString.ToString());
+            Debug.Log(saveDataString.ToString());
 
         }*/
         public void ConsoleLog(string txt)
@@ -185,7 +185,7 @@ namespace Oilan
         }
         public void ReturnFromTrainer(bool success, int starsEarned)
         {
-            //WebGLMessageHandler.Instance.ConsoleLog("Returned from Trainer. Success: " + success.ToString() + " StarsEarned: " + starsEarned.ToString());
+            //Debug.Log("Returned from Trainer. Success: " + success.ToString() + " StarsEarned: " + starsEarned.ToString());
         }
 
         public void TestOpenTrainer()
@@ -227,7 +227,7 @@ namespace Oilan
         public bool UnityPlatform()
         {
             //return Application.platform == RuntimePlatform.WebGLPlayer;//== for testing in pickuperast.github.io and oilan.kz
-            //return false;   //false - test in oilan.kz
+            return false;   //false - test in oilan.kz
             return true;   //true - test in editor and pickuperast.github.io
         }
 
@@ -248,8 +248,8 @@ namespace Oilan
                 foreach (Match m in Regex.Matches(input, pattern, options))
                 {
                     output = m.Value;
-                    WebGLMessageHandler.Instance.ConsoleLog(m.Value);
-                    WebGLMessageHandler.Instance.ConsoleLog("'{0}' found at index {1}." + m.Value + m.Index);
+                    Debug.Log(m.Value);
+                    Debug.Log("'{0}' found at index {1}." + m.Value + m.Index);
                 }
                 //output = output.Substring(1, output.Length - 1);//{"id":2,"user_id":9,"level":1,"step":1,"part":1,"starts":0}
                 mSaveData = JsonUtility.FromJson<SaveData>(output);

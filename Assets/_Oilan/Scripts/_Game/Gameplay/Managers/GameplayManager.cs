@@ -317,10 +317,7 @@ namespace Oilan
         {
 
             PlayerController.Instance.move = Vector2.zero;
-
             PlayerController.Instance.TurnPlayerControllsOnOff(newValue);
-
-            controlsUI.SetActive(newValue);
         }
 
         public void TurnAutoCamOnOff(bool newValue)

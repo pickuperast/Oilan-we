@@ -109,7 +109,7 @@ namespace Oilan
         {
             m_items[ItemIdinList].isEquipped = true;
             isRequiredItemChecking = true;
-            WebGLMessageHandler.Instance.ConsoleLog("Called EquipItem(" + ItemIdinList + ")");
+            Debug.Log("Called EquipItem(" + ItemIdinList + ")");
         }
         public void UnEquipItem(int ItemIdinList)
         {
@@ -117,7 +117,7 @@ namespace Oilan
             //проверка, если при вызове метода "UnEquipItem", остался хоть один одетый предмет, то
             //оставляем переменную "isRequiredItemChecking" = true, чтобы продолжалось отображение одетого предмета
             isRequiredItemChecking = isAnyItemEquipped();
-            WebGLMessageHandler.Instance.ConsoleLog("Called UnEquipItem(" + ItemIdinList + ")");
+            Debug.Log("Called UnEquipItem(" + ItemIdinList + ")");
             if (ItemIdinList != 2)
             {
                 Character_Ali.Instance.SetAnimatorShowItemTalk(false);
@@ -144,13 +144,13 @@ namespace Oilan
                 if (item.isForLeftHand)
                 {
                     LeftHand.sprite = item.m_sprite;
-                    WebGLMessageHandler.Instance.ConsoleLog("showing left hand item. Sprite: " + LeftHand.sprite);
+                    Debug.Log("showing left hand item. Sprite: " + LeftHand.sprite);
                 }
                 //check right hand items
                 if (item.isForRightHand)
                 {
                     RightHand.sprite = item.m_sprite;
-                    WebGLMessageHandler.Instance.ConsoleLog("showing right hand item. Sprite: " + RightHand.sprite);
+                    Debug.Log("showing right hand item. Sprite: " + RightHand.sprite);
                 }
                 //check backpack
                 if (item.isForBack)
@@ -262,6 +262,10 @@ namespace Oilan
         {
             SetAnimatorTrigger("ali_r20_zevaet");
         }
+        public void SetAnimator_r24_MashetRukoi()
+        {
+            SetAnimatorTrigger("ali_r24_mashet_levoi_rukoi");
+        }
         public void SetAnimatorAli_r37_Trigger()
         {
             SetAnimatorTrigger("ali_r37_applause");
@@ -317,29 +321,21 @@ namespace Oilan
         public void SetAnimatorShowItemTalk(bool isOn){
             SetAnimatorBool("Lift_up_left_hand", isOn);
         }
-
-        public void SetAnimator_r24_MashetRukoi()
-        {
-            SetAnimatorTrigger("ali_r24_mashet_levoi_rukoi");
-        }
-
         public void SetAnimatorAli_r40_look_aroundTrigger()
         {
             SetAnimatorTrigger("ali_r40_look_around");
+        }
+        public void SetAnimatorAli_r46_stay_Trigger(bool isOn)
+        {
+            SetAnimatorBool("ali_r46_stay", isOn);
         }
         public void SetAnimatorAli_r58_Trigger(bool isOn)
         {
             SetAnimatorBool("ali_r58_walk", isOn);
         }
-
-        public void SetAnimatorAli_r46_stay_Trigger(bool isOn)
-        {
-            SetAnimatorBool("ali_r46_stay", isOn);
-        }
-
         public void SetAnimator_r23_take_letterTrigger()
         {
-            SetAnimatorTrigger("ali_r23");
+            SetAnimatorTrigger("ali_r23_beret_predmet");
         }
 
         public void SetAnimator_r62Trigger()
@@ -372,7 +368,15 @@ namespace Oilan
             SetAnimatorTrigger("ali_put_plate_in_backpack(useThis)");
         }
 
+        public void SetAnimatorOnBool(string nameOfBool)
+        {
+            m_Anim.SetBool(nameOfBool, true);
+        }
 
+        public void SetAnimatorOffBool(string nameOfBool)
+        {
+            m_Anim.SetBool(nameOfBool, false);
+        }
 
         public void SetSpriteVisibility(bool newVal)
         {

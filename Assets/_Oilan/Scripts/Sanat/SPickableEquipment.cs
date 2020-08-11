@@ -12,7 +12,7 @@ namespace Oilan
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            WebGLMessageHandler.Instance.ConsoleLog(gameObject.name + " is collided with " + other.gameObject.name);
+            //WebGLMessageHandler.Instance.ConsoleLog(gameObject.name + " is collided with " + other.gameObject.name);
             AudioManager.Instance.PlaySound("Zv-3 (Характерный звук - издается в случае правильного ответа )");
             gameObject.SetActive(false);
             switch (QuestID)

@@ -72,7 +72,7 @@ public class SAudioManagerRef : MonoBehaviour
     [ExecuteAlways]
     public void PlayAudioFromTimeline(string audioName)
     {
-        WebGLMessageHandler.Instance.ConsoleLog("Trying to play " + audioName + " sound");
+        Debug.Log("Trying to play " + audioName + " sound");
         if (GOAudioManager != null) { 
         GOAudioManager.GetComponent<AudioManager>().PlaySound(audioName);
         }
@@ -88,7 +88,7 @@ public class SAudioManagerRef : MonoBehaviour
                 l_audioSource.clip = clip;
             }
             l_audioSource.Play();
-            WebGLMessageHandler.Instance.ConsoleLog("Playing " + audioName + " sound with l_audioSource");
+            Debug.Log("Playing " + audioName + " sound with l_audioSource");
         }
     }
 }
