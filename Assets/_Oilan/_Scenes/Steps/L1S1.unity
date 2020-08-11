@@ -18992,7 +18992,7 @@ MonoBehaviour:
   stepID: 
   next_level_num: 1
   next_step_num: 2
-  startFromFirstTimeline: 1
+  startFromFirstTimeline: 0
   gameplayCamera: {fileID: 519420031}
   gameplayAutoCam: {fileID: 873330949}
   gameplayCanvas: {fileID: 869214884}
@@ -38276,6 +38276,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1678620130727589334, guid: 2c87a319e27f3334596621f9e49df7a0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c87a319e27f3334596621f9e49df7a0, type: 3}
 --- !u!1001 &1743301092571797295
@@ -38497,7 +38502,7 @@ PrefabInstance:
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.7
+      value: 103.15
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
