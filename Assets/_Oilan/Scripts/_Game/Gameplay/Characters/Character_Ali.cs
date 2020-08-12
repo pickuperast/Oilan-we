@@ -288,10 +288,6 @@ namespace Oilan
         {
             SetAnimatorTrigger("ali_r59_put_plate_in_backpack");
         }
-        public void SetAnimatorAli_r74_Trigger()
-        {
-            SetAnimatorTrigger("ali_r74_derzhit_krystall");
-        }
         public void SetAnimatorAli_r76_Trigger()
         {
             SetAnimatorTrigger("ali_r76_happy_talk");
@@ -367,7 +363,22 @@ namespace Oilan
         {
             SetAnimatorTrigger("ali_put_plate_in_backpack(useThis)");
         }
-
+        public void SetAnimator_ali_r74_derzhit_krystallTrigger()
+        {
+            SetAnimatorTrigger("ali_r74_derzhit_krystall");
+        }
+        public void SetAnimator_ali_r74_derzhit_krystall2Trigger()
+        {
+            SetAnimatorTrigger("ali_r74_derzhit_krystall2");
+        }
+        public void SetAnimator_ali_plate_from_backpack_left_handTrigger()
+        {
+            SetAnimatorTrigger("ali_plate_from_backpack(left_hand)");
+        }
+        public void SetAnimator_ali_r64_put_plate_in_backpack_left_hand()
+        {
+            SetAnimatorTrigger("ali_r64_put_plate_in_backpack(left_hand)");
+        }
         public void SetAnimatorOnBool(string nameOfBool)
         {
             m_Anim.SetBool(nameOfBool, true);
