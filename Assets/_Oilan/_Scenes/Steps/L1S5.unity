@@ -26641,12 +26641,12 @@ PrefabInstance:
     - target: {fileID: 1883546239490979397, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.93311644
+      value: -0.9331356
       objectReference: {fileID: 0}
     - target: {fileID: 1883546239490979397, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.35957438
+      value: 0.35952467
       objectReference: {fileID: 0}
     - target: {fileID: 1895638941941148451, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
@@ -26681,12 +26681,12 @@ PrefabInstance:
     - target: {fileID: 4861539586972776171, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.9311514
+      value: 0.93115133
       objectReference: {fileID: 0}
     - target: {fileID: 4861539586972776171, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.36463293
+      value: 0.3646329
       objectReference: {fileID: 0}
     - target: {fileID: 5104956719103359952, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
@@ -26736,7 +26736,7 @@ PrefabInstance:
     - target: {fileID: 7781931314323168335, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.84
+      value: -6.92
       objectReference: {fileID: 0}
     - target: {fileID: 7781931314323168335, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
@@ -26836,12 +26836,12 @@ PrefabInstance:
     - target: {fileID: 8901681625403077885, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.395507
+      value: 0.39550704
       objectReference: {fileID: 0}
     - target: {fileID: 8901681625403077885, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.91846293
+      value: 0.918463
       objectReference: {fileID: 0}
     - target: {fileID: 9126118641788680376, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
@@ -29895,6 +29895,17 @@ MonoBehaviour:
         - m_Target: {fileID: 1613841432}
           m_MethodName: SetAnimatorTalkTrigger
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2070864618}
+          m_MethodName: PlayNextTimeline
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
