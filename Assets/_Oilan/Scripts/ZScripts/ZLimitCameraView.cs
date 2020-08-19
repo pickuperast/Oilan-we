@@ -118,7 +118,7 @@ public class ZLimitCameraView : MonoBehaviour
     IEnumerator ChangeActiveBorderCoroutine(int borderIndex)
     {     
         protectCameraFromWall.enabled = true;
-      //  autoCam.enabled = false;
+     // autoCam.enabled = false;
 
         for (int i = 0; i < cameraLimits.Length; i++)
         {
