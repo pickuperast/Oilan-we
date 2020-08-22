@@ -25,8 +25,14 @@ public class SUniversalEquipItemAnimation : MonoBehaviour
         m_Anim.SetBool(nameOfBool, true);
     }
 
+
     public void OffBool(string nameOfBool)    {
         m_Anim.SetBool(nameOfBool, false);
+    }
+
+    public void RunTrigger(string nameOfTrigger)
+    {
+        m_Anim.SetTrigger(nameOfTrigger);
     }
 
     public void EquipItem(int ItemIdinList)    {
