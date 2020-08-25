@@ -6579,7 +6579,7 @@ RectTransform:
   m_GameObject: {fileID: 219385942}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -5}
-  m_LocalScale: {x: 0.00800926, y: 0.009259259, z: 0.009259259}
+  m_LocalScale: {x: 0.00853, y: 0.009259259, z: 0.009259259}
   m_Children:
   - {fileID: 1811670166}
   - {fileID: 1273636107}
@@ -27552,7 +27552,7 @@ MonoBehaviour:
   stepID: 
   next_level_num: 1
   next_step_num: 4
-  startFromFirstTimeline: 0
+  startFromFirstTimeline: 1
   gameplayCamera: {fileID: 519420031}
   gameplayAutoCam: {fileID: 873330949}
   gameplayCanvas: {fileID: 869214884}
@@ -32730,7 +32730,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1270730537
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32740,7 +32740,7 @@ RectTransform:
   m_GameObject: {fileID: 1270730536}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -5}
-  m_LocalScale: {x: 0.008509838, y: 0.009259259, z: 0.009259259}
+  m_LocalScale: {x: 0.00853, y: 0.009259259, z: 0.009259259}
   m_Children: []
   m_Father: {fileID: 573084869}
   m_RootOrder: 20
@@ -41814,12 +41814,12 @@ PrefabInstance:
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.64
+      value: -5.43
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.11
+      value: -3.16
       objectReference: {fileID: 0}
     - target: {fileID: 8175776209976014586, guid: a78faa85e2a730d4b8af34fedfcdeec1,
         type: 3}
@@ -49504,9 +49504,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-        - m_Target: {fileID: 873330950}
-          m_MethodName: set_enabled
-          m_Mode: 6
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PauseBGSound
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -49515,9 +49515,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1150245498}
-          m_MethodName: PauseBGSound
-          m_Mode: 1
+        - m_Target: {fileID: 873330950}
+          m_MethodName: set_enabled
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -49555,17 +49555,6 @@ MonoBehaviour:
         - m_Target: {fileID: 1613841431}
           m_MethodName: PauseAFK_Routine
           m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 2070864618}
-          m_MethodName: StopAllTimelines
-          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
