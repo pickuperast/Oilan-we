@@ -26,7 +26,7 @@ namespace Oilan
 
         public GameObject buttonCheck;
 
-        public ProblemFlashCard[] problems;
+        public ProblemFlashCardStairs[] problems;
         public float checkDelay = 0.5f;
 
         public PlayableAsset oakTimeline_showProblems;

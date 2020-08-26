@@ -36323,7 +36323,7 @@ PlayableDirector:
   m_GameObject: {fileID: 2106483131}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: dfffa107903366442b181bd5a5cac7b5, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 0d02344fad667e244accfa14520d79a1, type: 2}
   m_InitialState: 0
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
@@ -36519,6 +36519,17 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 823012108}
+          m_MethodName: SetAnimatorPointOnChest
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -36781,17 +36792,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1743301092571797297}
-          m_MethodName: TurnPlayerControllsOnOff
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
         - m_Target: {fileID: 823012108}
           m_MethodName: SetAnimatorPointOnChest
           m_Mode: 6
@@ -36802,6 +36802,17 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1743301092571797297}
+          m_MethodName: TurnPlayerControllsOnOff
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
@@ -37326,9 +37337,29 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 278719418456106820, guid: 52841dfb19be06f4fa7859a3658ec227,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 278719418456106820, guid: 52841dfb19be06f4fa7859a3658ec227,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2106483135}
+    - target: {fileID: 278719418456106820, guid: 52841dfb19be06f4fa7859a3658ec227,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 278719418456106820, guid: 52841dfb19be06f4fa7859a3658ec227,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 278719418456106820, guid: 52841dfb19be06f4fa7859a3658ec227,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1743301092571797296}
     - target: {fileID: 278719418456106822, guid: 52841dfb19be06f4fa7859a3658ec227,
         type: 3}
       propertyPath: m_Icon
@@ -39709,7 +39740,7 @@ PrefabInstance:
     - target: {fileID: 3187089691377403340, guid: 2518692efc6ea494e8ebfe33fbdfd752,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3640754602647695471, guid: 2518692efc6ea494e8ebfe33fbdfd752,
         type: 3}
