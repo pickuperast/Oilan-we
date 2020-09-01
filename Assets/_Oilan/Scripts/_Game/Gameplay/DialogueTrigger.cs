@@ -35,7 +35,7 @@ namespace Oilan
                 ShowHideGraphics(false);
 
                 Character_Ali.Instance.SetAnimatorTalkTrigger(true);
-                Character_Ali.Instance.SetAnimatorPointOnChest(true);
+                Character_Ali.Instance.SetAnimatorAli_b14_PointOnChestTrigger();
                 //WebGLMessageHandler.Instance.ConsoleLog("class DialogueTrigger called Character_Ali.Instance.SetAnimatorTalkTrigger();");
                 //GameplayManager.Instance.TurnPlayerControlsOnOff(false);
 
@@ -63,7 +63,6 @@ namespace Oilan
             //WebGLMessageHandler.Instance.ConsoleLog("HideDialogue");
             DialogueManager.Instance.HideDialogueGUI();
             Character_Ali.Instance.SetAnimatorTalkTrigger(false);
-            Character_Ali.Instance.SetAnimatorPointOnChest(false);
 
             //Character_Ali.Instance.SetAnimatorIdleTrigger();
             //GameplayManager.Instance.TurnPlayerControlsOnOff(true);
