@@ -246,13 +246,9 @@ namespace Oilan
         {
             SetAnimatorBool("ali_eyes_front", isOn);
         }
-        public void SetAnimatorAli_r83_Bool(bool isOn)
+        public void SetAnimatorAli_b14_PointOnChestTrigger()
         {
-            SetAnimatorBool("ali_r83_ukazyvaet_vpered", isOn);
-        }
-        public void SetAnimatorAli_r48_Bool(bool isOn)
-        {
-            SetAnimatorBool("ali_r48_point_in_front", isOn);
+            SetAnimatorTrigger("ali_b14_point_on_chest_trigger");
         }
         public void SetAnimatorAli_r19_Trigger()
         {
@@ -284,6 +280,10 @@ namespace Oilan
         {
             SetAnimatorTrigger("ali_r47_surprise_no_smile");
         }
+        public void SetAnimatorAli_r48_Bool(bool isOn)
+        {
+            SetAnimatorBool("ali_r48_point_in_front", isOn);
+        }
         public void SetAnimatorAli_r59_Trigger()
         {
             SetAnimatorTrigger("ali_r59_put_plate_in_backpack");
@@ -303,6 +303,10 @@ namespace Oilan
         public void SetAnimatorAli_r80_Trigger()
         {
             SetAnimatorTrigger("ali_r80_look_down");
+        }
+        public void SetAnimatorAli_r83_Bool(bool isOn)
+        {
+            SetAnimatorBool("ali_r83_ukazyvaet_vpered", isOn);
         }
         public void SetAnimatorTalkTrigger(bool isOn){
             SetAnimatorAli_r78_Bool_Talk(isOn);
