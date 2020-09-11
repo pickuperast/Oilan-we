@@ -17,5 +17,10 @@ namespace Oilan
             SceneChanger.Instance.UnloadGameScenes();
             //SceneManager.UnloadScene(1);
         }
+
+        public void StepFinish()
+        {
+            GameplayManager.Instance.WhenStepWasFinished();
+        }
     }
 }
