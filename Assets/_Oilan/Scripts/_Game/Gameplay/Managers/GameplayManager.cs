@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using Oilan.Utils;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using UnityEngine.UI;
 using UnityStandardAssets.Cameras;
 using DG.Tweening;
 using System.Runtime.InteropServices;
+using UnityEngine.Events;
 
 namespace Oilan
 {
@@ -18,6 +20,13 @@ namespace Oilan
         Cutscene,
         Paused,
         GameOver
+    }
+
+    [Serializable]
+    public class BoltEvents
+    {
+        public GameObject go;
+        public string EventName;
     }
 
     public class GameplayManager : MonoBehaviour
@@ -58,6 +67,9 @@ namespace Oilan
         public List<GameObject> ShouldBeHiddenAtStart;
         public GameObject FinalUI;
 
+        public List<BoltEvents> _boltEvents;
+
+
         // STANDARD FUNCTIONS
         private void Awake()
         {
@@ -88,6 +100,7 @@ namespace Oilan
         {
             SetUpScreen();
             Init();
+            Bolt.CustomEvent.Trigger(_boltEvents[0].go, _boltEvents[0].EventName);
         }
 
         void SetUpScreen()
@@ -301,6 +314,7 @@ namespace Oilan
             TurnPlayerControlsOnOff(false);
             ShowLevelFinishedWindow();
             SaveGameManager.Instance.SaveProgress(SaveGameManager.Instance.mSaveData.level, SaveGameManager.Instance.mSaveData.step);
+            WebGLMessageHandler.Instance.PubOpenEndStepTrainer();
             WebGLMessageHandler.Instance.ConsoleLog("called WhenStepWasFinished()");
         }
         // GET PARAMS

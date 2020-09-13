@@ -29717,7 +29717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 110.00004, y: 192}
+  m_AnchoredPosition: {x: 110.000046, y: 192}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!61 &1890629499
@@ -42532,6 +42532,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 869214885}
     m_Modifications:
+    - target: {fileID: 5326194551897254040, guid: b5c6907ec060c2d4c86d07ea7cb05eaa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4961555585755562010}
+    - target: {fileID: 5326194551897254040, guid: b5c6907ec060c2d4c86d07ea7cb05eaa,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StepFinish
+      objectReference: {fileID: 0}
     - target: {fileID: 5326194552687345190, guid: b5c6907ec060c2d4c86d07ea7cb05eaa,
         type: 3}
       propertyPath: m_Name
@@ -42656,6 +42666,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4961555585755562007}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4961555585755562010 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 819969279856253739, guid: b5c6907ec060c2d4c86d07ea7cb05eaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 4961555585755562007}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca94b395f9b95a041bd85fc170d65ac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &4990440751513766574
 CanvasRenderer:
   m_ObjectHideFlags: 0
