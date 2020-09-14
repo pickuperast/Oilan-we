@@ -3222,7 +3222,7 @@ PrefabInstance:
     - target: {fileID: 7781931314323168335, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.45791
+      value: -15.89
       objectReference: {fileID: 0}
     - target: {fileID: 7781931314323168335, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
@@ -3276,6 +3276,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f630fab5925c21a4780be26ca1779e81, type: 3}
+--- !u!1 &1749781559 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4270912567018848580, guid: f630fab5925c21a4780be26ca1779e81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1749781558}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1749781560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749781559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969997b8f2f20b84dbf0ad4d8dc1e2fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  correctAnswerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  answer: -1
+  answerUser: -1
+  rewardMax: 1
+  reward: 1
+  counterWrongAnswers: 0
+  isFirstTime: 1
+  audioSource: {fileID: 0}
+  clipSolved: {fileID: 0}
+  clipWrong: {fileID: 0}
+  colorIdle: {r: 0, g: 0, b: 0, a: 0}
+  colorWrong: {r: 0, g: 0, b: 0, a: 0}
+  colorSolved: {r: 0, g: 0, b: 0, a: 0}
+  buttonCheck: {fileID: 0}
+  inputFieldImage: {fileID: 0}
+  inputField: {fileID: 0}
 --- !u!1001 &1847087484
 PrefabInstance:
   m_ObjectHideFlags: 0
