@@ -2481,7 +2481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -779.00006, y: 0}
+  m_AnchoredPosition: {x: -779.0001, y: 0}
   m_SizeDelta: {x: 1200, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &204483759
@@ -27851,7 +27851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1831985236
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28837,7 +28837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 74.000015, y: 132}
+  m_AnchoredPosition: {x: 73.999985, y: 132}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!61 &1890629499
@@ -30316,6 +30316,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 128385db434086040853d6d250458a25, type: 2}
     - {fileID: 11400000, guid: 22d38f15f3a2ae54d9bc3e80c80dd1e5, type: 2}
     - {fileID: 11400000, guid: 4748600f0c5cbf0409a8d952c65c78d3, type: 2}
+    - {fileID: 11400000, guid: c497acf0880aaba4eaff754a4f53e2b2, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -30845,6 +30846,17 @@ MonoBehaviour:
             m_StringArgument: Au-P3-36
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 1674718127}
+          m_MethodName: OffBool
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: talk
+            m_BoolArgument: 1
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1613841432}
@@ -30882,6 +30894,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1674718127}
+          m_MethodName: OnBool
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: walk
+            m_BoolArgument: 0
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1674718127}
@@ -30895,8 +30918,30 @@ MonoBehaviour:
             m_StringArgument: walk
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetEmulateWalking
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1674718127}
+          m_MethodName: OffBool
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: talk
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 1674718127}
           m_MethodName: RunTrigger
           m_Mode: 5
@@ -30906,6 +30951,19 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: pokazatput
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1674718127}
+          m_MethodName: OnBool
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: talk
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!320 &1950108454
@@ -30979,6 +31037,8 @@ PlayableDirector:
     value: {fileID: 873330952}
   - key: {fileID: -6011976319705148077, guid: 0a7c5d046b2798e4aae48e23f4a4c90f, type: 2}
     value: {fileID: 1141418292}
+  - key: {fileID: -6094478385245785346, guid: 0a7c5d046b2798e4aae48e23f4a4c90f, type: 2}
+    value: {fileID: 1613841428}
   m_ExposedReferences:
     m_References:
     - 65ec44c6884ca9f4a85fbfebbe1c0db4: {fileID: 47413480}
@@ -32876,11 +32936,11 @@ MonoBehaviour:
   interactiveObjectsList: []
   buttonCheck: {fileID: 1613413602899719433}
   problems:
-  - {fileID: 7851575891052989790}
-  - {fileID: 2239415781919392803}
-  - {fileID: 2934798689744923542}
-  - {fileID: 5082554834002216573}
-  - {fileID: 4492331254476987645}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   checkDelay: 0.5
   oakTimeline_showProblems: {fileID: 11400000, guid: eaca89450c8ec1f4a8dd68b9de03886c,
     type: 2}
