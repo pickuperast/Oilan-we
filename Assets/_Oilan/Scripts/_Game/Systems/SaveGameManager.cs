@@ -123,13 +123,13 @@ namespace Oilan
         //например если пройден последний степ 1 уровня, отправить i_level = 2, i_step = 1
         public void SaveProgress(int i_level, int i_step)
         {
-            if (i_level > mSaveData.level || i_step > mSaveData.step)
-            {
+            //if (i_level > mSaveData.level || i_step > mSaveData.step)
+            //{
                 mSaveData.level = i_level;
                 mSaveData.step = i_step;
                 mSaveData.stars = ScoreManager.Instance.coins;//отправляем только заработанное количество звезд
                 PushProgress();
-            }
+            //}
             
         }
 
