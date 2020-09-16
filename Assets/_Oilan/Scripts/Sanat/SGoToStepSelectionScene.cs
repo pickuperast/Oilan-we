@@ -20,7 +20,7 @@ namespace Oilan
 
         public void StepFinish()
         {
-            GameplayManager.Instance.WhenStepWasFinished();
+            //GameplayManager.Instance.WhenStepWasFinished();
         }
     }
 }

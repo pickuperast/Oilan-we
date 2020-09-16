@@ -57,7 +57,7 @@ public class SUniversalEquipItemAnimation : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()    {
         if (isRequiredItemChecking) CheckRequiredItems();
-        Debug.Log("showing item");
+        //Debug.Log("showing item");
     }
 
     private void CheckRequiredItems() { //Делает проверку по листу m_items и переодевает персонажа
