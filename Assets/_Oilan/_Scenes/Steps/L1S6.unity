@@ -4216,6 +4216,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 464bfb1a5e79f56469044be4f90d1904, type: 2}
     - {fileID: 11400000, guid: 9285d95eaa510e143bf81e7b3b8aa258, type: 2}
     - {fileID: 11400000, guid: 7221e2640165e024c8709226232494a2, type: 2}
+    - {fileID: 11400000, guid: 15003b8423b589a43b550dc3c0ba43bb, type: 2}
+    - {fileID: 11400000, guid: 5ea7b14610b781f499841751d0dd3a0b, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -4291,6 +4293,43 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Au_igra_40
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorTalkTrigger
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 873330949}
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!320 &348271006
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -4334,6 +4373,8 @@ PlayableDirector:
     value: {fileID: 1855853458}
   - key: {fileID: 4879487888714061425, guid: f8ebe87b018e5044b92b59e9c5741525, type: 2}
     value: {fileID: 1613841428}
+  - key: {fileID: 3157319022108854674, guid: f8ebe87b018e5044b92b59e9c5741525, type: 2}
+    value: {fileID: 519420030}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &348271007
@@ -7252,6 +7293,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7267,6 +7309,25 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!95 &519420030
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -16281,9 +16342,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInitialized: 0
   currentGamePlayState: 0
-  stepID: 
-  next_level_num: 0
-  next_step_num: 0
+  stepID: 6
+  next_level_num: 1
+  next_step_num: 7
   startFromFirstTimeline: 1
   gameplayCamera: {fileID: 519420031}
   gameplayAutoCam: {fileID: 873330949}
@@ -33550,6 +33611,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VideoGUI (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1678620129047882097, guid: 2c87a319e27f3334596621f9e49df7a0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1875.0002
       objectReference: {fileID: 0}
     - target: {fileID: 1678620129163652355, guid: 2c87a319e27f3334596621f9e49df7a0,
         type: 3}
