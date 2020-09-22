@@ -70,6 +70,7 @@ namespace Oilan
 
 
         public bool isBeingPushed = false;
+        public float BeingPushedDirection = 1f;
         public bool isRequiredToResetPush = true;
         public bool isRequiredItemChecking = false;
         /*
@@ -193,7 +194,7 @@ namespace Oilan
 
             if (isBeingPushed)//pushes ali in front and plays walk animation
             {
-                gameObject.GetComponent<PlayerController>().move = new Vector2(1f, 0f);
+                gameObject.GetComponent<PlayerController>().move = new Vector2(BeingPushedDirection, 0f);
                 isRequiredToResetPush = true;
             }
             else
@@ -237,6 +238,10 @@ namespace Oilan
         public void SetAnimatorBool(string boolName, bool newValue = false)
         {
             m_Anim.SetBool(boolName, newValue);
+        }
+        public void SetEmulateWalkingDirectionLeft(bool isOn)
+        {
+            if (isOn) BeingPushedDirection = -1f;
         }
         public void SetEmulateWalking(bool isOn)
         {
