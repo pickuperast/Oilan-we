@@ -2228,6 +2228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75177bcb18cfef54fb1940179acea207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIControlButtons: []
   move: {x: 0, y: 0}
   m_Jump: 0
   canJump: 0
@@ -2325,6 +2326,15 @@ MonoBehaviour:
     isEquipped: 0
     isForLeftHand: 0
     isForRightHand: 1
+    isForBack: 0
+    isForFoot: 0
+    isNeedInThisStep: 0
+  - name: CrystalEarth
+    m_sprite: {fileID: 21300000, guid: 1178455c73968394297a22b8921856bd, type: 3}
+    Backpack: {fileID: 0}
+    isEquipped: 0
+    isForLeftHand: 1
+    isForRightHand: 0
     isForBack: 0
     isForFoot: 0
     isNeedInThisStep: 0
