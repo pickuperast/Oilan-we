@@ -7,4 +7,9 @@ public class ZClickTrigger : MonoBehaviour
 {
 
     UnityEvent uEvent;
+
+    private void OnMouseDown()
+    {
+        uEvent.Invoke();
+    }
 }
