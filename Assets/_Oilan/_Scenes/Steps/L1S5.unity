@@ -9868,8 +9868,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Events:
-    m_Signals: []
-    m_Events: []
+    m_Signals:
+    - {fileID: 11400000, guid: 74c9292a90640424c98431a98328cd18, type: 2}
+    - {fileID: 11400000, guid: 6e8cb3aa53c36ba478a6440e311c598d, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Au-P3-39
+            m_BoolArgument: 0
+          m_CallState: 1
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorAli_r78_Bool_Talk
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1613841432}
+          m_MethodName: SetAnimatorAli_r78_Bool_Talk
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!320 &716345912
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -9911,6 +9950,12 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -1522638151286594978, guid: 56507a0352c437a4899c8bcfd9b85501, type: 2}
     value: {fileID: 1855853458}
+  - key: {fileID: 3375176819527193691, guid: 43f0af3cf6ddfd44490bf334da847064, type: 2}
+    value: {fileID: 1246748534}
+  - key: {fileID: 1276018444326053737, guid: 43f0af3cf6ddfd44490bf334da847064, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -458645508200874188, guid: 43f0af3cf6ddfd44490bf334da847064, type: 2}
+    value: {fileID: 716345909}
   m_ExposedReferences:
     m_References:
     - 95f86cc153f53704e9155ed7327b84e1: {fileID: 1613841426}
@@ -10049,8 +10094,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
+    _json: '{"declarations":{"collection":{"$content":[{"name":"GameplayTimelineHandler","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 2070864618}
 --- !u!4 &726017983
 Transform:
   m_ObjectHideFlags: 0
@@ -15202,7 +15248,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9bf6f57b6854ea54b974f42e7923ab6b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0e8d45ca0366de1499ccb384d7a66733, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -17757,7 +17803,7 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"collection":{"$content":[{"name":"Left Tree","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Middle
       Tree","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Right
-      Tree","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"GameplayTheoryHandler","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Starik2","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Ali","value":{"$content":5,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Earth","value":{"$content":6,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Tree","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"GameplayTheoryHandler","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Starik2","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Ali","value":{"$content":5,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Earth","value":{"$content":6,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"GameplayAudioHandler","value":{"$content":7,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 118304784}
     - {fileID: 1467872630}
@@ -17766,6 +17812,7 @@ MonoBehaviour:
     - {fileID: 1855853458}
     - {fileID: 1613841428}
     - {fileID: 1548868307}
+    - {fileID: 1150245498}
 --- !u!82 &1246748538
 AudioSource:
   m_ObjectHideFlags: 0
@@ -31129,7 +31176,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 31.85
+  m_fontSize: 31.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -32282,6 +32329,8 @@ PlayableDirector:
     value: {fileID: 1141418292}
   - key: {fileID: -2714771740624354094, guid: 0a7c5d046b2798e4aae48e23f4a4c90f, type: 2}
     value: {fileID: 759765194}
+  - key: {fileID: 6766705949661509789, guid: 0a7c5d046b2798e4aae48e23f4a4c90f, type: 2}
+    value: {fileID: 1246748534}
   m_ExposedReferences:
     m_References:
     - 65ec44c6884ca9f4a85fbfebbe1c0db4: {fileID: 47413480}
