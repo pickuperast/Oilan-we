@@ -205,7 +205,10 @@ namespace Oilan
             //TextSavedStats.text += "\nUnityLog: Setting progress to: " + mJSONinput;
             //WebGLMessageHandler.Instance.ConsoleLog("Setting progress to: "+ mJSONinput);
             if (!UnityPlatform())
+            {
+                LibConsoleWriter("calling SetProgress: "+ mJSONinput);
                 Unity_SetProgress(mJSONinput);
+            }
         }
 
         public void AddWebsiteStar(int HowMuch = 1)
@@ -227,6 +230,7 @@ namespace Oilan
         public bool UnityPlatform()
         {
             //return Application.platform == RuntimePlatform.WebGLPlayer;//== for testing in pickuperast.github.io and oilan.kz
+            //return false;
             return true;   //false - test in oilan.kz //true - test in editor and pickuperast.github.io
         }
 
