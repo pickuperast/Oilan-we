@@ -15958,6 +15958,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1053625891}
   - component: {fileID: 1053625892}
+  - component: {fileID: 1053625893}
+  - component: {fileID: 1053625894}
   m_Layer: 0
   m_Name: "\u0421\u0440\u0435\u0434\u043D\u044F\u044F \u043A\u043B\u0443\u043C\u0431\u0430"
   m_TagString: Untagged
@@ -15973,7 +15975,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053625890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.54, y: -3.33, z: 0}
+  m_LocalPosition: {x: 3.68, y: -3.25, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 1261232146}
@@ -16028,6 +16030,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1053625893
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053625890}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.1992912, y: 0.83130693}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.72, y: 9.09}
+    newSize: {x: 9.72, y: 9.09}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.5122585, y: 6.387038}
+  m_EdgeRadius: 0
+--- !u!114 &1053625894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053625890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "Zv-2 (\u0425\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u043D\u044B\u0439
+              \u0437\u0432\u0443\u043A - \u0438\u0437\u0434\u0430\u0435\u0442\u0441\u044F
+              \u0432 \u0441\u043B\u0443\u0447\u0430\u0435 \u043D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u043E\u0433\u043E
+              \u043E\u0442\u0432\u0435\u0442\u0430)"
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1055757006
 GameObject:
   m_ObjectHideFlags: 0
@@ -16345,7 +16404,7 @@ MonoBehaviour:
   stepID: 6
   next_level_num: 1
   next_step_num: 7
-  startFromFirstTimeline: 1
+  startFromFirstTimeline: 0
   gameplayCamera: {fileID: 519420031}
   gameplayAutoCam: {fileID: 873330949}
   gameplayCanvas: {fileID: 869214884}
@@ -27291,6 +27350,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1621693831}
   - component: {fileID: 1621693832}
+  - component: {fileID: 1621693833}
+  - component: {fileID: 1621693834}
   m_Layer: 0
   m_Name: "\u0411\u043E\u043B\u044C\u0448\u0430\u044F \u043A\u043B\u0443\u043C\u0431\u0430"
   m_TagString: Untagged
@@ -27306,7 +27367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621693830}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2899919, y: -2.5899997, z: 0}
+  m_LocalPosition: {x: 2.994, y: -2.831, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 1261232146}
@@ -27361,6 +27422,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1621693833
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621693830}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.7737722, y: 0.16627741}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 14.87, y: 11.78}
+    newSize: {x: 14.87, y: 11.78}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.6868267, y: 7.1565027}
+  m_EdgeRadius: 0
+--- !u!114 &1621693834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621693830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "Zv-2 (\u0425\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u043D\u044B\u0439
+              \u0437\u0432\u0443\u043A - \u0438\u0437\u0434\u0430\u0435\u0442\u0441\u044F
+              \u0432 \u0441\u043B\u0443\u0447\u0430\u0435 \u043D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u043E\u0433\u043E
+              \u043E\u0442\u0432\u0435\u0442\u0430)"
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1631949648
 GameObject:
   m_ObjectHideFlags: 0
@@ -31877,6 +31995,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1917199810}
   - component: {fileID: 1917199811}
+  - component: {fileID: 1917199812}
+  - component: {fileID: 1917199813}
   m_Layer: 0
   m_Name: "\u041C\u0430\u043B\u0435\u043D\u044C\u043A\u0430\u044F \u043A\u043B\u0443\u043C\u0431\u0430"
   m_TagString: Untagged
@@ -31892,7 +32012,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917199809}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.55, y: -3.24, z: 0}
+  m_LocalPosition: {x: 5.239, y: -3.42, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 1261232146}
@@ -31947,6 +32067,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1917199812
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917199809}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.5778999, y: 1.1676459}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10.66, y: 7.17}
+    newSize: {x: 10.66, y: 7.17}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.809925, y: 4.834708}
+  m_EdgeRadius: 0
+--- !u!114 &1917199813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917199809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: "Zv-3 (\u0425\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u043D\u044B\u0439
+              \u0437\u0432\u0443\u043A - \u0438\u0437\u0434\u0430\u0435\u0442\u0441\u044F
+              \u0432 \u0441\u043B\u0443\u0447\u0430\u0435 \u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u043E\u0433\u043E
+              \u043E\u0442\u0432\u0435\u0442\u0430 )"
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1917353746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32838,7 +33015,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1613167401
   m_SortingLayer: 2
-  m_SortingOrder: 150
+  m_SortingOrder: -22
   m_Sprite: {fileID: 21300000, guid: 0193e7798e524ff48808508f12f4e8d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
