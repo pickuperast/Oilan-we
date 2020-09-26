@@ -72,6 +72,9 @@ public class SMiniGameTrost : MonoBehaviour
 
         //Проигрываем следующий таймлайн из списка таймлайнов в GameplayTimelineManager
         Oilan.GameplayTimelineManager.Instance.PlayNextTimeline();
+
+        //Выключаем игровой объект
+        gameObject.SetActive(false);
     }
     private IEnumerator ActivateQuestCoroutine()    {
         Oilan.problemValues newProblems = new Oilan.ProblemAA().getAbacusSimple(problems.Length);
