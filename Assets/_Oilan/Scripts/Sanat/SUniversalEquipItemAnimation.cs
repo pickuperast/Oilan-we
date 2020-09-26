@@ -10,21 +10,29 @@ public class SUniversalEquipItemList
     public bool isEquipped;
 };
 
+[ExecuteAlways]
 public class SUniversalEquipItemAnimation : MonoBehaviour
 {
 
     public List<SUniversalEquipItemList> m_items;
     public bool isRequiredItemChecking = false;
     public Animator m_Anim;
+    public AudioSource m_Audio;
 
     private void Start()    {
         m_Anim = gameObject.GetComponent<Animator>();
+        m_Audio = gameObject.GetComponent<AudioSource>();
     }
 
     public void OnBool(string nameOfBool)    {
         m_Anim.SetBool(nameOfBool, true);
     }
 
+    public void PlaySound(string audioName)
+    {
+        m_Audio.clip = (AudioClip)Resources.Load("Media/Audio/Sounds/" + audioName, typeof(AudioClip));
+        m_Audio.Play();
+    }
 
     public void OffBool(string nameOfBool)    {
         m_Anim.SetBool(nameOfBool, false);
