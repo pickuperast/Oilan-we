@@ -73,6 +73,9 @@ namespace Oilan
         public float BeingPushedDirection = 1f;
         public bool isRequiredToResetPush = true;
         public bool isRequiredItemChecking = false;
+
+
+        private AudioSource m_Audio;
         /*
         public Vector2 StartPosition;
         public float timer;
@@ -175,6 +178,7 @@ namespace Oilan
             m_GroundCheck = transform.Find("GroundCheck");
             m_CeilingCheck = transform.Find("CeilingCheck");
             m_Anim = GetComponent<Animator>();
+            m_Audio = GetComponent<AudioSource>();
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
             m_SpriteRenderer = GetComponent<SpriteRenderer>();
         }
@@ -229,7 +233,11 @@ namespace Oilan
             }*/
 
         }
-
+        public void PlayCharSound(string audioName)
+        {
+            m_Audio.clip = (AudioClip)Resources.Load("Media/Audio/Sounds/" + audioName, typeof(AudioClip));
+            m_Audio.Play();
+        }
         public void SetAnimatorTrigger(string triggerName)
         {
             m_Anim.SetTrigger(triggerName);

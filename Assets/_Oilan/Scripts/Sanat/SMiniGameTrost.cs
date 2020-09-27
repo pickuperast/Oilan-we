@@ -22,6 +22,7 @@ public class SMiniGameTrost : MonoBehaviour
     void Start(){
         starik_Anim = _starik.GetComponent<Animator>();
         m_Anim = gameObject.GetComponent<Animator>();
+
         LaunchMiniGame();
         StartCoroutine(ActivateQuestCoroutine());
     }
@@ -57,9 +58,12 @@ public class SMiniGameTrost : MonoBehaviour
         //ждем пока не проиграется звук
         StartCoroutine(Sleep(_Au_igra_39.length));
         starik_Anim.SetBool("talk", false);
+        StartCoroutine(Sleep(1f));
+
+        //вылетают уравнения
+        m_Anim.SetTrigger("Born");
 
         //Пользователь вносит ответы, Система проверяет на соответствие форматов. Пользователь нажимает на кнопку «Проверить».
-        m_Anim.SetTrigger("Born");
     }
 
     public void CheckSolved()    {
@@ -72,6 +76,9 @@ public class SMiniGameTrost : MonoBehaviour
 
         //Проигрываем следующий таймлайн из списка таймлайнов в GameplayTimelineManager
         Oilan.GameplayTimelineManager.Instance.PlayNextTimeline();
+
+        //Даем 10 звезд
+        Oilan.GameplayScoreManager.Instance.AddWebStars(10);
 
         //Выключаем игровой объект
         gameObject.SetActive(false);
