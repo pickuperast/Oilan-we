@@ -46276,7 +46276,7 @@ PrefabInstance:
     - target: {fileID: 2544787420881815938, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2544787420881815938, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
         type: 3}
@@ -46298,63 +46298,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mini Game Tri dereva
       objectReference: {fileID: 0}
-    - target: {fileID: 2544787420881815939, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
+    - target: {fileID: 7568393782226232657, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: _Trees.Array.size
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 2544787420881815948, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
+    - target: {fileID: 7568393782226232657, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
         type: 3}
-      propertyPath: _data._objectReferences.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2544787420881815948, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.data[0]
-      value: 
-      objectReference: {fileID: 118304784}
-    - target: {fileID: 2544787420881815948, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.data[1]
-      value: 
-      objectReference: {fileID: 1467872630}
-    - target: {fileID: 2544787420881815948, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.data[2]
-      value: 
-      objectReference: {fileID: 1791673469}
-    - target: {fileID: 2544787420881815948, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.data[3]
-      value: 
-      objectReference: {fileID: 2137360378}
-    - target: {fileID: 2544787420881815948, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.data[4]
-      value: 
-      objectReference: {fileID: 1855853458}
-    - target: {fileID: 2544787420881815948, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
-        type: 3}
-      propertyPath: _data._objectReferences.Array.data[5]
+      propertyPath: _ali
       value: 
       objectReference: {fileID: 1613841428}
-    - target: {fileID: 2544787420881815948, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
+    - target: {fileID: 7568393782226232657, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
         type: 3}
-      propertyPath: _data._objectReferences.Array.data[6]
+      propertyPath: _starik
+      value: 
+      objectReference: {fileID: 1855853458}
+    - target: {fileID: 7568393782226232657, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
+        type: 3}
+      propertyPath: _audioManager
       value: 
       objectReference: {fileID: 1150245498}
-    - target: {fileID: 2544787420881815948, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
+    - target: {fileID: 7568393782226232657, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
         type: 3}
-      propertyPath: _data._objectReferences.Array.data[7]
+      propertyPath: _Trees.Array.data[0]
       value: 
-      objectReference: {fileID: 1150245498}
-    - target: {fileID: 2544787420881815948, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
+      objectReference: {fileID: 118304784}
+    - target: {fileID: 7568393782226232657, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
         type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"collection":{"$content":[{"name":"Left Tree","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Middle
-        Tree","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Right
-        Tree","value":{"$content":2,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"GameplayTheoryHandler","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Starik2","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Ali","value":{"$content":5,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"GameplayAudioHandler","value":{"$content":6,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
+      propertyPath: _Trees.Array.data[1]
+      value: 
+      objectReference: {fileID: 1467872630}
+    - target: {fileID: 7568393782226232657, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
+        type: 3}
+      propertyPath: _Trees.Array.data[2]
+      value: 
+      objectReference: {fileID: 1791673469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48c956d86939c8b4ca3e8ba6f8d13446, type: 3}
 --- !u!114 &2622686177317525861
@@ -46531,7 +46509,7 @@ PrefabInstance:
     - target: {fileID: 3092689702668856685, guid: 51ac283768cb86f4387b2f2e05ed2112,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3092689702668856685, guid: 51ac283768cb86f4387b2f2e05ed2112,
         type: 3}
