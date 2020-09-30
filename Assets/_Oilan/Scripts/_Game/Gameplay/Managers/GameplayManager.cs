@@ -67,8 +67,6 @@ namespace Oilan
         public List<GameObject> ShouldBeHiddenAtStart;
         public GameObject FinalUI;
 
-        public List<BoltEvents> _boltEvents;
-
 
         // STANDARD FUNCTIONS
         private void Awake()
@@ -100,7 +98,6 @@ namespace Oilan
         {
             SetUpScreen();
             Init();
-            Bolt.CustomEvent.Trigger(_boltEvents[0].go, _boltEvents[0].EventName);
         }
 
         void SetUpScreen()
