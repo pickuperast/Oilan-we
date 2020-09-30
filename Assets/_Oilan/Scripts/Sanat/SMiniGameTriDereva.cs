@@ -11,6 +11,7 @@ public class SMiniGameTriDereva : MonoBehaviour
     public SAudioManagerRef _audioManager;
     public string _audioCorrect = "Zv-3 (Характерный звук - издается в случае правильного ответа )";
     public string _audioWrong = "Zv-2 (Характерный звук - издается в случае неправильного ответа)";
+    public GameObject UIContinue;
 
 
     private bool isTracking = true;
@@ -40,8 +41,13 @@ public class SMiniGameTriDereva : MonoBehaviour
         isTracking = false;
         _audioManager.PlayAudioFromTimeline(_audioCorrect);
         Sleep(1f);
-        Oilan.GameplayTheoryManager.Instance.openExternalTrainerString("abacus");
+        Oilan.GameplayTheoryManager.Instance.openExternalTrainerString("fleshCart");
+        UIContinue.SetActive(true);
+    }
 
+    public void ContinueAfterTrainerFinished()
+    {
+        UIContinue.SetActive(false);
         //play activate crystal on starik
         _starik.SetTrigger("activate_krystall");
         _audioManager.PlayAudioFromTimeline("Zv-20 (Звук волшебства)");

@@ -41,7 +41,7 @@ public class SMiniGameTrost : MonoBehaviour
         _global_audio.Play();
 
         //ждем пока не проиграется звук
-        StartCoroutine(Sleep(_Au_igra_38.length));
+        StartCoroutine(Sleep(6.4f));//_Au_igra_38.length
         starik_Anim.SetBool("talk", false);
 
         //Из трости появляется свет деталь: свечение из трости, и из трости вылетают уравнения с Zv-36 с полем ответа, которые собираются на небе. Звук проигрывается в самой анимации
