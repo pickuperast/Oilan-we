@@ -20,15 +20,17 @@ public class SMiniGameTriDereva : MonoBehaviour
     {
         if (isTracking && Input.GetMouseButtonDown(0))
         {
-
+            Oilan.WebGLMessageHandler.Instance.ConsoleLog("Mouse clicked");
             RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
             if (hit.collider.gameObject == _Trees[_correctTreeNum])
             {
                 CorrectAnswer();
+                Oilan.WebGLMessageHandler.Instance.ConsoleLog("Correct tree!");
             }
             else if(hit.collider.gameObject == _Trees[0] || hit.collider.gameObject == _Trees[1] || hit.collider.gameObject == _Trees[2])
             {
                 _audioManager.PlayAudioFromTimeline(_audioWrong);
+                Oilan.WebGLMessageHandler.Instance.ConsoleLog("Wrong tree!");
             }
         }
     }
