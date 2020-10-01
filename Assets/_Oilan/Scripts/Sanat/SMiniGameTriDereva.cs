@@ -25,11 +25,13 @@ public class SMiniGameTriDereva : MonoBehaviour
             RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
             if (hit.collider.gameObject == _Trees[_correctTreeNum])
             {
+                _ali.SetBool("Talk", false);
                 CorrectAnswer();
                 Oilan.WebGLMessageHandler.Instance.ConsoleLog("Correct tree!");
             }
             else if(hit.collider.gameObject == _Trees[0] || hit.collider.gameObject == _Trees[1] || hit.collider.gameObject == _Trees[2])
             {
+                _ali.SetBool("Talk", false);
                 _audioManager.PlayAudioFromTimeline(_audioWrong);
                 Oilan.WebGLMessageHandler.Instance.ConsoleLog("Wrong tree!");
             }
@@ -47,6 +49,7 @@ public class SMiniGameTriDereva : MonoBehaviour
 
     public void ContinueAfterTrainerFinished()
     {
+        Oilan.WebGLMessageHandler.Instance.ConsoleLog("Continue button pressed");
         UIContinue.SetActive(false);
         //play activate crystal on starik
         _starik.SetTrigger("activate_krystall");
