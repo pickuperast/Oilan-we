@@ -26,7 +26,7 @@ public class SMiniGameTriDereva : MonoBehaviour
             if (hit.collider.gameObject == _Trees[_correctTreeNum])
             {
                 _ali.SetBool("Talk", false);
-                CorrectAnswer();
+                StartCoroutine(CorrectAnswer());
                 Oilan.WebGLMessageHandler.Instance.ConsoleLog("Correct tree!");
             }
             else if(hit.collider.gameObject == _Trees[0] || hit.collider.gameObject == _Trees[1] || hit.collider.gameObject == _Trees[2])
@@ -38,32 +38,26 @@ public class SMiniGameTriDereva : MonoBehaviour
         }
     }
 
-    void CorrectAnswer()
+    IEnumerator CorrectAnswer()
     {
         isTracking = false;
         _audioManager.PlayAudioFromTimeline(_audioCorrect);
-        Sleep(1f);
+        yield return new WaitForSeconds(1f);
         Oilan.GameplayTheoryManager.Instance.openExternalTrainerString("fleshCart");
         UIContinue.SetActive(true);
     }
 
-    public void ContinueAfterTrainerFinished()
+    public IEnumerator ContinueAfterTrainerFinished()
     {
         Oilan.WebGLMessageHandler.Instance.ConsoleLog("Continue button pressed");
         UIContinue.SetActive(false);
         //play activate crystal on starik
         _starik.SetTrigger("activate_krystall");
         _audioManager.PlayAudioFromTimeline("Zv-20 (Звук волшебства)");
-        Sleep(1f);
+        yield return new WaitForSeconds(1f);
         _ali.SetTrigger("ali_r47_surprise_no_smile");
-        Sleep(3.667f + 1.35f);
+        yield return new WaitForSeconds(3.667f + 1.35f);
         Oilan.GameplayTimelineManager.Instance.PlayNextTimeline();
         gameObject.SetActive(false);
-    }
-
-
-    IEnumerator Sleep(float HowMany)
-    {
-        yield return new WaitForSeconds(HowMany);//Wait
     }
 }
