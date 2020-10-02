@@ -1061,12 +1061,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66105862}
   m_CullTransparentMesh: 0
---- !u!1 &84427431 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2597261334328395269, guid: f630fab5925c21a4780be26ca1779e81,
-    type: 3}
-  m_PrefabInstance: {fileID: 1674718125}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &108187360
 GameObject:
   m_ObjectHideFlags: 0
@@ -22918,11 +22912,6 @@ MonoBehaviour:
   showSaveGameDebugLog: 0
   ShouldBeHiddenAtStart: []
   FinalUI: {fileID: 0}
-  _boltEvents:
-  - go: {fileID: 84427431}
-    EventName: MiniGameTrostLaunch
-  - go: {fileID: 0}
-    EventName: 
 --- !u!114 &1092593892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26911,6 +26900,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1279046119}
+  - component: {fileID: 1279046121}
+  - component: {fileID: 1279046120}
   m_Layer: 0
   m_Name: Cutscene_L1S8_0
   m_TagString: Untagged
@@ -26932,6 +26923,46 @@ Transform:
   m_Father: {fileID: 1722985055}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1279046120
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279046118}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!320 &1279046121
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279046118}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 1bef6e00709be304c9dfc3b6ca08d87a, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -2653844500439980914, guid: d081b505842e8564e8dea7adeddc4770, type: 2}
+    value: {fileID: 1279046120}
+  - key: {fileID: -1137006553612721981, guid: 1bef6e00709be304c9dfc3b6ca08d87a, type: 2}
+    value: {fileID: 1279046120}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &1284966432
 GameObject:
   m_ObjectHideFlags: 0
@@ -39903,7 +39934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timelineItems:
   - name: Cutscene_L1S8_0
-    timeline: {fileID: 0}
+    timeline: {fileID: 1279046121}
 --- !u!1 &2081805311
 GameObject:
   m_ObjectHideFlags: 0
