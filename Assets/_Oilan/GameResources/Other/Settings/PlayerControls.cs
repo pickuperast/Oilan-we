@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/_Oilan/GameResources/Settings/PlayerControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/_Oilan/GameResources/Other/Settings/PlayerControls.inputactions'
 
 using System;
 using System.Collections;
