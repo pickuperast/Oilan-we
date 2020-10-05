@@ -1,150 +1,84 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Playables;
 
 namespace Oilan
 {
-    public class MillQuest : Quest
+    public class MillQuest : MonoBehaviour
     {
-        //public GameObject cameraAnchor;
-        //public float cameraTargetSize;
+        public GameObject cameraAnchor;
+        public float cameraTargetSize;
 
-        private Vector3 cameraPosOriginal;
-        private float cameraSizeOriginal;
+        public GameObject[] stackProblem;
+        public GameObject[] buttonCheck;
 
-        public GameObject star;
+        private int numProb = 0;
+        public ProblemFlashCardStairs[] allProblems;
+        public float checkDelay = 0.5f; //Задержка между проверками ответов
 
-        public PlayableDirector director;
+        public GameObject mill;
+        public GameObject _ali;
 
-        public GameObject[] questCanvasList;
+        public AudioSource _global_audio;
 
-        public GameObject[] questObjectsList;
+        public AudioClip Au_igra_42;
+        public AudioClip _Au_igra_43;
 
-        public GameObject[] interactiveObjectsList;
+        public AnimationClip rotate_120_degree;
+        private Animator mill_Anim;
+        private Animator ali_Anim;
 
-        //public GameObject m;
-
-        public GameObject buttonCheck;
-
-        public ProblemFlashCardStairs[] problems;
-        public float checkDelay = 0.5f;//Задержка между проверками ответов
-
-        public PlayableAsset mTimeline_start;
-        public PlayableAsset mTimeline_showProblems;
-        public PlayableAsset mTimeline_hideProblemsAndEndQuest;
-
-        private void Start()
+        //Мини игра активируется, если сделать объект активным
+        void Start()
         {
-            isPreActivated = false;
-            isActivated = false;
-            isSolved = false;
-            isDeactivated = false;
-            isPostDeactivated = false;
+            mill_Anim = mill.GetComponent<Animator>();
+            ali_Anim = _ali.GetComponent<Animator>();
+            StartCoroutine(LaunchMiniGame());
 
-            buttonCheck.SetActive(false);
-        }
-
-        public void ClearQuestCanvas()
-        {
-            foreach (GameObject canvas in questCanvasList)
+            foreach(var btn in buttonCheck)
             {
-                canvas.SetActive(false);
+                btn.SetActive(false);
             }
         }
 
-        public void ClearQuestObjects()
+        public IEnumerator LaunchMiniGame()
         {
-            foreach (GameObject go in questObjectsList)
+            CameraZoom(); //перемещение камеры
+
+            _ali.GetComponent<Character_Ali>().SetAnimatorAli_r78_Bool_Talk(true);
+            ali_Anim.SetBool("talk", true);
+            _global_audio.clip = Au_igra_42;
+            _global_audio.Play();
+
+            //ждем пока не проиграется звук
+            yield return new WaitForSeconds(Au_igra_42.length);
+
+            _ali.GetComponent<Character_Ali>().SetAnimatorAli_r78_Bool_Talk(false);
+
+            StartCoroutine(CheckSolvedCoroutine(0));
+
+            //Пользователь вносит ответы, Система проверяет на соответствие форматов. Пользователь нажимает на кнопку «Проверить».
+        }
+
+        private IEnumerator CheckSolvedCoroutine(int numCarts)
+        {
+            stackProblem[numCarts].SetActive(true);
+
+            List<ProblemFlashCardStairs> problems = new List<ProblemFlashCardStairs>();
+
+            for (int numProb = 0; numProb < 3; numProb++)
             {
-                go.SetActive(false);
-            }
-        }
-
-        public void ClearInteractiveObjects()
-        {
-            foreach (GameObject go in interactiveObjectsList)
-            {
-                go.SetActive(false);
-            }
-        }
-
-        public override void PreActivateQuest()//Вызывается из Quest_Trigger
-        {
-            StartCoroutine(PreActivateQuestCoroutine());
-        }
-
-        private IEnumerator PreActivateQuestCoroutine()
-        {
-            ClearQuestCanvas();
-            ClearQuestObjects();
-            ClearInteractiveObjects();
-            ////=====визуальное включение копии игрока (для анимаций разговоров)
-            //Character_Ali.Instance.ResetCharacterCutscenePosition();
-            //Character_Ali.Instance.SetSpriteVisibility(false);
-            //Character_Ali.Instance.SetCutsceneSpriteVisibility(true);
-            ////=====визуальное включение копии игрока (для анимаций разговоров)
-
-            GameplayManager.Instance.TurnPlayerControlsOnOff(false);//отключение контроля
-
-            isPreActivated = true;
-
-            //GameplayManager.Instance.TurnPlayerControlsOnOff(true);
-
-            yield return null;
-        }
-
-        public override void ActivateQuest()//это флеш игра
-        {
-            //перемещение камеры
-            cameraPosOriginal = Camera.main.transform.position;
-            cameraSizeOriginal = Camera.main.orthographicSize;
-
-            GameplayManager.Instance.TurnPlayerControlsOnOff(false);
-
-            GameplayManager.Instance.TurnAutoCamOnOff(false);
-            GameplayManager.Instance.MoveCamera(cameraAnchor, cameraTargetSize);
-
-            StartCoroutine(ActivateQuestCoroutine());
-        }
-
-        private IEnumerator ActivateQuestCoroutine()
-        {
-            for (int i = 0; i < problems.Length; i++)
-            {
-               problems[i].Init();
+                problems.Add(allProblems[numProb]);
             }
 
-            director.Play(mTimeline_showProblems);
-
-            yield return new WaitForSeconds((float)director.duration);
-
-            buttonCheck.SetActive(true);
-
-            isActivated = true;
-
-            yield return null;
-
-        }
-
-        public override void CheckSolved()
-        {
-            StopAllCoroutines();
-            StartCoroutine(CheckSolvedCoroutine());
-        }
-
-        private IEnumerator CheckSolvedCoroutine()
-        {
-            buttonCheck.SetActive(false);
-
-            //foreach (ProblemFlashCardStairs prblm in problems)
-            //{
-            //    prblm.SetState(ProblemFlashCardState.IDLE);
-            //}
+            buttonCheck[numCarts].SetActive(false);
 
             bool _isSolved = true;
 
-            for (int i = 0; i < problems.Length; i++)
+            for (int i = 0; i < problems.Count; i++)
             {
                 if (problems[i].gameObject.activeSelf)
                 {
@@ -160,99 +94,57 @@ namespace Oilan
                         }
                         else
                         {
-                            problems[i].gameObject.SetActive(false);
-                            questObjectsList[i].GetComponent<Animator>().enabled = true;
-
-                            yield return new WaitForSeconds(1);
-                            SAudioManagerRef.Instance.PlayAudioFromTimeline("Zv-32 (Звук крепления ступеньки (сбор лестницы))");
-                            if (problems[i].isFirstTime)
-                            {
-                                if (SaveGameManager.Instance.mSaveData.level > GameplayManager.Instance.next_level_num) continue;
-                                if (SaveGameManager.Instance.mSaveData.step >= GameplayManager.Instance.next_step_num) continue;
-                                GameObject starObject = Instantiate(star, new Vector3(questObjectsList[i].transform.position.x, questObjectsList[i].transform.position.y + 1, questObjectsList[i].transform.position.z),
-                                    Quaternion.identity, questObjectsList[i].transform) as GameObject;
-                                starObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "Objects_Back";
-                                starObject.GetComponentInChildren<SpriteRenderer>().sortingOrder = 11 + i;
-                            }
+                            problems[i].gameObject.SetActive(false);                     
                         }
                     }
                 }
             }
 
             if (_isSolved)
-            {              
-                Solved();
+            {
+                if (numCarts != 2)
+                {
+                    mill_Anim.SetTrigger("Rotate_120_degree");
+                    numCarts++;
+                    yield return new WaitForSeconds(rotate_120_degree.length);
+                    StartCoroutine(CheckSolvedCoroutine(numCarts));
+                }
+                else
+                {
+                    GameplayManager.Instance.TurnPlayerControlsOnOff(true);
+                    GameplayManager.Instance.TurnAutoCamOnOff(true);
+                    _global_audio.clip = _Au_igra_43;
+                    _global_audio.Play();
+                    Solved();
+                }
+
+                stackProblem[numCarts].SetActive(false);
             }
             else
             {
-                buttonCheck.SetActive(true);
+                buttonCheck[numCarts].SetActive(true);
             }
 
             yield return null;
         }
 
-        public override void Solved()
-        {         
-            StartCoroutine(SolvedCoroutine());
+        public void Solved()
+        {
+            //Проигрываем следующий таймлайн из списка таймлайнов в GameplayTimelineManager
+            Oilan.GameplayTimelineManager.Instance.PlayNextTimeline();
+
+            //Даем 10 звезд
+            Oilan.GameplayScoreManager.Instance.AddWebStars(9);
+
+            //Выключаем игровой объект
+            gameObject.SetActive(false);
         }
 
-        private IEnumerator SolvedCoroutine()
+        public void CameraZoom()
         {
-            isSolved = true;
-
-            buttonCheck.SetActive(false);
-
-            ClearQuestCanvas();
-            ClearQuestObjects();
-
-            GameplayManager.Instance.TurnPlayerControlsOnOff(true);
-            GameplayManager.Instance.TurnAutoCamOnOff(true);
-
-            director.Play(mTimeline_hideProblemsAndEndQuest);
-
-            yield return new WaitForSeconds((float)director.duration);
-
-            director.enabled = false;
-   
-            Character_Ali.Instance.backpack_Value = 1f;
-            Character_Ali.Instance.equipment_Value = 0f;
-            Character_Ali.Instance.hold_Value = 0f;
-
-            yield return null;
-        }
-
-        public override void DeactivateQuest()
-        {
-            //StartCoroutine(DeactivateQuestCoroutine());
-        }
-
-        public override void PostDeactivateQuest()
-        {
-            StartCoroutine(PostDeactivateQuestCoroutine());
-        }
-
-        private IEnumerator PostDeactivateQuestCoroutine()
-        {
-            ClearQuestCanvas();
-            ClearQuestObjects();
-
-         //   director.Play(mTimeline_endQuest);
-
-            yield return new WaitForSeconds((float)director.duration);
-
-            director.enabled = false;
-
-            Character_Ali.Instance.SetSpriteVisibility(true);
-            Character_Ali.Instance.SetCutsceneSpriteVisibility(false);
-
-            GameplayManager.Instance.TurnPlayerControlsOnOff(true);
-            GameplayManager.Instance.TurnAutoCamOnOff(true);
-
-            Character_Ali.Instance.backpack_Value = 1f;
-            Character_Ali.Instance.equipment_Value = 0f;
-            Character_Ali.Instance.hold_Value = 0f;
-
-            yield return null;
+            GameplayManager.Instance.TurnPlayerControlsOnOff(false);
+            GameplayManager.Instance.TurnAutoCamOnOff(false);
+            GameplayManager.Instance.MoveCamera(cameraAnchor, cameraTargetSize);
         }
 
     }

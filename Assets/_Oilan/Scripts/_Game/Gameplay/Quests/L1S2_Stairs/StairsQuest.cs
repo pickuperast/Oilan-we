@@ -10,6 +10,9 @@ namespace Oilan
         //public GameObject cameraAnchor;
         //public float cameraTargetSize;
 
+        public GameObject cameraAnchor;
+        public float cameraTargetSize;
+
         private Vector3 cameraPosOriginal;
         private float cameraSizeOriginal;
 
@@ -105,7 +108,6 @@ namespace Oilan
             cameraSizeOriginal = Camera.main.orthographicSize;
 
             GameplayManager.Instance.TurnPlayerControlsOnOff(false);
-
             GameplayManager.Instance.TurnAutoCamOnOff(false);
             GameplayManager.Instance.MoveCamera(cameraAnchor, cameraTargetSize);
 
