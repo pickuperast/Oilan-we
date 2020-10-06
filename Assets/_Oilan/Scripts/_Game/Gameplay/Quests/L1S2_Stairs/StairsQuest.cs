@@ -171,15 +171,15 @@ namespace Oilan
 
                             yield return new WaitForSeconds(1);
                             SAudioManagerRef.Instance.PlayAudioFromTimeline("Zv-32 (Звук крепления ступеньки (сбор лестницы))");
-                            if (problems[i].isFirstTime)
-                            {
-                                if (SaveGameManager.Instance.mSaveData.level > GameplayManager.Instance.next_level_num) continue;
-                                if (SaveGameManager.Instance.mSaveData.step >= GameplayManager.Instance.next_step_num) continue;
-                                GameObject starObject = Instantiate(star, new Vector3(questObjectsList[i].transform.position.x, questObjectsList[i].transform.position.y + 1, questObjectsList[i].transform.position.z),
-                                    Quaternion.identity, questObjectsList[i].transform) as GameObject;
-                                starObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "Objects_Back";
-                                starObject.GetComponentInChildren<SpriteRenderer>().sortingOrder = 11 + i;
-                            }
+                            //if (problems[i].isFirstTime)
+                            //{
+                            //    if (SaveGameManager.Instance.mSaveData.level > GameplayManager.Instance.next_level_num) continue;
+                            //    if (SaveGameManager.Instance.mSaveData.step >= GameplayManager.Instance.next_step_num) continue;
+                            //    GameObject starObject = Instantiate(star, new Vector3(questObjectsList[i].transform.position.x, questObjectsList[i].transform.position.y + 1, questObjectsList[i].transform.position.z),
+                            //        Quaternion.identity, questObjectsList[i].transform) as GameObject;
+                            //    starObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "Objects_Back";
+                            //    starObject.GetComponentInChildren<SpriteRenderer>().sortingOrder = 11 + i;
+                            //}
                         }
                     }
                 }
