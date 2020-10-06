@@ -136,19 +136,15 @@ namespace Oilan
         [DllImport("__Internal")]
         private static extern void ShowTrainer(int userID, int level, int step, string type);
         */
+        
+
+
 #endif
 
         private void Awake()
         {
             Instance = this;
             //var gameInstance = UnityLoader.instantiate("gameContainer", "Build/webgl.json");
-        }
-        public void PubOpenEndStepTrainer(){
-            Unity_openTrenazerAfterStep();
-        }
-        public void PubOpenShop()
-        {
-            Unity_OpenShop();
         }
         public void RecieveMessageInt(int message)
         {
@@ -198,31 +194,59 @@ namespace Oilan
             SetData("{id:18, level:1,step:4,part:1,stars:0}");
         }
 
-//#if UNITY_WEBGL
+        //#if UNITY_WEBGL
+        public void PubOpenEndStepTrainer()
+        {
+            #if UNITY_WEBGL
+            Unity_openTrenazerAfterStep();
+#endif
+        }
+        public void PubOpenShop()
+        {
+#if UNITY_WEBGL
+            Unity_OpenShop();
+#endif
+        }
+        public string PubGetProgress()
+        {
+            string s = "";
+#if UNITY_WEBGL
+            s = GetProgress();
+#endif
+            return s;
+        }
+
         public void SetData(string mJSONinput)
         {
             //LibConsoleWriter("UnityLog: Setting progress to: " + mJSONinput);
             //TextSavedStats.text += "\nUnityLog: Setting progress to: " + mJSONinput;
             //WebGLMessageHandler.Instance.ConsoleLog("Setting progress to: "+ mJSONinput);
+
+#if UNITY_WEBGL
             if (!UnityPlatform())
             {
                 LibConsoleWriter("calling SetProgress: "+ mJSONinput);
                 Unity_SetProgress(mJSONinput);
-            }
+        }
+#endif
         }
 
         public void AddWebsiteStar(int HowMuch = 1)
         {
+#if UNITY_WEBGL
             if (!UnityPlatform())
                 Unity_AddStar(HowMuch);
+#endif
         }
 
         public void PubOpenTrainer(string TrainerType, int level, int step, bool isLastStepTrainer = false)
         {
+#if UNITY_WEBGL
             if (!UnityPlatform()) {
                 OpenTrainer(TrainerType, level, step, isLastStepTrainer);
                 LibConsoleWriter("calling: startGame("+TrainerType+", "+level.ToString()+", "+step.ToString()+", "+isLastStepTrainer.ToString()+")");
             }
+#endif
         }
 //#elif UNITY_EDITOR
 //#endif
@@ -260,10 +284,10 @@ namespace Oilan
             }
             else//oilan.kz
             {
-                string progress = GetProgress();
+                string progress = PubGetProgress();
                 //LibConsoleWriter("UnityLog: call GetProgress(), answer: " + progress);
                 //TextSavedStats.text += "\nUnityLog: call GetProgress(), answer: " + progress;
-                progress = GetProgress().Replace("&quot;", @"""");
+                progress = PubGetProgress().Replace("&quot;", @"""");
                 //LibConsoleWriter("UnityLog: Replacing quots, answer: " + progress);
                 //TextSavedStats.text += "\nUnityLog: Replacing quots, answer: " + progress;
                 string pattern = @"{.*?\}";
