@@ -19989,7 +19989,7 @@ MonoBehaviour:
   stepID: 
   next_level_num: 1
   next_step_num: 2
-  startFromFirstTimeline: 1
+  startFromFirstTimeline: 0
   gameplayCamera: {fileID: 519420031}
   gameplayAutoCam: {fileID: 873330949}
   gameplayCanvas: {fileID: 869214884}
@@ -27588,7 +27588,6 @@ GameObject:
   - component: {fileID: 1553990919}
   - component: {fileID: 1553990918}
   - component: {fileID: 1553990917}
-  - component: {fileID: 1553990916}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -27616,20 +27615,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 108, y: 0}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &1553990916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1553990914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26d0eacc0046b1d40904aa9a4e5731be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberValue: 1
-  SelectedField: {fileID: 0}
 --- !u!114 &1553990917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32122,6 +32107,7 @@ GameObject:
   - component: {fileID: 1785649631}
   - component: {fileID: 1785649630}
   - component: {fileID: 1785649629}
+  - component: {fileID: 1785649633}
   m_Layer: 5
   m_Name: UINumbers
   m_TagString: Untagged
@@ -32229,6 +32215,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785649627}
   m_CullTransparentMesh: 0
+--- !u!114 &1785649633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785649627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26d0eacc0046b1d40904aa9a4e5731be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberValue: 1
+  SelectedField: {fileID: 0}
+  ButtonsNumbers:
+  - {fileID: 1553990918}
+  - {fileID: 1836758610}
+  - {fileID: 846170149}
+  - {fileID: 207835280}
+  - {fileID: 1443148060}
+  - {fileID: 21667629}
+  - {fileID: 1898305906}
+  - {fileID: 1810918961}
+  - {fileID: 2030855000}
+  - {fileID: 390129822}
 --- !u!1 &1787257987
 GameObject:
   m_ObjectHideFlags: 0
@@ -41718,6 +41729,126 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.78431374
       objectReference: {fileID: 0}
+    - target: {fileID: 4298034944751803378, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034944751803378, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1785649633}
+    - target: {fileID: 4298034944751803378, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelectedField
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034944751803378, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034944751803378, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: TMPro.TMP_InputField, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034944751803378, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 6919857658316446799}
+    - target: {fileID: 4298034945380070881, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034945380070881, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1785649633}
+    - target: {fileID: 4298034945380070881, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelectedField
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034945380070881, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034945380070881, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: TMPro.TMP_InputField, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034945380070881, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 6919857658316446796}
+    - target: {fileID: 4298034945819282416, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034945819282416, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1785649633}
+    - target: {fileID: 4298034945819282416, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelectedField
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034945819282416, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034945819282416, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: TMPro.TMP_InputField, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034945819282416, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 6919857658316446798}
+    - target: {fileID: 4298034945981534435, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034945981534435, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1785649633}
+    - target: {fileID: 4298034945981534435, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelectedField
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034945981534435, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034945981534435, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: TMPro.TMP_InputField, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4298034945981534435, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 6919857658316446797}
     - target: {fileID: 6919857659105107203, guid: cdb0f0ebb0019b1449fad11dcea77025,
         type: 3}
       propertyPath: m_Camera
@@ -41867,7 +41998,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1553990916}
+      objectReference: {fileID: 1785649633}
     - target: {fileID: 8489240858823409648, guid: cdb0f0ebb0019b1449fad11dcea77025,
         type: 3}
       propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -41883,6 +42014,36 @@ PrefabInstance:
       propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 6919857658316446795}
+    - target: {fileID: 8489240858823409648, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489240858823409648, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetSelectedField
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489240858823409648, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489240858823409648, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 6919857658316446795}
+    - target: {fileID: 8489240858823409648, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: TMPro.TMP_InputField, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489240858823409648, guid: cdb0f0ebb0019b1449fad11dcea77025,
+        type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdb0f0ebb0019b1449fad11dcea77025, type: 3}
 --- !u!95 &6919857658316446794 stripped
@@ -41894,6 +42055,54 @@ Animator:
 --- !u!114 &6919857658316446795 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8489240858823409648, guid: cdb0f0ebb0019b1449fad11dcea77025,
+    type: 3}
+  m_PrefabInstance: {fileID: 6919857658316446793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6919857658316446796 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4298034945380070881, guid: cdb0f0ebb0019b1449fad11dcea77025,
+    type: 3}
+  m_PrefabInstance: {fileID: 6919857658316446793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6919857658316446797 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4298034945981534435, guid: cdb0f0ebb0019b1449fad11dcea77025,
+    type: 3}
+  m_PrefabInstance: {fileID: 6919857658316446793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6919857658316446798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4298034945819282416, guid: cdb0f0ebb0019b1449fad11dcea77025,
+    type: 3}
+  m_PrefabInstance: {fileID: 6919857658316446793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6919857658316446799 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4298034944751803378, guid: cdb0f0ebb0019b1449fad11dcea77025,
     type: 3}
   m_PrefabInstance: {fileID: 6919857658316446793}
   m_PrefabAsset: {fileID: 0}
