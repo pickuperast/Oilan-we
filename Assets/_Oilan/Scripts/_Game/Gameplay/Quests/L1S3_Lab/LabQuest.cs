@@ -139,7 +139,7 @@ namespace Oilan
 
         private IEnumerator CheckSolvedCoroutine()
         {
-
+            buttonCheck.SetActive(false);
             //foreach (ProblemAA_1_1_3 prblm in problems)
             //{
             //    prblm.SetState(ProblemAA_1_1_3_State.IDLE);
@@ -166,6 +166,10 @@ namespace Oilan
             if (_isSolved)
             {
                 Solved();
+            }
+            else
+            {
+                buttonCheck.SetActive(true);
             }
 
             yield return null;
