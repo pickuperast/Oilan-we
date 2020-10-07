@@ -26,14 +26,14 @@ public class SMiniGameTriDereva : MonoBehaviour
             if (hit.collider.gameObject == _Trees[_correctTreeNum])
             {
                 _ali.SetBool("Talk", false);
-                StartCoroutine(CorrectAnswer());
                 Oilan.WebGLMessageHandler.Instance.ConsoleLog("Correct tree!");
+                StartCoroutine(CorrectAnswer());
             }
             else if(hit.collider.gameObject == _Trees[0] || hit.collider.gameObject == _Trees[1] || hit.collider.gameObject == _Trees[2])
             {
                 _ali.SetBool("Talk", false);
-                _audioManager.PlayAudioFromTimeline(_audioWrong);
                 Oilan.WebGLMessageHandler.Instance.ConsoleLog("Wrong tree!");
+                _audioManager.PlayAudioFromTimeline(_audioWrong);
             }
         }
     }
@@ -47,7 +47,12 @@ public class SMiniGameTriDereva : MonoBehaviour
         UIContinue.SetActive(true);
     }
 
-    public IEnumerator ContinueAfterTrainerFinished()
+    public void PubContinueAfterTrainerFinished()
+    {
+        StartCoroutine(ContinueAfterTrainerFinished());//Потому что WebGl не может с кнопки вызывать курутину
+    }
+
+    IEnumerator ContinueAfterTrainerFinished()
     {
         Oilan.WebGLMessageHandler.Instance.ConsoleLog("Continue button pressed");
         UIContinue.SetActive(false);
