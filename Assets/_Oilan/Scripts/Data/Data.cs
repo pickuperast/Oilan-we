@@ -27,7 +27,7 @@ namespace Oilan
                 links = JsonUtility.FromJson<LinksData>(txtLinksData.text);
 
             else
-                Debug.LogError("Count find file at path AppResources/" + Constants._pathLinksData);
+                Debug.LogError("Couldn't find file at path AppResources/" + Constants._pathLinksData);
 
         }
     }
