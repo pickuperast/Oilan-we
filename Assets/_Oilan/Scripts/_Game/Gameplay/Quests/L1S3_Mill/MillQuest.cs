@@ -38,7 +38,7 @@ namespace Oilan
             ali_Anim = _ali.GetComponent<Animator>();
             StartCoroutine(LaunchMiniGame());
 
-            foreach(var btn in buttonCheck)
+            foreach (var btn in buttonCheck)
             {
                 btn.SetActive(false);
             }
@@ -58,9 +58,12 @@ namespace Oilan
 
             _ali.GetComponent<Character_Ali>().SetAnimatorAli_r78_Bool_Talk(false);
 
-            StartCoroutine(CheckSolvedCoroutine(0));
-
             //Пользователь вносит ответы, Система проверяет на соответствие форматов. Пользователь нажимает на кнопку «Проверить».
+        }
+
+        public void CheckSolved(int numBtn)
+        {
+            StartCoroutine(CheckSolvedCoroutine(numBtn));
         }
 
         private IEnumerator CheckSolvedCoroutine(int numCarts)
@@ -105,9 +108,9 @@ namespace Oilan
                 if (numCarts != 2)
                 {
                     mill_Anim.SetTrigger("Rotate_120_degree");
-                    numCarts++;
+                   // numCarts++;
                     yield return new WaitForSeconds(rotate_120_degree.length);
-                    StartCoroutine(CheckSolvedCoroutine(numCarts));
+                   // StartCoroutine(CheckSolvedCoroutine(numCarts));
                 }
                 else
                 {
