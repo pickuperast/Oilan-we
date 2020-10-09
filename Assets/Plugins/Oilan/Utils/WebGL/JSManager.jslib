@@ -22,6 +22,7 @@
 	},
 	
 	Unity_openTrenazerAfterStep: function (){
+		console.log("calling openTrenazerAfterStep()");
 		openTrenazerAfterStep();
 	},
 	

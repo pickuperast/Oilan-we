@@ -5,11 +5,12 @@ namespace Oilan
 {
     public class SSaveGameToServer : MonoBehaviour
     {
+        public GameplayManager _GameplayManager; 
         // Start is called before the first frame update
         void Start()
         {
-            Debug.Log("Save Game");
-            GameplayManager.Instance.WhenStepWasFinished();
+            _GameplayManager.WhenStepWasFinished();
+            //GameplayManager.Instance.WhenStepWasFinished();
         }
     }
 }

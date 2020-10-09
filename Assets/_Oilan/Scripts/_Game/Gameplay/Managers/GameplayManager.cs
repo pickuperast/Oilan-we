@@ -312,8 +312,8 @@ namespace Oilan
             ShowLevelFinishedWindow();
             if (!WebGLMessageHandler.Instance.UnityPlatform()) { 
                 SaveGameManager.Instance.SaveProgress(SaveGameManager.Instance.mSaveData.level, SaveGameManager.Instance.mSaveData.step);
+                WebGLMessageHandler.Instance.ConsoleLog("calling WhenStepWasFinished()");
                 WebGLMessageHandler.Instance.PubOpenEndStepTrainer();
-                WebGLMessageHandler.Instance.ConsoleLog("called WhenStepWasFinished()");
             }
         }
         // GET PARAMS
