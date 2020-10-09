@@ -46,5 +46,9 @@ namespace Oilan
         {
             WebGLMessageHandler.Instance.PubOpenTrainer(l_type, level, step, true);
         }
+        public void ConsoleLog(string s)
+        {
+            WebGLMessageHandler.Instance.ConsoleLog(s);
+        }
     }
 }
