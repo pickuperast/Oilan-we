@@ -58,6 +58,8 @@ namespace Oilan
 
             _ali.GetComponent<Character_Ali>().SetAnimatorAli_r78_Bool_Talk(false);
 
+            stackProblem[0].SetActive(true);
+            buttonCheck[0].SetActive(true);
             //Пользователь вносит ответы, Система проверяет на соответствие форматов. Пользователь нажимает на кнопку «Проверить».
         }
 
@@ -68,8 +70,6 @@ namespace Oilan
 
         private IEnumerator CheckSolvedCoroutine(int numCarts)
         {
-            stackProblem[numCarts].SetActive(true);
-
             List<ProblemFlashCardStairs> problems = new List<ProblemFlashCardStairs>();
 
             for (int numProb = 0; numProb < 3; numProb++)
@@ -105,12 +105,17 @@ namespace Oilan
 
             if (_isSolved)
             {
+                stackProblem[numCarts].SetActive(false);
+                buttonCheck[numCarts].SetActive(false);
+
                 if (numCarts != 2)
                 {
                     mill_Anim.SetTrigger("Rotate_120_degree");
                    // numCarts++;
                     yield return new WaitForSeconds(rotate_120_degree.length);
-                   // StartCoroutine(CheckSolvedCoroutine(numCarts));
+                    stackProblem[numCarts + 1].SetActive(true);
+                    buttonCheck[numCarts + 1].SetActive(true);
+                    // StartCoroutine(CheckSolvedCoroutine(numCarts));
                 }
                 else
                 {
@@ -121,7 +126,6 @@ namespace Oilan
                     Solved();
                 }
 
-                stackProblem[numCarts].SetActive(false);
             }
             else
             {
