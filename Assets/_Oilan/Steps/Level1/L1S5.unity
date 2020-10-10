@@ -18633,7 +18633,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 616db844672df624f950505151ef451d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4a4719bd17d214a49aa21cc06b4cfe8a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -24534,6 +24534,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Starik2
       objectReference: {fileID: 0}
+    - target: {fileID: 4019188923719252708, guid: f630fab5925c21a4780be26ca1779e81,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7597046549057521389, guid: f630fab5925c21a4780be26ca1779e81,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691631380110218088, guid: f630fab5925c21a4780be26ca1779e81,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7781931314323168335, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27222,7 +27237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 74.000015, y: 132}
+  m_AnchoredPosition: {x: 74.00003, y: 132}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!61 &1890629499
@@ -29502,7 +29517,7 @@ PrefabInstance:
     - target: {fileID: 1678620130727589334, guid: 2c87a319e27f3334596621f9e49df7a0,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -5.000061
+      value: -5.000122
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c87a319e27f3334596621f9e49df7a0, type: 3}
