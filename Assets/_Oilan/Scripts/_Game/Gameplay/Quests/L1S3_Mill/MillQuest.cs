@@ -19,8 +19,9 @@ namespace Oilan
         public ProblemFlashCardStairs[] allProblems;
         public float checkDelay = 0.5f; //Задержка между проверками ответов
 
-        public GameObject mill;
+        public GameObject[] mills;
         public GameObject _ali;
+        private Character_Ali character_Ali;
 
         public AudioSource _global_audio;
 
@@ -34,19 +35,28 @@ namespace Oilan
         //Мини игра активируется, если сделать объект активным
         void Start()
         {
-            mill_Anim = mill.GetComponent<Animator>();
+            mill_Anim = mills[0].GetComponent<Animator>();
             ali_Anim = _ali.GetComponent<Animator>();
-            StartCoroutine(LaunchMiniGame());
+            character_Ali = _ali.GetComponent<Character_Ali>();
+
+            foreach (var mill in mills)
+            {
+                mill.GetComponent<Animator>().SetBool("Sleep", true);
+                mill.GetComponent<Animator>().enabled = true;
+            }
 
             foreach (var btn in buttonCheck)
             {
                 btn.SetActive(false);
             }
+
+            StartCoroutine(LaunchMiniGame());
+
         }
 
         public IEnumerator LaunchMiniGame()
         {
-            CameraZoom(); //перемещение камеры
+          //  CameraZoom(); //перемещение камеры
 
             _ali.GetComponent<Character_Ali>().SetAnimatorAli_r78_Bool_Talk(true);
             ali_Anim.SetBool("talk", true);
@@ -72,7 +82,7 @@ namespace Oilan
         {
             List<ProblemFlashCardStairs> problems = new List<ProblemFlashCardStairs>();
 
-            for (int numProb = 0; numProb < 3; numProb++)
+            for (int numProb = numCarts * 3; numProb < numCarts * 3 + 3; numProb++)
             {
                 problems.Add(allProblems[numProb]);
             }
@@ -115,14 +125,9 @@ namespace Oilan
                     yield return new WaitForSeconds(rotate_120_degree.length);
                     stackProblem[numCarts + 1].SetActive(true);
                     buttonCheck[numCarts + 1].SetActive(true);
-                    // StartCoroutine(CheckSolvedCoroutine(numCarts));
                 }
                 else
-                {
-                    GameplayManager.Instance.TurnPlayerControlsOnOff(true);
-                    GameplayManager.Instance.TurnAutoCamOnOff(true);
-                    _global_audio.clip = _Au_igra_43;
-                    _global_audio.Play();
+                {                             
                     Solved();
                 }
 
@@ -137,6 +142,13 @@ namespace Oilan
 
         public void Solved()
         {
+            StartCoroutine(AudioCoroutine(_Au_igra_43));
+
+            foreach (var mill in mills)
+            {
+                mill.GetComponent<Animator>().SetBool("Sleep", false);
+            }
+
             //Проигрываем следующий таймлайн из списка таймлайнов в GameplayTimelineManager
             Oilan.GameplayTimelineManager.Instance.PlayNextTimeline();
 
@@ -147,13 +159,21 @@ namespace Oilan
             gameObject.SetActive(false);
         }
 
+        IEnumerator AudioCoroutine(AudioClip audioClip)
+        {
+            character_Ali.SetAnimatorTalkTrigger(true);
+            _global_audio.clip = audioClip;
+            _global_audio.Play();
+            yield return new WaitForSeconds(audioClip.length);
+            character_Ali.SetAnimatorTalkTrigger(false);
+        }
+
         public void CameraZoom()
         {
             GameplayManager.Instance.TurnPlayerControlsOnOff(false);
             GameplayManager.Instance.TurnAutoCamOnOff(false);
             GameplayManager.Instance.MoveCamera(cameraAnchor, cameraTargetSize);
         }
-
     }
 }
 
