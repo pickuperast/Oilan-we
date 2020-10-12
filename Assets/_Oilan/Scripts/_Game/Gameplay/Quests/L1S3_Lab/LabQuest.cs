@@ -91,12 +91,9 @@ namespace Oilan
             ClearQuestCanvas();
             ClearQuestObjects();
             ClearInteractiveObjects();
-
-            cameraPosOriginal = Camera.main.transform.position;
-            cameraSizeOriginal = Camera.main.orthographicSize;
-
+            
             GameplayManager.Instance.TurnPlayerControlsOnOff(false);
-            GameplayManager.Instance.TurnAutoCamOnOff(false);
+            //GameplayManager.Instance.TurnAutoCamOnOff(false);
 
             GameplayManager.Instance.MoveCamera(cameraAnchor, cameraTargetSize);
 

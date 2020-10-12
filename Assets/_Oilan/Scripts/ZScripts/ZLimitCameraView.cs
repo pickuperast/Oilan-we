@@ -26,6 +26,7 @@ public class ZLimitCameraView : MonoBehaviour
         public float rightLimitP;
     }
 
+    public GameObject blackScreen;
     public Transform player;
     public Transform cameraTransform;
     private AutoCam autoCam;
@@ -41,6 +42,7 @@ public class ZLimitCameraView : MonoBehaviour
     {
         autoCam = GetComponent<AutoCam>();
         protectCameraFromWall = GetComponent<ProtectCameraFromWallClip>();
+
     }
 
     void Update()
@@ -116,10 +118,10 @@ public class ZLimitCameraView : MonoBehaviour
         }
     }
     IEnumerator ChangeActiveBorderCoroutine(int borderIndex)
-    {     
-        protectCameraFromWall.enabled = true;
-     // autoCam.enabled = false;
-
+    {
+        //protectCameraFromWall.enabled = true;
+        // autoCam.enabled = false;
+        blackScreen.SetActive(true);
         for (int i = 0; i < cameraLimits.Length; i++)
         {
             cameraLimits[i].isActive = false;
@@ -137,13 +139,14 @@ public class ZLimitCameraView : MonoBehaviour
             }
 
         }
-
+        protectCameraFromWall.enabled = false;
         transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
-
+        
         yield return new WaitForSeconds(0.1f);
 
-        protectCameraFromWall.enabled = false;
-       // cameraTransform.transform.position = new Vector3(0, cameraTransform.transform.position.y, cameraTransform.transform.position.z);
+        protectCameraFromWall.enabled = true;
+        blackScreen.SetActive(false);
+        //cameraTransform.transform.position = new Vector3(0, cameraTransform.transform.position.y, cameraTransform.transform.position.z);
     }
 
     public void ChangeActiveBorder(int borderIndex)
