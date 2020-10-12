@@ -140,7 +140,7 @@ public class ZLimitCameraView : MonoBehaviour
 
         transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.1f);
 
         protectCameraFromWall.enabled = false;
        // cameraTransform.transform.position = new Vector3(0, cameraTransform.transform.position.y, cameraTransform.transform.position.z);
