@@ -19,6 +19,7 @@ namespace Oilan
         public ProblemFlashCardStairs[] allProblems;
         public float checkDelay = 0.5f; //Задержка между проверками ответов
 
+        public Animator flashSpinner;
         public GameObject[] mills;
         public GameObject _ali;
         private Character_Ali character_Ali;
@@ -121,7 +122,8 @@ namespace Oilan
                 if (numCarts != 2)
                 {
                     mill_Anim.SetTrigger("Rotate_120_degree");
-                   // numCarts++;
+                    flashSpinner.SetTrigger("Rotate_120_degree");
+                    // numCarts++;
                     yield return new WaitForSeconds(rotate_120_degree.length);
                     stackProblem[numCarts + 1].SetActive(true);
                     buttonCheck[numCarts + 1].SetActive(true);
