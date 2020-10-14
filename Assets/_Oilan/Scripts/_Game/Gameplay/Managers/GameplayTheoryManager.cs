@@ -26,10 +26,7 @@ namespace Oilan
             }
         }
 
-        //ТУ – "multiplicationTable"
-        //АА – "abacus"
-        //ФК – "fleshCart"
-        //МА – "mental"
+        
         public void openExternalTrainer()
         {
             WebGLMessageHandler.Instance.PubOpenTrainer(TrainerType, level, step);
@@ -42,6 +39,10 @@ namespace Oilan
         {
             WebGLMessageHandler.Instance.PubOpenTrainer(l_type, level, step);
         }
+        //ТУ – "multiplicationTable"
+        //АА – "abacus"
+        //ФК – "fleshCart"
+        //МА – "mental"
         public void openExternalLastTrainerString(string l_type)
         {
             WebGLMessageHandler.Instance.PubOpenTrainer(l_type, level, step, true);

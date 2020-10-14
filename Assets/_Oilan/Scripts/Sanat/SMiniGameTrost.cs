@@ -14,6 +14,7 @@ public class SMiniGameTrost : MonoBehaviour
     public AudioClip _Au_igra_38;
     public AudioClip _Au_igra_39;
     public Oilan.ProblemAA_1_1_3[] problems;
+    public GameObject _UINumbers;
 
     private Animator starik_Anim;
     private Animator m_Anim;
@@ -49,10 +50,10 @@ public class SMiniGameTrost : MonoBehaviour
         //вылетают уравнения
         m_Anim.SetTrigger("Born");
         Oilan.problemValues newProblems = new Oilan.ProblemAA().getAbacusSimple(problems.Length);
-        for (int i = 0; i < problems.Length; i++)
-        {
+        for (int i = 0; i < problems.Length; i++)        {
             problems[i].Init(newProblems.countsArr[i], newProblems.sumArr[i]);
         }
+        _UINumbers.SetActive(true);
 
         //Старец говорит (starik_neitral) Au_igra_39: «Нужно зарядить его цифрами, и он снова засияет! Реши задачи с помощью Абакуса.». 
         starik_Anim.SetBool("talk", true);
@@ -73,6 +74,9 @@ public class SMiniGameTrost : MonoBehaviour
 
         //Действия если все ответы правильные
         m_Anim.SetTrigger("Die");
+
+        //Скрываем кнопки ввода цифр
+        _UINumbers.SetActive(false);
 
         //Проигрываем следующий таймлайн из списка таймлайнов в GameplayTimelineManager
         Oilan.GameplayTimelineManager.Instance.PlayNextTimeline();

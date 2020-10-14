@@ -9172,7 +9172,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 976996312}
+  - {fileID: 701758434}
+  - {fileID: 1246748535}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17395,38 +17396,6 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 105.82166, y: -3.1975155, z: -0.005}
     m_Extent: {x: 105.82166, y: 3.8145761, z: 0.005}
---- !u!1 &976996311
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 976996312}
-  m_Layer: 0
-  m_Name: --Mini Games--
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &976996312
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 976996311}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1246748535}
-  - {fileID: 701758434}
-  m_Father: {fileID: 573084869}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &978537874
 GameObject:
   m_ObjectHideFlags: 0
@@ -26390,12 +26359,18 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1871966829}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1871966832}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26d0eacc0046b1d40904aa9a4e5731be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1871966832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5732095613615643425, guid: a8bc7e3e763de4b48a0e919434ddb4fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1871966829}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1873905437
 GameObject:
   m_ObjectHideFlags: 0
@@ -26592,7 +26567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 74.00003, y: 132}
+  m_AnchoredPosition: {x: 74.00004, y: 132}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!61 &1890629499
@@ -30485,7 +30460,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 976996312}
+    m_TransformParent: {fileID: 573084869}
     m_Modifications:
     - target: {fileID: 2544787420881815938, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
         type: 3}
@@ -30505,17 +30480,17 @@ PrefabInstance:
     - target: {fileID: 2544787420881815938, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2544787420881815938, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2544787420881815938, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2544787420881815938, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
         type: 3}
@@ -30525,7 +30500,7 @@ PrefabInstance:
     - target: {fileID: 2544787420881815938, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2544787420881815938, guid: 48c956d86939c8b4ca3e8ba6f8d13446,
         type: 3}
@@ -30611,7 +30586,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 976996312}
+    m_TransformParent: {fileID: 573084869}
     m_Modifications:
     - target: {fileID: 2471238485777230742, guid: 51ac283768cb86f4387b2f2e05ed2112,
         type: 3}
@@ -30638,6 +30613,11 @@ PrefabInstance:
       propertyPath: _global_audio
       value: 
       objectReference: {fileID: 1150245497}
+    - target: {fileID: 3092689702668856684, guid: 51ac283768cb86f4387b2f2e05ed2112,
+        type: 3}
+      propertyPath: _UINumbers
+      value: 
+      objectReference: {fileID: 1871966832}
     - target: {fileID: 3092689702668856685, guid: 51ac283768cb86f4387b2f2e05ed2112,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30656,17 +30636,17 @@ PrefabInstance:
     - target: {fileID: 3092689702668856685, guid: 51ac283768cb86f4387b2f2e05ed2112,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3092689702668856685, guid: 51ac283768cb86f4387b2f2e05ed2112,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3092689702668856685, guid: 51ac283768cb86f4387b2f2e05ed2112,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3092689702668856685, guid: 51ac283768cb86f4387b2f2e05ed2112,
         type: 3}
@@ -30676,7 +30656,7 @@ PrefabInstance:
     - target: {fileID: 3092689702668856685, guid: 51ac283768cb86f4387b2f2e05ed2112,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3092689702668856685, guid: 51ac283768cb86f4387b2f2e05ed2112,
         type: 3}
@@ -30708,6 +30688,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3092689703450081852, guid: 51ac283768cb86f4387b2f2e05ed2112,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8162357627158603663, guid: 51ac283768cb86f4387b2f2e05ed2112,
         type: 3}
       propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.size
