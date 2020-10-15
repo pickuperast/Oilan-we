@@ -19,7 +19,8 @@ namespace Oilan
         public ProblemFlashCardStairs[] allProblems;
         public float checkDelay = 0.5f; //Задержка между проверками ответов
 
-        public Animator flashSpinner;
+        public float speedSpinner;
+        public GameObject flashSpinner;
         public GameObject[] mills;
         public GameObject _ali;
         private Character_Ali character_Ali;
@@ -30,6 +31,8 @@ namespace Oilan
         public AudioClip _Au_igra_43;
 
         public AnimationClip rotate_120_degree;
+
+        private Animator animFlash;
         private Animator mill_Anim;
         private Animator ali_Anim;
 
@@ -39,6 +42,7 @@ namespace Oilan
             mill_Anim = mills[0].GetComponent<Animator>();
             ali_Anim = _ali.GetComponent<Animator>();
             character_Ali = _ali.GetComponent<Character_Ali>();
+            animFlash = flashSpinner.GetComponent<Animator>();
 
             foreach (var mill in mills)
             {
@@ -120,11 +124,15 @@ namespace Oilan
                 buttonCheck[numCarts].SetActive(false);
 
                 if (numCarts != 2)
-                {
+                {                  
                     mill_Anim.SetTrigger("Rotate_120_degree");
-                    flashSpinner.SetTrigger("Rotate_120_degree");
-                    // numCarts++;
+                    animFlash.enabled = true;
+                    // animFlash.SetTrigger("Rotate_120_degree");
+
                     yield return new WaitForSeconds(rotate_120_degree.length);
+                    animFlash.enabled = false;
+
+                    // flashSpinner.transform.Rotate(0, 0, flashSpinner.transform.rotation.z - 120);
                     stackProblem[numCarts + 1].SetActive(true);
                     buttonCheck[numCarts + 1].SetActive(true);
                 }
