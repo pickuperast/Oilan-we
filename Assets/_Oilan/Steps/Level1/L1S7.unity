@@ -18860,11 +18860,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 632265049}
+  - {fileID: 2096348975}
   - {fileID: 81791732}
   - {fileID: 583108980}
   - {fileID: 249011556}
   - {fileID: 594753263}
-  - {fileID: 2096348975}
   - {fileID: 1054947931}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -54913,6 +54913,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.87
       objectReference: {fileID: 0}
+    - target: {fileID: 2189012756279301866, guid: f630fab5925c21a4780be26ca1779e81,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189012756279301866, guid: f630fab5925c21a4780be26ca1779e81,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.53699017
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189012756279301866, guid: f630fab5925c21a4780be26ca1779e81,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2597261334328395269, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
       propertyPath: m_Name
@@ -54922,6 +54937,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691631380110218088, guid: f630fab5925c21a4780be26ca1779e81,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.53333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691631380110218088, guid: f630fab5925c21a4780be26ca1779e81,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691631380110218088, guid: f630fab5925c21a4780be26ca1779e81,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.5372549
       objectReference: {fileID: 0}
     - target: {fileID: 7781931314323168335, guid: f630fab5925c21a4780be26ca1779e81,
         type: 3}
@@ -64260,7 +64290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 73.99997, y: 132}
+  m_AnchoredPosition: {x: 73.99996, y: 132}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!61 &1890629499
@@ -74282,7 +74312,7 @@ Transform:
   - {fileID: 154722593}
   - {fileID: 953319222}
   m_Father: {fileID: 573084869}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2096348976
 BoxCollider2D:
