@@ -11,6 +11,8 @@ public class SMiniGameClouds : MonoBehaviour
     public AudioClip _Zv_36;
     public BoxCollider2D _CloudCollider;
     public GameObject UIContinue;
+    public List<Animator> _CloudAnims;
+    public GameObject _GrayBG;
 
     private bool isTracking = true;
     void OnTriggerEnter2D(Collider2D collision)
@@ -48,7 +50,17 @@ public class SMiniGameClouds : MonoBehaviour
 
     public void WhenTrainerFinished()
     {
-        //После того, как Пользователь решит все задачи, Цифры лопаются как мыльный пузырь с Zv-5 и исчезают
+        StartCoroutine(CorWhenTrainerFinished());
+    }
 
+    IEnumerator CorWhenTrainerFinished()
+    {
+        //После того, как Пользователь решит все задачи, Цифры лопаются как мыльный пузырь с Zv-5 и исчезают
+        foreach (var l_Animator in _CloudAnims)
+        {
+            l_Animator.SetTrigger("die");
+            _GrayBG.SetActive(false);
+        }
+        yield return new WaitForSeconds(3.8f);
     }
 }
