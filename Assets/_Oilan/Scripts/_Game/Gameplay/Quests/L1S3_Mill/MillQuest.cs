@@ -126,11 +126,11 @@ namespace Oilan
                 if (numCarts != 2)
                 {                  
                     mill_Anim.SetTrigger("Rotate_120_degree");
-                    animFlash.enabled = true;
+                    //animFlash.enabled = true;
                     // animFlash.SetTrigger("Rotate_120_degree");
 
                     yield return new WaitForSeconds(rotate_120_degree.length);
-                    animFlash.enabled = false;
+                    //animFlash.enabled = false;
 
                     // flashSpinner.transform.Rotate(0, 0, flashSpinner.transform.rotation.z - 120);
                     stackProblem[numCarts + 1].SetActive(true);
