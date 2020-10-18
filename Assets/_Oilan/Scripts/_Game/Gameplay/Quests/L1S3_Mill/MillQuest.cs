@@ -36,19 +36,20 @@ namespace Oilan
         private Animator mill_Anim;
         private Animator ali_Anim;
 
+        public GameObject spinnerMill;
+        public int rotationDirection = -1; // -1 for clockwise
+                                          //  1 for anti-clockwise
+        public int rotationStep = 10;    // should be less than 90
+
+        private Vector3 currentRotation, targetRotation;
+
         //Мини игра активируется, если сделать объект активным
         void Start()
         {
             mill_Anim = mills[0].GetComponent<Animator>();
             ali_Anim = _ali.GetComponent<Animator>();
             character_Ali = _ali.GetComponent<Character_Ali>();
-            animFlash = flashSpinner.GetComponent<Animator>();
-
-            foreach (var mill in mills)
-            {
-                mill.GetComponent<Animator>().SetBool("Sleep", true);
-                mill.GetComponent<Animator>().enabled = true;
-            }
+            animFlash = flashSpinner.GetComponent<Animator>();  
 
             foreach (var btn in buttonCheck)
             {
@@ -125,10 +126,11 @@ namespace Oilan
 
                 if (numCarts != 2)
                 {                  
-                    mill_Anim.SetTrigger("Rotate_120_degree");
+                    //mill_Anim.SetTrigger("Rotate_120_degree");
                     //animFlash.enabled = true;
                     // animFlash.SetTrigger("Rotate_120_degree");
-
+                    rotateObject(spinnerMill);
+                    rotateObject(flashSpinner);
                     yield return new WaitForSeconds(rotate_120_degree.length);
                     //animFlash.enabled = false;
 
@@ -156,6 +158,7 @@ namespace Oilan
 
             foreach (var mill in mills)
             {
+                mill.GetComponent<Animator>().enabled = true;
                 mill.GetComponent<Animator>().SetBool("Sleep", false);
             }
 
@@ -183,6 +186,33 @@ namespace Oilan
             GameplayManager.Instance.TurnPlayerControlsOnOff(false);
             GameplayManager.Instance.TurnAutoCamOnOff(false);
             GameplayManager.Instance.MoveCamera(cameraAnchor, cameraTargetSize);
+        }
+
+        private void rotateObject(GameObject gameObj)
+        {
+            currentRotation = gameObj.transform.eulerAngles;
+            targetRotation.z = (currentRotation.z + (120 * rotationDirection));
+            StartCoroutine(objectRotationAnimation(gameObj));
+        }
+
+        IEnumerator objectRotationAnimation(GameObject gameObj)
+        {
+            // add rotation step to current rotation.
+            currentRotation.z += (rotationStep * rotationDirection);
+            gameObj.transform.eulerAngles = currentRotation;
+
+            yield return new WaitForSeconds(0);
+
+            if (((int)currentRotation.z >
+   (int)targetRotation.z && rotationDirection < 0) ||  // for clockwise
+         ((int)currentRotation.z < (int)targetRotation.z && rotationDirection > 0)) // for anti-clockwise
+            {
+                StartCoroutine(objectRotationAnimation(gameObj));
+            }
+            else
+            {
+                gameObj.transform.eulerAngles = targetRotation;
+            }
         }
     }
 }
