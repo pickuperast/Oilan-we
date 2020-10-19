@@ -111,19 +111,16 @@ namespace Oilan
                     }
                     else
                     {
-                        problems[i].currentState = ProblemFlashCardState.SOLVED;
                         problems[i].gameObject.SetActive(false);
-                        if (problems[i].isFirstTime)
-                        {
-                            GameObject starObject = Instantiate(star, new Vector3(problems[i].transform.position.x, problems[i].transform.position.y + 1, problems[i].transform.position.z),
-                            Quaternion.identity, gameObject.GetComponentInChildren<Transform>()) as GameObject;
-                            starObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "UI";
-                            starObject.GetComponentInChildren<SpriteRenderer>().sortingOrder = 10;
-                            yield return new WaitForSeconds(0.5f);
-                            GameplayScoreManager.Instance.AddWebStars(1);
-                            SAudioManagerRef.Instance.PlayAudioFromTimeline("Zv-9 (Волшебный звук для звезды (отлетают на табло в меню “Награды”))");
-                            Destroy(starObject);
-                        }
+                        //if (problems[i].isFirstTime)
+                        //{
+                        //    GameObject starObject = Instantiate(star, new Vector3(problems[i].transform.position.x, problems[i].transform.position.y + 1, problems[i].transform.position.z),
+                        //    Quaternion.identity, gameObject.GetComponentInChildren<Transform>()) as GameObject;
+                        //    starObject.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "UI";
+                        //    starObject.GetComponentInChildren<SpriteRenderer>().sortingOrder = 10;
+                        //    yield return new WaitForSeconds(0.5f);
+                        //    Destroy(starObject);
+                        //}
                       
                     }
                  

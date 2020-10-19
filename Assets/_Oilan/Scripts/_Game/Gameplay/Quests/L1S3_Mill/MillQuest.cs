@@ -19,10 +19,11 @@ namespace Oilan
         public ProblemFlashCardStairs[] allProblems;
         public float checkDelay = 0.5f; //Задержка между проверками ответов
 
-        public float speedSpinner;
         public GameObject flashSpinner;
         public GameObject[] mills;
         public GameObject _ali;
+        public GameObject _UINumbers;
+
         private Character_Ali character_Ali;
 
         public AudioSource _global_audio;
@@ -33,7 +34,7 @@ namespace Oilan
         public AnimationClip rotate_120_degree;
 
         private Animator animFlash;
-        private Animator mill_Anim;
+       // private Animator mill_Anim;
         private Animator ali_Anim;
 
         public GameObject spinnerMill;
@@ -46,7 +47,7 @@ namespace Oilan
         //Мини игра активируется, если сделать объект активным
         void Start()
         {
-            mill_Anim = mills[0].GetComponent<Animator>();
+           // mill_Anim = mills[0].GetComponent<Animator>();
             ali_Anim = _ali.GetComponent<Animator>();
             character_Ali = _ali.GetComponent<Character_Ali>();
             animFlash = flashSpinner.GetComponent<Animator>();  
@@ -76,6 +77,7 @@ namespace Oilan
 
             stackProblem[0].SetActive(true);
             buttonCheck[0].SetActive(true);
+            _UINumbers.SetActive(true);
             //Пользователь вносит ответы, Система проверяет на соответствие форматов. Пользователь нажимает на кнопку «Проверить».
         }
 
@@ -154,13 +156,14 @@ namespace Oilan
 
         public void Solved()
         {
+            _UINumbers.SetActive(false);
             StartCoroutine(AudioCoroutine(_Au_igra_43));
 
-            foreach (var mill in mills)
-            {
-                mill.GetComponent<Animator>().enabled = true;
-                mill.GetComponent<Animator>().SetBool("Sleep", false);
-            }
+            //foreach (var mill in mills)
+            //{
+            //    mill.GetComponent<Animator>().enabled = true;
+            //    mill.GetComponent<Animator>().SetBool("Sleep", false);
+            //}
 
             //Проигрываем следующий таймлайн из списка таймлайнов в GameplayTimelineManager
             Oilan.GameplayTimelineManager.Instance.PlayNextTimeline();
