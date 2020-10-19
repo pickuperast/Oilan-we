@@ -128,6 +128,7 @@ namespace Oilan
                     btn.SetActive(newValue);
                 }
             }
+            PauseAFK_Routine(!newValue);
         }
 
         private void OnEnable()

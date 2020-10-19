@@ -33,7 +33,7 @@ namespace Oilan
         void Start()
         {
             //videoURL = "";
-
+            ChangeURL(videoURL);
             buttonPlay.onClick.AddListener(TaskOnClick);
             buttonRepeat.onClick.AddListener(TaskOnRepeatClick);
             buttonClose.onClick.AddListener(TaskOnCloseClick);
