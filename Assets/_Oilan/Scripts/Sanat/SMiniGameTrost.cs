@@ -20,6 +20,7 @@ public class SMiniGameTrost : MonoBehaviour
     private Animator m_Anim;
     private float checkDelay = 0.2f;
     //Мини игра активируется, если сделать объект активным
+
     void Start(){
         starik_Anim = _starik.GetComponent<Animator>();
         m_Anim = gameObject.GetComponent<Animator>();
