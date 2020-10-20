@@ -26019,7 +26019,7 @@ MonoBehaviour:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 2137360378}
-          m_MethodName: openExternalLastTrainerString
+          m_MethodName: openExternalTrainerString
           m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -38087,11 +38087,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe82cdb85176564da8359812e588145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _CharacterAli: {fileID: 0}
+  _CharacterAli: {fileID: 1613841426}
   _global_audio: {fileID: 1150245497}
   _Au_igra_44: {fileID: 8300000, guid: 4ff25cbbaab14af4a9d4b17234363962, type: 3}
   _Zv_36: {fileID: 8300000, guid: 4c1de113eac479743b99bcced76a30cd, type: 3}
-  _Au_P3_55: {fileID: 0}
+  _Au_P3_55: {fileID: 8300000, guid: 7b4b4a69b7060b044a6e7d83a7ce76bb, type: 3}
   _CloudCollider: {fileID: 401964015}
   UIContinue: {fileID: 2039873795}
   _CloudAnims:
@@ -54708,13 +54708,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a78faa85e2a730d4b8af34fedfcdeec1, type: 3}
+--- !u!1 &1613841426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8175776209976014588, guid: a78faa85e2a730d4b8af34fedfcdeec1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1613841425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1613841427 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 870960306, guid: a78faa85e2a730d4b8af34fedfcdeec1,
     type: 3}
   m_PrefabInstance: {fileID: 1613841425}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1613841426}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75177bcb18cfef54fb1940179acea207, type: 3}
@@ -54732,7 +54738,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1613841425}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1613841426}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d08f91df3bd212f429df17f53ce2f364, type: 3}
@@ -64635,7 +64641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 73.99996, y: 132}
+  m_AnchoredPosition: {x: 73.99998, y: 132}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!61 &1890629499

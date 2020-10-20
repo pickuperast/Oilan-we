@@ -21,7 +21,13 @@ public class SMiniGameTrost : MonoBehaviour
     private float checkDelay = 0.2f;
     //Мини игра активируется, если сделать объект активным
 
+
     void Start(){
+        //Чтобы UINumbers отображался поверх
+        Canvas _canvas = transform.GetChild(0).GetComponent<Canvas>();
+        _canvas.worldCamera = Camera.main;
+        _canvas.sortingLayerName = "UI";
+
         starik_Anim = _starik.GetComponent<Animator>();
         m_Anim = gameObject.GetComponent<Animator>();
         StartCoroutine(LaunchMiniGame());
