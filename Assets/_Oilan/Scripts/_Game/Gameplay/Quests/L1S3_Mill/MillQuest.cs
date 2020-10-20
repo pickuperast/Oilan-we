@@ -19,7 +19,7 @@ namespace Oilan
         public ProblemFlashCardStairs[] allProblems;
         public float checkDelay = 0.5f; //Задержка между проверками ответов
 
-        public GameObject flashSpinner;
+        public GameObject[] flashSpinner;
         public GameObject[] mills;
         public GameObject _ali;
         public GameObject _UINumbers;
@@ -37,7 +37,7 @@ namespace Oilan
        // private Animator mill_Anim;
         private Animator ali_Anim;
 
-        public GameObject spinnerMill;
+        public GameObject[] spinnerMill;
         public int rotationDirection = -1; // -1 for clockwise
                                           //  1 for anti-clockwise
         public int rotationStep = 10;    // should be less than 90
@@ -50,7 +50,6 @@ namespace Oilan
            // mill_Anim = mills[0].GetComponent<Animator>();
             ali_Anim = _ali.GetComponent<Animator>();
             character_Ali = _ali.GetComponent<Character_Ali>();
-            animFlash = flashSpinner.GetComponent<Animator>();  
 
             foreach (var btn in buttonCheck)
             {
@@ -75,8 +74,11 @@ namespace Oilan
 
             _ali.GetComponent<Character_Ali>().SetAnimatorAli_r78_Bool_Talk(false);
 
-            stackProblem[0].SetActive(true);
-            buttonCheck[0].SetActive(true);
+            foreach (var btn in buttonCheck)
+            {
+                btn.SetActive(true);
+            }
+
             _UINumbers.SetActive(true);
             //Пользователь вносит ответы, Система проверяет на соответствие форматов. Пользователь нажимает на кнопку «Проверить».
         }
@@ -90,9 +92,16 @@ namespace Oilan
         {
             List<ProblemFlashCardStairs> problems = new List<ProblemFlashCardStairs>();
 
+            bool endSolve = false;
+
             for (int numProb = numCarts * 3; numProb < numCarts * 3 + 3; numProb++)
             {
-                problems.Add(allProblems[numProb]);
+                if (allProblems[numProb].currentState != ProblemFlashCardState.SOLVED)
+                {
+                    problems.Add(allProblems[numProb]);
+                    if (numProb == 2 || numProb == 5 || numProb == 8) endSolve = true;
+                        break;
+                }
             }
 
             buttonCheck[numCarts].SetActive(false);
@@ -122,27 +131,31 @@ namespace Oilan
             }
 
             if (_isSolved)
-            {
-                stackProblem[numCarts].SetActive(false);
+            {            
                 buttonCheck[numCarts].SetActive(false);
 
-                if (numCarts != 2)
+                if (!endSolve)
                 {                  
                     //mill_Anim.SetTrigger("Rotate_120_degree");
                     //animFlash.enabled = true;
                     // animFlash.SetTrigger("Rotate_120_degree");
-                    rotateObject(spinnerMill);
-                    rotateObject(flashSpinner);
+                    rotateObject(spinnerMill[numCarts]);
+                    rotateObject(flashSpinner[numCarts]);
                     yield return new WaitForSeconds(rotate_120_degree.length);
                     //animFlash.enabled = false;
 
                     // flashSpinner.transform.Rotate(0, 0, flashSpinner.transform.rotation.z - 120);
-                    stackProblem[numCarts + 1].SetActive(true);
-                    buttonCheck[numCarts + 1].SetActive(true);
+                    buttonCheck[numCarts].SetActive(true);
                 }
                 else
-                {                             
-                    Solved();
+                {          
+                    foreach(var problem in allProblems)
+                    {
+                        if (problem.currentState != ProblemFlashCardState.SOLVED) endSolve = false;
+                            
+                    }
+             
+                    if(endSolve) Solved();
                 }
 
             }
