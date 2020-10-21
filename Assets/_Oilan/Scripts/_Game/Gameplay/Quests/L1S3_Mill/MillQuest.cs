@@ -51,11 +51,6 @@ namespace Oilan
             ali_Anim = _ali.GetComponent<Animator>();
             character_Ali = _ali.GetComponent<Character_Ali>();
 
-            foreach (var btn in buttonCheck)
-            {
-                btn.SetActive(false);
-            }
-
             StartCoroutine(LaunchMiniGame());
 
         }
@@ -73,11 +68,6 @@ namespace Oilan
             yield return new WaitForSeconds(Au_igra_42.length);
 
             _ali.GetComponent<Character_Ali>().SetAnimatorAli_r78_Bool_Talk(false);
-
-            foreach (var btn in buttonCheck)
-            {
-                btn.SetActive(true);
-            }
 
             _UINumbers.SetActive(true);
             //Пользователь вносит ответы, Система проверяет на соответствие форматов. Пользователь нажимает на кнопку «Проверить».
