@@ -87,7 +87,7 @@ namespace Oilan
 
         }
 
-        private void TaskOnRepeatClick()
+        public void TaskOnRepeatClick()
         {
             if (videoController.IsPlaying)
             {
