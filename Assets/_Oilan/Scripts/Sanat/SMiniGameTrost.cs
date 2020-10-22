@@ -18,7 +18,7 @@ public class SMiniGameTrost : MonoBehaviour
 
     private Animator starik_Anim;
     private Animator m_Anim;
-    private float checkDelay = 0.2f;
+    private float checkDelay = 0.5f;
     //Мини игра активируется, если сделать объект активным
 
 
