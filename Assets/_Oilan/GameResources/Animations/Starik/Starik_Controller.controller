@@ -909,7 +909,7 @@ AnimatorStateMachine:
     m_Position: {x: 780, y: 400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6879431881244744647}
-    m_Position: {x: 370, y: 330, z: 0}
+    m_Position: {x: 420, y: 330, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6779830720190206623}
     m_Position: {x: 780, y: 460, z: 0}
@@ -933,7 +933,7 @@ AnimatorStateMachine:
     m_Position: {x: -30, y: 50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4630362972620657334}
-    m_Position: {x: 150, y: 440, z: 0}
+    m_Position: {x: 50, y: 420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8951932492753029236}
     m_Position: {x: 590, y: 130, z: 0}
@@ -943,6 +943,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -5695882590808078313}
     m_Position: {x: 175, y: 35, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 8600074904094967528}
+    m_Position: {x: 280, y: 470, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 3492019773796600888}
@@ -1024,6 +1027,12 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: starik_radost
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: Starik_beret_i_otdaet_pismo
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1313,6 +1322,7 @@ AnimatorState:
   - {fileID: 2865835166384559285}
   - {fileID: 5892378523397813619}
   - {fileID: 3862623600102124415}
+  - {fileID: 4140689427205609063}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -1564,6 +1574,53 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &4140689427205609063
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Starik_beret_i_otdaet_pismo
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 8600074904094967528}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.8333333
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &5600583284846435668
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 3167687233587721636}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 1
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1102 &5732935979839496317
 AnimatorState:
   serializedVersion: 5
@@ -1736,6 +1793,33 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &8600074904094967528
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Starik_beret_i_otdaet_pismo
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 5600583284846435668}
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 921d7aff684d03345b6cecf54d3ff6e9, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1101 &8686387881504070966
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
