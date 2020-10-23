@@ -254,6 +254,7 @@ namespace Oilan
         public void SetEmulateWalking(bool isOn)
         {
             isBeingPushed = isOn;
+            GameplayManager.Instance.TurnAutoCamOnOff(isOn);
         }
         public void SetEyesFront(bool isOn)
         {
