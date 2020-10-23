@@ -34,20 +34,24 @@ namespace Oilan
         public AnimationClip rotate_120_degree;
 
         private Animator animFlash;
-       // private Animator mill_Anim;
+        // private Animator mill_Anim;
         private Animator ali_Anim;
 
         public GameObject[] spinnerMill;
         public int rotationDirection = -1; // -1 for clockwise
-                                          //  1 for anti-clockwise
+                                           //  1 for anti-clockwise
         public int rotationStep = 10;    // should be less than 90
 
         private Vector3 currentRotation, targetRotation;
 
+        public GameObject cameraRig;
+        public int interpolationFramesCount = 45; // Number of frames to completely interpolate between the 2 positions
+        int elapsedFrames = 0;
+
         //Мини игра активируется, если сделать объект активным
         void Start()
         {
-           // mill_Anim = mills[0].GetComponent<Animator>();
+                          // mill_Anim = mills[0].GetComponent<Animator>();
             ali_Anim = _ali.GetComponent<Animator>();
             character_Ali = _ali.GetComponent<Character_Ali>();
 
@@ -55,9 +59,18 @@ namespace Oilan
 
         }
 
+        void Update()
+        {
+            float interpolationRatio = (float)elapsedFrames / interpolationFramesCount;
+
+            Vector3 interpolatedPosition = Vector3.Lerp(cameraRig.transform.position, cameraAnchor.transform.position, interpolationRatio);
+
+            elapsedFrames = (elapsedFrames + 1) % (interpolationFramesCount + 1);  // reset elapsedFrames to zero after it reached (interpolationFramesCount + 1)
+
+        }
+
         public IEnumerator LaunchMiniGame()
         {
-          //  CameraZoom(); //перемещение камеры
 
             _ali.GetComponent<Character_Ali>().SetAnimatorAli_r78_Bool_Talk(true);
             ali_Anim.SetBool("talk", true);
@@ -90,7 +103,7 @@ namespace Oilan
                 {
                     problems.Add(allProblems[numProb]);
                     if (numProb == 2 || numProb == 5 || numProb == 8) endSolve = true;
-                        break;
+                    break;
                 }
             }
 
@@ -114,18 +127,18 @@ namespace Oilan
                         }
                         else
                         {
-                            problems[i].gameObject.SetActive(false);                     
+                            problems[i].gameObject.SetActive(false);
                         }
                     }
                 }
             }
 
             if (_isSolved)
-            {            
+            {
                 buttonCheck[numCarts].SetActive(false);
 
                 if (!endSolve)
-                {                  
+                {
                     //mill_Anim.SetTrigger("Rotate_120_degree");
                     //animFlash.enabled = true;
                     // animFlash.SetTrigger("Rotate_120_degree");
@@ -138,14 +151,14 @@ namespace Oilan
                     buttonCheck[numCarts].SetActive(true);
                 }
                 else
-                {          
-                    foreach(var problem in allProblems)
+                {
+                    foreach (var problem in allProblems)
                     {
                         if (problem.currentState != ProblemFlashCardState.SOLVED) endSolve = false;
-                            
+
                     }
-             
-                    if(endSolve) Solved();
+
+                    if (endSolve) Solved();
                 }
 
             }
@@ -189,8 +202,6 @@ namespace Oilan
 
         public void CameraZoom()
         {
-            GameplayManager.Instance.TurnPlayerControlsOnOff(false);
-            GameplayManager.Instance.TurnAutoCamOnOff(false);
             GameplayManager.Instance.MoveCamera(cameraAnchor, cameraTargetSize);
         }
 
