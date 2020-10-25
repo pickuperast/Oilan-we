@@ -9,6 +9,12 @@ namespace Oilan
     {
         // A multi-purpose script which causes an action to occur when
         // a trigger collider is entered.
+        public enum TypeOfTrigger
+        {
+            OnEnter,
+            OnStay
+            
+        }
         public enum Mode
         {
             Trigger = 0,    // Just broadcast the action on to the target
@@ -20,6 +26,7 @@ namespace Oilan
             Event = 6  // To do some event
         }
 
+        public TypeOfTrigger typeOfTrigger;
         public UnityEvent triggerEvent;
         public Mode action = Mode.Activate;         // The action to accomplish
         public Object target;                       // The game object to affect. If none, the trigger work on this game object
@@ -104,9 +111,23 @@ namespace Oilan
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Player"))
-            {      
-                DoActivateTrigger();
+            if (typeOfTrigger == TypeOfTrigger.OnEnter)
+            {
+                if (other.CompareTag("Player"))
+                {
+                    DoActivateTrigger();
+                }
+            }
+        }
+
+        private void OnTriggerStay2D(Collider2D other)
+        {
+            if (typeOfTrigger == TypeOfTrigger.OnStay)
+            {
+                if (other.CompareTag("Player"))
+                {
+                    DoActivateTrigger();
+                }
             }
         }
     }
