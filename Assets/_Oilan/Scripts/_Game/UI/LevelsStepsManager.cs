@@ -33,9 +33,26 @@ namespace Oilan
         [Header("Error UI when lvl/step closed")]
         public GameObject UIError;
 
+        [Header("Для этих юзеров степы не будут блокироваться")]
+        public List<int> AdminUserId;
         private void Awake()
         {
             Instance = this;
+        }
+
+        //блокируем все предыдущие степы для игрока. Запрос от 2020 10 23
+        void BlockStepsFromSecondApproach(GameObject _newStepsPage)
+        {
+            foreach (int id in AdminUserId)//Если ид в списке админов, то не блокируем степы для игрока
+                if (SaveGameManager.Instance.mSaveData.id == id) return;
+
+            SStepsCheck _SStepsCheck = _newStepsPage.GetComponent<SStepsCheck>();
+            foreach (var stepButton in _SStepsCheck.steps)
+            {
+                if (SaveGameManager.Instance.mSaveData.level == _SStepsCheck.this_level && SaveGameManager.Instance.mSaveData.step == int.Parse(stepButton.stepSceneID.Substring(2, 1))) continue;
+                stepButton.isUnlocked = false;
+                stepButton.UpdateState();
+            }
         }
 
         //called when level selection button is pressed, method creates prefab which contains all steps
@@ -72,6 +89,9 @@ namespace Oilan
                                     //unlock step
                                     newStepsPage.GetComponent<SStepsCheck>().steps[j].isUnlocked = true;
                                     newStepsPage.GetComponent<SStepsCheck>().steps[j].UpdateState();
+
+                                    //блокируем все предыдущие степы для игрока. Запрос от 2020 10 23
+                                    BlockStepsFromSecondApproach(newStepsPage);
                                 }
                             }
                         }
