@@ -9,49 +9,43 @@ public class ChangeItemsPanelsScript : MonoBehaviour
     public GameObject ClothesPnl;
     public GameObject PetsPnl;
     public GameObject EffectsPnl;
-    private Color ActiveColor;
-    private Color UnactiveColor;
+
+    public Color ActiveColor = new Color32(25, 110, 0, 255);
+    public Color InactiveColor = new Color32(25, 110, 0, 100);
     // Start is called before the first frame update
     void Start()
     {
         ActiveColor = new Color32(25, 110, 0, 255);
-        UnactiveColor = new Color32(25, 110, 0, 100);
+        InactiveColor = new Color32(25, 110, 0, 100);
     }
-
+    public void SetPanelActive(GameObject firstPnl, GameObject secondPnl, GameObject thirdPnl)
+    {
+        firstPnl.SetActive(true);
+        secondPnl.SetActive(false);
+        thirdPnl.SetActive(false);
+        firstPnl.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+        secondPnl.transform.localScale = Vector3.one;
+        thirdPnl.transform.localScale = Vector3.one;
+    }
   
     public void SetClothesPanelActive()
     {
-        ClothesPnl.SetActive(true);
-        PetsPnl.SetActive(false);
-        EffectsPnl.SetActive(false);
-        gameObject.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
-        SecondBtn.transform.localScale = new Vector3(1, 1, 1);
-        ThirdBtn.transform.localScale = new Vector3(1, 1, 1);
-
+        SetPanelActive(ClothesPnl, PetsPnl, EffectsPnl);
+        
        /* gameObject.GetComponent<Renderer>().material.color = ActiveColor;
         SecondBtn.GetComponent<Renderer>().material.color = UnactiveColor;
         ThirdBtn.GetComponent<Renderer>().material.color = UnactiveColor;*/
     }
     public void SetPetsPanelActive()
     {
-        ClothesPnl.SetActive(false);
-        PetsPnl.SetActive(true);
-        EffectsPnl.SetActive(false);
-        gameObject.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
-        SecondBtn.transform.localScale = new Vector3(1, 1, 1);
-        ThirdBtn.transform.localScale = new Vector3(1, 1, 1);
+        SetPanelActive(PetsPnl, ClothesPnl, EffectsPnl);
         /*gameObject.GetComponent<Renderer>().material.color = ActiveColor;
         SecondBtn.GetComponent<Renderer>().material.color = UnactiveColor;
         ThirdBtn.GetComponent<Renderer>().material.color = UnactiveColor;*/
     }
     public void SetEffectsPanelActive()
     {
-        ClothesPnl.SetActive(false);
-        PetsPnl.SetActive(false);
-        EffectsPnl.SetActive(true);
-        gameObject.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
-        SecondBtn.transform.localScale = new Vector3(1, 1, 1);
-        ThirdBtn.transform.localScale = new Vector3(1, 1, 1);
+        SetPanelActive(EffectsPnl, PetsPnl, ClothesPnl);
       /*  gameObject.GetComponent<Renderer>().material.color = ActiveColor;
         SecondBtn.GetComponent<Renderer>().material.color = UnactiveColor;
         ThirdBtn.GetComponent<Renderer>().material.color = UnactiveColor;*/
