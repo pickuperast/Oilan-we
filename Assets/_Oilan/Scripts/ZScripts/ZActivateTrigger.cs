@@ -20,13 +20,6 @@ namespace Oilan
             Event = 6  // To do some event
         }
 
-        public enum TypeOfTrigger
-        {
-            OnTriggerEnter,
-            OntriggerStay
-        }
-
-        public TypeOfTrigger typeOfTrigger;
         public UnityEvent triggerEvent;
         public Mode action = Mode.Activate;         // The action to accomplish
         public Object target;                       // The game object to affect. If none, the trigger work on this game object
@@ -111,24 +104,9 @@ namespace Oilan
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (typeOfTrigger == TypeOfTrigger.OnTriggerEnter)
-            {
-
-                if (other.CompareTag("Player"))
-                {
-                    DoActivateTrigger();
-                }
-            }
-        }
-
-        private void OnTriggerStay2D (Collider2D other)
-        {
-            if (typeOfTrigger == TypeOfTrigger.OntriggerStay)
-            {
-                if (other.CompareTag("Player"))
-                {
-                    DoActivateTrigger();
-                }
+            if (other.CompareTag("Player"))
+            {      
+                DoActivateTrigger();
             }
         }
     }
