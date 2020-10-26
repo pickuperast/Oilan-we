@@ -102,7 +102,8 @@ namespace Oilan
                 if (problems[i].currentState != ProblemFlashCardState.SOLVED)
                 {
                     problems[i].CheckAnswer();
-
+                    if (problems[i].currentState == ProblemFlashCardState.SOLVED)
+                        SAudioManagerRef.Instance.PlayAudioFromTimeline("Zv-3 (Характерный звук - издается в случае правильного ответа )");
                     yield return new WaitForSeconds(checkDelay);
 
                     if (problems[i].currentState != ProblemFlashCardState.SOLVED)
