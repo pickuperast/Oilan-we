@@ -6448,7 +6448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &348271004
 Transform:
   m_ObjectHideFlags: 0
@@ -9517,7 +9517,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.16, y: 0.16, z: 1}
   m_Children: []
   m_Father: {fileID: 1093885859}
   m_RootOrder: 0
@@ -51744,6 +51744,8 @@ PlayableDirector:
     value: {fileID: 1855853458}
   - key: {fileID: 2214466132787703947, guid: 8a916436971c62d46bdc96e141c05962, type: 2}
     value: {fileID: 519420030}
+  - key: {fileID: 7198385880000574793, guid: 8a916436971c62d46bdc96e141c05962, type: 2}
+    value: {fileID: 1855853458}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &2064181195
@@ -51853,7 +51855,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: Au-P3-45
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
         - m_Target: {fileID: 1613841432}
           m_MethodName: SetAnimatorAli_r78_Bool_Talk
           m_Mode: 6
@@ -51901,7 +51903,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: Au_igra_40
             m_BoolArgument: 1
-          m_CallState: 2
+          m_CallState: 1
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1613841432}

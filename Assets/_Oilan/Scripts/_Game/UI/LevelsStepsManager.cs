@@ -91,7 +91,7 @@ namespace Oilan
                                     newStepsPage.GetComponent<SStepsCheck>().steps[j].UpdateState();
 
                                     //блокируем все предыдущие степы для игрока. Запрос от 2020 10 23
-                                    BlockStepsFromSecondApproach(newStepsPage);
+                                    //BlockStepsFromSecondApproach(newStepsPage);
                                 }
                             }
                         }
