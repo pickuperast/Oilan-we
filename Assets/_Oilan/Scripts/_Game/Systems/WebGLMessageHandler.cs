@@ -242,7 +242,7 @@ namespace Oilan
         public bool UnityPlatform()
         {
             //return Application.platform == RuntimePlatform.WebGLPlayer;//== for testing in pickuperast.github.io and oilan.kz
-            return false;
+            //return false;
             return true;  //false - test in oilan.kz //true - test in editor and pickuperast.github.io
         }
 
@@ -252,7 +252,7 @@ namespace Oilan
             if (UnityPlatform())
             {
 
-                string GetProgress = @"[{&quot;id&quot;:18,&quot;level&quot;:5,&quot;step&quot;:1,&quot;part&quot;:1,&quot;stars&quot;:0,&quot;count_level&quot;:5}]";
+                string GetProgress = @"[{&quot;id&quot;:19,&quot;level&quot;:1,&quot;step&quot;:6,&quot;part&quot;:1,&quot;stars&quot;:0,&quot;count_level&quot;:5}]";
                 string progress = GetProgress.Replace("&quot;", @"""");
                 string pattern = @"{.*?\}";
                 string input = progress;

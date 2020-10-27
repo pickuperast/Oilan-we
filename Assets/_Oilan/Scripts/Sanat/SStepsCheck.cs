@@ -9,7 +9,7 @@ public class SStepsCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpdateStepButtons();
+        //UpdateStepButtons();
     }
 
     public void UpdateStepButtons()
@@ -22,10 +22,7 @@ public class SStepsCheck : MonoBehaviour
         {
             //open all steps
             foreach (var step_btn in steps)
-            {
-                step_btn.isUnlocked = true;
-                step_btn.UpdateState();
-            }
+                step_btn.UpdateState(true);
         }
         else
         {
@@ -34,14 +31,9 @@ public class SStepsCheck : MonoBehaviour
                 //server responds step parameter starting from 1, but our steps list begins from 0, so (code) 0 = 1 (db)
                 Debug.Log("i + 1(" + (i + 1).ToString() + ") <= (" + Oilan.SaveGameManager.Instance.mSaveData.step.ToString() + ")Oilan.SaveGameManager.Instance.mSaveData.step");
                 if (i + 1 <= Oilan.SaveGameManager.Instance.mSaveData.step)
-                {
-                    steps[i].isUnlocked = true;
-                    steps[i].UpdateState();
-                }
+                    steps[i].UpdateState(true);
                 else
-                {
                     break;
-                }
             }
         }
     }

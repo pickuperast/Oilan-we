@@ -35,33 +35,21 @@ namespace Oilan
 
         [Header("Для этих юзеров степы не будут блокироваться")]
         public List<int> AdminUserId;
-        private void Awake()
-        {
-            Instance = this;
-        }
 
-        //блокируем все предыдущие степы для игрока. Запрос от 2020 10 23
-        void BlockStepsFromSecondApproach(GameObject _newStepsPage)
-        {
-            foreach (int id in AdminUserId)//Если ид в списке админов, то не блокируем степы для игрока
-                if (SaveGameManager.Instance.mSaveData.id == id) return;
-
-            SStepsCheck _SStepsCheck = _newStepsPage.GetComponent<SStepsCheck>();
-            foreach (var stepButton in _SStepsCheck.steps)
-            {
-                if (SaveGameManager.Instance.mSaveData.level == _SStepsCheck.this_level && SaveGameManager.Instance.mSaveData.step == int.Parse(stepButton.stepSceneID.Substring(2, 1))) continue;
-                stepButton.isUnlocked = false;
-                stepButton.UpdateState();
-            }
-        }
+        private void Awake()  {Instance = this;}
 
         //called when level selection button is pressed, method creates prefab which contains all steps
         public void LoadStepsPage(string levelID)
         {
             currentLevelID = levelID;
-
+            SStepsCheck _SStepsCheck = null;
             ClearStepsPage();
+            bool isAdmin = false;
 
+            foreach (int id in AdminUserId)//Если ид в списке админов, то не блокируем степы для игрока
+                if (SaveGameManager.Instance.mSaveData.id == id) isAdmin = true;
+
+            //если открыт уровень на котором прогресс:
             for (int i = 0; i < stepsPageElements.Count; i++)//цикл для поиска подходящего префаба, в префабе уже созданы кнопки степов
             {
                 if (stepsPageElements[i].name == levelID)//load level like in pressed button
@@ -70,33 +58,40 @@ namespace Oilan
                     {
                         //Creating
                         GameObject newStepsPage = Instantiate(stepsPageElements[i].prefab, stepsPageContainer.transform);
+                        _SStepsCheck = newStepsPage.GetComponent<SStepsCheck>();
                         //blocking steps
                         //steps in db starts from 1, but in our list it starts from 0
-
+                        //Если level который открываем меньше max level прогресса, то открываем все степы
                         if (i + 1 < SaveGameManager.Instance.mSaveData.level)//SaveGameManager.Instance.mSaveData.level = max opened level
                         {
-                            foreach (var stepButton in newStepsPage.GetComponent<SStepsCheck>().steps)
-                            {
-                                stepButton.isUnlocked = true;
-                                stepButton.UpdateState();
-                            }
-                        } else if (i + 1 == SaveGameManager.Instance.mSaveData.level)//if equals, we compare with mSaveData.step
-                        {
-                            for (int j = 0; j < newStepsPage.GetComponent<SStepsCheck>().steps.Capacity; j++)
-                            {
-                                if (j + 1 <= SaveGameManager.Instance.mSaveData.step)//compare max unlocked step
-                                {
-                                    //unlock step
-                                    newStepsPage.GetComponent<SStepsCheck>().steps[j].isUnlocked = true;
-                                    newStepsPage.GetComponent<SStepsCheck>().steps[j].UpdateState();
+                            foreach (var stepButton in _SStepsCheck.steps)
+                                stepButton.UpdateState(true);
 
-                                    //блокируем все предыдущие степы для игрока. Запрос от 2020 10 23
-                                    //BlockStepsFromSecondApproach(newStepsPage);
+                        }//Если level который открываем равен max level прогресса, то открываем степы до max степ прогресса (включительно)
+                        else if (i + 1 == SaveGameManager.Instance.mSaveData.level)//if equals, we compare with mSaveData.step
+                        {
+                            ////блокируем все предыдущие степы для игрока. Запрос от 2020 10 23
+                            if (isAdmin)
+                            {
+                                for (int j = 0; j < _SStepsCheck.steps.Capacity; j++)
+                                {
+                                    if (j + 1 <= SaveGameManager.Instance.mSaveData.step)//compare max unlocked step
+                                        _SStepsCheck.steps[j].UpdateState(true);//unlock step
                                 }
                             }
+                            else
+                                _SStepsCheck.steps[SaveGameManager.Instance.mSaveData.step - 1].UpdateState(true);//unlock step, потому что степ в БД(1), в листе(0)
+                            //открываем все предыдущие степы для игрока
+                            //for (int j = 0; j < _SStepsCheck.steps.Capacity; j++)
+                            //{
+                            //    if (j + 1 <= SaveGameManager.Instance.mSaveData.step)//compare max unlocked step
+                            //        _SStepsCheck.steps[j].UpdateState(true);//unlock step
+                            //    else
+                            //        break;
+                            //}
                         }
 
-                     //   newStepsPage.GetComponent<StepButton>().UIError = UIError;//add link to error ui from existing main scene
+                        //   newStepsPage.GetComponent<StepButton>().UIError = UIError;//add link to error ui from existing main scene
                         stepsPageObjects.Add(newStepsPage);
                     }
                     break;
