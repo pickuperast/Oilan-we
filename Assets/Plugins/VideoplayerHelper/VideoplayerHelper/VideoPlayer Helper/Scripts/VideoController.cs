@@ -66,7 +66,8 @@ namespace Unity.VideoHelper
         /// </summary>
         public ulong Duration
         {
-            get { return videoPlayer.frameCount / (ulong)videoPlayer.frameRate; }
+            
+            get { return (ulong)videoPlayer.frameRate  > 0 ? videoPlayer.frameCount / (ulong)videoPlayer.frameRate : 0; }
         }
 
         /// <summary>
@@ -248,7 +249,12 @@ namespace Unity.VideoHelper
             time = Mathf.Clamp(time, 0, 1);
             videoPlayer.time = time * Duration;
         }
+        public void StartNewVideo(string url)
+        {
+            PrepareForUrl(url);
 
+            OnStarted(videoPlayer);
+        }
         #endregion
 
         #region Private Methods
@@ -256,6 +262,7 @@ namespace Unity.VideoHelper
         private void OnStarted(VideoPlayer source)
         {
             onStartedPlaying.Invoke();
+            Volume = 1f;
         }
 
         private void OnFinished(VideoPlayer source)

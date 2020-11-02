@@ -18,6 +18,7 @@ public class SMiniGameStairs : MonoBehaviour
         PlayerController.Instance.PauseAFK_Routine(true);
 
         //находим кнопку, которая будет запускать след. действие
+        
         Button btn = _buttonNextPart.transform.GetChild(0).GetComponent<Button>();
         btn.onClick.AddListener(WhenTrainerFinished);
         _buttonNextPart.SetActive(true);
@@ -28,6 +29,7 @@ public class SMiniGameStairs : MonoBehaviour
 
     IEnumerator BuildStairs()
     {
+        _buttonNextPart.SetActive(false);
         _Stairs.SetTrigger("born");
         //Ждем пока не отыграет анимация рождения
         yield return new WaitForSeconds(1.667f);
