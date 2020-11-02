@@ -49,7 +49,6 @@ namespace Oilan
         public void ChangeURLFromStreamingAssets(string newURL)
         {
             linkToStreamingAssets = true;
-
             ChangeURL(newURL);
         }
 
@@ -65,7 +64,7 @@ namespace Oilan
             {
                 filePath = newURL;
             }
-
+            
             videoURL = filePath;
         }
 
@@ -77,14 +76,12 @@ namespace Oilan
                 {
                     videoController.Pause();
                 }
-                
                 videoController.PrepareForUrl(videoURL);
             }
             else
             {
                 videoController.Play();
             }
-
         }
 
         public void TaskOnRepeatClick()
@@ -96,6 +93,11 @@ namespace Oilan
             
             videoController.Seek(0f);
             videoController.Play();
+        }
+
+        public void StartVideoPlayer()
+        {
+            videoController.StartNewVideo(videoURL);
         }
 
         private void TaskOnCloseClick()

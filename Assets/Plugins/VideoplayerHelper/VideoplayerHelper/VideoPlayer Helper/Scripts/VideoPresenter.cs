@@ -141,7 +141,10 @@ namespace Unity.VideoHelper
                     return -1;
             });
         }
-
+        public void OnStart()
+        {
+            OnVolumeChanged(1f);
+        }
         private void Update()
         {
             CheckKeys();
@@ -234,7 +237,7 @@ namespace Unity.VideoHelper
 
             StartCoroutine(SetCurrentPosition());
 
-            Volume.value = controller.Volume;
+            Volume.value =  controller.Volume;
             NormalFullscreen.sprite = Fullscreen;
             PlayPause.sprite = Pause;
         }

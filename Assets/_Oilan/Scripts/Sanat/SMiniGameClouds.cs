@@ -9,6 +9,7 @@ public class SMiniGameClouds : MonoBehaviour
     public GameObject _CharacterAli;
     public AudioSource _global_audio;
     public AudioClip _Au_igra_44;
+    public AudioClip _Au_P3_53;
     public AudioClip _Zv_36;
     public AudioClip _Au_P3_55;
     public BoxCollider2D _CloudCollider;
@@ -16,15 +17,29 @@ public class SMiniGameClouds : MonoBehaviour
     public List<Animator> _CloudAnims;
     public GameObject _GrayBG;
     public GameObject _DroppableItem;
-
+    public GameObject bush;
     private bool isDroppableDrop = false;
     private bool isTracking = true;
     void OnTriggerEnter2D(Collider2D collision)
     {//Не делаем проверку, потому что слой Interractable пересекается только с Али
+        StartCoroutine(Sounding());
+        GetComponent<BoxCollider2D>().enabled = false;
+        PlayerController.Instance.TurnPlayerControllsOnOff(false);
+        
+    }
+    private IEnumerator Sounding()
+    {
+        _CharacterAli.GetComponent<Animator>().SetTrigger("ali_r39");
+        //yield return new WaitForSeconds(5f);
+        _CharacterAli.GetComponent<Animator>().SetBool("Talk", true);
+        _global_audio.clip = _Au_P3_53;
+        _global_audio.Play();
+        yield return new WaitForSeconds(_Au_P3_53.length);
         _global_audio.clip = _Au_igra_44;
         _global_audio.Play();
+        yield return new WaitForSeconds(_Au_igra_44.length);
+        _CharacterAli.GetComponent<Animator>().SetBool("Talk", false);
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +49,8 @@ public class SMiniGameClouds : MonoBehaviour
             RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
             if (hit.collider == _CloudCollider)
             {
+                _CloudCollider.enabled = false;
+
                 StartCoroutine(CorrectAnswer());
             }
         }
@@ -41,24 +58,33 @@ public class SMiniGameClouds : MonoBehaviour
         //Если есть предмет над облаками, то он падает на землю
         if (_DroppableItem != null && isDroppableDrop)
         {
-            if (_DroppableItem.transform.position != Vector3.zero)
-            {
+            if (_DroppableItem.transform.position.x > 1.5f) {
+
                 float step = 0.5f * Time.deltaTime; // calculate distance to move
-                transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, step);
+                _DroppableItem.transform.Translate(-(_DroppableItem.transform.position - transform.position) * Time.deltaTime * 0.5f);
 
                 // Check if the position of the cube and sphere are approximately equal.
-                if (Vector3.Distance(transform.position, Vector3.zero) < 0.001f)
-                {
-                    StartCoroutine(CorWhenPubDroppableItemInPlate());
+                if (Vector3.Distance(_DroppableItem.transform.position, Vector3.zero) <= 84f) {
+                    _DroppableItem.GetComponent<SpriteRenderer>().sortingLayerName = "Objects_Back";
+                    _DroppableItem.GetComponent<SpriteRenderer>().sortingOrder = 10;
+                    _DroppableItem.GetComponent<Rigidbody2D>().gravityScale = 1f;
+                    isDroppableDrop = false;
                 }
             }
         }
+        if (_DroppableItem.GetComponent<Rigidbody2D>().gravityScale > 0) {
+            if (bush.transform.position.x - _DroppableItem.transform.position.x > 1) {
+                _DroppableItem.transform.Translate(Vector3.right * Time.deltaTime * 0.5f);
+            } else {
+                _DroppableItem.SetActive(false);
+            }
+        }
     }
-
     IEnumerator CorrectAnswer()
     {
         _global_audio.clip = _Zv_36;
         _global_audio.Play();
+        PlayerController.Instance.TurnPlayerControllsOnOff(false);
         yield return new WaitForSeconds(3.8f);
         GameplayTheoryManager.Instance.openExternalTrainerString("abacus");
         //находим кнопку, которая будет запускать след. действие
@@ -69,6 +95,7 @@ public class SMiniGameClouds : MonoBehaviour
 
     public void WhenTrainerFinished()
     {
+        UIContinue.SetActive(false);
         StartCoroutine(CorWhenTrainerFinished());
     }
 
@@ -85,23 +112,7 @@ public class SMiniGameClouds : MonoBehaviour
         //Если есть предмет над облаками, то он падает на землю
         if (_DroppableItem != null)
         {
-
+            isDroppableDrop = true;
         }
-    }
-
-    IEnumerator CorWhenPubDroppableItemInPlate()
-    {
-        isDroppableDrop = false;
-        _DroppableItem.SetActive(false);
-        _CharacterAli.GetComponent<Animator>().SetBool("isSunCrystalEquipped", true);
-        _CharacterAli.GetComponent<Animator>().SetTrigger("ali_r37_svodit_vmeste ruki");
-        yield return new WaitForSeconds(0.4f);
-        _CharacterAli.GetComponent<Animator>().SetBool("isSunCrystalEquipped", false);
-        //Персонаж радостный держит жёлтый деталь: кристалл солнца, достаёт из рюкзака деталь: плиту и крепит деталь: кристалл солнца на пустое место со звуком Zv-18и кладет плиту в рюкзак (ali_r11) 
-        //Персонаж говорит(ali_r78): Au - P3 - 55
-        _global_audio.clip = _Au_P3_55;
-        _global_audio.Play();
-        yield return new WaitForSeconds(8.0f);
-        _CharacterAli.GetComponent<PlayerController>().TurnPlayerControllsOnOff(true);
     }
 }
