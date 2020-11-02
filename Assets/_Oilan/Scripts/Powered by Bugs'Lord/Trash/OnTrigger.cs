@@ -61,6 +61,7 @@ public class OnTrigger : MonoBehaviour
     {
         foreach(var toggle in toggles) {
             if (!toggle.isOn && toggle.gameObject.name.Contains("Yellow")) {
+                AudioManager.Instance.PlaySound("Zv-38 (Хруст-шелест листьев)");
                 while (toggle.GetComponent<CanvasGroup>().alpha >= .005f) {
                     toggle.GetComponent<CanvasGroup>().alpha -= toggle.GetComponent<CanvasGroup>().alpha / 10;
                     yield return new WaitForSeconds(.02f);
@@ -79,7 +80,6 @@ public class OnTrigger : MonoBehaviour
         foreach(var toggle in toggles) {
             if (toggle.gameObject.name.Contains("Green")) {
                 i++;
-                Debug.LogError(i);
                 if(i == 3) {
                     GameObject obj = toggle.gameObject;
                     Destroy(toggle);

@@ -74,7 +74,7 @@ public class SMiniGameClouds : MonoBehaviour
         }
         if (_DroppableItem.GetComponent<Rigidbody2D>().gravityScale > 0) {
             if (bush.transform.position.x - _DroppableItem.transform.position.x > 1) {
-                _DroppableItem.transform.Translate(Vector3.right * Time.deltaTime * 0.5f);
+                _DroppableItem.transform.Translate(Vector3.right * Time.deltaTime * 1.5f);
             } else {
                 _DroppableItem.SetActive(false);
             }
