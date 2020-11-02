@@ -31,13 +31,11 @@ namespace Oilan
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag("Player") && pickableType == PickableType.STAR && !isPicked)
-            {
-                isPicked = true;
-                GameplayScoreManager.Instance.AddWebStars();
-                AudioManager.Instance.PlaySound("Zv-9 (Волшебный звук для звезды (отлетают на табло в меню “Награды”))");
-                Destroy(this.gameObject);
-            }
+            //if (collision.CompareTag("Player") && pickableType == PickableType.STAR && !isPicked)
+            isPicked = true;
+            GameplayScoreManager.Instance.AddWebStars();
+            GetComponent<AudioSource>().Play();//Zv-9 (Волшебный звук для звезды (отлетают на табло в меню “Награды”
+            Destroy(this.gameObject);
         }
 
     }

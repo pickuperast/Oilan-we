@@ -17,13 +17,16 @@ namespace Oilan
 
         private void Start()
         {
-            UpdateState();
+            //UpdateState(false);
+            UIError = GameObject.Find("UIerror blocked step");
         }
 
-        public void UpdateState()
+        public void UpdateState(bool isOn)
         {
+            isUnlocked = isOn;
             spriteActive.gameObject.SetActive(isUnlocked);
             spriteDisabled.gameObject.SetActive(!isUnlocked);
+            Debug.Log(gameObject.name);
         }
 
         public void OpenStep()
@@ -31,7 +34,6 @@ namespace Oilan
             if (isUnlocked)
             {
                 LevelsStepsManager.Instance.currentStepID = stepSceneID;
-
                 GameStateParametersManager.Instance.SetBoolTrue("Bool_ShowNewGame");
             }
             else

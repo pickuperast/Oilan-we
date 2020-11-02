@@ -45,7 +45,7 @@ public class SMiniGameTrost : MonoBehaviour
 
 
         //ждем пока не проиграется звук
-        yield return new WaitForSeconds(_Au_igra_39.length);
+        yield return new WaitForSeconds(_Au_igra_39.length - 3f);
         starik_Anim.SetBool("talk", false);
 
         //Из трости появляется свет деталь: свечение из трости, и из трости вылетают уравнения с Zv-36 с полем ответа, которые собираются на небе. Звук проигрывается в самой анимации
@@ -60,8 +60,8 @@ public class SMiniGameTrost : MonoBehaviour
         for (int i = 0; i < problems.Length; i++)        {
             problems[i].Init(newProblems.countsArr[i], newProblems.sumArr[i]);
         }
+        yield return new WaitForSeconds(0.2f);//потому что по непонятной причине UINumbers становятся неактивными сами по себе
         _UINumbers.SetActive(true);
-
         //Старец говорит (starik_neitral) Au_igra_39: «Нужно зарядить его цифрами, и он снова засияет! Реши задачи с помощью Абакуса.». 
         starik_Anim.SetBool("talk", true);
         _global_audio.clip = _Au_igra_39;
@@ -70,7 +70,7 @@ public class SMiniGameTrost : MonoBehaviour
         //ждем пока не проиграется звук
         yield return new WaitForSeconds(_Au_igra_39.length);
         starik_Anim.SetBool("talk", false);
-
+        _UINumbers.SetActive(true);
         //Пользователь вносит ответы, Система проверяет на соответствие форматов. Пользователь нажимает на кнопку «Проверить».
     }
 

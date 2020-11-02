@@ -197,22 +197,16 @@ namespace Oilan
         //#if UNITY_WEBGL
         public void PubOpenEndStepTrainer()
         {
-            #if UNITY_WEBGL
             Unity_openTrenazerAfterStep();
-#endif
         }
         public void PubOpenShop()
         {
-#if UNITY_WEBGL
             Unity_OpenShop();
-#endif
         }
         public string PubGetProgress()
         {
             string s = "";
-#if UNITY_WEBGL
             s = GetProgress();
-#endif
             return s;
         }
 
@@ -222,31 +216,25 @@ namespace Oilan
             //TextSavedStats.text += "\nUnityLog: Setting progress to: " + mJSONinput;
             //WebGLMessageHandler.Instance.ConsoleLog("Setting progress to: "+ mJSONinput);
 
-#if UNITY_WEBGL
             if (!UnityPlatform())
             {
                 LibConsoleWriter("calling SetProgress: "+ mJSONinput);
                 Unity_SetProgress(mJSONinput);
         }
-#endif
         }
 
         public void AddWebsiteStar(int HowMuch = 1)
         {
-#if UNITY_WEBGL
             if (!UnityPlatform())
                 Unity_AddStar(HowMuch);
-#endif
         }
 
         public void PubOpenTrainer(string TrainerType, int level, int step, bool isLastStepTrainer = false)
         {
-#if UNITY_WEBGL
             if (!UnityPlatform()) {
                 OpenTrainer(TrainerType, level, step, isLastStepTrainer);
                 LibConsoleWriter("calling: startGame("+TrainerType+", "+level.ToString()+", "+step.ToString()+", "+isLastStepTrainer.ToString()+")");
             }
-#endif
         }
 //#elif UNITY_EDITOR
 //#endif
@@ -254,7 +242,7 @@ namespace Oilan
         public bool UnityPlatform()
         {
             //return Application.platform == RuntimePlatform.WebGLPlayer;//== for testing in pickuperast.github.io and oilan.kz
-            return true;
+            //return false;
             return true;  //false - test in oilan.kz //true - test in editor and pickuperast.github.io
         }
 
@@ -264,7 +252,7 @@ namespace Oilan
             if (UnityPlatform())
             {
 
-                string GetProgress = @"[{&quot;id&quot;:18,&quot;level&quot;:5,&quot;step&quot;:1,&quot;part&quot;:1,&quot;stars&quot;:0,&quot;count_level&quot;:5}]";
+                string GetProgress = @"[{&quot;id&quot;:19,&quot;level&quot;:1,&quot;step&quot;:6,&quot;part&quot;:1,&quot;stars&quot;:0,&quot;count_level&quot;:5}]";
                 string progress = GetProgress.Replace("&quot;", @"""");
                 string pattern = @"{.*?\}";
                 string input = progress;
