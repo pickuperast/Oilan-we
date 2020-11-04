@@ -69,16 +69,17 @@ public class SMiniGameClouds : MonoBehaviour
                     _DroppableItem.GetComponent<SpriteRenderer>().sortingOrder = 10;
                     _DroppableItem.GetComponent<Rigidbody2D>().gravityScale = 1f;
                     isDroppableDrop = false;
+                    bush.GetComponent<BoxCollider2D>().enabled = true;
                 }
             }
-        }
+        }/*
         if (_DroppableItem.GetComponent<Rigidbody2D>().gravityScale > 0) {
             if (bush.transform.position.x - _DroppableItem.transform.position.x > 1) {
                 _DroppableItem.transform.Translate(Vector3.right * Time.deltaTime * 1.5f);
             } else {
                 _DroppableItem.SetActive(false);
             }
-        }
+        }*/
     }
     IEnumerator CorrectAnswer()
     {

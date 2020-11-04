@@ -23,6 +23,9 @@ public class OnTrigger : MonoBehaviour
     private bool sun = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.tag == "sun") {
+            Destroy(collision.gameObject);
+        }
         if(collision.tag == "Player") {
             PlayerController.Instance.TurnPlayerControllsOnOff(false);
             if(Au_igra_45 != null)

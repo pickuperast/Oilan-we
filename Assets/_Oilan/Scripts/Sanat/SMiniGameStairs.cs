@@ -9,13 +9,17 @@ public class SMiniGameStairs : MonoBehaviour
     public Animator _Stairs;
     public GameObject _StarsPlacer;
     public GameObject _buttonNextPart;
-    
+    [SerializeField]
+    private AudioClip Au_igra_15;
+    [SerializeField]
+    private AudioSource _global_audio;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {//Не делаем проверку, потому что слой Interractable пересекается только с Али
         GetComponent<BoxCollider2D>().enabled = false;
-        GameplayTheoryManager.Instance.openExternalTrainerString("fleshCart");
         GameplayManager.Instance.TurnPlayerControlsOnOff(false);
         PlayerController.Instance.PauseAFK_Routine(true);
+        StartCoroutine(IntroToGame());
 
         //находим кнопку, которая будет запускать след. действие
         
@@ -26,6 +30,17 @@ public class SMiniGameStairs : MonoBehaviour
     //Вызывается нажатием кнопки
     public void WhenTrainerFinished() { StartCoroutine(BuildStairs()); }
 
+    IEnumerator IntroToGame()
+    {
+        _global_audio.clip = Au_igra_15;
+        _global_audio.Play();
+        PlayerController.Instance.gameObject.GetComponent<Animator>().SetBool("Talk", true);
+        yield return new WaitForEndOfFrame();
+        //yield return new WaitForSeconds(Au_igra_15.length);
+        GameplayTheoryManager.Instance.openExternalTrainerString("fleshCart");
+        yield return new WaitForSeconds(Au_igra_15.length);
+        PlayerController.Instance.gameObject.GetComponent<Animator>().SetBool("Talk", false);
+    }
 
     IEnumerator BuildStairs()
     {

@@ -114,7 +114,6 @@ namespace Oilan
                 controls.Enable();
                 idlePause = false;
                 GameplayManager.Instance.TurnAutoCamOnOff(true);
-                GameplayManager.Instance.gameplayAutoCam.GetComponent<Animator>().enabled = false;
             }
             else
             {
