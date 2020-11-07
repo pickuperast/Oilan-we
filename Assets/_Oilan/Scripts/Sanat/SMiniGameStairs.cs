@@ -20,27 +20,25 @@ public class SMiniGameStairs : MonoBehaviour
         GameplayManager.Instance.TurnPlayerControlsOnOff(false);
         PlayerController.Instance.PauseAFK_Routine(true);
         StartCoroutine(IntroToGame());
-
-        //находим кнопку, которая будет запускать след. действие
-        
-        Button btn = _buttonNextPart.transform.GetChild(0).GetComponent<Button>();
-        btn.onClick.AddListener(WhenTrainerFinished);
-        _buttonNextPart.SetActive(true);
     }
-    //Вызывается нажатием кнопки
-    public void WhenTrainerFinished() { StartCoroutine(BuildStairs()); }
 
     IEnumerator IntroToGame()
     {
         _global_audio.clip = Au_igra_15;
         _global_audio.Play();
         PlayerController.Instance.gameObject.GetComponent<Animator>().SetBool("Talk", true);
-        yield return new WaitForEndOfFrame();
-        //yield return new WaitForSeconds(Au_igra_15.length);
-        GameplayTheoryManager.Instance.openExternalTrainerString("fleshCart");
         yield return new WaitForSeconds(Au_igra_15.length);
         PlayerController.Instance.gameObject.GetComponent<Animator>().SetBool("Talk", false);
+
+        GameplayTheoryManager.Instance.openExternalTrainerString("fleshCart");
+        //находим кнопку, которая будет запускать след. действие
+        Button btn = _buttonNextPart.transform.GetChild(0).GetComponent<Button>();
+        btn.onClick.AddListener(WhenTrainerFinished);
+        _buttonNextPart.SetActive(true);
     }
+
+    //Вызывается нажатием кнопки
+    public void WhenTrainerFinished() { StartCoroutine(BuildStairs()); }
 
     IEnumerator BuildStairs()
     {

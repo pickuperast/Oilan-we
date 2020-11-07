@@ -4,7 +4,7 @@ using UnityEngine;
 using Oilan;
 public class OnPick : MonoBehaviour
 {
-    public OnTrigger sun;
+    public TMiniGameLeafs sun;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //if(collision.collider.tag == "Player" && sun.GetCollider()) {

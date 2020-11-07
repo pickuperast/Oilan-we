@@ -35,8 +35,14 @@ namespace Oilan
             isPicked = true;
             GameplayScoreManager.Instance.AddWebStars();
             GetComponent<AudioSource>().Play();//Zv-9 (Волшебный звук для звезды (отлетают на табло в меню “Награды”
-            Destroy(this.gameObject);
+            GetComponentInChildren<SpriteRenderer>().enabled = false;
+            StartCoroutine(TimedDestroy());
         }
 
+        private IEnumerator TimedDestroy()
+        {
+            yield return new WaitForSeconds(4f);
+            Destroy(this.gameObject);
+        }
     }
 }

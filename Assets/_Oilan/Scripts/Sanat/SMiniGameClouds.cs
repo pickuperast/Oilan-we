@@ -12,35 +12,40 @@ public class SMiniGameClouds : MonoBehaviour
     public AudioClip _Au_P3_53;
     public AudioClip _Zv_36;
     public AudioClip _Au_P3_55;
+    public AudioClip _Au_P3_radost;
     public BoxCollider2D _CloudCollider;
     public GameObject UIContinue;
     public List<Animator> _CloudAnims;
     public GameObject _GrayBG;
     public GameObject _DroppableItem;
     public GameObject bush;
+    public Animator _camera;
     private bool isDroppableDrop = false;
     private bool isTracking = true;
+
     void OnTriggerEnter2D(Collider2D collision)
     {//Не делаем проверку, потому что слой Interractable пересекается только с Али
+        PlayerController.Instance.TurnPlayerControllsOnOff(false);
         StartCoroutine(Sounding());
         GetComponent<BoxCollider2D>().enabled = false;
-        PlayerController.Instance.TurnPlayerControllsOnOff(false);
-        
     }
-    private IEnumerator Sounding()
+
+    IEnumerator Sounding()
     {
         _CharacterAli.GetComponent<Animator>().SetTrigger("ali_r39");
         //yield return new WaitForSeconds(5f);
         _CharacterAli.GetComponent<Animator>().SetBool("Talk", true);
         _global_audio.clip = _Au_P3_53;
         _global_audio.Play();
+        //Приближаем камеру, чтобы показать тучи
+        _camera.SetTrigger("zoom_for_minigame_clouds");
         yield return new WaitForSeconds(_Au_P3_53.length);
         _global_audio.clip = _Au_igra_44;
         _global_audio.Play();
         yield return new WaitForSeconds(_Au_igra_44.length);
         _CharacterAli.GetComponent<Animator>().SetBool("Talk", false);
     }
-    // Update is called once per frame
+
     void Update()
     {
         if (isTracking && Input.GetMouseButtonDown(0))
@@ -50,7 +55,7 @@ public class SMiniGameClouds : MonoBehaviour
             if (hit.collider == _CloudCollider)
             {
                 _CloudCollider.enabled = false;
-
+                _CharacterAli.GetComponent<Animator>().SetBool("Talk", false);
                 StartCoroutine(CorrectAnswer());
             }
         }
@@ -81,17 +86,19 @@ public class SMiniGameClouds : MonoBehaviour
             }
         }*/
     }
+
     IEnumerator CorrectAnswer()
     {
+        _camera.SetTrigger("zoom_out_for_minigame_clouds");
         _global_audio.clip = _Zv_36;
         _global_audio.Play();
-        PlayerController.Instance.TurnPlayerControllsOnOff(false);
         yield return new WaitForSeconds(3.8f);
+        //Запускается тренажер на сайте, перекрывая игру
         GameplayTheoryManager.Instance.openExternalTrainerString("abacus");
-        //находим кнопку, которая будет запускать след. действие
+        //находим кнопку, которая будет запускать след. действие, т.к. игра перекрыта, можно сразу активировать
+        UIContinue.SetActive(true);
         Button btn = UIContinue.transform.GetChild(0).GetComponent<Button>();
         btn.onClick.AddListener(WhenTrainerFinished);
-        UIContinue.SetActive(true);
     }
 
     public void WhenTrainerFinished()
