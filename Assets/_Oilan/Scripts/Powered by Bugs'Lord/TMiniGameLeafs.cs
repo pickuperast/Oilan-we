@@ -50,6 +50,7 @@ public class TMiniGameLeafs : MonoBehaviour
         }
         Debug.Log(sum);
         if(sum == 5) {
+            _UI_Leafs_game.transform.Find("Check").GetComponent<Button>().onClick.RemoveListener(Check);
             StartCoroutine(onDestroy(TOtoggles));
         }
     }
@@ -63,7 +64,7 @@ public class TMiniGameLeafs : MonoBehaviour
     IEnumerator onDestroy(Toggle[] toggles)
     {
         float frameTime = 1f / 60f;
-        float fadeAmount = fadeTime / frameTime;
+        float fadeAmount = 0.016f;// fadeTime / frameTime;
         foreach(var toggle in toggles) {
             if (!toggle.isOn && toggle.gameObject.name.Contains("Yellow")) {
                 AudioManager.Instance.PlaySound("Zv-38 (Хруст-шелест листьев)");
@@ -75,9 +76,14 @@ public class TMiniGameLeafs : MonoBehaviour
                 toggle.enabled = false;
             }
         }
-        _UI_Leafs_game.transform.Find("Check").gameObject.SetActive(false);
+        GameplayTheoryManager.Instance.openExternalTrainerString("fleshCart");
+        _UI_Leafs_game.transform.Find("Check").GetComponent<Button>().onClick.AddListener(() => StartCoroutine(OpenStars()));
+
+
+        /*
         exercises.SetActive(true);
         exercises.GetComponent<Temirlan.Series>().onDestroy +=  () => StartCoroutine(OpenStars());
+        */
     }
     public IEnumerator OpenStars (){
         int i = 0;
