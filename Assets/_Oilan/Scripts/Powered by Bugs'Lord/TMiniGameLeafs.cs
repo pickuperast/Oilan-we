@@ -34,10 +34,11 @@ public class TMiniGameLeafs : MonoBehaviour
         }
     }
 
-    private void Start()
+    void Start()
     {
         GOLeafs = _UI_Leafs_game.transform.Find("leafs").gameObject;
         TOtoggles = GOLeafs.GetComponentsInChildren<Toggle>();
+        gameObject.SetActive(false);
     }
     //висит на кнопке
     void Check()
@@ -64,13 +65,13 @@ public class TMiniGameLeafs : MonoBehaviour
     IEnumerator onDestroy(Toggle[] toggles)
     {
         float frameTime = 1f / 60f;
-        float fadeAmount = 0.016f;// fadeTime / frameTime;
+        float fadeAmount = 0.0166f;// fadeTime / frameTime;
         foreach(var toggle in toggles) {
             if (!toggle.isOn && toggle.gameObject.name.Contains("Yellow")) {
                 AudioManager.Instance.PlaySound("Zv-38 (Хруст-шелест листьев)");
                 CanvasGroup _canvasGroupToggle = toggle.GetComponent<CanvasGroup>();
                 while (_canvasGroupToggle.alpha >= fadeAmount) {
-                    _canvasGroupToggle.alpha -= fadeAmount;
+                    _canvasGroupToggle.alpha -= 2*fadeAmount;
                     yield return new WaitForSeconds(frameTime);
                 }
                 toggle.enabled = false;
@@ -87,7 +88,9 @@ public class TMiniGameLeafs : MonoBehaviour
     }
     public IEnumerator OpenStars (){
         int i = 0;
-        foreach(var toggle in TOtoggles) {
+        float fadeTime = 0.5f;
+        float fadeAmount = 0.0166f / fadeTime;//0.0166 - frame time
+        foreach (var toggle in TOtoggles) {
             if (toggle.gameObject.name.Contains("Green")) {
                 i++;
                 if(i == 3) {
@@ -98,9 +101,10 @@ public class TMiniGameLeafs : MonoBehaviour
                     obj.AddComponent<Image>().sprite = sunSprite;
                     continue;
                 } else {
-                    while (toggle.GetComponent<CanvasGroup>().alpha >= .005f) {
-                        toggle.GetComponent<CanvasGroup>().alpha -= toggle.GetComponent<CanvasGroup>().alpha / 10;
-                        yield return new WaitForSeconds(.02f);
+                    CanvasGroup _canvas = toggle.GetComponent<CanvasGroup>();
+                    while (_canvas.alpha >= fadeAmount) {
+                        _canvas.alpha -= fadeAmount;
+                        yield return new WaitForEndOfFrame();
                     }
                     GameplayScoreManager.Instance.AddWebStars();
                     AudioManager.Instance.PlaySound("Zv-9 (Волшебный звук для звезды (отлетают на табло в меню “Награды”))");
@@ -136,13 +140,9 @@ public class TMiniGameLeafs : MonoBehaviour
         yield return new WaitForSeconds(8.0f);
         Character_Ali.Instance.m_Anim.SetBool("Talk", false);
         PlayerController.Instance.TurnPlayerControllsOnOff(true);
+        _UI_Leafs_game.SetActive(false);
     }
 
-    void Continue()
-    {
-        _UI_Leafs_game.SetActive(false);
-        PlayerController.Instance.TurnPlayerControllsOnOff(true);
-    }
     public bool GetCollider()
     {
         return sun;
