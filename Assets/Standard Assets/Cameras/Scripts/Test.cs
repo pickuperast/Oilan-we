@@ -8,16 +8,16 @@ public class Test : MonoBehaviour
     public float smoothing;
     public Vector2 maxPosition;
     public Vector2 minPosition;
-    void LateUpdate ()
+    public Animator m_Anim;
+
+    private void Start()
     {
-        if (transform.position != target.position) 
-        {
-            Vector3 targetPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
+        StartCoroutine(testCor());
+    }
 
-            targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
-
-
-            transform.position = Vector3.Lerp(transform.position, target.position, smoothing);
-        }
+    IEnumerator testCor()
+    {
+        yield return new WaitForSeconds(4f);
+        m_Anim.SetTrigger("zoom_for_minigame_clouds");
     }
 }
