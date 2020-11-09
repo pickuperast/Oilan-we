@@ -9,12 +9,13 @@ namespace Oilan
     {
         // A multi-purpose script which causes an action to occur when
         // a trigger collider is entered.
+
         public enum TypeOfTrigger
         {
             OnEnter,
             OnStay
-            
         }
+
         public enum Mode
         {
             Trigger = 0,    // Just broadcast the action on to the target
@@ -33,7 +34,6 @@ namespace Oilan
         public GameObject source;
         public int triggerCount = 1;
         public bool repeatTrigger = false;
-
 
         public void Awake()
         {

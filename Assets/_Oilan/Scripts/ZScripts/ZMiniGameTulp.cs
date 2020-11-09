@@ -2,9 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ZMiniGameTulp : MonoBehaviour
 {
+    public UnityEvent uevent;
     public float checkDelay;
     public AudioSource _global_audio;
     public AudioClip _Au_igra_46;
@@ -17,7 +19,7 @@ public class ZMiniGameTulp : MonoBehaviour
         Canvas _canvas = transform.GetChild(0).GetComponent<Canvas>();
         _canvas.worldCamera = Camera.main;
         _canvas.sortingLayerName = "UI";
-
+        GameplayManager.Instance.TurnPlayerControlsOnOff(true);
         StartCoroutine(LaunchMiniGame());
     }
 
@@ -77,7 +79,9 @@ public class ZMiniGameTulp : MonoBehaviour
     }
     public void Solved()
     {
+        GameplayManager.Instance.TurnPlayerControlsOnOff(false);      
         _UINumbers.SetActive(false);
+        uevent.Invoke();
         gameObject.SetActive(false);
     }
 
