@@ -9,6 +9,7 @@ public class SMiniGameStairs : MonoBehaviour
     public Animator _Stairs;
     public GameObject _StarsPlacer;
     public GameObject _buttonNextPart;
+    public GameObject _sceneCamera;
     [SerializeField]
     private AudioClip Au_igra_15;
     [SerializeField]
@@ -20,6 +21,7 @@ public class SMiniGameStairs : MonoBehaviour
         GameplayManager.Instance.TurnPlayerControlsOnOff(false);
         PlayerController.Instance.PauseAFK_Routine(true);
         StartCoroutine(IntroToGame());
+        _sceneCamera.GetComponent<Animator>().enabled = false;
     }
 
     IEnumerator IntroToGame()
@@ -35,6 +37,7 @@ public class SMiniGameStairs : MonoBehaviour
         Button btn = _buttonNextPart.transform.GetChild(0).GetComponent<Button>();
         btn.onClick.AddListener(WhenTrainerFinished);
         _buttonNextPart.SetActive(true);
+        _sceneCamera.GetComponent<Animator>().enabled = true;
     }
 
     //Вызывается нажатием кнопки
