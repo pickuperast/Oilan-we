@@ -5,6 +5,8 @@ using Oilan;
 
 public class TMiniGameLeafs : MonoBehaviour
 {
+    public Animator _mainCamera;
+
     [SerializeField] GameObject _UI_Leafs_game;
     [SerializeField] AudioSource _global_audio;
     [SerializeField] AudioClip Au_igra_45;
@@ -125,13 +127,13 @@ public class TMiniGameLeafs : MonoBehaviour
         yield return new WaitForSeconds(1.5f);//Время через которое рука будет у рюкзака
         //отрисовываем одетую плиту
         Character_Ali.Instance.m_Anim.SetBool("isPlateWithStarEquipped", true);
+        _mainCamera.SetTrigger("zoom_in");
         yield return new WaitForSeconds(1.72f);//опускаем руку вниз
-        //надеваем камень на плиту
-        Character_Ali.Instance.m_Anim.SetTrigger("ali_r37_svodit_vmeste ruki");
+        Character_Ali.Instance.m_Anim.SetTrigger("ali_r37_svodit_vmeste ruki");//надеваем камень на плиту
         yield return new WaitForSeconds(0.566f);//время необходимое для сведения руки и плиты
-        //скрываем кристал
-        Character_Ali.Instance.m_Anim.SetBool("isSunCrystalEquipped", false);
-        yield return new WaitForSeconds(0.534f);//время необходимое для сведения руки и плиты
+        Character_Ali.Instance.m_Anim.SetBool("isSunCrystalEquipped", false);//скрываем кристал
+        _mainCamera.SetTrigger("zoom_out");
+        yield return new WaitForSeconds(0.534f);//время необходимое для разведения руки и плиты
         Character_Ali.Instance.m_Anim.SetTrigger("ali_put_plate_in_backpack(useThis)");
         yield return new WaitForSeconds(1.5f);//Время через которое рука будет у рюкзака
         Character_Ali.Instance.m_Anim.SetBool("isPlateWithStarEquipped", false);
