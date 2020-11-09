@@ -31354,6 +31354,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 62932649052de1a418ba7a845e72b82e, type: 2}
     - {fileID: 11400000, guid: 80fce184ef1af9243a5f028b28e5efa2, type: 2}
     - {fileID: 11400000, guid: 4748600f0c5cbf0409a8d952c65c78d3, type: 2}
+    - {fileID: 11400000, guid: 128385db434086040853d6d250458a25, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -31468,26 +31469,15 @@ MonoBehaviour:
             m_StringArgument: isPlateWithStarEquipped
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 273596148}
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 1674718127}
+          m_MethodName: OnBool
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 1674718130}
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: posoh_yelo_glow
             m_BoolArgument: 1
           m_CallState: 2
         - m_Target: {fileID: 1674718129}
@@ -31599,6 +31589,19 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1674718129}
+          m_MethodName: SetTrigger
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: FX_tornado
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!95 &699192353
@@ -40338,6 +40341,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UIEndGameSelectTrainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5326194552687345190, guid: b5c6907ec060c2d4c86d07ea7cb05eaa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5326194552687345191, guid: b5c6907ec060c2d4c86d07ea7cb05eaa,
         type: 3}
@@ -60572,12 +60580,6 @@ GameObject:
 --- !u!95 &1674718129 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1308013645407685808, guid: f630fab5925c21a4780be26ca1779e81,
-    type: 3}
-  m_PrefabInstance: {fileID: 1674718125}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1674718130 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7597046549057521389, guid: f630fab5925c21a4780be26ca1779e81,
     type: 3}
   m_PrefabInstance: {fileID: 1674718125}
   m_PrefabAsset: {fileID: 0}
