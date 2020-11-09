@@ -31577,6 +31577,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 1150245498}
+          m_MethodName: PlayAudioFromTimeline
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Au-P3-58
+            m_BoolArgument: 1
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1613841432}
@@ -31630,8 +31641,6 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -2084896143156628283, guid: cf1240f18b6f14b4f98037626dacfce7, type: 2}
     value: {fileID: 273596148}
-  - key: {fileID: -8137219149589723775, guid: cf1240f18b6f14b4f98037626dacfce7, type: 2}
-    value: {fileID: 1674718130}
   - key: {fileID: -6042287012989994728, guid: cf1240f18b6f14b4f98037626dacfce7, type: 2}
     value: {fileID: 902716994}
   - key: {fileID: -3697433574222940170, guid: cf1240f18b6f14b4f98037626dacfce7, type: 2}
@@ -40320,6 +40329,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 869214885}
     m_Modifications:
+    - target: {fileID: 4938755578739128349, guid: b5c6907ec060c2d4c86d07ea7cb05eaa,
+        type: 3}
+      propertyPath: _GameplayManager
+      value: 
+      objectReference: {fileID: 1092593891}
     - target: {fileID: 5326194552687345190, guid: b5c6907ec060c2d4c86d07ea7cb05eaa,
         type: 3}
       propertyPath: m_Name

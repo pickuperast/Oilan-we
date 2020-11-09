@@ -80,7 +80,6 @@ public class TMiniGameLeafs : MonoBehaviour
         GameplayTheoryManager.Instance.openExternalTrainerString("fleshCart");
         _UI_Leafs_game.transform.Find("Check").GetComponent<Button>().onClick.AddListener(() => StartCoroutine(OpenStars()));
 
-
         /*
         exercises.SetActive(true);
         exercises.GetComponent<Temirlan.Series>().onDestroy +=  () => StartCoroutine(OpenStars());
@@ -116,6 +115,8 @@ public class TMiniGameLeafs : MonoBehaviour
 
     public IEnumerator CorWhenPubDroppableItemInPlate()
     {
+        Character_Ali.Instance.m_Anim.SetBool("ali_eyes_right", false);
+        Character_Ali.Instance.m_Anim.SetBool("ali_eyes_front", true);
         _UI_Leafs_game.SetActive(false);
         //do camera zoom
         Character_Ali.Instance.m_Anim.SetBool("isSunCrystalEquipped", true);
@@ -138,7 +139,7 @@ public class TMiniGameLeafs : MonoBehaviour
         _global_audio.clip = _Au_P3_55;
         _global_audio.Play();
         yield return new WaitForSeconds(8.0f);
-        Character_Ali.Instance.m_Anim.SetBool("Talk", false);
+        Character_Ali.Instance.SetAnimatorAli_r78_Bool_Talk(false);
         PlayerController.Instance.TurnPlayerControllsOnOff(true);
         _UI_Leafs_game.SetActive(false);
     }
