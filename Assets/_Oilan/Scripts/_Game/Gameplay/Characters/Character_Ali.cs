@@ -284,7 +284,7 @@ namespace Oilan
         {
             SetAnimatorTrigger("ali_r45_talk_look_in_front");
         }
-        public void SetAnimatorAli_r45_Bool(bool isOn)
+        public void SetAnimatorAli_r45_Bool(bool isOn)//говорит смотря перед собой
         {
             SetAnimatorBool("ali_eyes_front", !isOn);
             SetAnimatorBool("ali_eyes_right" , isOn);
@@ -306,7 +306,7 @@ namespace Oilan
         {
             SetAnimatorTrigger("ali_r76_happy_talk");
         }
-        public void SetAnimatorAli_r78_Bool_Talk(bool isOn)
+        public void SetAnimatorAli_r78_Bool_Talk(bool isOn)//говорит смотря на экран
         {
             if (isOn) SAudioManagerRef.Instance.TurnDownBGSound();
             else SAudioManagerRef.Instance.TurnUpBGSound();

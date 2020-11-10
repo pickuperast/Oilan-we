@@ -29,10 +29,11 @@ public class SMiniGameStairs : MonoBehaviour
         _global_audio.clip = Au_igra_15;
         _global_audio.Play();
         PlayerController.Instance.gameObject.GetComponent<Animator>().SetBool("Talk", true);
-        yield return new WaitForSeconds(Au_igra_15.length);
+        yield return new WaitForSeconds(5f);
         PlayerController.Instance.gameObject.GetComponent<Animator>().SetBool("Talk", false);
-
         GameplayTheoryManager.Instance.openExternalTrainerString("fleshCart");
+        //yield return new WaitForSeconds(Au_igra_15.length-5f);
+
         //находим кнопку, которая будет запускать след. действие
         Button btn = _buttonNextPart.transform.GetChild(0).GetComponent<Button>();
         btn.onClick.AddListener(WhenTrainerFinished);

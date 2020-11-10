@@ -113,7 +113,6 @@ public class SMiniGameClouds : MonoBehaviour
         foreach (var l_Animator in _CloudAnims)
         {
             l_Animator.SetTrigger("die");
-            _GrayBG.SetActive(false);
         }
         yield return new WaitForSeconds(1.0f);
 
