@@ -292,7 +292,7 @@ namespace Unity.VideoHelper
             fitter.aspectMode = AspectRatioFitter.AspectMode.FitInParent;
             //20201011 Убрал, потому что размер видео сжимался
             //fitter.aspectRatio = (float)videoPlayer.texture.width / videoPlayer.texture.height;
-            fitter.aspectRatio = 1.7778f;
+            fitter.aspectRatio = 1.7778f;//1280/720
         }
 
         private void SetupAudio()
