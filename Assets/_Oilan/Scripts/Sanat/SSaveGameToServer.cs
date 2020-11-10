@@ -5,12 +5,26 @@ namespace Oilan
 {
     public class SSaveGameToServer : MonoBehaviour
     {
-        public GameplayManager _GameplayManager; 
-        // Start is called before the first frame update
         void Start()
         {
-            _GameplayManager.WhenStepWasFinished();
-            //GameplayManager.Instance.WhenStepWasFinished();
+            transform.localPosition = Vector3.zero;
+            gameObject.SetActive(false);
+            GameplayManager.Instance.FinalUI = gameObject;
+            WebGLMessageHandler.Instance.ConsoleLog("FinalUI setted up");
+        }
+
+        private void OnEnable()
+        {
+            StartCoroutine(SaveGame());
+        }
+
+        IEnumerator SaveGame()
+        {
+            yield return new WaitForSeconds(.5f);//Да топорно, но работает =)
+            if (gameObject.active) { 
+                WebGLMessageHandler.Instance.ConsoleLog("calling when step was finished");
+                GameplayManager.Instance.WhenStepWasFinished();
+            }
         }
     }
 }

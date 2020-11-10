@@ -74,7 +74,7 @@ public class SMiniGameClouds : MonoBehaviour
                     _DroppableItem.GetComponent<SpriteRenderer>().sortingOrder = 10;
                     _DroppableItem.GetComponent<Rigidbody2D>().gravityScale = 1f;
                     isDroppableDrop = false;
-                    bush.GetComponent<BoxCollider2D>().enabled = true;
+                    bush.SetActive(true);
                 }
             }
         }/*
@@ -113,7 +113,6 @@ public class SMiniGameClouds : MonoBehaviour
         foreach (var l_Animator in _CloudAnims)
         {
             l_Animator.SetTrigger("die");
-            _GrayBG.SetActive(false);
         }
         yield return new WaitForSeconds(1.0f);
 

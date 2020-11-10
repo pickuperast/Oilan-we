@@ -9,6 +9,7 @@ public class SMiniGameStairs : MonoBehaviour
     public Animator _Stairs;
     public GameObject _StarsPlacer;
     public GameObject _buttonNextPart;
+    public GameObject _sceneCamera;
     [SerializeField]
     private AudioClip Au_igra_15;
     [SerializeField]
@@ -20,6 +21,7 @@ public class SMiniGameStairs : MonoBehaviour
         GameplayManager.Instance.TurnPlayerControlsOnOff(false);
         PlayerController.Instance.PauseAFK_Routine(true);
         StartCoroutine(IntroToGame());
+        _sceneCamera.GetComponent<Animator>().enabled = false;
     }
 
     IEnumerator IntroToGame()
@@ -27,14 +29,16 @@ public class SMiniGameStairs : MonoBehaviour
         _global_audio.clip = Au_igra_15;
         _global_audio.Play();
         PlayerController.Instance.gameObject.GetComponent<Animator>().SetBool("Talk", true);
-        yield return new WaitForSeconds(Au_igra_15.length);
+        yield return new WaitForSeconds(5f);
         PlayerController.Instance.gameObject.GetComponent<Animator>().SetBool("Talk", false);
-
         GameplayTheoryManager.Instance.openExternalTrainerString("fleshCart");
+        //yield return new WaitForSeconds(Au_igra_15.length-5f);
+
         //находим кнопку, которая будет запускать след. действие
         Button btn = _buttonNextPart.transform.GetChild(0).GetComponent<Button>();
         btn.onClick.AddListener(WhenTrainerFinished);
         _buttonNextPart.SetActive(true);
+        _sceneCamera.GetComponent<Animator>().enabled = true;
     }
 
     //Вызывается нажатием кнопки
