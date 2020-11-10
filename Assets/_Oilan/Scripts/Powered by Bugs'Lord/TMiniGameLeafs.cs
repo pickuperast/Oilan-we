@@ -15,10 +15,10 @@ public class TMiniGameLeafs : MonoBehaviour
     [SerializeField] GameObject exercises;
     [SerializeField] Sprite sunSprite;
     private bool sun = false;
-    float fadeTime = .4f;
-    GameObject GOLeafs = null;
-    Toggle[] TOtoggles;
-
+    private float fadeTime = .4f;
+    private GameObject GOLeafs = null;
+    private Toggle[] TOtoggles;
+    private int pressedCount = 0;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "sun") {
@@ -40,7 +40,28 @@ public class TMiniGameLeafs : MonoBehaviour
     {
         GOLeafs = _UI_Leafs_game.transform.Find("leafs").gameObject;
         TOtoggles = GOLeafs.GetComponentsInChildren<Toggle>();
-        gameObject.SetActive(false);
+        foreach(Toggle toggle in TOtoggles) {
+            toggle.onValueChanged.AddListener(Count);
+        }
+    }
+
+    void Count(bool pressed)
+    {
+        pressedCount += pressed ? 1 : -1;
+        Debug.Log(pressedCount);
+    }
+
+    private void Update()
+    {
+        if(pressedCount >= 5) {
+            foreach(Toggle toggle in TOtoggles) {
+                toggle.enabled = toggle.isOn ? true : false;
+            }
+        } else {
+            foreach (Toggle toggle in TOtoggles) {
+                toggle.enabled = true;
+            }
+        }
     }
     //висит на кнопке
     void Check()
@@ -77,15 +98,13 @@ public class TMiniGameLeafs : MonoBehaviour
                     yield return new WaitForSeconds(frameTime);
                 }
                 toggle.enabled = false;
+            }else if(toggle.isOn && toggle.gameObject.name.Contains("Yellow")) {
+                AudioManager.Instance.PlaySound("Zv-38 (Хруст-шелест листьев)");
+
             }
         }
         GameplayTheoryManager.Instance.openExternalTrainerString("fleshCart");
         _UI_Leafs_game.transform.Find("Check").GetComponent<Button>().onClick.AddListener(() => StartCoroutine(OpenStars()));
-
-        /*
-        exercises.SetActive(true);
-        exercises.GetComponent<Temirlan.Series>().onDestroy +=  () => StartCoroutine(OpenStars());
-        */
     }
     public IEnumerator OpenStars (){
         int i = 0;
